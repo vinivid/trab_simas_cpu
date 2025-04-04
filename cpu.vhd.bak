@@ -354,10 +354,7 @@ begin
 -- LOAD Direto  			RX <- M[End]
 --========================================================================		
 			IF(IR(15 DOWNTO 10) = LOAD) THEN -- Busca o endereco
-				M1 <= PC;
-				RW <= '0';
-				loadMar := '1';
-				IncpPC := '1';
+
 				state := exec;  -- Vai para o estado de Executa para buscar o dado do endereco
 			END IF;			
 			
@@ -367,8 +364,7 @@ begin
 -- STORE   DIReto			M[END] <- RX
 --========================================================================			
 			IF(IR(15 DOWNTO 10) = STORE) THEN  -- Busca o endereco
-				
-				incPC := '1'
+		
 				state := exec;  -- Vai para o estado de Executa para gravar Registrador no endereco
 			END IF;					
 
@@ -376,11 +372,7 @@ begin
 -- LOAD Indexado por registrador 			RX <- M(RY)
 --========================================================================		
 			IF(IR(15 DOWNTO 10) = LOADINDEX) THEN
-				M4 := REG(RY);      --M4 seleciona a registradora y
-				M1 <= M4;           --M1 recebe o input de ry
-				RW <= '0';          --ler algo da memoria
-				selM2 := sMEM;      --Mux 2 recebe valor da memoria
-				LoadReg(RX) := '1'; -- Colocar o dado em rx
+				
 				state := fetch;
 			END IF;					
 		
@@ -388,12 +380,7 @@ begin
 -- STORE indexado por registrador 			M[RX] <- RY
 --========================================================================		
 			IF(IR(15 DOWNTO 10) = STOREINDEX) THEN 
-				M4 := REG(RX);      --M4 seleciona a registradora y
-				M1 <= M4;           --M1 recebe o input de ry
-				RW <= '1';
 				
-				M3 := REG(RY);
-				M5 <= M3;
 				state := fetch;
 			END IF;					
 		
@@ -590,10 +577,7 @@ begin
 -- EXEC LOAD DIReto  			RX <- M[END]
 --========================================================================
 			IF(IR(15 DOWNTO 10) = LOAD) THEN
-				M1 <= MAR;
-				RW <= '0';
-				selM2 := sMEM;
-				loadReg(RX) := '1';
+				
 				state := fetch;
 			END IF;
 							
