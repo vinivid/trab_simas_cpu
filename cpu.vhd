@@ -390,7 +390,7 @@ begin
 			IF(IR(15 DOWNTO 10) = STOREINDEX) THEN 
 				M4 := REG(RX);      --M4 seleciona a registradora y
 				M1 <= M4;           --M1 recebe o input de ry
-				RW <= '1';
+				RW <= '1';          --
 				
 				M3 := REG(RY);
 				M5 <= M3;
@@ -409,8 +409,17 @@ begin
 
 --========================================================================		
 			IF(IR(15 DOWNTO 10) = MOV) THEN 
-			
-			  
+				IF(IR(0) = '0') THEN
+					M4 := Reg(Ry);      -- Selecionando ry no mux 4
+					M2 := sM4;          -- Selicionando o mux 4 no mux 2
+					loadReg(RX) := '1'; -- Permitindo que RX seja carregado
+				ELSIF (IR(1) = '0') THEN
+					selM2 := sSP;       -- Carregar o stack pointer na RX       
+					loadReg(RX) = '1';
+				ELSE
+					M4 := Reg(Rx);      -- Colocar o valor de RX no stack pointer
+					LOADSP := '1';
+				END IF;
 				state := fetch;
 			END IF;
 
@@ -418,15 +427,46 @@ begin
 -- ARITH OPERATION ('INC' NOT INCLUDED) 			RX <- RY (?) RZ
 --========================================================================
 			IF(IR(15 DOWNTO 14) = ARITH AND IR(13 DOWNTO 10) /= INC) THEN
-				
+					M3 := Reg(RY); -- Ordem de selecao importa para a operacao
+					m4 := Reg(RZ);
+					X <= M3; 		-- X e Y sao as entradas da ula
+					Y <= M4;
+					OP(5 downto 4) <= ARITH; -- Que é aritimetica
+					OP(3 downto 0) <= IR(13 downto 10); --Qual a operacao que sera feita
+					OP(6) <= IR(0); --Seleciona se e com carry ou nao 
+					selM2 := sULA;      -- Selecionando o output da ula no mux recebedor
+					loadReg(RX) := '1'; -- Caregando na registradora rx
+					
+					-- Colocando a parte das flags para receber da ula
+					selM6 := sULA;
+					LOADFR := '1'
 				state := fetch;
 			END IF;
 			
 --========================================================================
 -- INC/DEC			RX <- RX (+ or -) 1
---========================================================================			
+--========================================================================	
+			-- O incremetar e em essencia o ++ ou --
 			IF(IR(15 DOWNTO 14) = ARITH AND (IR(13 DOWNTO 10) = INC))	THEN
-				
+					M3 := Reg(RY); 
+					m4 := x"0001"; 	-- So inicializa para o valor 1 porque nao e necessario carregar de uma reg
+					X <= M3;       	-- Colocar os valores da operacao na ULA
+					Y <= M4;				 
+					OP(5 downto 4) <= ARITH; 
+					IF (IR(6) = 0) THEN
+						OP(3 downto 0) <= ADD;
+					ELSE 
+						OP(3 downto 0) <= SUB;
+					END IF;
+					
+					OP(3 downto 0) <= ADD; 
+					OP(6) <= IR(0);
+					selM2 := sULA;     
+					loadReg(RX) := '1'; 
+					
+
+					selM6 := sULA;
+					LOADFR := '1'
 				state := fetch;
 			END IF;
 			
