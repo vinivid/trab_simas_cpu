@@ -339,66 +339,81 @@ begin
 		
 --========================================================================
 -- LOAD Imediato 			RX <- Nr
---========================================================================			
+--========================================================================	
+			--  O imediato esta localizado na próxima posição da memória
+			-- e o program counter ja aponta para ela, portanto é necessario
+			-- apenas resgatar o valor da memória, coloca-lo na registradora
+			-- e deixar o PC na próxima instrução
 			IF(IR(15 DOWNTO 10) = LOADIMED) THEN
-				M1 <= PC;				-- M1 <- PC
-				Rw <= '0';				-- Rw <= '0'
-				selM2 := sMeM; 		-- M2 <- MEM	
-				LoadReg(RX) := '1';	-- LRx <- 1	
-				IncPC := '1';  		-- IncPC <- 1	
+				M1 <= PC;				-- Endereçando memória com o PC
+				Rw <= '0';				-- Deixando a memória no estado de leitura
+				selM2 := sMeM; 		    -- Selecionando o barramento de dados para a entrada das registradoras
+				LoadReg(RX) := '1';	    -- Permitindo escrever na registradora de destino
+				IncPC := '1';  		    -- Indo para a próxima instrução
 				state := fetch;
 			END IF;		
 
 
 --========================================================================
 -- LOAD Direto  			RX <- M[End]
---========================================================================		
-			IF(IR(15 DOWNTO 10) = LOAD) THEN -- Busca o endereco
-				M1 <= PC;
-				RW <= '0';
-				loadMar := '1';
-				IncpPC := '1';
-				state := exec;  -- Vai para o estado de Executa para buscar o dado do endereco
+--========================================================================
+			--  Load direto carrega na registradra RX o valor armazenado no
+			-- endereço de memória (End). Tipo: load a0, 0x458
+			--  O que significa que o endereço que desejamos olhar
+			-- o valor ja esta sendo apontado pelo program counter e no estado
+			-- de fetch é necesssario apenas coleta-lo para que seja possivel
+			-- endereçar a memória com ele no estado de execução
+			IF(IR(15 DOWNTO 10) = LOAD) THEN
+				M1 <= PC;       -- Endereçar a memória pelo PC
+				RW <= '0';      -- Ler da memória o endereço para dar load
+				loadMar := '1'; -- Carregar na memory adress register o endereço
+				IncPC := '1';	-- Incremetar o PC counter para apontar para próxima instrução
+				state := exec;  -- Vai para o estado de Executa para ler o dado do endereco
 			END IF;			
 			
-				
-
 --========================================================================
 -- STORE   DIReto			M[END] <- RX
---========================================================================			
-			IF(IR(15 DOWNTO 10) = STORE) THEN  -- Busca o endereco
-				
-				incPC := '1'
-				state := exec;  -- Vai para o estado de Executa para gravar Registrador no endereco
+--========================================================================
+			--  O store carrega o valor de uma registradora em um endereço
+			-- da memória.
+			--  Essa instrução é analoga a load direto, a unica diferença é 
+			-- que no estado de execução iremos escrever na memória e não ler 
+			-- dela.
+			IF(IR(15 DOWNTO 10) = STORE) THEN 
+				M1 <= PC;       -- Exatamente igual a load
+				RW <= '0'; 
+				loadMar := '1';
+				incPC := '1';
+				state := exec; 
 			END IF;					
 
 --========================================================================
 -- LOAD Indexado por registrador 			RX <- M(RY)
---========================================================================		
+--========================================================================
+			--  Mesma coisa que o load normal, porém o endereço ja esta
+			-- em uma registradora
 			IF(IR(15 DOWNTO 10) = LOADINDEX) THEN
-				M4 := REG(RY);      --M4 seleciona a registradora y
-				M1 <= M4;           --M1 recebe o input de ry
-				RW <= '0';          --ler algo da memoria
-				selM2 := sMEM;      --Mux 2 recebe valor da memoria
-				LoadReg(RX) := '1'; -- Colocar o dado em rx
+				M4 := REG(RY);      -- M4 seleciona a registradora y
+				M1 <= M4;           -- Endereçado a memoria peala registradora y, selecionada por M4
+				RW <= '0';          -- Colocando a memoria como leitura
+				selM2 := sMEM;      -- Selecionando o barramento de dados para a entrada das registradoras
+				LoadReg(RX) := '1'; -- Escrever o dado em RX
 				state := fetch;
 			END IF;					
 		
 --========================================================================
 -- STORE indexado por registrador 			M[RX] <- RY
---========================================================================		
+--========================================================================	
+			--   Mesma coisa que o load indexado, só que agora é escrito
+			-- o conteudo de Ry no endereço da registradora RX
 			IF(IR(15 DOWNTO 10) = STOREINDEX) THEN 
-				M4 := REG(RX);      --M4 seleciona a registradora y
-				M1 <= M4;           --M1 recebe o input de ry
-				RW <= '1';          --
-				
-				M3 := REG(RY);
-				M5 <= M3;
+				M4 := REG(RX);      -- M4 seleciona a registradora RX
+				M1 <= M4;           -- M1 recebe o input de RX, seleionado por M4
+				RW <= '1';          -- Colocando memoria como escrita
+				M3 := REG(RY);      -- M3 seleciona a registradra RY
+				M5 <= M3;           -- M5 seleciona o conteudo de RY, selecionado por M3
 				state := fetch;
 			END IF;					
-		
-
-			
 
 --========================================================================
 -- MOV  			RX/SP <- RY/SP
@@ -407,17 +422,21 @@ begin
 -- MOV RX SP    RX <- SP         Format: < inst(6) | RX(3) | xxx | xx | 01 >
 -- MOV SP RX    SP <- RX         Format: < inst(6) | RX(3) | xxx | xx | 11 >
 
---========================================================================		
+--========================================================================	
+			--  Copia o conteudo de uma registradora RY para uma registradora
+			-- RX. Essa função tem um brainrot de que voce também pode copiar
+			-- o conteudo de stack pointer, ou pode mover conteudo para o stack
+			-- pointer
 			IF(IR(15 DOWNTO 10) = MOV) THEN 
 				IF(IR(0) = '0') THEN
 					M4 := Reg(Ry);      -- Selecionando ry no mux 4
-					M2 := sM4;          -- Selicionando o mux 4 no mux 2
-					loadReg(RX) := '1'; -- Permitindo que RX seja carregado
-				ELSIF (IR(1) = '0') THEN
-					selM2 := sSP;       -- Carregar o stack pointer na RX       
-					loadReg(RX) = '1';
-				ELSE
-					M4 := Reg(Rx);      -- Colocar o valor de RX no stack pointer
+					selm2 := sM4;       -- M2 seleciona o conteudo de RY, selecionado por M4
+					loadReg(RX) := '1'; -- Carregando o valor de RY em RX
+				ELSIF (IR(1) = '0') THEN  -- trazendo o valor de SP para RX
+					selM2 := sSP;       -- M2 seleciona o conteudo do stack pointer      
+					loadReg(RX) := '1'; -- Carregando o valor de SP em RX
+				ELSE                       -- Colocando o valor de RX em SP
+					M4 := Reg(Rx);     
 					LOADSP := '1';
 				END IF;
 				state := fetch;
@@ -426,47 +445,49 @@ begin
 --========================================================================
 -- ARITH OPERATION ('INC' NOT INCLUDED) 			RX <- RY (?) RZ
 --========================================================================
+			-- São todas as operações aritimeticas. Tudo a ser feito ja vém 
+			-- com a instrução, é necessario apenas selecionar as respectivas registradoras
+			-- como argumentos da ULA
 			IF(IR(15 DOWNTO 14) = ARITH AND IR(13 DOWNTO 10) /= INC) THEN
 					M3 := Reg(RY); -- Ordem de selecao importa para a operacao
 					m4 := Reg(RZ);
 					X <= M3; 		-- X e Y sao as entradas da ula
 					Y <= M4;
-					OP(5 downto 4) <= ARITH; -- Que Ã© aritimetica
+					OP(5 downto 4) <= ARITH; -- Colocando que sera uma op aritimetica
 					OP(3 downto 0) <= IR(13 downto 10); --Qual a operacao que sera feita
-					OP(6) <= IR(0); --Seleciona se e com carry ou nao 
+					OP(6) <= IR(0);     --Seleciona se é com carry ou nao 
 					selM2 := sULA;      -- Selecionando o output da ula no mux recebedor
 					loadReg(RX) := '1'; -- Caregando na registradora rx
 					
 					-- Colocando a parte das flags para receber da ula
 					selM6 := sULA;
-					LOADFR := '1'
+					LOADFR := '1';
 				state := fetch;
 			END IF;
 			
 --========================================================================
 -- INC/DEC			RX <- RX (+ or -) 1
 --========================================================================	
-			-- O incremetar e em essencia o ++ ou --
+			-- O que se quer dizer com incremetar é o ++ e o --, mesma coisa
+			-- que a operação aritimetica normal só que agora obrigatoriamente
+			-- o segundo argumento é 1
 			IF(IR(15 DOWNTO 14) = ARITH AND (IR(13 DOWNTO 10) = INC))	THEN
 					M3 := Reg(RY); 
-					m4 := x"0001"; 	-- So inicializa para o valor 1 porque nao e necessario carregar de uma reg
+					m4 := x"0001"; 	-- Como é sempre por 1 o incremento e decremento não é necessario colocar o valor de uma registradora
 					X <= M3;       	-- Colocar os valores da operacao na ULA
 					Y <= M4;				 
 					OP(5 downto 4) <= ARITH; 
-					IF (IR(6) = 0) THEN
+					IF (IR(6) = '0') THEN
 						OP(3 downto 0) <= ADD;
 					ELSE 
 						OP(3 downto 0) <= SUB;
 					END IF;
-					
-					OP(3 downto 0) <= ADD; 
 					OP(6) <= IR(0);
 					selM2 := sULA;     
 					loadReg(RX) := '1'; 
 					
-
 					selM6 := sULA;
-					LOADFR := '1'
+					LOADFR := '1';
 				state := fetch;
 			END IF;
 			
@@ -629,19 +650,27 @@ begin
 --========================================================================
 -- EXEC LOAD DIReto  			RX <- M[END]
 --========================================================================
+			--  Neste estado o endereço ja esta no MAR, portanto é necessario
+			-- apenas que a memória seja indexada pelo endereço e o valor seja
+			-- salvo na registradora de destino
 			IF(IR(15 DOWNTO 10) = LOAD) THEN
-				M1 <= MAR;
-				RW <= '0';
-				selM2 := sMEM;
-				loadReg(RX) := '1';
+				M1 <= MAR;          -- Endereçando memória pelo MAR
+				RW <= '0';          -- Colocando a memória como leitura
+				selM2 := sMEM;      -- Colocando os inputs das registradoras como a memória
+				loadReg(RX) := '1'; -- Carregando na registradora de destino
 				state := fetch;
 			END IF;
 							
 --========================================================================
 -- EXEC STORE DIReto 			M[END] <- RX
 --========================================================================
+			--    Mesma coisa que o load, só agora é escrevido os conteudos da
+			-- registradora na memoria.
 			IF(IR(15 DOWNTO 10) = STORE) THEN 
-				
+				M1 <= MAR;      -- Endereçando a memória pelo MAR
+				RW <= '1';      -- Colocando a memória como escrita 
+				M3 := REG(RX);  -- M3 Recebe o conteudo da registradora rx
+				M5 <= M3;       -- M5 recebe o conteudo da registradora rx passado por M3
 				state := fetch;
 			END IF;
 						
