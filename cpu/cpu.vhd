@@ -340,16 +340,16 @@ begin
 --========================================================================
 -- LOAD Imediato 			RX <- Nr
 --========================================================================	
-			--  O imediato esta localizado na próxima posição da memória
-			-- e o program counter ja aponta para ela, portanto é necessario
-			-- apenas resgatar o valor da memória, coloca-lo na registradora
-			-- e deixar o PC na próxima instrução
+			--  O imediato esta localizado na prï¿½xima posiï¿½ï¿½o da memï¿½ria
+			-- e o program counter ja aponta para ela, portanto ï¿½ necessario
+			-- apenas resgatar o valor da memï¿½ria, coloca-lo na registradora
+			-- e deixar o PC na prï¿½xima instruï¿½ï¿½o
 			IF(IR(15 DOWNTO 10) = LOADIMED) THEN
-				M1 <= PC;				-- Endereçando memória com o PC
-				Rw <= '0';				-- Deixando a memória no estado de leitura
+				M1 <= PC;				-- Endereï¿½ando memï¿½ria com o PC
+				Rw <= '0';				-- Deixando a memï¿½ria no estado de leitura
 				selM2 := sMeM; 		    -- Selecionando o barramento de dados para a entrada das registradoras
 				LoadReg(RX) := '1';	    -- Permitindo escrever na registradora de destino
-				IncPC := '1';  		    -- Indo para a próxima instrução
+				IncPC := '1';  		    -- Indo para a prï¿½xima instruï¿½ï¿½o
 				state := fetch;
 			END IF;		
 
@@ -358,26 +358,26 @@ begin
 -- LOAD Direto  			RX <- M[End]
 --========================================================================
 			--  Load direto carrega na registradra RX o valor armazenado no
-			-- endereço de memória (End). Tipo: load a0, 0x458
-			--  O que significa que o endereço que desejamos olhar
+			-- endereï¿½o de memï¿½ria (End). Tipo: load a0, 0x458
+			--  O que significa que o endereï¿½o que desejamos olhar
 			-- o valor ja esta sendo apontado pelo program counter e no estado
-			-- de fetch é necesssario apenas coleta-lo para que seja possivel
-			-- endereçar a memória com ele no estado de execução
+			-- de fetch ï¿½ necesssario apenas coleta-lo para que seja possivel
+			-- endereï¿½ar a memï¿½ria com ele no estado de execuï¿½ï¿½o
 			IF(IR(15 DOWNTO 10) = LOAD) THEN
-				M1 <= PC;       -- Endereçar a memória pelo PC
-				RW <= '0';      -- Ler da memória o endereço para dar load
-				loadMar := '1'; -- Carregar na memory adress register o endereço
-				IncPC := '1';	-- Incremetar o PC counter para apontar para próxima instrução
+				M1 <= PC;       -- Endereï¿½ar a memï¿½ria pelo PC
+				RW <= '0';      -- Ler da memï¿½ria o endereï¿½o para dar load
+				loadMar := '1'; -- Carregar na memory adress register o endereï¿½o
+				IncPC := '1';	-- Incremetar o PC counter para apontar para prï¿½xima instruï¿½ï¿½o
 				state := exec;  -- Vai para o estado de Executa para ler o dado do endereco
 			END IF;			
 			
 --========================================================================
 -- STORE   DIReto			M[END] <- RX
 --========================================================================
-			--  O store carrega o valor de uma registradora em um endereço
-			-- da memória.
-			--  Essa instrução é analoga a load direto, a unica diferença é 
-			-- que no estado de execução iremos escrever na memória e não ler 
+			--  O store carrega o valor de uma registradora em um endereï¿½o
+			-- da memï¿½ria.
+			--  Essa instruï¿½ï¿½o ï¿½ analoga a load direto, a unica diferenï¿½a ï¿½ 
+			-- que no estado de execuï¿½ï¿½o iremos escrever na memï¿½ria e nï¿½o ler 
 			-- dela.
 			IF(IR(15 DOWNTO 10) = STORE) THEN 
 				M1 <= PC;       -- Exatamente igual a load
@@ -390,11 +390,11 @@ begin
 --========================================================================
 -- LOAD Indexado por registrador 			RX <- M(RY)
 --========================================================================
-			--  Mesma coisa que o load normal, porém o endereço ja esta
+			--  Mesma coisa que o load normal, porï¿½m o endereï¿½o ja esta
 			-- em uma registradora
 			IF(IR(15 DOWNTO 10) = LOADINDEX) THEN
 				M4 := REG(RY);      -- M4 seleciona a registradora y
-				M1 <= M4;           -- Endereçado a memoria peala registradora y, selecionada por M4
+				M1 <= M4;           -- Endereï¿½ado a memoria peala registradora y, selecionada por M4
 				RW <= '0';          -- Colocando a memoria como leitura
 				selM2 := sMEM;      -- Selecionando o barramento de dados para a entrada das registradoras
 				LoadReg(RX) := '1'; -- Escrever o dado em RX
@@ -404,8 +404,8 @@ begin
 --========================================================================
 -- STORE indexado por registrador 			M[RX] <- RY
 --========================================================================	
-			--   Mesma coisa que o load indexado, só que agora é escrito
-			-- o conteudo de Ry no endereço da registradora RX
+			--   Mesma coisa que o load indexado, sï¿½ que agora ï¿½ escrito
+			-- o conteudo de Ry no endereï¿½o da registradora RX
 			IF(IR(15 DOWNTO 10) = STOREINDEX) THEN 
 				M4 := REG(RX);      -- M4 seleciona a registradora RX
 				M1 <= M4;           -- M1 recebe o input de RX, seleionado por M4
@@ -424,7 +424,7 @@ begin
 
 --========================================================================	
 			--  Copia o conteudo de uma registradora RY para uma registradora
-			-- RX. Essa função tem um brainrot de que voce também pode copiar
+			-- RX. Essa funï¿½ï¿½o tem um brainrot de que voce tambï¿½m pode copiar
 			-- o conteudo de stack pointer, ou pode mover conteudo para o stack
 			-- pointer
 			IF(IR(15 DOWNTO 10) = MOV) THEN 
@@ -445,8 +445,8 @@ begin
 --========================================================================
 -- ARITH OPERATION ('INC' NOT INCLUDED) 			RX <- RY (?) RZ
 --========================================================================
-			-- São todas as operações aritimeticas. Tudo a ser feito ja vém 
-			-- com a instrução, é necessario apenas selecionar as respectivas registradoras
+			-- Sï¿½o todas as operaï¿½ï¿½es aritimeticas. Tudo a ser feito ja vï¿½m 
+			-- com a instruï¿½ï¿½o, ï¿½ necessario apenas selecionar as respectivas registradoras
 			-- como argumentos da ULA
 			IF(IR(15 DOWNTO 14) = ARITH AND IR(13 DOWNTO 10) /= INC) THEN
 					M3 := Reg(RY); -- Ordem de selecao importa para a operacao
@@ -455,7 +455,7 @@ begin
 					Y <= M4;
 					OP(5 downto 4) <= ARITH; -- Colocando que sera uma op aritimetica
 					OP(3 downto 0) <= IR(13 downto 10); --Qual a operacao que sera feita
-					OP(6) <= IR(0);     --Seleciona se é com carry ou nao 
+					OP(6) <= IR(0);     --Seleciona se ï¿½ com carry ou nao 
 					selM2 := sULA;      -- Selecionando o output da ula no mux recebedor
 					loadReg(RX) := '1'; -- Caregando na registradora rx
 					
@@ -468,12 +468,12 @@ begin
 --========================================================================
 -- INC/DEC			RX <- RX (+ or -) 1
 --========================================================================	
-			-- O que se quer dizer com incremetar é o ++ e o --, mesma coisa
-			-- que a operação aritimetica normal só que agora obrigatoriamente
-			-- o segundo argumento é 1
+			-- O que se quer dizer com incremetar ï¿½ o ++ e o --, mesma coisa
+			-- que a operaï¿½ï¿½o aritimetica normal sï¿½ que agora obrigatoriamente
+			-- o segundo argumento ï¿½ 1
 			IF(IR(15 DOWNTO 14) = ARITH AND (IR(13 DOWNTO 10) = INC))	THEN
 					M3 := Reg(RY); 
-					m4 := x"0001"; 	-- Como é sempre por 1 o incremento e decremento não é necessario colocar o valor de uma registradora
+					m4 := x"0001"; 	-- Como ï¿½ sempre por 1 o incremento e decremento nï¿½o ï¿½ necessario colocar o valor de uma registradora
 					X <= M3;       	-- Colocar os valores da operacao na ULA
 					Y <= M4;				 
 					OP(5 downto 4) <= ARITH; 
@@ -494,8 +494,21 @@ begin
 --========================================================================
 -- LOGIC OPERATION ('SHIFT', and 'CMP'  NOT INCLUDED)  			RX <- RY (?) RZ
 --========================================================================		
+			-- Mesma coisa que a aritimetica so que em vez de ARITH fazer a operacao
+			-- de LOGIc 
 			IF(IR(15 DOWNTO 14) = LOGIC AND IR(13 DOWNTO 10) /= SHIFT AND IR(13 DOWNTO 10) /= CMP) THEN 
-				
+					M3 := Reg(RY); 
+					m4 := Reg(RZ);
+					X <= M3; 		
+					Y <= M4;
+					OP(5 downto 4) <= LOGIC; 
+					OP(3 downto 0) <= IR(13 downto 10); 
+					OP(6) <= IR(0);     
+					selM2 := sULA;     
+					loadReg(RX) := '1'; 
+					
+					selM6 := sULA;
+					LOADFR := '1';
 				state := fetch;
 			END IF;			
 		
@@ -524,9 +537,21 @@ begin
 
 --========================================================================
 -- CMP		RX, RY
---========================================================================		
+--========================================================================	
+			-- Mesma coisa que as logicas
 			IF(IR(15 DOWNTO 14) = LOGIC AND IR(13 DOWNTO 10) = CMP) THEN 
-				
+					M3 := Reg(RX); 
+					m4 := Reg(RY);
+					X <= M3; 		
+					Y <= M4;
+					OP(5 downto 4) <= LOGIC; 
+					OP(3 downto 0) <= CMP; 
+					OP(6) <= IR(0);     
+					selM2 := sULA;     
+					
+					selM6 := sULA;
+					LOADFR := '1';
+	
 				state := fetch;
 			END IF;
 		
@@ -568,14 +593,37 @@ begin
 -- JMP Condition: (UNconditional, EQual, Not Equal, Zero, Not Zero, CarRY, Not CarRY, GReater, LEsser, Equal or Greater, Equal or Lesser, OVerflow, Not OVerflow, Negative, DIVbyZero, NOT USED)	
 --========================================================================
 			IF(IR(15 DOWNTO 10) = CALL) THEN 
-				
+				IF((IR(9 DOWNTO 6) = "0000") OR
+				((IR(9 DOWNTO 6) = "0111") AND FR(0) = '1') OR
+				((IR(9 DOWNTO 6) = "1001") AND (FR(2) = '1' OR FR(0) = '1')) OR
+				((IR(9 DOWNTO 6) = "1000") AND FR(1) = '1') OR
+				((IR(9 DOWNTO 6) = "1010") AND (FR(2) = '1' OR FR(1) = '1')) OR
+				((IR(9 DOWNTO 6) = "0001") AND FR(2) = '1') OR
+				((IR(9 DOWNTO 6) = "0010") AND FR(2) = '0') OR
+				((IR(9 DOWNTO 6) = "0011") AND FR(3) = '1') OR
+				((IR(9 DOWNTO 6) = "0100") AND FR(3) = '0') OR
+				((IR(9 DOWNTO 6) = "0101") AND FR(4) = '1') OR
+				((IR(9 DOWNTO 6) = "0110") AND FR(4) = '0') OR
+				((IR(9 DOWNTO 6) = "1011") AND FR(5) = '1') OR
+				((IR(9 DOWNTO 6) = "1100") AND FR(5) = '0') OR
+				((IR(9 DOWNTO 6) = "1101") AND FR(6) = '1') OR
+				((IR(9 DOWNTO 6) = "1110") AND FR(9) = '1')) THEN
+					M1 <= SP;
+					rw <= '1';
+					M5 <= PC;
+					DecSP := '1';
+					state := exec;
+				ELSE 
+					IncPC := '1';
+					state := fetch;
+				END IF;
 			END IF;
 
 --========================================================================
 -- RTS 			PC <- Mem[SP]
 --========================================================================				
 			IF(IR(15 DOWNTO 10) = RTS) THEN
-
+					IncSp := '1';
 				state := exec;
 			END IF;
 
@@ -650,13 +698,13 @@ begin
 --========================================================================
 -- EXEC LOAD DIReto  			RX <- M[END]
 --========================================================================
-			--  Neste estado o endereço ja esta no MAR, portanto é necessario
-			-- apenas que a memória seja indexada pelo endereço e o valor seja
+			--  Neste estado o endereï¿½o ja esta no MAR, portanto ï¿½ necessario
+			-- apenas que a memï¿½ria seja indexada pelo endereï¿½o e o valor seja
 			-- salvo na registradora de destino
 			IF(IR(15 DOWNTO 10) = LOAD) THEN
-				M1 <= MAR;          -- Endereçando memória pelo MAR
-				RW <= '0';          -- Colocando a memória como leitura
-				selM2 := sMEM;      -- Colocando os inputs das registradoras como a memória
+				M1 <= MAR;          -- Endereï¿½ando memï¿½ria pelo MAR
+				RW <= '0';          -- Colocando a memï¿½ria como leitura
+				selM2 := sMEM;      -- Colocando os inputs das registradoras como a memï¿½ria
 				loadReg(RX) := '1'; -- Carregando na registradora de destino
 				state := fetch;
 			END IF;
@@ -664,11 +712,11 @@ begin
 --========================================================================
 -- EXEC STORE DIReto 			M[END] <- RX
 --========================================================================
-			--    Mesma coisa que o load, só agora é escrevido os conteudos da
+			--    Mesma coisa que o load, sï¿½ agora ï¿½ escrevido os conteudos da
 			-- registradora na memoria.
 			IF(IR(15 DOWNTO 10) = STORE) THEN 
-				M1 <= MAR;      -- Endereçando a memória pelo MAR
-				RW <= '1';      -- Colocando a memória como escrita 
+				M1 <= MAR;      -- Endereï¿½ando a memï¿½ria pelo MAR
+				RW <= '1';      -- Colocando a memï¿½ria como escrita 
 				M3 := REG(RX);  -- M3 Recebe o conteudo da registradora rx
 				M5 <= M3;       -- M5 recebe o conteudo da registradora rx passado por M3
 				state := fetch;
@@ -679,7 +727,10 @@ begin
 -- EXEC CALL    Pilha <- PC e PC <- 16bit END :
 --========================================================================
 			IF(IR(15 DOWNTO 10) = CALL) THEN
-				
+					M1 <= PC;				-- M1 <- PC
+					Rw <= '0';				-- Rw <= '0'
+					LoadPC := '1';			-- LoadPC <- 1
+					
 				state := fetch;
 			END IF;
 
@@ -687,7 +738,10 @@ begin
 -- EXEC RTS 			PC <- Mem[SP]
 --========================================================================
 			IF(IR(15 DOWNTO 10) = RTS) THEN
-				
+					M1 <= PC;				-- M1 <- PC
+					Rw <= '0';				-- Rw <= '0'
+					LoadPC := '1';			-- LoadPC <- 1
+					
 				state := exec2;
 			END IF;
 			
@@ -711,7 +765,7 @@ begin
 -- EXEC2 RTS 			PC <- Mem[SP]
 --========================================================================
 			IF(IR(15 DOWNTO 10) = RTS) THEN
-				
+					IncPC := '1';
 				state := fetch;
 			END IF;				
 
