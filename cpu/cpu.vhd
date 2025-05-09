@@ -472,7 +472,7 @@ begin
 			-- que a opera��o aritimetica normal s� que agora obrigatoriamente
 			-- o segundo argumento � 1
 			IF(IR(15 DOWNTO 14) = ARITH AND (IR(13 DOWNTO 10) = INC))	THEN
-					M3 := Reg(RY); 
+					M3 := Reg(RX); 
 					m4 := x"0001"; 	-- Como � sempre por 1 o incremento e decremento n�o � necessario colocar o valor de uma registradora
 					X <= M3;       	-- Colocar os valores da operacao na ULA
 					Y <= M4;				 
@@ -631,7 +631,18 @@ begin
 -- PUSH RX
 --========================================================================		
 			IF(IR(15 DOWNTO 10) = PUSH) THEN
-				
+					M1 <= SP;
+					RW <= '1';
+					
+					IF (IR(6) = '0') THEN
+						M3 := Reg(Rx);
+					ELSE 
+						M3 := FR;
+					END IF;
+					
+					M5 <= M3;
+					DecSP := '1';
+					
 				state := fetch;
 			END IF;
 		
@@ -639,7 +650,7 @@ begin
 -- POP RX
 --========================================================================
 			IF(IR(15 DOWNTO 10) = POP) THEN
-				
+					IncSP := '1';
 				state := exec;
 			END IF;						
 				
@@ -749,7 +760,17 @@ begin
 -- EXEC POP RX/FR
 --========================================================================
 			IF(IR(15 DOWNTO 10) = POP) THEN
-				
+					M1 <= SP;
+					RW <= '0';
+					
+					IF (IR(6) = '0') THEN
+						selM2 := sMEM;
+						LoadReg(RX) := '1';
+					ELSE 
+						selM6 := sMEM;
+						LoadFR := '1';
+					END IF;
+					
 				state := fetch;
 			END IF;		
 		

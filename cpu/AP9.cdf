@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("C:/Users/15491959/cpu/cpu/") File("AP9.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/15491959/Desktop/trab_simas_cpu/cpu/") File("AP9.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

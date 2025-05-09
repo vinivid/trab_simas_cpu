@@ -1,5 +1,5 @@
 Timing Analyzer report for AP9
-Fri Apr 25 18:08:15 2025
+Fri May  9 18:11:04 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -102,18 +102,18 @@ on the Quartus Prime software download page.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
-; Average used               ; 2.66        ;
+; Average used               ; 2.61        ;
 ; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  27.4%      ;
-;     Processor 3            ;  27.1%      ;
-;     Processor 4            ;  26.9%      ;
-;     Processor 5            ;  21.2%      ;
-;     Processor 6            ;  21.2%      ;
-;     Processor 7            ;  21.2%      ;
-;     Processor 8            ;  21.2%      ;
+;     Processor 2            ;  27.2%      ;
+;     Processor 3            ;  26.8%      ;
+;     Processor 4            ;  26.6%      ;
+;     Processor 5            ;  20.2%      ;
+;     Processor 6            ;  20.2%      ;
+;     Processor 7            ;  20.2%      ;
+;     Processor 8            ;  20.2%      ;
 +----------------------------+-------------+
 
 
@@ -146,20 +146,20 @@ on the Quartus Prime software download page.
 +------------+-----------------+------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                     ; Note ;
 +------------+-----------------+------------------------------------------------+------+
-; 24.93 MHz  ; 24.93 MHz       ; SW[8]                                          ;      ;
-; 69.53 MHz  ; 69.53 MHz       ; CLOCK_50                                       ;      ;
-; 115.29 MHz ; 115.29 MHz      ; cpu:inst12|OP[4]                               ;      ;
-; 126.42 MHz ; 126.42 MHz      ; PS2_CLK                                        ;      ;
-; 153.92 MHz ; 153.92 MHz      ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ;      ;
-; 247.1 MHz  ; 247.1 MHz       ; clk_div:inst25|clock_1KHz                      ;      ;
-; 307.22 MHz ; 307.22 MHz      ; clk_div:inst25|clock_100hz_int                 ;      ;
-; 309.89 MHz ; 309.89 MHz      ; clk_div:inst25|clock_1Khz_int                  ;      ;
-; 324.99 MHz ; 324.99 MHz      ; clk_div:inst25|clock_100Khz_int                ;      ;
-; 353.23 MHz ; 353.23 MHz      ; clk_div:inst25|clock_10Khz_int                 ;      ;
-; 362.06 MHz ; 362.06 MHz      ; clk_div:inst25|clock_1Mhz_int                  ;      ;
-; 364.43 MHz ; 364.43 MHz      ; dec_keyboard:inst11|f3                         ;      ;
-; 390.47 MHz ; 390.47 MHz      ; clk_div:inst25|clock_10Hz_int                  ;      ;
-; 438.6 MHz  ; 438.6 MHz       ; clk_div:inst25|clock_100KHz                    ;      ;
+; 25.39 MHz  ; 25.39 MHz       ; SW[8]                                          ;      ;
+; 78.41 MHz  ; 78.41 MHz       ; CLOCK_50                                       ;      ;
+; 109.46 MHz ; 109.46 MHz      ; cpu:inst12|OP[4]                               ;      ;
+; 123.56 MHz ; 123.56 MHz      ; PS2_CLK                                        ;      ;
+; 150.58 MHz ; 150.58 MHz      ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ;      ;
+; 310.75 MHz ; 310.75 MHz      ; clk_div:inst25|clock_1Mhz_int                  ;      ;
+; 313.97 MHz ; 313.97 MHz      ; clk_div:inst25|clock_1Khz_int                  ;      ;
+; 335.35 MHz ; 335.35 MHz      ; clk_div:inst25|clock_100hz_int                 ;      ;
+; 338.98 MHz ; 338.98 MHz      ; clk_div:inst25|clock_10Khz_int                 ;      ;
+; 366.3 MHz  ; 366.3 MHz       ; dec_keyboard:inst11|f3                         ;      ;
+; 371.2 MHz  ; 371.2 MHz       ; clk_div:inst25|clock_100Khz_int                ;      ;
+; 389.71 MHz ; 389.71 MHz      ; clk_div:inst25|clock_1KHz                      ;      ;
+; 390.32 MHz ; 390.32 MHz      ; clk_div:inst25|clock_10Hz_int                  ;      ;
+; 453.93 MHz ; 453.93 MHz      ; clk_div:inst25|clock_100KHz                    ;      ;
 +------------+-----------------+------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -175,20 +175,20 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------+---------+---------------+
 ; Clock                                          ; Slack   ; End Point TNS ;
 +------------------------------------------------+---------+---------------+
-; cpu:inst12|OP[4]                               ; -42.490 ; -671.634      ;
-; SW[8]                                          ; -39.117 ; -5897.333     ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -21.553 ; -1335.807     ;
-; dec_keyboard:inst11|f3                         ; -9.744  ; -87.344       ;
-; PS2_CLK                                        ; -6.910  ; -58.016       ;
-; CLOCK_50                                       ; -6.887  ; -16167.221    ;
-; clk_div:inst25|clock_1KHz                      ; -3.047  ; -7.062        ;
-; clk_div:inst25|clock_100hz_int                 ; -2.255  ; -8.390        ;
-; clk_div:inst25|clock_1Khz_int                  ; -2.227  ; -10.980       ;
-; clk_div:inst25|clock_100Khz_int                ; -2.077  ; -10.756       ;
-; clk_div:inst25|clock_10Khz_int                 ; -1.831  ; -8.921        ;
-; clk_div:inst25|clock_1Mhz_int                  ; -1.762  ; -8.431        ;
-; clk_div:inst25|clock_10Hz_int                  ; -1.561  ; -11.881       ;
-; clk_div:inst25|clock_100KHz                    ; -1.280  ; -5.316        ;
+; cpu:inst12|OP[4]                               ; -43.147 ; -681.699      ;
+; SW[8]                                          ; -38.380 ; -5213.788     ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -20.966 ; -1305.558     ;
+; dec_keyboard:inst11|f3                         ; -9.682  ; -90.967       ;
+; PS2_CLK                                        ; -7.093  ; -61.282       ;
+; CLOCK_50                                       ; -6.060  ; -13715.948    ;
+; clk_div:inst25|clock_1Mhz_int                  ; -2.218  ; -9.360        ;
+; clk_div:inst25|clock_1Khz_int                  ; -2.185  ; -8.986        ;
+; clk_div:inst25|clock_100hz_int                 ; -1.982  ; -9.341        ;
+; clk_div:inst25|clock_10Khz_int                 ; -1.950  ; -8.359        ;
+; clk_div:inst25|clock_100Khz_int                ; -1.694  ; -8.672        ;
+; clk_div:inst25|clock_1KHz                      ; -1.693  ; -4.997        ;
+; clk_div:inst25|clock_10Hz_int                  ; -1.562  ; -9.394        ;
+; clk_div:inst25|clock_100KHz                    ; -1.203  ; -4.156        ;
 +------------------------------------------------+---------+---------------+
 
 
@@ -197,20 +197,20 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; SW[8]                                          ; -3.834 ; -25.986       ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -1.404 ; -1.404        ;
-; CLOCK_50                                       ; 0.261  ; 0.000         ;
-; clk_div:inst25|clock_100Khz_int                ; 0.340  ; 0.000         ;
-; clk_div:inst25|clock_10Khz_int                 ; 0.446  ; 0.000         ;
-; clk_div:inst25|clock_100hz_int                 ; 0.457  ; 0.000         ;
-; PS2_CLK                                        ; 0.459  ; 0.000         ;
-; clk_div:inst25|clock_1Khz_int                  ; 0.537  ; 0.000         ;
-; clk_div:inst25|clock_1Mhz_int                  ; 0.570  ; 0.000         ;
-; clk_div:inst25|clock_1KHz                      ; 0.646  ; 0.000         ;
-; clk_div:inst25|clock_10Hz_int                  ; 0.783  ; 0.000         ;
-; clk_div:inst25|clock_100KHz                    ; 0.807  ; 0.000         ;
-; dec_keyboard:inst11|f3                         ; 0.861  ; 0.000         ;
-; cpu:inst12|OP[4]                               ; 0.959  ; 0.000         ;
+; SW[8]                                          ; -0.816 ; -1.985        ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 0.081  ; 0.000         ;
+; CLOCK_50                                       ; 0.263  ; 0.000         ;
+; clk_div:inst25|clock_10Khz_int                 ; 0.308  ; 0.000         ;
+; clk_div:inst25|clock_100hz_int                 ; 0.419  ; 0.000         ;
+; PS2_CLK                                        ; 0.443  ; 0.000         ;
+; clk_div:inst25|clock_100Khz_int                ; 0.466  ; 0.000         ;
+; clk_div:inst25|clock_1Mhz_int                  ; 0.569  ; 0.000         ;
+; clk_div:inst25|clock_1Khz_int                  ; 0.603  ; 0.000         ;
+; clk_div:inst25|clock_1KHz                      ; 0.711  ; 0.000         ;
+; clk_div:inst25|clock_100KHz                    ; 0.767  ; 0.000         ;
+; clk_div:inst25|clock_10Hz_int                  ; 0.867  ; 0.000         ;
+; dec_keyboard:inst11|f3                         ; 0.890  ; 0.000         ;
+; cpu:inst12|OP[4]                               ; 1.015  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -219,8 +219,8 @@ HTML report is unavailable in plain text report export.
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; keyboard:inst14|ready_set  ; -1.626 ; -1.626        ;
-; keyboard:inst14|scan_ready ; -1.473 ; -1.473        ;
+; keyboard:inst14|ready_set  ; -1.316 ; -1.316        ;
+; keyboard:inst14|scan_ready ; -1.308 ; -1.308        ;
 +----------------------------+--------+---------------+
 
 
@@ -229,8 +229,8 @@ HTML report is unavailable in plain text report export.
 +----------------------------+-------+---------------+
 ; Clock                      ; Slack ; End Point TNS ;
 +----------------------------+-------+---------------+
-; keyboard:inst14|ready_set  ; 0.401 ; 0.000         ;
-; keyboard:inst14|scan_ready ; 0.740 ; 0.000         ;
+; keyboard:inst14|ready_set  ; 0.519 ; 0.000         ;
+; keyboard:inst14|scan_ready ; 0.674 ; 0.000         ;
 +----------------------------+-------+---------------+
 
 
@@ -239,22 +239,22 @@ HTML report is unavailable in plain text report export.
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; CLOCK_50                                       ; -2.636 ; -15234.030    ;
-; SW[8]                                          ; -1.244 ; -668.467      ;
-; PS2_CLK                                        ; -0.575 ; -21.407       ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.561 ; -147.092      ;
-; dec_keyboard:inst11|f3                         ; -0.538 ; -8.636        ;
-; clk_div:inst25|clock_10Hz_int                  ; -0.538 ; -6.310        ;
-; clk_div:inst25|clock_100Khz_int                ; -0.538 ; -5.785        ;
-; clk_div:inst25|clock_1Khz_int                  ; -0.538 ; -5.573        ;
-; clk_div:inst25|clock_100KHz                    ; -0.538 ; -4.997        ;
-; clk_div:inst25|clock_10Khz_int                 ; -0.538 ; -4.625        ;
-; clk_div:inst25|clock_1Mhz_int                  ; -0.538 ; -4.611        ;
-; clk_div:inst25|clock_100hz_int                 ; -0.538 ; -4.038        ;
-; clk_div:inst25|clock_1KHz                      ; -0.538 ; -2.906        ;
-; keyboard:inst14|scan_ready                     ; -0.538 ; -0.914        ;
-; keyboard:inst14|ready_set                      ; -0.538 ; -0.813        ;
-; cpu:inst12|OP[4]                               ; 0.285  ; 0.000         ;
+; CLOCK_50                                       ; -2.636 ; -15234.502    ;
+; SW[8]                                          ; -1.079 ; -576.725      ;
+; PS2_CLK                                        ; -0.572 ; -24.760       ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.538 ; -132.698      ;
+; dec_keyboard:inst11|f3                         ; -0.538 ; -7.967        ;
+; clk_div:inst25|clock_10Hz_int                  ; -0.538 ; -5.396        ;
+; clk_div:inst25|clock_10Khz_int                 ; -0.538 ; -5.347        ;
+; clk_div:inst25|clock_1Mhz_int                  ; -0.538 ; -4.735        ;
+; clk_div:inst25|clock_100hz_int                 ; -0.538 ; -4.718        ;
+; clk_div:inst25|clock_1Khz_int                  ; -0.538 ; -4.663        ;
+; clk_div:inst25|clock_100Khz_int                ; -0.538 ; -4.613        ;
+; clk_div:inst25|clock_100KHz                    ; -0.538 ; -4.036        ;
+; clk_div:inst25|clock_1KHz                      ; -0.538 ; -2.494        ;
+; keyboard:inst14|scan_ready                     ; -0.538 ; -0.797        ;
+; keyboard:inst14|ready_set                      ; -0.538 ; -0.768        ;
+; cpu:inst12|OP[4]                               ; 0.108  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -270,20 +270,20 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------+-----------------+------------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                     ; Note ;
 +------------+-----------------+------------------------------------------------+------+
-; 23.89 MHz  ; 23.89 MHz       ; SW[8]                                          ;      ;
-; 72.35 MHz  ; 72.35 MHz       ; CLOCK_50                                       ;      ;
-; 116.96 MHz ; 116.96 MHz      ; cpu:inst12|OP[4]                               ;      ;
-; 126.2 MHz  ; 126.2 MHz       ; PS2_CLK                                        ;      ;
-; 144.24 MHz ; 144.24 MHz      ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ;      ;
-; 253.42 MHz ; 253.42 MHz      ; clk_div:inst25|clock_1KHz                      ;      ;
-; 305.72 MHz ; 305.72 MHz      ; clk_div:inst25|clock_100hz_int                 ;      ;
-; 306.84 MHz ; 306.84 MHz      ; clk_div:inst25|clock_1Khz_int                  ;      ;
-; 326.8 MHz  ; 326.8 MHz       ; clk_div:inst25|clock_100Khz_int                ;      ;
-; 354.86 MHz ; 354.86 MHz      ; clk_div:inst25|clock_1Mhz_int                  ;      ;
-; 354.99 MHz ; 354.99 MHz      ; clk_div:inst25|clock_10Khz_int                 ;      ;
-; 369.55 MHz ; 369.55 MHz      ; dec_keyboard:inst11|f3                         ;      ;
-; 383.73 MHz ; 383.73 MHz      ; clk_div:inst25|clock_10Hz_int                  ;      ;
-; 434.59 MHz ; 434.59 MHz      ; clk_div:inst25|clock_100KHz                    ;      ;
+; 24.53 MHz  ; 24.53 MHz       ; SW[8]                                          ;      ;
+; 80.59 MHz  ; 80.59 MHz       ; CLOCK_50                                       ;      ;
+; 112.03 MHz ; 112.03 MHz      ; cpu:inst12|OP[4]                               ;      ;
+; 122.88 MHz ; 122.88 MHz      ; PS2_CLK                                        ;      ;
+; 142.43 MHz ; 142.43 MHz      ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ;      ;
+; 311.62 MHz ; 311.62 MHz      ; clk_div:inst25|clock_1Mhz_int                  ;      ;
+; 312.4 MHz  ; 312.4 MHz       ; clk_div:inst25|clock_1Khz_int                  ;      ;
+; 339.56 MHz ; 339.56 MHz      ; clk_div:inst25|clock_100hz_int                 ;      ;
+; 339.67 MHz ; 339.67 MHz      ; clk_div:inst25|clock_10Khz_int                 ;      ;
+; 361.93 MHz ; 361.93 MHz      ; clk_div:inst25|clock_100Khz_int                ;      ;
+; 367.78 MHz ; 367.78 MHz      ; dec_keyboard:inst11|f3                         ;      ;
+; 381.39 MHz ; 381.39 MHz      ; clk_div:inst25|clock_10Hz_int                  ;      ;
+; 381.68 MHz ; 381.68 MHz      ; clk_div:inst25|clock_1KHz                      ;      ;
+; 455.79 MHz ; 455.79 MHz      ; clk_div:inst25|clock_100KHz                    ;      ;
 +------------+-----------------+------------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -293,20 +293,20 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------+---------+---------------+
 ; Clock                                          ; Slack   ; End Point TNS ;
 +------------------------------------------------+---------+---------------+
-; cpu:inst12|OP[4]                               ; -44.124 ; -696.662      ;
-; SW[8]                                          ; -40.851 ; -5848.324     ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -22.269 ; -1362.189     ;
-; dec_keyboard:inst11|f3                         ; -9.967  ; -88.830       ;
-; PS2_CLK                                        ; -6.924  ; -57.536       ;
-; CLOCK_50                                       ; -6.547  ; -14838.851    ;
-; clk_div:inst25|clock_1KHz                      ; -2.946  ; -6.815        ;
-; clk_div:inst25|clock_100hz_int                 ; -2.271  ; -8.687        ;
-; clk_div:inst25|clock_1Khz_int                  ; -2.259  ; -11.349       ;
-; clk_div:inst25|clock_100Khz_int                ; -2.060  ; -11.122       ;
-; clk_div:inst25|clock_1Mhz_int                  ; -1.818  ; -8.536        ;
-; clk_div:inst25|clock_10Khz_int                 ; -1.817  ; -9.203        ;
-; clk_div:inst25|clock_10Hz_int                  ; -1.606  ; -12.332       ;
-; clk_div:inst25|clock_100KHz                    ; -1.301  ; -5.468        ;
+; cpu:inst12|OP[4]                               ; -44.459 ; -703.249      ;
+; SW[8]                                          ; -39.766 ; -5168.261     ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -21.759 ; -1336.895     ;
+; dec_keyboard:inst11|f3                         ; -9.801  ; -91.620       ;
+; PS2_CLK                                        ; -7.138  ; -59.628       ;
+; CLOCK_50                                       ; -5.824  ; -12604.872    ;
+; clk_div:inst25|clock_1Mhz_int                  ; -2.209  ; -9.505        ;
+; clk_div:inst25|clock_1Khz_int                  ; -2.201  ; -9.256        ;
+; clk_div:inst25|clock_100hz_int                 ; -1.945  ; -9.548        ;
+; clk_div:inst25|clock_10Khz_int                 ; -1.944  ; -8.534        ;
+; clk_div:inst25|clock_1KHz                      ; -1.781  ; -4.889        ;
+; clk_div:inst25|clock_100Khz_int                ; -1.763  ; -8.980        ;
+; clk_div:inst25|clock_10Hz_int                  ; -1.622  ; -9.754        ;
+; clk_div:inst25|clock_100KHz                    ; -1.194  ; -4.213        ;
 +------------------------------------------------+---------+---------------+
 
 
@@ -315,20 +315,20 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; SW[8]                                          ; -3.801 ; -25.126       ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -1.236 ; -1.236        ;
-; CLOCK_50                                       ; -0.076 ; -0.721        ;
-; clk_div:inst25|clock_100Khz_int                ; 0.391  ; 0.000         ;
-; clk_div:inst25|clock_10Khz_int                 ; 0.466  ; 0.000         ;
-; PS2_CLK                                        ; 0.486  ; 0.000         ;
-; clk_div:inst25|clock_100hz_int                 ; 0.544  ; 0.000         ;
-; clk_div:inst25|clock_1Khz_int                  ; 0.597  ; 0.000         ;
-; clk_div:inst25|clock_1Mhz_int                  ; 0.673  ; 0.000         ;
-; clk_div:inst25|clock_1KHz                      ; 0.681  ; 0.000         ;
-; clk_div:inst25|clock_10Hz_int                  ; 0.755  ; 0.000         ;
-; clk_div:inst25|clock_100KHz                    ; 0.812  ; 0.000         ;
-; dec_keyboard:inst11|f3                         ; 0.817  ; 0.000         ;
-; cpu:inst12|OP[4]                               ; 0.902  ; 0.000         ;
+; SW[8]                                          ; -0.788 ; -2.308        ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 0.085  ; 0.000         ;
+; CLOCK_50                                       ; 0.110  ; 0.000         ;
+; clk_div:inst25|clock_10Khz_int                 ; 0.368  ; 0.000         ;
+; clk_div:inst25|clock_100hz_int                 ; 0.431  ; 0.000         ;
+; PS2_CLK                                        ; 0.473  ; 0.000         ;
+; clk_div:inst25|clock_1Mhz_int                  ; 0.538  ; 0.000         ;
+; clk_div:inst25|clock_100Khz_int                ; 0.558  ; 0.000         ;
+; clk_div:inst25|clock_1Khz_int                  ; 0.654  ; 0.000         ;
+; clk_div:inst25|clock_1KHz                      ; 0.685  ; 0.000         ;
+; clk_div:inst25|clock_100KHz                    ; 0.749  ; 0.000         ;
+; clk_div:inst25|clock_10Hz_int                  ; 0.810  ; 0.000         ;
+; dec_keyboard:inst11|f3                         ; 0.877  ; 0.000         ;
+; cpu:inst12|OP[4]                               ; 0.965  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -337,8 +337,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; keyboard:inst14|ready_set  ; -1.598 ; -1.598        ;
-; keyboard:inst14|scan_ready ; -1.305 ; -1.305        ;
+; keyboard:inst14|ready_set  ; -1.287 ; -1.287        ;
+; keyboard:inst14|scan_ready ; -1.189 ; -1.189        ;
 +----------------------------+--------+---------------+
 
 
@@ -347,8 +347,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------------------------+-------+---------------+
 ; Clock                      ; Slack ; End Point TNS ;
 +----------------------------+-------+---------------+
-; keyboard:inst14|ready_set  ; 0.352 ; 0.000         ;
-; keyboard:inst14|scan_ready ; 0.605 ; 0.000         ;
+; keyboard:inst14|ready_set  ; 0.444 ; 0.000         ;
+; keyboard:inst14|scan_ready ; 0.597 ; 0.000         ;
 +----------------------------+-------+---------------+
 
 
@@ -357,22 +357,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; CLOCK_50                                       ; -2.636 ; -15236.819    ;
-; SW[8]                                          ; -1.285 ; -711.568      ;
-; PS2_CLK                                        ; -0.608 ; -19.465       ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.546 ; -145.216      ;
-; dec_keyboard:inst11|f3                         ; -0.538 ; -8.650        ;
-; clk_div:inst25|clock_10Hz_int                  ; -0.538 ; -6.234        ;
-; clk_div:inst25|clock_100Khz_int                ; -0.538 ; -5.691        ;
-; clk_div:inst25|clock_1Khz_int                  ; -0.538 ; -5.524        ;
-; clk_div:inst25|clock_100KHz                    ; -0.538 ; -4.932        ;
-; clk_div:inst25|clock_10Khz_int                 ; -0.538 ; -4.636        ;
-; clk_div:inst25|clock_1Mhz_int                  ; -0.538 ; -4.620        ;
-; clk_div:inst25|clock_100hz_int                 ; -0.538 ; -3.999        ;
-; clk_div:inst25|clock_1KHz                      ; -0.538 ; -2.937        ;
-; keyboard:inst14|scan_ready                     ; -0.538 ; -0.876        ;
-; keyboard:inst14|ready_set                      ; -0.538 ; -0.799        ;
-; cpu:inst12|OP[4]                               ; 0.278  ; 0.000         ;
+; CLOCK_50                                       ; -2.636 ; -15237.186    ;
+; SW[8]                                          ; -1.086 ; -608.661      ;
+; PS2_CLK                                        ; -0.617 ; -21.984       ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.538 ; -131.034      ;
+; dec_keyboard:inst11|f3                         ; -0.538 ; -7.873        ;
+; clk_div:inst25|clock_10Hz_int                  ; -0.538 ; -5.409        ;
+; clk_div:inst25|clock_10Khz_int                 ; -0.538 ; -5.214        ;
+; clk_div:inst25|clock_100hz_int                 ; -0.538 ; -4.692        ;
+; clk_div:inst25|clock_1Mhz_int                  ; -0.538 ; -4.686        ;
+; clk_div:inst25|clock_1Khz_int                  ; -0.538 ; -4.644        ;
+; clk_div:inst25|clock_100Khz_int                ; -0.538 ; -4.633        ;
+; clk_div:inst25|clock_100KHz                    ; -0.538 ; -4.045        ;
+; clk_div:inst25|clock_1KHz                      ; -0.538 ; -2.460        ;
+; keyboard:inst14|scan_ready                     ; -0.538 ; -0.791        ;
+; keyboard:inst14|ready_set                      ; -0.538 ; -0.770        ;
+; cpu:inst12|OP[4]                               ; 0.153  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -388,20 +388,20 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+---------+---------------+
 ; Clock                                          ; Slack   ; End Point TNS ;
 +------------------------------------------------+---------+---------------+
-; cpu:inst12|OP[4]                               ; -19.564 ; -309.064      ;
-; SW[8]                                          ; -18.065 ; -3156.885     ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -9.650  ; -599.436      ;
-; dec_keyboard:inst11|f3                         ; -4.301  ; -38.532       ;
-; CLOCK_50                                       ; -3.871  ; -7600.529     ;
-; PS2_CLK                                        ; -3.405  ; -17.982       ;
-; clk_div:inst25|clock_1KHz                      ; -1.393  ; -3.222        ;
-; clk_div:inst25|clock_1Khz_int                  ; -1.043  ; -3.403        ;
-; clk_div:inst25|clock_100Khz_int                ; -0.993  ; -3.301        ;
-; clk_div:inst25|clock_100hz_int                 ; -0.972  ; -2.627        ;
-; clk_div:inst25|clock_10Khz_int                 ; -0.890  ; -2.805        ;
-; clk_div:inst25|clock_1Mhz_int                  ; -0.787  ; -2.612        ;
-; clk_div:inst25|clock_10Hz_int                  ; -0.470  ; -3.327        ;
-; clk_div:inst25|clock_100KHz                    ; -0.386  ; -1.190        ;
+; cpu:inst12|OP[4]                               ; -20.072 ; -315.440      ;
+; SW[8]                                          ; -17.915 ; -2807.348     ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -9.301  ; -576.143      ;
+; dec_keyboard:inst11|f3                         ; -4.309  ; -41.090       ;
+; PS2_CLK                                        ; -3.466  ; -19.676       ;
+; CLOCK_50                                       ; -3.464  ; -6186.360     ;
+; clk_div:inst25|clock_1Mhz_int                  ; -1.248  ; -3.284        ;
+; clk_div:inst25|clock_1Khz_int                  ; -1.034  ; -2.793        ;
+; clk_div:inst25|clock_100hz_int                 ; -0.956  ; -3.022        ;
+; clk_div:inst25|clock_10Khz_int                 ; -0.955  ; -2.605        ;
+; clk_div:inst25|clock_100Khz_int                ; -0.737  ; -2.639        ;
+; clk_div:inst25|clock_1KHz                      ; -0.539  ; -1.521        ;
+; clk_div:inst25|clock_10Hz_int                  ; -0.461  ; -2.479        ;
+; clk_div:inst25|clock_100KHz                    ; -0.397  ; -1.001        ;
 +------------------------------------------------+---------+---------------+
 
 
@@ -410,20 +410,20 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; SW[8]                                          ; -1.998 ; -10.587       ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.910 ; -0.910        ;
-; CLOCK_50                                       ; -0.148 ; -1.744        ;
-; clk_div:inst25|clock_10Khz_int                 ; -0.005 ; -0.005        ;
-; clk_div:inst25|clock_1Mhz_int                  ; 0.010  ; 0.000         ;
-; clk_div:inst25|clock_100Khz_int                ; 0.015  ; 0.000         ;
-; clk_div:inst25|clock_1KHz                      ; 0.042  ; 0.000         ;
-; clk_div:inst25|clock_1Khz_int                  ; 0.079  ; 0.000         ;
-; clk_div:inst25|clock_100hz_int                 ; 0.100  ; 0.000         ;
-; PS2_CLK                                        ; 0.182  ; 0.000         ;
-; clk_div:inst25|clock_100KHz                    ; 0.286  ; 0.000         ;
-; dec_keyboard:inst11|f3                         ; 0.346  ; 0.000         ;
+; clk_div:inst25|clock_10Khz_int                 ; -0.133 ; -0.133        ;
+; clk_div:inst25|clock_1KHz                      ; -0.111 ; -0.147        ;
+; CLOCK_50                                       ; -0.080 ; -0.624        ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.040 ; -0.040        ;
+; clk_div:inst25|clock_100Khz_int                ; -0.035 ; -0.035        ;
+; clk_div:inst25|clock_100hz_int                 ; 0.002  ; 0.000         ;
+; SW[8]                                          ; 0.080  ; 0.000         ;
+; clk_div:inst25|clock_1Khz_int                  ; 0.114  ; 0.000         ;
+; clk_div:inst25|clock_1Mhz_int                  ; 0.148  ; 0.000         ;
+; PS2_CLK                                        ; 0.178  ; 0.000         ;
+; clk_div:inst25|clock_100KHz                    ; 0.282  ; 0.000         ;
 ; clk_div:inst25|clock_10Hz_int                  ; 0.349  ; 0.000         ;
-; cpu:inst12|OP[4]                               ; 0.533  ; 0.000         ;
+; dec_keyboard:inst11|f3                         ; 0.360  ; 0.000         ;
+; cpu:inst12|OP[4]                               ; 0.503  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -432,8 +432,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; keyboard:inst14|ready_set  ; -1.096 ; -1.096        ;
-; keyboard:inst14|scan_ready ; -0.370 ; -0.370        ;
+; keyboard:inst14|ready_set  ; -0.840 ; -0.840        ;
+; keyboard:inst14|scan_ready ; -0.372 ; -0.372        ;
 +----------------------------+--------+---------------+
 
 
@@ -442,8 +442,8 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------+-------+---------------+
 ; Clock                      ; Slack ; End Point TNS ;
 +----------------------------+-------+---------------+
-; keyboard:inst14|scan_ready ; 0.054 ; 0.000         ;
-; keyboard:inst14|ready_set  ; 0.081 ; 0.000         ;
+; keyboard:inst14|ready_set  ; 0.104 ; 0.000         ;
+; keyboard:inst14|scan_ready ; 0.127 ; 0.000         ;
 +----------------------------+-------+---------------+
 
 
@@ -452,22 +452,22 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; CLOCK_50                                       ; -2.174 ; -12501.030    ;
-; SW[8]                                          ; -1.191 ; -619.452      ;
-; PS2_CLK                                        ; -0.685 ; -15.221       ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.192 ; -10.166       ;
-; clk_div:inst25|clock_1KHz                      ; -0.112 ; -0.333        ;
-; dec_keyboard:inst11|f3                         ; -0.072 ; -0.167        ;
-; keyboard:inst14|scan_ready                     ; -0.032 ; -0.032        ;
-; clk_div:inst25|clock_100KHz                    ; 0.010  ; 0.000         ;
-; keyboard:inst14|ready_set                      ; 0.042  ; 0.000         ;
-; clk_div:inst25|clock_100Khz_int                ; 0.069  ; 0.000         ;
-; clk_div:inst25|clock_100hz_int                 ; 0.122  ; 0.000         ;
-; clk_div:inst25|clock_10Khz_int                 ; 0.127  ; 0.000         ;
-; clk_div:inst25|clock_1Khz_int                  ; 0.128  ; 0.000         ;
-; clk_div:inst25|clock_10Hz_int                  ; 0.131  ; 0.000         ;
-; clk_div:inst25|clock_1Mhz_int                  ; 0.143  ; 0.000         ;
-; cpu:inst12|OP[4]                               ; 0.301  ; 0.000         ;
+; CLOCK_50                                       ; -2.174 ; -12498.963    ;
+; SW[8]                                          ; -1.085 ; -556.385      ;
+; PS2_CLK                                        ; -0.646 ; -20.666       ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.196 ; -2.111        ;
+; clk_div:inst25|clock_10Khz_int                 ; -0.038 ; -0.225        ;
+; clk_div:inst25|clock_1KHz                      ; 0.031  ; 0.000         ;
+; clk_div:inst25|clock_100KHz                    ; 0.050  ; 0.000         ;
+; dec_keyboard:inst11|f3                         ; 0.078  ; 0.000         ;
+; keyboard:inst14|scan_ready                     ; 0.088  ; 0.000         ;
+; clk_div:inst25|clock_10Hz_int                  ; 0.124  ; 0.000         ;
+; clk_div:inst25|clock_1Khz_int                  ; 0.132  ; 0.000         ;
+; clk_div:inst25|clock_1Mhz_int                  ; 0.138  ; 0.000         ;
+; clk_div:inst25|clock_100Khz_int                ; 0.144  ; 0.000         ;
+; keyboard:inst14|ready_set                      ; 0.144  ; 0.000         ;
+; clk_div:inst25|clock_100hz_int                 ; 0.154  ; 0.000         ;
+; cpu:inst12|OP[4]                               ; 0.200  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -483,20 +483,20 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+---------+---------------+
 ; Clock                                          ; Slack   ; End Point TNS ;
 +------------------------------------------------+---------+---------------+
-; cpu:inst12|OP[4]                               ; -18.383 ; -290.982      ;
-; SW[8]                                          ; -16.971 ; -2805.373     ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -9.060  ; -551.038      ;
-; dec_keyboard:inst11|f3                         ; -4.157  ; -37.277       ;
-; CLOCK_50                                       ; -3.467  ; -6364.830     ;
-; PS2_CLK                                        ; -3.172  ; -15.072       ;
-; clk_div:inst25|clock_1KHz                      ; -1.190  ; -2.710        ;
-; clk_div:inst25|clock_1Khz_int                  ; -0.962  ; -2.993        ;
-; clk_div:inst25|clock_100Khz_int                ; -0.904  ; -2.880        ;
-; clk_div:inst25|clock_100hz_int                 ; -0.904  ; -2.294        ;
-; clk_div:inst25|clock_10Khz_int                 ; -0.815  ; -2.472        ;
-; clk_div:inst25|clock_1Mhz_int                  ; -0.743  ; -2.240        ;
-; clk_div:inst25|clock_10Hz_int                  ; -0.403  ; -2.858        ;
-; clk_div:inst25|clock_100KHz                    ; -0.306  ; -0.907        ;
+; cpu:inst12|OP[4]                               ; -18.833 ; -296.866      ;
+; SW[8]                                          ; -16.776 ; -2482.328     ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -8.755  ; -532.664      ;
+; dec_keyboard:inst11|f3                         ; -4.149  ; -39.505       ;
+; PS2_CLK                                        ; -3.295  ; -16.525       ;
+; CLOCK_50                                       ; -3.133  ; -5141.704     ;
+; clk_div:inst25|clock_1Mhz_int                  ; -1.110  ; -2.810        ;
+; clk_div:inst25|clock_1Khz_int                  ; -0.951  ; -2.453        ;
+; clk_div:inst25|clock_100hz_int                 ; -0.876  ; -2.660        ;
+; clk_div:inst25|clock_10Khz_int                 ; -0.872  ; -2.246        ;
+; clk_div:inst25|clock_100Khz_int                ; -0.694  ; -2.311        ;
+; clk_div:inst25|clock_1KHz                      ; -0.417  ; -1.226        ;
+; clk_div:inst25|clock_10Hz_int                  ; -0.400  ; -2.087        ;
+; clk_div:inst25|clock_100KHz                    ; -0.304  ; -0.742        ;
 +------------------------------------------------+---------+---------------+
 
 
@@ -505,20 +505,20 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; SW[8]                                          ; -1.887 ; -9.903        ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.832 ; -0.841        ;
-; CLOCK_50                                       ; -0.304 ; -26.094       ;
-; clk_div:inst25|clock_10Khz_int                 ; -0.023 ; -0.023        ;
-; clk_div:inst25|clock_100Khz_int                ; -0.015 ; -0.015        ;
-; clk_div:inst25|clock_1Mhz_int                  ; 0.008  ; 0.000         ;
-; clk_div:inst25|clock_1KHz                      ; 0.040  ; 0.000         ;
-; clk_div:inst25|clock_1Khz_int                  ; 0.053  ; 0.000         ;
-; clk_div:inst25|clock_100hz_int                 ; 0.083  ; 0.000         ;
-; PS2_CLK                                        ; 0.170  ; 0.000         ;
-; clk_div:inst25|clock_100KHz                    ; 0.260  ; 0.000         ;
-; clk_div:inst25|clock_10Hz_int                  ; 0.312  ; 0.000         ;
-; dec_keyboard:inst11|f3                         ; 0.321  ; 0.000         ;
-; cpu:inst12|OP[4]                               ; 0.476  ; 0.000         ;
+; CLOCK_50                                       ; -0.213 ; -23.997       ;
+; clk_div:inst25|clock_10Khz_int                 ; -0.143 ; -0.143        ;
+; clk_div:inst25|clock_1KHz                      ; -0.110 ; -0.250        ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.084 ; -0.113        ;
+; clk_div:inst25|clock_100Khz_int                ; -0.038 ; -0.038        ;
+; clk_div:inst25|clock_100hz_int                 ; -0.024 ; -0.024        ;
+; SW[8]                                          ; 0.017  ; 0.000         ;
+; clk_div:inst25|clock_1Khz_int                  ; 0.085  ; 0.000         ;
+; clk_div:inst25|clock_1Mhz_int                  ; 0.091  ; 0.000         ;
+; PS2_CLK                                        ; 0.167  ; 0.000         ;
+; clk_div:inst25|clock_100KHz                    ; 0.249  ; 0.000         ;
+; clk_div:inst25|clock_10Hz_int                  ; 0.303  ; 0.000         ;
+; dec_keyboard:inst11|f3                         ; 0.329  ; 0.000         ;
+; cpu:inst12|OP[4]                               ; 0.477  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -527,19 +527,19 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +----------------------------+--------+---------------+
 ; Clock                      ; Slack  ; End Point TNS ;
 +----------------------------+--------+---------------+
-; keyboard:inst14|ready_set  ; -0.951 ; -0.951        ;
-; keyboard:inst14|scan_ready ; -0.248 ; -0.248        ;
+; keyboard:inst14|ready_set  ; -0.737 ; -0.737        ;
+; keyboard:inst14|scan_ready ; -0.273 ; -0.273        ;
 +----------------------------+--------+---------------+
 
 
-+-----------------------------------------------------+
-; Fast 1100mV 0C Model Removal Summary                ;
-+----------------------------+--------+---------------+
-; Clock                      ; Slack  ; End Point TNS ;
-+----------------------------+--------+---------------+
-; keyboard:inst14|scan_ready ; -0.030 ; -0.030        ;
-; keyboard:inst14|ready_set  ; 0.025  ; 0.000         ;
-+----------------------------+--------+---------------+
++----------------------------------------------------+
+; Fast 1100mV 0C Model Removal Summary               ;
++----------------------------+-------+---------------+
+; Clock                      ; Slack ; End Point TNS ;
++----------------------------+-------+---------------+
+; keyboard:inst14|ready_set  ; 0.046 ; 0.000         ;
+; keyboard:inst14|scan_ready ; 0.055 ; 0.000         ;
++----------------------------+-------+---------------+
 
 
 +-------------------------------------------------------------------------+
@@ -547,22 +547,22 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+--------+---------------+
 ; Clock                                          ; Slack  ; End Point TNS ;
 +------------------------------------------------+--------+---------------+
-; CLOCK_50                                       ; -2.174 ; -12714.837    ;
-; SW[8]                                          ; -1.135 ; -598.809      ;
-; PS2_CLK                                        ; -0.715 ; -17.035       ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.120 ; -4.992        ;
-; clk_div:inst25|clock_1KHz                      ; -0.069 ; -0.205        ;
-; dec_keyboard:inst11|f3                         ; -0.027 ; -0.027        ;
-; keyboard:inst14|scan_ready                     ; 0.015  ; 0.000         ;
-; clk_div:inst25|clock_100KHz                    ; 0.042  ; 0.000         ;
-; keyboard:inst14|ready_set                      ; 0.072  ; 0.000         ;
-; clk_div:inst25|clock_100Khz_int                ; 0.091  ; 0.000         ;
-; clk_div:inst25|clock_100hz_int                 ; 0.126  ; 0.000         ;
-; clk_div:inst25|clock_10Khz_int                 ; 0.128  ; 0.000         ;
-; clk_div:inst25|clock_1Khz_int                  ; 0.136  ; 0.000         ;
-; clk_div:inst25|clock_10Hz_int                  ; 0.139  ; 0.000         ;
-; clk_div:inst25|clock_1Mhz_int                  ; 0.144  ; 0.000         ;
-; cpu:inst12|OP[4]                               ; 0.338  ; 0.000         ;
+; CLOCK_50                                       ; -2.174 ; -12714.446    ;
+; SW[8]                                          ; -1.028 ; -548.988      ;
+; PS2_CLK                                        ; -0.691 ; -21.147       ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -0.134 ; -0.617        ;
+; clk_div:inst25|clock_10Khz_int                 ; 0.015  ; 0.000         ;
+; clk_div:inst25|clock_1KHz                      ; 0.052  ; 0.000         ;
+; clk_div:inst25|clock_100KHz                    ; 0.073  ; 0.000         ;
+; dec_keyboard:inst11|f3                         ; 0.095  ; 0.000         ;
+; keyboard:inst14|scan_ready                     ; 0.100  ; 0.000         ;
+; clk_div:inst25|clock_10Hz_int                  ; 0.127  ; 0.000         ;
+; clk_div:inst25|clock_1Khz_int                  ; 0.139  ; 0.000         ;
+; clk_div:inst25|clock_100Khz_int                ; 0.140  ; 0.000         ;
+; keyboard:inst14|ready_set                      ; 0.143  ; 0.000         ;
+; clk_div:inst25|clock_1Mhz_int                  ; 0.149  ; 0.000         ;
+; clk_div:inst25|clock_100hz_int                 ; 0.154  ; 0.000         ;
+; cpu:inst12|OP[4]                               ; 0.264  ; 0.000         ;
 +------------------------------------------------+--------+---------------+
 
 
@@ -578,40 +578,40 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +-------------------------------------------------+------------+---------+----------+---------+---------------------+
 ; Clock                                           ; Setup      ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
 +-------------------------------------------------+------------+---------+----------+---------+---------------------+
-; Worst-case Slack                                ; -44.124    ; -3.834  ; -1.626   ; -0.030  ; -2.636              ;
-;  CLOCK_50                                       ; -6.887     ; -0.304  ; N/A      ; N/A     ; -2.636              ;
-;  PS2_CLK                                        ; -6.924     ; 0.170   ; N/A      ; N/A     ; -0.715              ;
-;  SW[8]                                          ; -40.851    ; -3.834  ; N/A      ; N/A     ; -1.285              ;
-;  clk_div:inst25|clock_100KHz                    ; -1.301     ; 0.260   ; N/A      ; N/A     ; -0.538              ;
-;  clk_div:inst25|clock_100Khz_int                ; -2.077     ; -0.015  ; N/A      ; N/A     ; -0.538              ;
-;  clk_div:inst25|clock_100hz_int                 ; -2.271     ; 0.083   ; N/A      ; N/A     ; -0.538              ;
-;  clk_div:inst25|clock_10Hz_int                  ; -1.606     ; 0.312   ; N/A      ; N/A     ; -0.538              ;
-;  clk_div:inst25|clock_10Khz_int                 ; -1.831     ; -0.023  ; N/A      ; N/A     ; -0.538              ;
-;  clk_div:inst25|clock_1KHz                      ; -3.047     ; 0.040   ; N/A      ; N/A     ; -0.538              ;
-;  clk_div:inst25|clock_1Khz_int                  ; -2.259     ; 0.053   ; N/A      ; N/A     ; -0.538              ;
-;  clk_div:inst25|clock_1Mhz_int                  ; -1.818     ; 0.008   ; N/A      ; N/A     ; -0.538              ;
-;  cpu:inst12|OP[4]                               ; -44.124    ; 0.476   ; N/A      ; N/A     ; 0.278               ;
-;  dec_keyboard:inst11|f3                         ; -9.967     ; 0.321   ; N/A      ; N/A     ; -0.538              ;
-;  keyboard:inst14|ready_set                      ; N/A        ; N/A     ; -1.626   ; 0.025   ; -0.538              ;
-;  keyboard:inst14|scan_ready                     ; N/A        ; N/A     ; -1.473   ; -0.030  ; -0.538              ;
-;  lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -22.269    ; -1.404  ; N/A      ; N/A     ; -0.561              ;
-; Design-wide TNS                                 ; -24289.092 ; -36.876 ; -3.099   ; -0.03   ; -16161.966          ;
-;  CLOCK_50                                       ; -16167.221 ; -26.094 ; N/A      ; N/A     ; -15236.819          ;
-;  PS2_CLK                                        ; -58.016    ; 0.000   ; N/A      ; N/A     ; -21.407             ;
-;  SW[8]                                          ; -5897.333  ; -25.986 ; N/A      ; N/A     ; -711.568            ;
-;  clk_div:inst25|clock_100KHz                    ; -5.468     ; 0.000   ; N/A      ; N/A     ; -4.997              ;
-;  clk_div:inst25|clock_100Khz_int                ; -11.122    ; -0.015  ; N/A      ; N/A     ; -5.785              ;
-;  clk_div:inst25|clock_100hz_int                 ; -8.687     ; 0.000   ; N/A      ; N/A     ; -4.038              ;
-;  clk_div:inst25|clock_10Hz_int                  ; -12.332    ; 0.000   ; N/A      ; N/A     ; -6.310              ;
-;  clk_div:inst25|clock_10Khz_int                 ; -9.203     ; -0.023  ; N/A      ; N/A     ; -4.636              ;
-;  clk_div:inst25|clock_1KHz                      ; -7.062     ; 0.000   ; N/A      ; N/A     ; -2.937              ;
-;  clk_div:inst25|clock_1Khz_int                  ; -11.349    ; 0.000   ; N/A      ; N/A     ; -5.573              ;
-;  clk_div:inst25|clock_1Mhz_int                  ; -8.536     ; 0.000   ; N/A      ; N/A     ; -4.620              ;
-;  cpu:inst12|OP[4]                               ; -696.662   ; 0.000   ; N/A      ; N/A     ; 0.000               ;
-;  dec_keyboard:inst11|f3                         ; -88.830    ; 0.000   ; N/A      ; N/A     ; -8.650              ;
-;  keyboard:inst14|ready_set                      ; N/A        ; N/A     ; -1.626   ; 0.000   ; -0.813              ;
-;  keyboard:inst14|scan_ready                     ; N/A        ; N/A     ; -1.473   ; -0.030  ; -0.914              ;
-;  lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -1362.189  ; -1.404  ; N/A      ; N/A     ; -147.092            ;
+; Worst-case Slack                                ; -44.459    ; -0.816  ; -1.316   ; 0.046   ; -2.636              ;
+;  CLOCK_50                                       ; -6.060     ; -0.213  ; N/A      ; N/A     ; -2.636              ;
+;  PS2_CLK                                        ; -7.138     ; 0.167   ; N/A      ; N/A     ; -0.691              ;
+;  SW[8]                                          ; -39.766    ; -0.816  ; N/A      ; N/A     ; -1.086              ;
+;  clk_div:inst25|clock_100KHz                    ; -1.203     ; 0.249   ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst25|clock_100Khz_int                ; -1.763     ; -0.038  ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst25|clock_100hz_int                 ; -1.982     ; -0.024  ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst25|clock_10Hz_int                  ; -1.622     ; 0.303   ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst25|clock_10Khz_int                 ; -1.950     ; -0.143  ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst25|clock_1KHz                      ; -1.781     ; -0.111  ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst25|clock_1Khz_int                  ; -2.201     ; 0.085   ; N/A      ; N/A     ; -0.538              ;
+;  clk_div:inst25|clock_1Mhz_int                  ; -2.218     ; 0.091   ; N/A      ; N/A     ; -0.538              ;
+;  cpu:inst12|OP[4]                               ; -44.459    ; 0.477   ; N/A      ; N/A     ; 0.108               ;
+;  dec_keyboard:inst11|f3                         ; -9.801     ; 0.329   ; N/A      ; N/A     ; -0.538              ;
+;  keyboard:inst14|ready_set                      ; N/A        ; N/A     ; -1.316   ; 0.046   ; -0.538              ;
+;  keyboard:inst14|scan_ready                     ; N/A        ; N/A     ; -1.308   ; 0.055   ; -0.538              ;
+;  lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -21.759    ; -0.084  ; N/A      ; N/A     ; -0.538              ;
+; Design-wide TNS                                 ; -21132.507 ; -24.565 ; -2.624   ; 0.0     ; -16044.082          ;
+;  CLOCK_50                                       ; -13715.948 ; -23.997 ; N/A      ; N/A     ; -15237.186          ;
+;  PS2_CLK                                        ; -61.282    ; 0.000   ; N/A      ; N/A     ; -24.760             ;
+;  SW[8]                                          ; -5213.788  ; -2.308  ; N/A      ; N/A     ; -608.661            ;
+;  clk_div:inst25|clock_100KHz                    ; -4.213     ; 0.000   ; N/A      ; N/A     ; -4.045              ;
+;  clk_div:inst25|clock_100Khz_int                ; -8.980     ; -0.038  ; N/A      ; N/A     ; -4.633              ;
+;  clk_div:inst25|clock_100hz_int                 ; -9.548     ; -0.024  ; N/A      ; N/A     ; -4.718              ;
+;  clk_div:inst25|clock_10Hz_int                  ; -9.754     ; 0.000   ; N/A      ; N/A     ; -5.409              ;
+;  clk_div:inst25|clock_10Khz_int                 ; -8.534     ; -0.143  ; N/A      ; N/A     ; -5.347              ;
+;  clk_div:inst25|clock_1KHz                      ; -4.997     ; -0.250  ; N/A      ; N/A     ; -2.494              ;
+;  clk_div:inst25|clock_1Khz_int                  ; -9.256     ; 0.000   ; N/A      ; N/A     ; -4.663              ;
+;  clk_div:inst25|clock_1Mhz_int                  ; -9.505     ; 0.000   ; N/A      ; N/A     ; -4.735              ;
+;  cpu:inst12|OP[4]                               ; -703.249   ; 0.000   ; N/A      ; N/A     ; 0.000               ;
+;  dec_keyboard:inst11|f3                         ; -91.620    ; 0.000   ; N/A      ; N/A     ; -7.967              ;
+;  keyboard:inst14|ready_set                      ; N/A        ; N/A     ; -1.316   ; 0.000   ; -0.770              ;
+;  keyboard:inst14|scan_ready                     ; N/A        ; N/A     ; -1.308   ; 0.000   ; -0.797              ;
+;  lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; -1336.895  ; -0.113  ; N/A      ; N/A     ; -132.698            ;
 +-------------------------------------------------+------------+---------+----------+---------+---------------------+
 
 
@@ -776,25 +776,25 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 +------------------------------------------------+------------------------------------------------+--------------+----------+--------------+----------+
 ; clk_div:inst25|clock_1KHz                      ; clk_div:inst25|clock_1KHz                      ; 4            ; 0        ; 0            ; 0        ;
 ; keyboard:inst14|scan_ready                     ; clk_div:inst25|clock_1KHz                      ; 3            ; 0        ; 0            ; 0        ;
-; clk_div:inst25|clock_1Khz_int                  ; clk_div:inst25|clock_1Khz_int                  ; 19           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_1Khz_int                  ; clk_div:inst25|clock_1Khz_int                  ; 16           ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_100hz_int                 ; clk_div:inst25|clock_1Khz_int                  ; 1            ; 1        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1Mhz_int                  ; clk_div:inst25|clock_1Mhz_int                  ; 16           ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_100Khz_int                ; clk_div:inst25|clock_1Mhz_int                  ; 1            ; 1        ; 0            ; 0        ;
-; clk_div:inst25|clock_10Hz_int                  ; clk_div:inst25|clock_10Hz_int                  ; 24           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_10Hz_int                  ; clk_div:inst25|clock_10Hz_int                  ; 22           ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1Khz_int                  ; clk_div:inst25|clock_10Khz_int                 ; 1            ; 1        ; 0            ; 0        ;
-; clk_div:inst25|clock_10Khz_int                 ; clk_div:inst25|clock_10Khz_int                 ; 17           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_10Khz_int                 ; clk_div:inst25|clock_10Khz_int                 ; 16           ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_10Hz_int                  ; clk_div:inst25|clock_100hz_int                 ; 1            ; 1        ; 0            ; 0        ;
-; clk_div:inst25|clock_100hz_int                 ; clk_div:inst25|clock_100hz_int                 ; 13           ; 0        ; 0            ; 0        ;
-; clk_div:inst25|clock_100KHz                    ; clk_div:inst25|clock_100KHz                    ; 8            ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_100hz_int                 ; clk_div:inst25|clock_100hz_int                 ; 16           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_100KHz                    ; clk_div:inst25|clock_100KHz                    ; 7            ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_10Khz_int                 ; clk_div:inst25|clock_100Khz_int                ; 1            ; 1        ; 0            ; 0        ;
-; clk_div:inst25|clock_100Khz_int                ; clk_div:inst25|clock_100Khz_int                ; 19           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_100Khz_int                ; clk_div:inst25|clock_100Khz_int                ; 16           ; 0        ; 0            ; 0        ;
 ; CLOCK_50                                       ; CLOCK_50                                       ; 6087         ; 982      ; 0            ; 0        ;
 ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; CLOCK_50                                       ; 48494        ; 983      ; 0            ; 0        ;
 ; SW[8]                                          ; CLOCK_50                                       ; 2178         ; 0        ; 0            ; 0        ;
 ; cpu:inst12|OP[4]                               ; cpu:inst12|OP[4]                               ; 0            ; 0        ; 16           ; 16       ;
 ; SW[8]                                          ; cpu:inst12|OP[4]                               ; 0            ; 0        ; > 2147483647 ; 0        ;
 ; dec_keyboard:inst11|f3                         ; dec_keyboard:inst11|f3                         ; 12           ; 0        ; 0            ; 0        ;
-; PS2_CLK                                        ; dec_keyboard:inst11|f3                         ; 304          ; 0        ; 0            ; 0        ;
+; PS2_CLK                                        ; dec_keyboard:inst11|f3                         ; 232          ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1KHz                      ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1Khz_int                  ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1Mhz_int                  ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
@@ -804,12 +804,12 @@ Design MTBF is not calculated because the design doesn't meet its timing require
 ; clk_div:inst25|clock_100KHz                    ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
 ; clk_div:inst25|clock_100Khz_int                ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
 ; CLOCK_50                                       ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 76           ; 0        ; 0            ; 0        ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 4212         ; 0        ; 0            ; 0        ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 4112         ; 0        ; 0            ; 0        ;
 ; SW[8]                                          ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; > 2147483647 ; 0        ; 0            ; 0        ;
 ; keyboard:inst14|ready_set                      ; PS2_CLK                                        ; 1            ; 1        ; 0            ; 0        ;
 ; PS2_CLK                                        ; PS2_CLK                                        ; 130          ; 0        ; 0            ; 0        ;
-; CLOCK_50                                       ; SW[8]                                          ; 12101310     ; 0        ; 0            ; 0        ;
-; cpu:inst12|OP[4]                               ; SW[8]                                          ; 9            ; 236849   ; 0            ; 0        ;
+; CLOCK_50                                       ; SW[8]                                          ; 16298952     ; 0        ; 0            ; 0        ;
+; cpu:inst12|OP[4]                               ; SW[8]                                          ; 10           ; 294834   ; 0            ; 0        ;
 ; dec_keyboard:inst11|f3                         ; SW[8]                                          ; 8            ; 0        ; 0            ; 0        ;
 ; SW[8]                                          ; SW[8]                                          ; > 2147483647 ; 0        ; 0            ; 0        ;
 +------------------------------------------------+------------------------------------------------+--------------+----------+--------------+----------+
@@ -823,25 +823,25 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +------------------------------------------------+------------------------------------------------+--------------+----------+--------------+----------+
 ; clk_div:inst25|clock_1KHz                      ; clk_div:inst25|clock_1KHz                      ; 4            ; 0        ; 0            ; 0        ;
 ; keyboard:inst14|scan_ready                     ; clk_div:inst25|clock_1KHz                      ; 3            ; 0        ; 0            ; 0        ;
-; clk_div:inst25|clock_1Khz_int                  ; clk_div:inst25|clock_1Khz_int                  ; 19           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_1Khz_int                  ; clk_div:inst25|clock_1Khz_int                  ; 16           ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_100hz_int                 ; clk_div:inst25|clock_1Khz_int                  ; 1            ; 1        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1Mhz_int                  ; clk_div:inst25|clock_1Mhz_int                  ; 16           ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_100Khz_int                ; clk_div:inst25|clock_1Mhz_int                  ; 1            ; 1        ; 0            ; 0        ;
-; clk_div:inst25|clock_10Hz_int                  ; clk_div:inst25|clock_10Hz_int                  ; 24           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_10Hz_int                  ; clk_div:inst25|clock_10Hz_int                  ; 22           ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1Khz_int                  ; clk_div:inst25|clock_10Khz_int                 ; 1            ; 1        ; 0            ; 0        ;
-; clk_div:inst25|clock_10Khz_int                 ; clk_div:inst25|clock_10Khz_int                 ; 17           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_10Khz_int                 ; clk_div:inst25|clock_10Khz_int                 ; 16           ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_10Hz_int                  ; clk_div:inst25|clock_100hz_int                 ; 1            ; 1        ; 0            ; 0        ;
-; clk_div:inst25|clock_100hz_int                 ; clk_div:inst25|clock_100hz_int                 ; 13           ; 0        ; 0            ; 0        ;
-; clk_div:inst25|clock_100KHz                    ; clk_div:inst25|clock_100KHz                    ; 8            ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_100hz_int                 ; clk_div:inst25|clock_100hz_int                 ; 16           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_100KHz                    ; clk_div:inst25|clock_100KHz                    ; 7            ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_10Khz_int                 ; clk_div:inst25|clock_100Khz_int                ; 1            ; 1        ; 0            ; 0        ;
-; clk_div:inst25|clock_100Khz_int                ; clk_div:inst25|clock_100Khz_int                ; 19           ; 0        ; 0            ; 0        ;
+; clk_div:inst25|clock_100Khz_int                ; clk_div:inst25|clock_100Khz_int                ; 16           ; 0        ; 0            ; 0        ;
 ; CLOCK_50                                       ; CLOCK_50                                       ; 6087         ; 982      ; 0            ; 0        ;
 ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; CLOCK_50                                       ; 48494        ; 983      ; 0            ; 0        ;
 ; SW[8]                                          ; CLOCK_50                                       ; 2178         ; 0        ; 0            ; 0        ;
 ; cpu:inst12|OP[4]                               ; cpu:inst12|OP[4]                               ; 0            ; 0        ; 16           ; 16       ;
 ; SW[8]                                          ; cpu:inst12|OP[4]                               ; 0            ; 0        ; > 2147483647 ; 0        ;
 ; dec_keyboard:inst11|f3                         ; dec_keyboard:inst11|f3                         ; 12           ; 0        ; 0            ; 0        ;
-; PS2_CLK                                        ; dec_keyboard:inst11|f3                         ; 304          ; 0        ; 0            ; 0        ;
+; PS2_CLK                                        ; dec_keyboard:inst11|f3                         ; 232          ; 0        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1KHz                      ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1Khz_int                  ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
 ; clk_div:inst25|clock_1Mhz_int                  ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
@@ -851,12 +851,12 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 ; clk_div:inst25|clock_100KHz                    ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
 ; clk_div:inst25|clock_100Khz_int                ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 1            ; 1        ; 0            ; 0        ;
 ; CLOCK_50                                       ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 76           ; 0        ; 0            ; 0        ;
-; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 4212         ; 0        ; 0            ; 0        ;
+; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; 4112         ; 0        ; 0            ; 0        ;
 ; SW[8]                                          ; lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] ; > 2147483647 ; 0        ; 0            ; 0        ;
 ; keyboard:inst14|ready_set                      ; PS2_CLK                                        ; 1            ; 1        ; 0            ; 0        ;
 ; PS2_CLK                                        ; PS2_CLK                                        ; 130          ; 0        ; 0            ; 0        ;
-; CLOCK_50                                       ; SW[8]                                          ; 12101310     ; 0        ; 0            ; 0        ;
-; cpu:inst12|OP[4]                               ; SW[8]                                          ; 9            ; 236849   ; 0            ; 0        ;
+; CLOCK_50                                       ; SW[8]                                          ; 16298952     ; 0        ; 0            ; 0        ;
+; cpu:inst12|OP[4]                               ; SW[8]                                          ; 10           ; 294834   ; 0            ; 0        ;
 ; dec_keyboard:inst11|f3                         ; SW[8]                                          ; 8            ; 0        ; 0            ; 0        ;
 ; SW[8]                                          ; SW[8]                                          ; > 2147483647 ; 0        ; 0            ; 0        ;
 +------------------------------------------------+------------------------------------------------+--------------+----------+--------------+----------+
@@ -905,7 +905,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 7     ; 7    ;
-; Unconstrained Input Port Paths  ; 605   ; 605  ;
+; Unconstrained Input Port Paths  ; 609   ; 609  ;
 ; Unconstrained Output Ports      ; 19    ; 19   ;
 ; Unconstrained Output Port Paths ; 19    ; 19   ;
 +---------------------------------+-------+------+
@@ -1025,7 +1025,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Fri Apr 25 18:08:07 2025
+    Info: Processing started: Fri May  9 18:10:56 2025
 Info: Command: quartus_sta AP9 -c AP9
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1061,69 +1061,69 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -42.490
+Info (332146): Worst-case setup slack is -43.147
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -42.490            -671.634 cpu:inst12|OP[4] 
-    Info (332119):   -39.117           -5897.333 SW[8] 
-    Info (332119):   -21.553           -1335.807 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -9.744             -87.344 dec_keyboard:inst11|f3 
-    Info (332119):    -6.910             -58.016 PS2_CLK 
-    Info (332119):    -6.887          -16167.221 CLOCK_50 
-    Info (332119):    -3.047              -7.062 clk_div:inst25|clock_1KHz 
-    Info (332119):    -2.255              -8.390 clk_div:inst25|clock_100hz_int 
-    Info (332119):    -2.227             -10.980 clk_div:inst25|clock_1Khz_int 
-    Info (332119):    -2.077             -10.756 clk_div:inst25|clock_100Khz_int 
-    Info (332119):    -1.831              -8.921 clk_div:inst25|clock_10Khz_int 
-    Info (332119):    -1.762              -8.431 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):    -1.561             -11.881 clk_div:inst25|clock_10Hz_int 
-    Info (332119):    -1.280              -5.316 clk_div:inst25|clock_100KHz 
-Info (332146): Worst-case hold slack is -3.834
+    Info (332119):   -43.147            -681.699 cpu:inst12|OP[4] 
+    Info (332119):   -38.380           -5213.788 SW[8] 
+    Info (332119):   -20.966           -1305.558 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):    -9.682             -90.967 dec_keyboard:inst11|f3 
+    Info (332119):    -7.093             -61.282 PS2_CLK 
+    Info (332119):    -6.060          -13715.948 CLOCK_50 
+    Info (332119):    -2.218              -9.360 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):    -2.185              -8.986 clk_div:inst25|clock_1Khz_int 
+    Info (332119):    -1.982              -9.341 clk_div:inst25|clock_100hz_int 
+    Info (332119):    -1.950              -8.359 clk_div:inst25|clock_10Khz_int 
+    Info (332119):    -1.694              -8.672 clk_div:inst25|clock_100Khz_int 
+    Info (332119):    -1.693              -4.997 clk_div:inst25|clock_1KHz 
+    Info (332119):    -1.562              -9.394 clk_div:inst25|clock_10Hz_int 
+    Info (332119):    -1.203              -4.156 clk_div:inst25|clock_100KHz 
+Info (332146): Worst-case hold slack is -0.816
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.834             -25.986 SW[8] 
-    Info (332119):    -1.404              -1.404 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):     0.261               0.000 CLOCK_50 
-    Info (332119):     0.340               0.000 clk_div:inst25|clock_100Khz_int 
-    Info (332119):     0.446               0.000 clk_div:inst25|clock_10Khz_int 
-    Info (332119):     0.457               0.000 clk_div:inst25|clock_100hz_int 
-    Info (332119):     0.459               0.000 PS2_CLK 
-    Info (332119):     0.537               0.000 clk_div:inst25|clock_1Khz_int 
-    Info (332119):     0.570               0.000 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):     0.646               0.000 clk_div:inst25|clock_1KHz 
-    Info (332119):     0.783               0.000 clk_div:inst25|clock_10Hz_int 
-    Info (332119):     0.807               0.000 clk_div:inst25|clock_100KHz 
-    Info (332119):     0.861               0.000 dec_keyboard:inst11|f3 
-    Info (332119):     0.959               0.000 cpu:inst12|OP[4] 
-Info (332146): Worst-case recovery slack is -1.626
+    Info (332119):    -0.816              -1.985 SW[8] 
+    Info (332119):     0.081               0.000 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):     0.263               0.000 CLOCK_50 
+    Info (332119):     0.308               0.000 clk_div:inst25|clock_10Khz_int 
+    Info (332119):     0.419               0.000 clk_div:inst25|clock_100hz_int 
+    Info (332119):     0.443               0.000 PS2_CLK 
+    Info (332119):     0.466               0.000 clk_div:inst25|clock_100Khz_int 
+    Info (332119):     0.569               0.000 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):     0.603               0.000 clk_div:inst25|clock_1Khz_int 
+    Info (332119):     0.711               0.000 clk_div:inst25|clock_1KHz 
+    Info (332119):     0.767               0.000 clk_div:inst25|clock_100KHz 
+    Info (332119):     0.867               0.000 clk_div:inst25|clock_10Hz_int 
+    Info (332119):     0.890               0.000 dec_keyboard:inst11|f3 
+    Info (332119):     1.015               0.000 cpu:inst12|OP[4] 
+Info (332146): Worst-case recovery slack is -1.316
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.626              -1.626 keyboard:inst14|ready_set 
-    Info (332119):    -1.473              -1.473 keyboard:inst14|scan_ready 
-Info (332146): Worst-case removal slack is 0.401
+    Info (332119):    -1.316              -1.316 keyboard:inst14|ready_set 
+    Info (332119):    -1.308              -1.308 keyboard:inst14|scan_ready 
+Info (332146): Worst-case removal slack is 0.519
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.401               0.000 keyboard:inst14|ready_set 
-    Info (332119):     0.740               0.000 keyboard:inst14|scan_ready 
+    Info (332119):     0.519               0.000 keyboard:inst14|ready_set 
+    Info (332119):     0.674               0.000 keyboard:inst14|scan_ready 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -15234.030 CLOCK_50 
-    Info (332119):    -1.244            -668.467 SW[8] 
-    Info (332119):    -0.575             -21.407 PS2_CLK 
-    Info (332119):    -0.561            -147.092 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -0.538              -8.636 dec_keyboard:inst11|f3 
-    Info (332119):    -0.538              -6.310 clk_div:inst25|clock_10Hz_int 
-    Info (332119):    -0.538              -5.785 clk_div:inst25|clock_100Khz_int 
-    Info (332119):    -0.538              -5.573 clk_div:inst25|clock_1Khz_int 
-    Info (332119):    -0.538              -4.997 clk_div:inst25|clock_100KHz 
-    Info (332119):    -0.538              -4.625 clk_div:inst25|clock_10Khz_int 
-    Info (332119):    -0.538              -4.611 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):    -0.538              -4.038 clk_div:inst25|clock_100hz_int 
-    Info (332119):    -0.538              -2.906 clk_div:inst25|clock_1KHz 
-    Info (332119):    -0.538              -0.914 keyboard:inst14|scan_ready 
-    Info (332119):    -0.538              -0.813 keyboard:inst14|ready_set 
-    Info (332119):     0.285               0.000 cpu:inst12|OP[4] 
+    Info (332119):    -2.636          -15234.502 CLOCK_50 
+    Info (332119):    -1.079            -576.725 SW[8] 
+    Info (332119):    -0.572             -24.760 PS2_CLK 
+    Info (332119):    -0.538            -132.698 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):    -0.538              -7.967 dec_keyboard:inst11|f3 
+    Info (332119):    -0.538              -5.396 clk_div:inst25|clock_10Hz_int 
+    Info (332119):    -0.538              -5.347 clk_div:inst25|clock_10Khz_int 
+    Info (332119):    -0.538              -4.735 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):    -0.538              -4.718 clk_div:inst25|clock_100hz_int 
+    Info (332119):    -0.538              -4.663 clk_div:inst25|clock_1Khz_int 
+    Info (332119):    -0.538              -4.613 clk_div:inst25|clock_100Khz_int 
+    Info (332119):    -0.538              -4.036 clk_div:inst25|clock_100KHz 
+    Info (332119):    -0.538              -2.494 clk_div:inst25|clock_1KHz 
+    Info (332119):    -0.538              -0.797 keyboard:inst14|scan_ready 
+    Info (332119):    -0.538              -0.768 keyboard:inst14|ready_set 
+    Info (332119):     0.108               0.000 cpu:inst12|OP[4] 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 111 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
@@ -1136,69 +1136,69 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -44.124
+Info (332146): Worst-case setup slack is -44.459
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -44.124            -696.662 cpu:inst12|OP[4] 
-    Info (332119):   -40.851           -5848.324 SW[8] 
-    Info (332119):   -22.269           -1362.189 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -9.967             -88.830 dec_keyboard:inst11|f3 
-    Info (332119):    -6.924             -57.536 PS2_CLK 
-    Info (332119):    -6.547          -14838.851 CLOCK_50 
-    Info (332119):    -2.946              -6.815 clk_div:inst25|clock_1KHz 
-    Info (332119):    -2.271              -8.687 clk_div:inst25|clock_100hz_int 
-    Info (332119):    -2.259             -11.349 clk_div:inst25|clock_1Khz_int 
-    Info (332119):    -2.060             -11.122 clk_div:inst25|clock_100Khz_int 
-    Info (332119):    -1.818              -8.536 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):    -1.817              -9.203 clk_div:inst25|clock_10Khz_int 
-    Info (332119):    -1.606             -12.332 clk_div:inst25|clock_10Hz_int 
-    Info (332119):    -1.301              -5.468 clk_div:inst25|clock_100KHz 
-Info (332146): Worst-case hold slack is -3.801
+    Info (332119):   -44.459            -703.249 cpu:inst12|OP[4] 
+    Info (332119):   -39.766           -5168.261 SW[8] 
+    Info (332119):   -21.759           -1336.895 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):    -9.801             -91.620 dec_keyboard:inst11|f3 
+    Info (332119):    -7.138             -59.628 PS2_CLK 
+    Info (332119):    -5.824          -12604.872 CLOCK_50 
+    Info (332119):    -2.209              -9.505 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):    -2.201              -9.256 clk_div:inst25|clock_1Khz_int 
+    Info (332119):    -1.945              -9.548 clk_div:inst25|clock_100hz_int 
+    Info (332119):    -1.944              -8.534 clk_div:inst25|clock_10Khz_int 
+    Info (332119):    -1.781              -4.889 clk_div:inst25|clock_1KHz 
+    Info (332119):    -1.763              -8.980 clk_div:inst25|clock_100Khz_int 
+    Info (332119):    -1.622              -9.754 clk_div:inst25|clock_10Hz_int 
+    Info (332119):    -1.194              -4.213 clk_div:inst25|clock_100KHz 
+Info (332146): Worst-case hold slack is -0.788
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.801             -25.126 SW[8] 
-    Info (332119):    -1.236              -1.236 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -0.076              -0.721 CLOCK_50 
-    Info (332119):     0.391               0.000 clk_div:inst25|clock_100Khz_int 
-    Info (332119):     0.466               0.000 clk_div:inst25|clock_10Khz_int 
-    Info (332119):     0.486               0.000 PS2_CLK 
-    Info (332119):     0.544               0.000 clk_div:inst25|clock_100hz_int 
-    Info (332119):     0.597               0.000 clk_div:inst25|clock_1Khz_int 
-    Info (332119):     0.673               0.000 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):     0.681               0.000 clk_div:inst25|clock_1KHz 
-    Info (332119):     0.755               0.000 clk_div:inst25|clock_10Hz_int 
-    Info (332119):     0.812               0.000 clk_div:inst25|clock_100KHz 
-    Info (332119):     0.817               0.000 dec_keyboard:inst11|f3 
-    Info (332119):     0.902               0.000 cpu:inst12|OP[4] 
-Info (332146): Worst-case recovery slack is -1.598
+    Info (332119):    -0.788              -2.308 SW[8] 
+    Info (332119):     0.085               0.000 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):     0.110               0.000 CLOCK_50 
+    Info (332119):     0.368               0.000 clk_div:inst25|clock_10Khz_int 
+    Info (332119):     0.431               0.000 clk_div:inst25|clock_100hz_int 
+    Info (332119):     0.473               0.000 PS2_CLK 
+    Info (332119):     0.538               0.000 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):     0.558               0.000 clk_div:inst25|clock_100Khz_int 
+    Info (332119):     0.654               0.000 clk_div:inst25|clock_1Khz_int 
+    Info (332119):     0.685               0.000 clk_div:inst25|clock_1KHz 
+    Info (332119):     0.749               0.000 clk_div:inst25|clock_100KHz 
+    Info (332119):     0.810               0.000 clk_div:inst25|clock_10Hz_int 
+    Info (332119):     0.877               0.000 dec_keyboard:inst11|f3 
+    Info (332119):     0.965               0.000 cpu:inst12|OP[4] 
+Info (332146): Worst-case recovery slack is -1.287
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.598              -1.598 keyboard:inst14|ready_set 
-    Info (332119):    -1.305              -1.305 keyboard:inst14|scan_ready 
-Info (332146): Worst-case removal slack is 0.352
+    Info (332119):    -1.287              -1.287 keyboard:inst14|ready_set 
+    Info (332119):    -1.189              -1.189 keyboard:inst14|scan_ready 
+Info (332146): Worst-case removal slack is 0.444
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.352               0.000 keyboard:inst14|ready_set 
-    Info (332119):     0.605               0.000 keyboard:inst14|scan_ready 
+    Info (332119):     0.444               0.000 keyboard:inst14|ready_set 
+    Info (332119):     0.597               0.000 keyboard:inst14|scan_ready 
 Info (332146): Worst-case minimum pulse width slack is -2.636
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.636          -15236.819 CLOCK_50 
-    Info (332119):    -1.285            -711.568 SW[8] 
-    Info (332119):    -0.608             -19.465 PS2_CLK 
-    Info (332119):    -0.546            -145.216 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -0.538              -8.650 dec_keyboard:inst11|f3 
-    Info (332119):    -0.538              -6.234 clk_div:inst25|clock_10Hz_int 
-    Info (332119):    -0.538              -5.691 clk_div:inst25|clock_100Khz_int 
-    Info (332119):    -0.538              -5.524 clk_div:inst25|clock_1Khz_int 
-    Info (332119):    -0.538              -4.932 clk_div:inst25|clock_100KHz 
-    Info (332119):    -0.538              -4.636 clk_div:inst25|clock_10Khz_int 
-    Info (332119):    -0.538              -4.620 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):    -0.538              -3.999 clk_div:inst25|clock_100hz_int 
-    Info (332119):    -0.538              -2.937 clk_div:inst25|clock_1KHz 
-    Info (332119):    -0.538              -0.876 keyboard:inst14|scan_ready 
-    Info (332119):    -0.538              -0.799 keyboard:inst14|ready_set 
-    Info (332119):     0.278               0.000 cpu:inst12|OP[4] 
+    Info (332119):    -2.636          -15237.186 CLOCK_50 
+    Info (332119):    -1.086            -608.661 SW[8] 
+    Info (332119):    -0.617             -21.984 PS2_CLK 
+    Info (332119):    -0.538            -131.034 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):    -0.538              -7.873 dec_keyboard:inst11|f3 
+    Info (332119):    -0.538              -5.409 clk_div:inst25|clock_10Hz_int 
+    Info (332119):    -0.538              -5.214 clk_div:inst25|clock_10Khz_int 
+    Info (332119):    -0.538              -4.692 clk_div:inst25|clock_100hz_int 
+    Info (332119):    -0.538              -4.686 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):    -0.538              -4.644 clk_div:inst25|clock_1Khz_int 
+    Info (332119):    -0.538              -4.633 clk_div:inst25|clock_100Khz_int 
+    Info (332119):    -0.538              -4.045 clk_div:inst25|clock_100KHz 
+    Info (332119):    -0.538              -2.460 clk_div:inst25|clock_1KHz 
+    Info (332119):    -0.538              -0.791 keyboard:inst14|scan_ready 
+    Info (332119):    -0.538              -0.770 keyboard:inst14|ready_set 
+    Info (332119):     0.153               0.000 cpu:inst12|OP[4] 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 111 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
@@ -1211,69 +1211,69 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -19.564
+Info (332146): Worst-case setup slack is -20.072
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -19.564            -309.064 cpu:inst12|OP[4] 
-    Info (332119):   -18.065           -3156.885 SW[8] 
-    Info (332119):    -9.650            -599.436 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -4.301             -38.532 dec_keyboard:inst11|f3 
-    Info (332119):    -3.871           -7600.529 CLOCK_50 
-    Info (332119):    -3.405             -17.982 PS2_CLK 
-    Info (332119):    -1.393              -3.222 clk_div:inst25|clock_1KHz 
-    Info (332119):    -1.043              -3.403 clk_div:inst25|clock_1Khz_int 
-    Info (332119):    -0.993              -3.301 clk_div:inst25|clock_100Khz_int 
-    Info (332119):    -0.972              -2.627 clk_div:inst25|clock_100hz_int 
-    Info (332119):    -0.890              -2.805 clk_div:inst25|clock_10Khz_int 
-    Info (332119):    -0.787              -2.612 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):    -0.470              -3.327 clk_div:inst25|clock_10Hz_int 
-    Info (332119):    -0.386              -1.190 clk_div:inst25|clock_100KHz 
-Info (332146): Worst-case hold slack is -1.998
+    Info (332119):   -20.072            -315.440 cpu:inst12|OP[4] 
+    Info (332119):   -17.915           -2807.348 SW[8] 
+    Info (332119):    -9.301            -576.143 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):    -4.309             -41.090 dec_keyboard:inst11|f3 
+    Info (332119):    -3.466             -19.676 PS2_CLK 
+    Info (332119):    -3.464           -6186.360 CLOCK_50 
+    Info (332119):    -1.248              -3.284 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):    -1.034              -2.793 clk_div:inst25|clock_1Khz_int 
+    Info (332119):    -0.956              -3.022 clk_div:inst25|clock_100hz_int 
+    Info (332119):    -0.955              -2.605 clk_div:inst25|clock_10Khz_int 
+    Info (332119):    -0.737              -2.639 clk_div:inst25|clock_100Khz_int 
+    Info (332119):    -0.539              -1.521 clk_div:inst25|clock_1KHz 
+    Info (332119):    -0.461              -2.479 clk_div:inst25|clock_10Hz_int 
+    Info (332119):    -0.397              -1.001 clk_div:inst25|clock_100KHz 
+Info (332146): Worst-case hold slack is -0.133
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.998             -10.587 SW[8] 
-    Info (332119):    -0.910              -0.910 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -0.148              -1.744 CLOCK_50 
-    Info (332119):    -0.005              -0.005 clk_div:inst25|clock_10Khz_int 
-    Info (332119):     0.010               0.000 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):     0.015               0.000 clk_div:inst25|clock_100Khz_int 
-    Info (332119):     0.042               0.000 clk_div:inst25|clock_1KHz 
-    Info (332119):     0.079               0.000 clk_div:inst25|clock_1Khz_int 
-    Info (332119):     0.100               0.000 clk_div:inst25|clock_100hz_int 
-    Info (332119):     0.182               0.000 PS2_CLK 
-    Info (332119):     0.286               0.000 clk_div:inst25|clock_100KHz 
-    Info (332119):     0.346               0.000 dec_keyboard:inst11|f3 
+    Info (332119):    -0.133              -0.133 clk_div:inst25|clock_10Khz_int 
+    Info (332119):    -0.111              -0.147 clk_div:inst25|clock_1KHz 
+    Info (332119):    -0.080              -0.624 CLOCK_50 
+    Info (332119):    -0.040              -0.040 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):    -0.035              -0.035 clk_div:inst25|clock_100Khz_int 
+    Info (332119):     0.002               0.000 clk_div:inst25|clock_100hz_int 
+    Info (332119):     0.080               0.000 SW[8] 
+    Info (332119):     0.114               0.000 clk_div:inst25|clock_1Khz_int 
+    Info (332119):     0.148               0.000 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):     0.178               0.000 PS2_CLK 
+    Info (332119):     0.282               0.000 clk_div:inst25|clock_100KHz 
     Info (332119):     0.349               0.000 clk_div:inst25|clock_10Hz_int 
-    Info (332119):     0.533               0.000 cpu:inst12|OP[4] 
-Info (332146): Worst-case recovery slack is -1.096
+    Info (332119):     0.360               0.000 dec_keyboard:inst11|f3 
+    Info (332119):     0.503               0.000 cpu:inst12|OP[4] 
+Info (332146): Worst-case recovery slack is -0.840
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.096              -1.096 keyboard:inst14|ready_set 
-    Info (332119):    -0.370              -0.370 keyboard:inst14|scan_ready 
-Info (332146): Worst-case removal slack is 0.054
+    Info (332119):    -0.840              -0.840 keyboard:inst14|ready_set 
+    Info (332119):    -0.372              -0.372 keyboard:inst14|scan_ready 
+Info (332146): Worst-case removal slack is 0.104
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.054               0.000 keyboard:inst14|scan_ready 
-    Info (332119):     0.081               0.000 keyboard:inst14|ready_set 
+    Info (332119):     0.104               0.000 keyboard:inst14|ready_set 
+    Info (332119):     0.127               0.000 keyboard:inst14|scan_ready 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174          -12501.030 CLOCK_50 
-    Info (332119):    -1.191            -619.452 SW[8] 
-    Info (332119):    -0.685             -15.221 PS2_CLK 
-    Info (332119):    -0.192             -10.166 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -0.112              -0.333 clk_div:inst25|clock_1KHz 
-    Info (332119):    -0.072              -0.167 dec_keyboard:inst11|f3 
-    Info (332119):    -0.032              -0.032 keyboard:inst14|scan_ready 
-    Info (332119):     0.010               0.000 clk_div:inst25|clock_100KHz 
-    Info (332119):     0.042               0.000 keyboard:inst14|ready_set 
-    Info (332119):     0.069               0.000 clk_div:inst25|clock_100Khz_int 
-    Info (332119):     0.122               0.000 clk_div:inst25|clock_100hz_int 
-    Info (332119):     0.127               0.000 clk_div:inst25|clock_10Khz_int 
-    Info (332119):     0.128               0.000 clk_div:inst25|clock_1Khz_int 
-    Info (332119):     0.131               0.000 clk_div:inst25|clock_10Hz_int 
-    Info (332119):     0.143               0.000 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):     0.301               0.000 cpu:inst12|OP[4] 
+    Info (332119):    -2.174          -12498.963 CLOCK_50 
+    Info (332119):    -1.085            -556.385 SW[8] 
+    Info (332119):    -0.646             -20.666 PS2_CLK 
+    Info (332119):    -0.196              -2.111 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):    -0.038              -0.225 clk_div:inst25|clock_10Khz_int 
+    Info (332119):     0.031               0.000 clk_div:inst25|clock_1KHz 
+    Info (332119):     0.050               0.000 clk_div:inst25|clock_100KHz 
+    Info (332119):     0.078               0.000 dec_keyboard:inst11|f3 
+    Info (332119):     0.088               0.000 keyboard:inst14|scan_ready 
+    Info (332119):     0.124               0.000 clk_div:inst25|clock_10Hz_int 
+    Info (332119):     0.132               0.000 clk_div:inst25|clock_1Khz_int 
+    Info (332119):     0.138               0.000 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):     0.144               0.000 clk_div:inst25|clock_100Khz_int 
+    Info (332119):     0.144               0.000 keyboard:inst14|ready_set 
+    Info (332119):     0.154               0.000 clk_div:inst25|clock_100hz_int 
+    Info (332119):     0.200               0.000 cpu:inst12|OP[4] 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 111 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
@@ -1284,69 +1284,69 @@ Info (332097): The following timing edges are non-unate.  The Timing Analyzer wi
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -18.383
+Info (332146): Worst-case setup slack is -18.833
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):   -18.383            -290.982 cpu:inst12|OP[4] 
-    Info (332119):   -16.971           -2805.373 SW[8] 
-    Info (332119):    -9.060            -551.038 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -4.157             -37.277 dec_keyboard:inst11|f3 
-    Info (332119):    -3.467           -6364.830 CLOCK_50 
-    Info (332119):    -3.172             -15.072 PS2_CLK 
-    Info (332119):    -1.190              -2.710 clk_div:inst25|clock_1KHz 
-    Info (332119):    -0.962              -2.993 clk_div:inst25|clock_1Khz_int 
-    Info (332119):    -0.904              -2.880 clk_div:inst25|clock_100Khz_int 
-    Info (332119):    -0.904              -2.294 clk_div:inst25|clock_100hz_int 
-    Info (332119):    -0.815              -2.472 clk_div:inst25|clock_10Khz_int 
-    Info (332119):    -0.743              -2.240 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):    -0.403              -2.858 clk_div:inst25|clock_10Hz_int 
-    Info (332119):    -0.306              -0.907 clk_div:inst25|clock_100KHz 
-Info (332146): Worst-case hold slack is -1.887
+    Info (332119):   -18.833            -296.866 cpu:inst12|OP[4] 
+    Info (332119):   -16.776           -2482.328 SW[8] 
+    Info (332119):    -8.755            -532.664 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):    -4.149             -39.505 dec_keyboard:inst11|f3 
+    Info (332119):    -3.295             -16.525 PS2_CLK 
+    Info (332119):    -3.133           -5141.704 CLOCK_50 
+    Info (332119):    -1.110              -2.810 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):    -0.951              -2.453 clk_div:inst25|clock_1Khz_int 
+    Info (332119):    -0.876              -2.660 clk_div:inst25|clock_100hz_int 
+    Info (332119):    -0.872              -2.246 clk_div:inst25|clock_10Khz_int 
+    Info (332119):    -0.694              -2.311 clk_div:inst25|clock_100Khz_int 
+    Info (332119):    -0.417              -1.226 clk_div:inst25|clock_1KHz 
+    Info (332119):    -0.400              -2.087 clk_div:inst25|clock_10Hz_int 
+    Info (332119):    -0.304              -0.742 clk_div:inst25|clock_100KHz 
+Info (332146): Worst-case hold slack is -0.213
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.887              -9.903 SW[8] 
-    Info (332119):    -0.832              -0.841 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -0.304             -26.094 CLOCK_50 
-    Info (332119):    -0.023              -0.023 clk_div:inst25|clock_10Khz_int 
-    Info (332119):    -0.015              -0.015 clk_div:inst25|clock_100Khz_int 
-    Info (332119):     0.008               0.000 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):     0.040               0.000 clk_div:inst25|clock_1KHz 
-    Info (332119):     0.053               0.000 clk_div:inst25|clock_1Khz_int 
-    Info (332119):     0.083               0.000 clk_div:inst25|clock_100hz_int 
-    Info (332119):     0.170               0.000 PS2_CLK 
-    Info (332119):     0.260               0.000 clk_div:inst25|clock_100KHz 
-    Info (332119):     0.312               0.000 clk_div:inst25|clock_10Hz_int 
-    Info (332119):     0.321               0.000 dec_keyboard:inst11|f3 
-    Info (332119):     0.476               0.000 cpu:inst12|OP[4] 
-Info (332146): Worst-case recovery slack is -0.951
+    Info (332119):    -0.213             -23.997 CLOCK_50 
+    Info (332119):    -0.143              -0.143 clk_div:inst25|clock_10Khz_int 
+    Info (332119):    -0.110              -0.250 clk_div:inst25|clock_1KHz 
+    Info (332119):    -0.084              -0.113 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):    -0.038              -0.038 clk_div:inst25|clock_100Khz_int 
+    Info (332119):    -0.024              -0.024 clk_div:inst25|clock_100hz_int 
+    Info (332119):     0.017               0.000 SW[8] 
+    Info (332119):     0.085               0.000 clk_div:inst25|clock_1Khz_int 
+    Info (332119):     0.091               0.000 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):     0.167               0.000 PS2_CLK 
+    Info (332119):     0.249               0.000 clk_div:inst25|clock_100KHz 
+    Info (332119):     0.303               0.000 clk_div:inst25|clock_10Hz_int 
+    Info (332119):     0.329               0.000 dec_keyboard:inst11|f3 
+    Info (332119):     0.477               0.000 cpu:inst12|OP[4] 
+Info (332146): Worst-case recovery slack is -0.737
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.951              -0.951 keyboard:inst14|ready_set 
-    Info (332119):    -0.248              -0.248 keyboard:inst14|scan_ready 
-Info (332146): Worst-case removal slack is -0.030
+    Info (332119):    -0.737              -0.737 keyboard:inst14|ready_set 
+    Info (332119):    -0.273              -0.273 keyboard:inst14|scan_ready 
+Info (332146): Worst-case removal slack is 0.046
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.030              -0.030 keyboard:inst14|scan_ready 
-    Info (332119):     0.025               0.000 keyboard:inst14|ready_set 
+    Info (332119):     0.046               0.000 keyboard:inst14|ready_set 
+    Info (332119):     0.055               0.000 keyboard:inst14|scan_ready 
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174          -12714.837 CLOCK_50 
-    Info (332119):    -1.135            -598.809 SW[8] 
-    Info (332119):    -0.715             -17.035 PS2_CLK 
-    Info (332119):    -0.120              -4.992 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
-    Info (332119):    -0.069              -0.205 clk_div:inst25|clock_1KHz 
-    Info (332119):    -0.027              -0.027 dec_keyboard:inst11|f3 
-    Info (332119):     0.015               0.000 keyboard:inst14|scan_ready 
-    Info (332119):     0.042               0.000 clk_div:inst25|clock_100KHz 
-    Info (332119):     0.072               0.000 keyboard:inst14|ready_set 
-    Info (332119):     0.091               0.000 clk_div:inst25|clock_100Khz_int 
-    Info (332119):     0.126               0.000 clk_div:inst25|clock_100hz_int 
-    Info (332119):     0.128               0.000 clk_div:inst25|clock_10Khz_int 
-    Info (332119):     0.136               0.000 clk_div:inst25|clock_1Khz_int 
-    Info (332119):     0.139               0.000 clk_div:inst25|clock_10Hz_int 
-    Info (332119):     0.144               0.000 clk_div:inst25|clock_1Mhz_int 
-    Info (332119):     0.338               0.000 cpu:inst12|OP[4] 
+    Info (332119):    -2.174          -12714.446 CLOCK_50 
+    Info (332119):    -1.028            -548.988 SW[8] 
+    Info (332119):    -0.691             -21.147 PS2_CLK 
+    Info (332119):    -0.134              -0.617 lpm_dff1:inst1|lpm_ff:lpm_ff_component|dffs[0] 
+    Info (332119):     0.015               0.000 clk_div:inst25|clock_10Khz_int 
+    Info (332119):     0.052               0.000 clk_div:inst25|clock_1KHz 
+    Info (332119):     0.073               0.000 clk_div:inst25|clock_100KHz 
+    Info (332119):     0.095               0.000 dec_keyboard:inst11|f3 
+    Info (332119):     0.100               0.000 keyboard:inst14|scan_ready 
+    Info (332119):     0.127               0.000 clk_div:inst25|clock_10Hz_int 
+    Info (332119):     0.139               0.000 clk_div:inst25|clock_1Khz_int 
+    Info (332119):     0.140               0.000 clk_div:inst25|clock_100Khz_int 
+    Info (332119):     0.143               0.000 keyboard:inst14|ready_set 
+    Info (332119):     0.149               0.000 clk_div:inst25|clock_1Mhz_int 
+    Info (332119):     0.154               0.000 clk_div:inst25|clock_100hz_int 
+    Info (332119):     0.264               0.000 cpu:inst12|OP[4] 
 Warning (18330): Ignoring Synchronizer Identification setting Off, and using Auto instead.
 Info (332114): Report Metastability: Found 111 synchronizer chains.
     Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
@@ -1354,7 +1354,7 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 5383 megabytes
-    Info: Processing ended: Fri Apr 25 18:08:15 2025
+    Info: Processing ended: Fri May  9 18:11:04 2025
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:19
 

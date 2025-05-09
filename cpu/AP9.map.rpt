@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AP9
-Fri Apr 25 18:01:26 2025
+Fri May  9 18:03:59 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -19,38 +19,37 @@ Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
  11. State Machine - |AP9|cpu:inst12|state
  12. User-Specified and Inferred Latches
  13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Inverted Register Statistics
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated
- 19. Source assignments for VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|altsyncram_fqn1:FIFOram
- 20. Source assignments for VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated
- 21. Source assignments for RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated
- 22. Source assignments for lpm_rom0:inst3|altsyncram:altsyncram_component|altsyncram_7kd1:auto_generated
- 23. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component
- 24. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst|lpm_ff:lpm_ff_component
- 25. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component
- 26. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst3|lpm_ff:lpm_ff_component
- 27. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst2|lpm_ff:lpm_ff_component
- 28. Parameter Settings for User Entity Instance: VGA_MOD:inst|BUSMUX:inst13
- 29. Parameter Settings for User Entity Instance: VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component
- 30. Parameter Settings for User Entity Instance: VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component
- 31. Parameter Settings for User Entity Instance: VGA_MOD:inst|BUSMUX:inst15
- 32. Parameter Settings for User Entity Instance: VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component
- 33. Parameter Settings for User Entity Instance: VGA_MOD:inst|BUSMUX:inst14
- 34. Parameter Settings for User Entity Instance: lpm_dff1:inst1|lpm_ff:lpm_ff_component
- 35. Parameter Settings for User Entity Instance: RAM:inst10|altsyncram:altsyncram_component
- 36. Parameter Settings for User Entity Instance: lpm_rom0:inst3|altsyncram:altsyncram_component
- 37. Parameter Settings for Inferred Entity Instance: cpu:inst12|lpm_divide:Mod0
- 38. Parameter Settings for Inferred Entity Instance: cpu:inst12|lpm_divide:Div0
- 39. Parameter Settings for Inferred Entity Instance: POS_CONV:inst13|lpm_divide:Mod0
- 40. Parameter Settings for Inferred Entity Instance: POS_CONV:inst13|lpm_divide:Div0
- 41. altsyncram Parameter Settings by Entity Instance
- 42. scfifo Parameter Settings by Entity Instance
- 43. Post-Synthesis Netlist Statistics for Top Partition
- 44. Elapsed Time Per Partition
- 45. Analysis & Synthesis Messages
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated
+ 18. Source assignments for VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|altsyncram_fqn1:FIFOram
+ 19. Source assignments for VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated
+ 20. Source assignments for RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated
+ 21. Source assignments for lpm_rom0:inst3|altsyncram:altsyncram_component|altsyncram_7kd1:auto_generated
+ 22. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+ 23. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst|lpm_ff:lpm_ff_component
+ 24. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component
+ 25. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst3|lpm_ff:lpm_ff_component
+ 26. Parameter Settings for User Entity Instance: VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst2|lpm_ff:lpm_ff_component
+ 27. Parameter Settings for User Entity Instance: VGA_MOD:inst|BUSMUX:inst13
+ 28. Parameter Settings for User Entity Instance: VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component
+ 29. Parameter Settings for User Entity Instance: VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component
+ 30. Parameter Settings for User Entity Instance: VGA_MOD:inst|BUSMUX:inst15
+ 31. Parameter Settings for User Entity Instance: VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component
+ 32. Parameter Settings for User Entity Instance: VGA_MOD:inst|BUSMUX:inst14
+ 33. Parameter Settings for User Entity Instance: lpm_dff1:inst1|lpm_ff:lpm_ff_component
+ 34. Parameter Settings for User Entity Instance: RAM:inst10|altsyncram:altsyncram_component
+ 35. Parameter Settings for User Entity Instance: lpm_rom0:inst3|altsyncram:altsyncram_component
+ 36. Parameter Settings for Inferred Entity Instance: cpu:inst12|lpm_divide:Mod0
+ 37. Parameter Settings for Inferred Entity Instance: cpu:inst12|lpm_divide:Div0
+ 38. Parameter Settings for Inferred Entity Instance: POS_CONV:inst13|lpm_divide:Mod0
+ 39. Parameter Settings for Inferred Entity Instance: POS_CONV:inst13|lpm_divide:Div0
+ 40. altsyncram Parameter Settings by Entity Instance
+ 41. scfifo Parameter Settings by Entity Instance
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
 
 
 
@@ -77,13 +76,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Apr 25 18:01:26 2025           ;
+; Analysis & Synthesis Status     ; Successful - Fri May  9 18:03:59 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; AP9                                             ;
 ; Top-level Entity Name           ; AP9                                             ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 653                                             ;
+; Total registers                 ; 663                                             ;
 ; Total pins                      ; 30                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 946,176                                         ;
@@ -206,31 +205,31 @@ on the Quartus Prime software download page.
 +----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                    ; Library ;
 +----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
-; cpu.vhd                          ; yes             ; User VHDL File                           ; C:/Users/15491959/cpu/cpu/cpu.vhd                                               ;         ;
-; AP9.bdf                          ; yes             ; User Block Diagram/Schematic File        ; C:/Users/15491959/cpu/cpu/AP9.bdf                                               ;         ;
-; lpm_rom0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Users/15491959/cpu/cpu/lpm_rom0.vhd                                          ;         ;
-; TEXT_DRAWER.vhd                  ; yes             ; User VHDL File                           ; C:/Users/15491959/cpu/cpu/TEXT_DRAWER.vhd                                       ;         ;
-; VGA_MOD.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/15491959/cpu/cpu/VGA_MOD.bdf                                           ;         ;
-; video_mem2.mif                   ; yes             ; User Memory Initialization File          ; C:/Users/15491959/cpu/cpu/video_mem2.mif                                        ;         ;
-; vga_sync.vhd                     ; yes             ; User VHDL File                           ; C:/Users/15491959/cpu/cpu/vga_sync.vhd                                          ;         ;
-; ASCII_CONV.vhd                   ; yes             ; User VHDL File                           ; C:/Users/15491959/cpu/cpu/ASCII_CONV.vhd                                        ;         ;
-; RAM.vhd                          ; yes             ; User Wizard-Generated File               ; C:/Users/15491959/cpu/cpu/RAM.vhd                                               ;         ;
-; POS_CONV.vhd                     ; yes             ; User VHDL File                           ; C:/Users/15491959/cpu/cpu/POS_CONV.vhd                                          ;         ;
-; video_filter.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/15491959/cpu/cpu/video_filter.bdf                                      ;         ;
-; lpm_dff0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/cpu/cpu/lpm_dff0.vhd                                          ;         ;
+; cpu.vhd                          ; yes             ; User VHDL File                           ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd                            ;         ;
+; AP9.bdf                          ; yes             ; User Block Diagram/Schematic File        ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/AP9.bdf                            ;         ;
+; lpm_rom0.vhd                     ; yes             ; User Wizard-Generated File               ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_rom0.vhd                       ;         ;
+; TEXT_DRAWER.vhd                  ; yes             ; User VHDL File                           ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/TEXT_DRAWER.vhd                    ;         ;
+; VGA_MOD.bdf                      ; yes             ; User Block Diagram/Schematic File        ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/VGA_MOD.bdf                        ;         ;
+; video_mem2.mif                   ; yes             ; User Memory Initialization File          ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/video_mem2.mif                     ;         ;
+; vga_sync.vhd                     ; yes             ; User VHDL File                           ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/vga_sync.vhd                       ;         ;
+; ASCII_CONV.vhd                   ; yes             ; User VHDL File                           ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/ASCII_CONV.vhd                     ;         ;
+; RAM.vhd                          ; yes             ; User Wizard-Generated File               ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/RAM.vhd                            ;         ;
+; POS_CONV.vhd                     ; yes             ; User VHDL File                           ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/POS_CONV.vhd                       ;         ;
+; video_filter.bdf                 ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/video_filter.bdf                   ;         ;
+; lpm_dff0.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff0.vhd                       ;         ;
 ; lpm_ff.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_ff.tdf            ;         ;
 ; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_constant.inc      ;         ;
 ; aglobal241.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/aglobal241.inc        ;         ;
-; lpm_dff2.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/cpu/cpu/lpm_dff2.vhd                                          ;         ;
-; color_bridge.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/cpu/cpu/color_bridge.vhd                                      ;         ;
+; lpm_dff2.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff2.vhd                       ;         ;
+; color_bridge.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/color_bridge.vhd                   ;         ;
 ; busmux.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/busmux.tdf            ;         ;
 ; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
 ; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_mux.tdf           ;         ;
 ; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/muxlut.inc            ;         ;
 ; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/bypassff.inc          ;         ;
 ; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mux_sjc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/mux_sjc.tdf                                        ;         ;
-; lpm_ram_dq0.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/cpu/cpu/lpm_ram_dq0.vhd                                       ;         ;
+; db/mux_sjc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_sjc.tdf                     ;         ;
+; lpm_ram_dq0.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq0.vhd                    ;         ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
 ; stratix_ram_block.inc            ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
 ; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
@@ -238,59 +237,59 @@ on the Quartus Prime software download page.
 ; altrom.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/altrom.inc            ;         ;
 ; altram.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/altram.inc            ;         ;
 ; altdpram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_o1j1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/altsyncram_o1j1.tdf                                ;         ;
-; video_mem1.mif                   ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/15491959/cpu/cpu/video_mem1.mif                                        ;         ;
-; db/decode_dla.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/decode_dla.tdf                                     ;         ;
-; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/decode_61a.tdf                                     ;         ;
-; db/mux_pfb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/mux_pfb.tdf                                        ;         ;
-; demux.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/15491959/cpu/cpu/demux.bdf                                             ;         ;
-; fifo0.vhd                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/cpu/cpu/fifo0.vhd                                             ;         ;
+; db/altsyncram_o1j1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_o1j1.tdf             ;         ;
+; video_mem1.mif                   ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/video_mem1.mif                     ;         ;
+; db/decode_dla.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_dla.tdf                  ;         ;
+; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_61a.tdf                  ;         ;
+; db/mux_pfb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_pfb.tdf                     ;         ;
+; demux.bdf                        ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/demux.bdf                          ;         ;
+; fifo0.vhd                        ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/fifo0.vhd                          ;         ;
 ; scfifo.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/scfifo.tdf            ;         ;
 ; a_regfifo.inc                    ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/a_regfifo.inc         ;         ;
 ; a_dpfifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/a_dpfifo.inc          ;         ;
 ; a_i2fifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/a_i2fifo.inc          ;         ;
 ; a_fffifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/a_fffifo.inc          ;         ;
 ; a_f2fifo.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/a_f2fifo.inc          ;         ;
-; db/scfifo_2491.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/scfifo_2491.tdf                                    ;         ;
-; db/a_dpfifo_9a91.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/a_dpfifo_9a91.tdf                                  ;         ;
-; db/altsyncram_fqn1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/altsyncram_fqn1.tdf                                ;         ;
-; db/cmpr_im8.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/cmpr_im8.tdf                                       ;         ;
-; db/cntr_vhb.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/cntr_vhb.tdf                                       ;         ;
-; db/cntr_ci7.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/cntr_ci7.tdf                                       ;         ;
-; db/cntr_0ib.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/cntr_0ib.tdf                                       ;         ;
-; db/mux_flc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/mux_flc.tdf                                        ;         ;
-; lpm_ram_dq1.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/cpu/cpu/lpm_ram_dq1.vhd                                       ;         ;
-; db/altsyncram_k1j1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/altsyncram_k1j1.tdf                                ;         ;
-; db/decode_5la.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/decode_5la.tdf                                     ;         ;
-; db/decode_u0a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/decode_u0a.tdf                                     ;         ;
-; db/mux_hfb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/mux_hfb.tdf                                        ;         ;
-; db/mux_dlc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/mux_dlc.tdf                                        ;         ;
-; lpm_dff1.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/cpu/cpu/lpm_dff1.vhd                                          ;         ;
-; seletorclock.v                   ; yes             ; Auto-Found Verilog HDL File              ; C:/Users/15491959/cpu/cpu/seletorclock.v                                        ;         ;
-; clk_div.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/cpu/cpu/clk_div.vhd                                           ;         ;
-; debounce.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/cpu/cpu/debounce.vhd                                          ;         ;
-; dec_keyboard.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/cpu/cpu/dec_keyboard.vhd                                      ;         ;
-; keyboard.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/cpu/cpu/keyboard.vhd                                          ;         ;
-; db/altsyncram_doi1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/altsyncram_doi1.tdf                                ;         ;
-; cpuram.mif                       ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/15491959/cpu/cpu/cpuram.mif                                            ;         ;
-; db/decode_8la.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/decode_8la.tdf                                     ;         ;
-; db/decode_11a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/decode_11a.tdf                                     ;         ;
-; db/mux_7hb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/mux_7hb.tdf                                        ;         ;
-; db/altsyncram_7kd1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/altsyncram_7kd1.tdf                                ;         ;
-; charmap.mif                      ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/15491959/cpu/cpu/charmap.mif                                           ;         ;
+; db/scfifo_2491.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/scfifo_2491.tdf                 ;         ;
+; db/a_dpfifo_9a91.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/a_dpfifo_9a91.tdf               ;         ;
+; db/altsyncram_fqn1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_fqn1.tdf             ;         ;
+; db/cmpr_im8.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/cmpr_im8.tdf                    ;         ;
+; db/cntr_vhb.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/cntr_vhb.tdf                    ;         ;
+; db/cntr_ci7.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/cntr_ci7.tdf                    ;         ;
+; db/cntr_0ib.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/cntr_0ib.tdf                    ;         ;
+; db/mux_flc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_flc.tdf                     ;         ;
+; lpm_ram_dq1.vhd                  ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq1.vhd                    ;         ;
+; db/altsyncram_k1j1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_k1j1.tdf             ;         ;
+; db/decode_5la.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_5la.tdf                  ;         ;
+; db/decode_u0a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_u0a.tdf                  ;         ;
+; db/mux_hfb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_hfb.tdf                     ;         ;
+; db/mux_dlc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_dlc.tdf                     ;         ;
+; lpm_dff1.vhd                     ; yes             ; Auto-Found Wizard-Generated File         ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff1.vhd                       ;         ;
+; seletorclock.v                   ; yes             ; Auto-Found Verilog HDL File              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/seletorclock.v                     ;         ;
+; clk_div.vhd                      ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/clk_div.vhd                        ;         ;
+; debounce.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/debounce.vhd                       ;         ;
+; dec_keyboard.vhd                 ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/dec_keyboard.vhd                   ;         ;
+; keyboard.vhd                     ; yes             ; Auto-Found VHDL File                     ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/keyboard.vhd                       ;         ;
+; db/altsyncram_doi1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_doi1.tdf             ;         ;
+; cpuram.mif                       ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpuram.mif                         ;         ;
+; db/decode_8la.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_8la.tdf                  ;         ;
+; db/decode_11a.tdf                ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_11a.tdf                  ;         ;
+; db/mux_7hb.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_7hb.tdf                     ;         ;
+; db/altsyncram_7kd1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_7kd1.tdf             ;         ;
+; charmap.mif                      ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/charmap.mif                        ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                             ; c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_a5m.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/lpm_divide_a5m.tdf                                 ;         ;
-; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/sign_div_unsign_dnh.tdf                            ;         ;
-; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/alt_u_div_03f.tdf                                  ;         ;
-; db/lpm_divide_7dm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/lpm_divide_7dm.tdf                                 ;         ;
-; db/lpm_divide_05m.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/lpm_divide_05m.tdf                                 ;         ;
-; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/sign_div_unsign_3nh.tdf                            ;         ;
-; db/alt_u_div_c2f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/alt_u_div_c2f.tdf                                  ;         ;
-; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/lpm_divide_hbm.tdf                                 ;         ;
-; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/sign_div_unsign_nlh.tdf                            ;         ;
-; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/cpu/cpu/db/alt_u_div_kve.tdf                                  ;         ;
+; db/lpm_divide_a5m.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/lpm_divide_a5m.tdf              ;         ;
+; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/sign_div_unsign_dnh.tdf         ;         ;
+; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/alt_u_div_03f.tdf               ;         ;
+; db/lpm_divide_7dm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/lpm_divide_7dm.tdf              ;         ;
+; db/lpm_divide_05m.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/lpm_divide_05m.tdf              ;         ;
+; db/sign_div_unsign_3nh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/sign_div_unsign_3nh.tdf         ;         ;
+; db/alt_u_div_c2f.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/alt_u_div_c2f.tdf               ;         ;
+; db/lpm_divide_hbm.tdf            ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/lpm_divide_hbm.tdf              ;         ;
+; db/sign_div_unsign_nlh.tdf       ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/sign_div_unsign_nlh.tdf         ;         ;
+; db/alt_u_div_kve.tdf             ; yes             ; Auto-Generated Megafunction              ; C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/alt_u_div_kve.tdf               ;         ;
 +----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
 
 
@@ -299,16 +298,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1496         ;
+; Estimate of Logic utilization (ALMs needed) ; 1529         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 2461         ;
-;     -- 7 input functions                    ; 36           ;
-;     -- 6 input functions                    ; 463          ;
-;     -- 5 input functions                    ; 683          ;
+; Combinational ALUT usage for logic          ; 2514         ;
+;     -- 7 input functions                    ; 35           ;
+;     -- 6 input functions                    ; 477          ;
+;     -- 5 input functions                    ; 678          ;
 ;     -- 4 input functions                    ; 459          ;
-;     -- <=3 input functions                  ; 820          ;
+;     -- <=3 input functions                  ; 865          ;
 ;                                             ;              ;
-; Dedicated logic registers                   ; 653          ;
+; Dedicated logic registers                   ; 663          ;
 ;                                             ;              ;
 ; I/O pins                                    ; 30           ;
 ; Total MLAB memory bits                      ; 0            ;
@@ -317,9 +316,9 @@ on the Quartus Prime software download page.
 ; Total DSP Blocks                            ; 1            ;
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
-; Maximum fan-out                             ; 453          ;
-; Total fan-out                               ; 15498        ;
-; Average fan-out                             ; 4.69         ;
+; Maximum fan-out                             ; 451          ;
+; Total fan-out                               ; 15746        ;
+; Average fan-out                             ; 4.67         ;
 +---------------------------------------------+--------------+
 
 
@@ -328,7 +327,7 @@ on the Quartus Prime software download page.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |AP9                                         ; 2461 (1)            ; 653 (0)                   ; 946176            ; 1          ; 30   ; 0            ; |AP9                                                                                                                          ; AP9                 ; work         ;
+; |AP9                                         ; 2514 (1)            ; 663 (0)                   ; 946176            ; 1          ; 30   ; 0            ; |AP9                                                                                                                          ; AP9                 ; work         ;
 ;    |POS_CONV:inst13|                         ; 228 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|POS_CONV:inst13                                                                                                          ; POS_CONV            ; work         ;
 ;       |lpm_divide:Div0|                      ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|POS_CONV:inst13|lpm_divide:Div0                                                                                          ; lpm_divide          ; work         ;
 ;          |lpm_divide_hbm:auto_generated|     ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|POS_CONV:inst13|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                            ; lpm_divide_hbm      ; work         ;
@@ -384,7 +383,7 @@ on the Quartus Prime software download page.
 ;             |altsyncram_k1j1:auto_generated| ; 2 (0)               ; 0 (0)                     ; 65536             ; 0          ; 0    ; 0            ; |AP9|VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated                            ; altsyncram_k1j1     ; work         ;
 ;                |decode_5la:decode3|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_5la:decode3         ; decode_5la          ; work         ;
 ;    |clk_div:inst25|                          ; 30 (30)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |AP9|clk_div:inst25                                                                                                           ; clk_div             ; work         ;
-;    |cpu:inst12|                              ; 1839 (1267)         ; 362 (362)                 ; 0                 ; 1          ; 0    ; 0            ; |AP9|cpu:inst12                                                                                                               ; cpu                 ; work         ;
+;    |cpu:inst12|                              ; 1894 (1322)         ; 372 (372)                 ; 0                 ; 1          ; 0    ; 0            ; |AP9|cpu:inst12                                                                                                               ; cpu                 ; work         ;
 ;       |lpm_divide:Div0|                      ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Div0                                                                                               ; lpm_divide          ; work         ;
 ;          |lpm_divide_7dm:auto_generated|     ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Div0|lpm_divide_7dm:auto_generated                                                                 ; lpm_divide_7dm      ; work         ;
 ;             |sign_div_unsign_dnh:divider|    ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Div0|lpm_divide_7dm:auto_generated|sign_div_unsign_dnh:divider                                     ; sign_div_unsign_dnh ; work         ;
@@ -394,7 +393,7 @@ on the Quartus Prime software download page.
 ;             |sign_div_unsign_dnh:divider|    ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Mod0|lpm_divide_a5m:auto_generated|sign_div_unsign_dnh:divider                                     ; sign_div_unsign_dnh ; work         ;
 ;                |alt_u_div_03f:divider|       ; 286 (286)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Mod0|lpm_divide_a5m:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_03f:divider               ; alt_u_div_03f       ; work         ;
 ;    |debounce:inst23|                         ; 1 (1)               ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|debounce:inst23                                                                                                          ; debounce            ; work         ;
-;    |dec_keyboard:inst11|                     ; 43 (43)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |AP9|dec_keyboard:inst11                                                                                                      ; dec_keyboard        ; work         ;
+;    |dec_keyboard:inst11|                     ; 41 (41)             ; 14 (14)                   ; 0                 ; 0          ; 0    ; 0            ; |AP9|dec_keyboard:inst11                                                                                                      ; dec_keyboard        ; work         ;
 ;    |keyboard:inst14|                         ; 10 (10)             ; 24 (24)                   ; 0                 ; 0          ; 0    ; 0            ; |AP9|keyboard:inst14                                                                                                          ; keyboard            ; work         ;
 ;    |lpm_dff1:inst1|                          ; 1 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|lpm_dff1:inst1                                                                                                           ; lpm_dff1            ; work         ;
 ;       |lpm_ff:lpm_ff_component|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|lpm_dff1:inst1|lpm_ff:lpm_ff_component                                                                                   ; lpm_ff              ; work         ;
@@ -485,7 +484,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                                      ; Reason for Removal                                                                                                             ;
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-; cpu:inst12|selM6[0..2]                                                                                             ; Stuck at GND due to stuck port data_in                                                                                         ;
+; cpu:inst12|selM6[1,2]                                                                                              ; Stuck at GND due to stuck port data_in                                                                                         ;
 ; cpu:inst12|TECLADO[8..15]                                                                                          ; Stuck at GND due to stuck port data_in                                                                                         ;
 ; VGA_MOD:inst|COLOR_BRIDGE:inst1|B[1]                                                                               ; Merged with VGA_MOD:inst|COLOR_BRIDGE:inst1|B[0]                                                                               ;
 ; VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|out_address_reg_a[0] ; Merged with VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|out_address_reg_a[0] ;
@@ -494,25 +493,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; TEXT_DRAWER:inst2|YP[0..2]                                                                                         ; Merged with TEXT_DRAWER:inst2|XP[0]                                                                                            ;
 ; VGA_MOD:inst|COLOR_BRIDGE:inst1|G[1]                                                                               ; Merged with VGA_MOD:inst|COLOR_BRIDGE:inst1|G[0]                                                                               ;
 ; VGA_MOD:inst|COLOR_BRIDGE:inst1|R[1]                                                                               ; Merged with VGA_MOD:inst|COLOR_BRIDGE:inst1|R[0]                                                                               ;
-; cpu:inst12|M6[0..6,9]                                                                                              ; Lost fanout                                                                                                                    ;
+; cpu:inst12|M6[0..15]                                                                                               ; Lost fanout                                                                                                                    ;
 ; TEXT_DRAWER:inst2|XP[0]                                                                                            ; Stuck at GND due to stuck port data_in                                                                                         ;
 ; TEXT_DRAWER:inst2|STATE[3]                                                                                         ; Stuck at GND due to stuck port data_in                                                                                         ;
-; cpu:inst12|FR[9]                                                                                                   ; Stuck at GND due to stuck port data_in                                                                                         ;
 ; TEXT_DRAWER:inst2|LNAUX[2]                                                                                         ; Merged with TEXT_DRAWER:inst2|CHARADDR[2]                                                                                      ;
 ; TEXT_DRAWER:inst2|LNAUX[1]                                                                                         ; Merged with TEXT_DRAWER:inst2|CHARADDR[1]                                                                                      ;
 ; TEXT_DRAWER:inst2|LNAUX[0]                                                                                         ; Merged with TEXT_DRAWER:inst2|CHARADDR[0]                                                                                      ;
-; Total Number of Removed Registers = 35                                                                             ;                                                                                                                                ;
+; Total Number of Removed Registers = 41                                                                             ;                                                                                                                                ;
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                              ;
-+---------------------+---------------------------+----------------------------------------+
-; Register name       ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------------+---------------------------+----------------------------------------+
-; cpu:inst12|selM6[2] ; Stuck at GND              ; cpu:inst12|FR[9]                       ;
-;                     ; due to stuck port data_in ;                                        ;
-+---------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -520,12 +508,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 653   ;
-; Number of registers using Synchronous Clear  ; 40    ;
-; Number of registers using Synchronous Load   ; 203   ;
-; Number of registers using Asynchronous Clear ; 371   ;
+; Total registers                              ; 663   ;
+; Number of registers using Synchronous Clear  ; 43    ;
+; Number of registers using Synchronous Load   ; 219   ;
+; Number of registers using Asynchronous Clear ; 372   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 287   ;
+; Number of registers using Clock Enable       ; 297   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -535,20 +523,20 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +-----------------------------------------+---------+
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
-; cpu:inst12|selM2[0]                     ; 22      ;
+; cpu:inst12|selM2[0]                     ; 27      ;
 ; cpu:inst12|SP[14]                       ; 1       ;
 ; cpu:inst12|SP[13]                       ; 1       ;
+; cpu:inst12|SP[12]                       ; 1       ;
+; cpu:inst12|SP[8]                        ; 1       ;
+; cpu:inst12|SP[7]                        ; 1       ;
+; cpu:inst12|SP[6]                        ; 1       ;
+; cpu:inst12|SP[5]                        ; 1       ;
 ; cpu:inst12|SP[11]                       ; 1       ;
+; cpu:inst12|SP[10]                       ; 1       ;
+; cpu:inst12|SP[9]                        ; 1       ;
+; cpu:inst12|SP[4]                        ; 1       ;
 ; cpu:inst12|SP[2]                        ; 1       ;
 ; cpu:inst12|SP[3]                        ; 1       ;
-; cpu:inst12|SP[4]                        ; 1       ;
-; cpu:inst12|SP[5]                        ; 1       ;
-; cpu:inst12|SP[6]                        ; 1       ;
-; cpu:inst12|SP[7]                        ; 1       ;
-; cpu:inst12|SP[8]                        ; 1       ;
-; cpu:inst12|SP[9]                        ; 1       ;
-; cpu:inst12|SP[10]                       ; 1       ;
-; cpu:inst12|SP[12]                       ; 1       ;
 ; TEXT_DRAWER:inst2|PREVXPOS[4]           ; 1       ;
 ; TEXT_DRAWER:inst2|PREVXPOS[5]           ; 1       ;
 ; TEXT_DRAWER:inst2|PREVXPOS[0]           ; 1       ;
@@ -564,48 +552,49 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |AP9|VGA_MOD:inst|VGA_SYNC:inst|Vcnt[8]                                                                          ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |AP9|VGA_MOD:inst|VGA_SYNC:inst|Vcnt[0]                                                                          ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |AP9|TEXT_DRAWER:inst2|XP[3]                                                                                     ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|XP[7]                                                                                     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |AP9|cpu:inst12|vga_char[10]                                                                                     ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|XP[8]                                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |AP9|cpu:inst12|vga_char[8]                                                                                      ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|FR[10]                                                                                           ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |AP9|dec_keyboard:inst11|bin_digit[5]                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |AP9|keyboard:inst14|INCNT[0]                                                                                    ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |AP9|dec_keyboard:inst11|cc[0]                                                                                   ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |AP9|cpu:inst12|OP[1]                                                                                            ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|y[3]                                                                                             ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |AP9|TEXT_DRAWER:inst2|STATE[1]                                                                                  ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|PIXCNT[0]                                                                                 ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |AP9|cpu:inst12|FR[0]                                                                                            ;
-; 10:1               ; 16 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |AP9|cpu:inst12|x[2]                                                                                             ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|LNCNT[3]                                                                                  ;
-; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |AP9|cpu:inst12|M5[7]                                                                                            ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |AP9|cpu:inst12|M4[10]                                                                                           ;
-; 11:1               ; 15 bits   ; 105 LEs       ; 30 LEs               ; 75 LEs                 ; Yes        ; |AP9|cpu:inst12|M1[13]                                                                                           ;
-; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |AP9|cpu:inst12|selM2[1]                                                                                         ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |AP9|RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|mux_7hb:mux2|l2_w6_n0_mux_dataout ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |AP9|keyboard:inst14|INCNT[3]                                                                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |AP9|dec_keyboard:inst11|cc[1]                                                                                   ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |AP9|cpu:inst12|OP[2]                                                                                            ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|y[15]                                                                                            ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|x[0]                                                                                             ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |AP9|TEXT_DRAWER:inst2|STATE[2]                                                                                  ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|PIXCNT[2]                                                                                 ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|LNCNT[1]                                                                                  ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |AP9|cpu:inst12|FR[0]                                                                                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |AP9|cpu:inst12|M5[7]                                                                                            ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |AP9|cpu:inst12|M4[8]                                                                                            ;
+; 12:1               ; 15 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; Yes        ; |AP9|cpu:inst12|M1[6]                                                                                            ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 14 LEs               ; 4 LEs                  ; Yes        ; |AP9|cpu:inst12|selM2[2]                                                                                         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |AP9|RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|mux_7hb:mux2|l2_w9_n0_mux_dataout ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft0                                                                                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|RotateRight0                                                                                     ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft0                                                                                       ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft0                                                                                       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftRight1                                                                                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|RotateLeft0                                                                                      ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftRight0                                                                                      ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftRight0                                                                                      ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft1                                                                                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|TEXT_DRAWER:inst2|Mux67                                                                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |AP9|VGA_MOD:inst|busmux:inst15|lpm_mux:$00000|mux_flc:auto_generated|l1_w15_n0_mux_dataout                      ;
-; 8:1                ; 17 bits   ; 85 LEs        ; 85 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux78                                                                                            ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux9                                                                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft1                                                                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|TEXT_DRAWER:inst2|Mux70                                                                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |AP9|VGA_MOD:inst|busmux:inst15|lpm_mux:$00000|mux_flc:auto_generated|l1_w4_n0_mux_dataout                       ;
+; 8:1                ; 33 bits   ; 165 LEs       ; 165 LEs              ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux52                                                                                            ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux22                                                                                            ;
 ; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |AP9|cpu:inst12|M2                                                                                               ;
 ; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |AP9|cpu:inst12|M2                                                                                               ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux30                                                                                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux17                                                                                            ;
 ; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|result[3]                                                                                        ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |AP9|VGA_MOD:inst|busmux:inst13|lpm_mux:$00000|mux_sjc:auto_generated|l1_w3_n0_mux_dataout                       ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|result[12]                                                                                       ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |AP9|VGA_MOD:inst|busmux:inst13|lpm_mux:$00000|mux_sjc:auto_generated|l1_w0_n0_mux_dataout                       ;
 ; 11:1               ; 16 bits   ; 112 LEs       ; 80 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|Mux81                                                                                            ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
 ; 18:1               ; 2 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
 ; 18:1               ; 2 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
 ; 32:1               ; 2 bits    ; 42 LEs        ; 34 LEs               ; 8 LEs                  ; No         ; |AP9|cpu:inst12|Selector23                                                                                       ;
-; 33:1               ; 2 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; No         ; |AP9|cpu:inst12|Selector25                                                                                       ;
+; 33:1               ; 2 bits    ; 44 LEs        ; 32 LEs               ; 12 LEs                 ; No         ; |AP9|cpu:inst12|Selector22                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1236,19 +1225,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 653                         ;
-;     CLR               ; 118                         ;
-;     CLR SCLR          ; 22                          ;
+; arriav_ff             ; 663                         ;
+;     CLR               ; 120                         ;
+;     CLR SCLR          ; 21                          ;
 ;     CLR SLD           ; 145                         ;
-;     ENA               ; 163                         ;
+;     ENA               ; 153                         ;
 ;     ENA CLR           ; 49                          ;
 ;     ENA CLR SCLR      ; 13                          ;
 ;     ENA CLR SLD       ; 24                          ;
-;     ENA SCLR          ; 4                           ;
-;     ENA SLD           ; 34                          ;
+;     ENA SCLR          ; 8                           ;
+;     ENA SLD           ; 50                          ;
 ;     SCLR              ; 1                           ;
-;     plain             ; 80                          ;
-; arriav_lcell_comb     ; 2461                        ;
+;     plain             ; 79                          ;
+; arriav_lcell_comb     ; 2514                        ;
 ;     arith             ; 613                         ;
 ;         0 data inputs ; 78                          ;
 ;         1 data inputs ; 108                         ;
@@ -1256,15 +1245,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 44                          ;
 ;         4 data inputs ; 73                          ;
 ;         5 data inputs ; 245                         ;
-;     extend            ; 36                          ;
-;         7 data inputs ; 36                          ;
-;     normal            ; 1771                        ;
+;     extend            ; 35                          ;
+;         7 data inputs ; 35                          ;
+;     normal            ; 1825                        ;
 ;         1 data inputs ; 24                          ;
-;         2 data inputs ; 137                         ;
-;         3 data inputs ; 329                         ;
+;         2 data inputs ; 142                         ;
+;         3 data inputs ; 369                         ;
 ;         4 data inputs ; 380                         ;
-;         5 data inputs ; 438                         ;
-;         6 data inputs ; 463                         ;
+;         5 data inputs ; 433                         ;
+;         6 data inputs ; 477                         ;
 ;     shared            ; 41                          ;
 ;         0 data inputs ; 8                           ;
 ;         1 data inputs ; 6                           ;
@@ -1276,7 +1265,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 133                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 36.00                       ;
-; Average LUT depth     ; 15.44                       ;
+; Average LUT depth     ; 15.51                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1285,7 +1274,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -1295,47 +1284,47 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Fri Apr 25 18:01:12 2025
+    Info: Processing started: Fri May  9 18:03:45 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AP9 -c AP9
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file cpu.vhd
-    Info (12022): Found design unit 1: cpu-main File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 34
-    Info (12023): Found entity 1: cpu File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 9
+    Info (12022): Found design unit 1: cpu-main File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 34
+    Info (12023): Found entity 1: cpu File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file ap9.bdf
     Info (12023): Found entity 1: AP9
 Info (12021): Found 2 design units, including 1 entities, in source file lpm_rom0.vhd
-    Info (12022): Found design unit 1: lpm_rom0-SYN File: C:/Users/15491959/cpu/cpu/lpm_rom0.vhd Line: 52
-    Info (12023): Found entity 1: lpm_rom0 File: C:/Users/15491959/cpu/cpu/lpm_rom0.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_rom0-SYN File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_rom0.vhd Line: 52
+    Info (12023): Found entity 1: lpm_rom0 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_rom0.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file text_drawer.vhd
-    Info (12022): Found design unit 1: TEXT_DRAWER-main File: C:/Users/15491959/cpu/cpu/TEXT_DRAWER.vhd Line: 23
-    Info (12023): Found entity 1: TEXT_DRAWER File: C:/Users/15491959/cpu/cpu/TEXT_DRAWER.vhd Line: 6
+    Info (12022): Found design unit 1: TEXT_DRAWER-main File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/TEXT_DRAWER.vhd Line: 23
+    Info (12023): Found entity 1: TEXT_DRAWER File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/TEXT_DRAWER.vhd Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file vga_mod.bdf
     Info (12023): Found entity 1: VGA_MOD
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
-    Info (12022): Found design unit 1: VGA_SYNC-main File: C:/Users/15491959/cpu/cpu/vga_sync.vhd Line: 18
-    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/15491959/cpu/cpu/vga_sync.vhd Line: 6
+    Info (12022): Found design unit 1: VGA_SYNC-main File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/vga_sync.vhd Line: 18
+    Info (12023): Found entity 1: VGA_SYNC File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/vga_sync.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file kb_ascii.vhd
-    Info (12022): Found design unit 1: KB_ASCII-main File: C:/Users/15491959/cpu/cpu/KB_ASCII.vhd Line: 21
-    Info (12023): Found entity 1: KB_ASCII File: C:/Users/15491959/cpu/cpu/KB_ASCII.vhd Line: 8
+    Info (12022): Found design unit 1: KB_ASCII-main File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/KB_ASCII.vhd Line: 21
+    Info (12023): Found entity 1: KB_ASCII File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/KB_ASCII.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file hex_2_7seg.vhd
-    Info (12022): Found design unit 1: hex_2_7seg-main File: C:/Users/15491959/cpu/cpu/hex_2_7seg.vhd Line: 13
-    Info (12023): Found entity 1: hex_2_7seg File: C:/Users/15491959/cpu/cpu/hex_2_7seg.vhd Line: 6
+    Info (12022): Found design unit 1: hex_2_7seg-main File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/hex_2_7seg.vhd Line: 13
+    Info (12023): Found entity 1: hex_2_7seg File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/hex_2_7seg.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file lcd_mod.vhd
-    Info (12022): Found design unit 1: LCD_MOD-main File: C:/Users/15491959/cpu/cpu/LCD_MOD.vhd Line: 20
-    Info (12023): Found entity 1: LCD_MOD File: C:/Users/15491959/cpu/cpu/LCD_MOD.vhd Line: 6
+    Info (12022): Found design unit 1: LCD_MOD-main File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/LCD_MOD.vhd Line: 20
+    Info (12023): Found entity 1: LCD_MOD File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/LCD_MOD.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ascii_conv.vhd
-    Info (12022): Found design unit 1: ASCII_CONV-main File: C:/Users/15491959/cpu/cpu/ASCII_CONV.vhd Line: 12
-    Info (12023): Found entity 1: ASCII_CONV File: C:/Users/15491959/cpu/cpu/ASCII_CONV.vhd Line: 6
+    Info (12022): Found design unit 1: ASCII_CONV-main File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/ASCII_CONV.vhd Line: 12
+    Info (12023): Found entity 1: ASCII_CONV File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/ASCII_CONV.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file ram.vhd
-    Info (12022): Found design unit 1: ram-SYN File: C:/Users/15491959/cpu/cpu/RAM.vhd Line: 54
-    Info (12023): Found entity 1: RAM File: C:/Users/15491959/cpu/cpu/RAM.vhd Line: 42
+    Info (12022): Found design unit 1: ram-SYN File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/RAM.vhd Line: 54
+    Info (12023): Found entity 1: RAM File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/RAM.vhd Line: 42
 Info (12021): Found 2 design units, including 1 entities, in source file pos_conv.vhd
-    Info (12022): Found design unit 1: POS_CONV-main File: C:/Users/15491959/cpu/cpu/POS_CONV.vhd Line: 15
-    Info (12023): Found entity 1: POS_CONV File: C:/Users/15491959/cpu/cpu/POS_CONV.vhd Line: 6
+    Info (12022): Found design unit 1: POS_CONV-main File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/POS_CONV.vhd Line: 15
+    Info (12023): Found entity 1: POS_CONV File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/POS_CONV.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file keyviewer.vhd
-    Info (12022): Found design unit 1: keyviewer-behav File: C:/Users/15491959/cpu/cpu/keyviewer.vhd Line: 16
-    Info (12023): Found entity 1: keyviewer File: C:/Users/15491959/cpu/cpu/keyviewer.vhd Line: 5
+    Info (12022): Found design unit 1: keyviewer-behav File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/keyviewer.vhd Line: 16
+    Info (12023): Found entity 1: keyviewer File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/keyviewer.vhd Line: 5
 Info (12127): Elaborating entity "AP9" for the top level hierarchy
 Warning (275089): Not all bits in bus "LEDR[8..1]" are used
 Warning (275089): Not all bits in bus "SW[9..0]" are used
@@ -1346,31 +1335,31 @@ Warning (12125): Using design file video_filter.bdf, which is not specified as a
     Info (12023): Found entity 1: VIDEO_FILTER
 Info (12128): Elaborating entity "VIDEO_FILTER" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8"
 Warning (12125): Using design file lpm_dff0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_dff0-SYN File: C:/Users/15491959/cpu/cpu/lpm_dff0.vhd Line: 52
-    Info (12023): Found entity 1: lpm_dff0 File: C:/Users/15491959/cpu/cpu/lpm_dff0.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_dff0-SYN File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff0.vhd Line: 52
+    Info (12023): Found entity 1: lpm_dff0 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff0.vhd Line: 42
 Info (12128): Elaborating entity "lpm_dff0" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1"
-Info (12128): Elaborating entity "lpm_ff" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" File: C:/Users/15491959/cpu/cpu/lpm_dff0.vhd Line: 80
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" File: C:/Users/15491959/cpu/cpu/lpm_dff0.vhd Line: 80
-Info (12133): Instantiated megafunction "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/15491959/cpu/cpu/lpm_dff0.vhd Line: 80
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff0.vhd Line: 80
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff0.vhd Line: 80
+Info (12133): Instantiated megafunction "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff0:inst1|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff0.vhd Line: 80
     Info (12134): Parameter "lpm_fftype" = "DFF"
     Info (12134): Parameter "lpm_type" = "LPM_FF"
     Info (12134): Parameter "lpm_width" = "1"
 Warning (12125): Using design file lpm_dff2.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_dff2-SYN File: C:/Users/15491959/cpu/cpu/lpm_dff2.vhd Line: 52
-    Info (12023): Found entity 1: lpm_dff2 File: C:/Users/15491959/cpu/cpu/lpm_dff2.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_dff2-SYN File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff2.vhd Line: 52
+    Info (12023): Found entity 1: lpm_dff2 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff2.vhd Line: 42
 Info (12128): Elaborating entity "lpm_dff2" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4"
-Info (12128): Elaborating entity "lpm_ff" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" File: C:/Users/15491959/cpu/cpu/lpm_dff2.vhd Line: 74
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" File: C:/Users/15491959/cpu/cpu/lpm_dff2.vhd Line: 74
-Info (12133): Instantiated megafunction "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/15491959/cpu/cpu/lpm_dff2.vhd Line: 74
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff2.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff2.vhd Line: 74
+Info (12133): Instantiated megafunction "VGA_MOD:inst|VIDEO_FILTER:inst8|lpm_dff2:inst4|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff2.vhd Line: 74
     Info (12134): Parameter "lpm_fftype" = "DFF"
     Info (12134): Parameter "lpm_type" = "LPM_FF"
     Info (12134): Parameter "lpm_width" = "4"
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "VGA_MOD:inst|VGA_SYNC:inst"
-Warning (10492): VHDL Process Statement warning at vga_sync.vhd(73): signal "Hcnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/cpu/cpu/vga_sync.vhd Line: 73
-Warning (10492): VHDL Process Statement warning at vga_sync.vhd(73): signal "Vcnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/cpu/cpu/vga_sync.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at vga_sync.vhd(73): signal "Hcnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/vga_sync.vhd Line: 73
+Warning (10492): VHDL Process Statement warning at vga_sync.vhd(73): signal "Vcnt" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/vga_sync.vhd Line: 73
 Warning (12125): Using design file color_bridge.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: COLOR_BRIDGE-main File: C:/Users/15491959/cpu/cpu/color_bridge.vhd Line: 18
-    Info (12023): Found entity 1: COLOR_BRIDGE File: C:/Users/15491959/cpu/cpu/color_bridge.vhd Line: 6
+    Info (12022): Found design unit 1: COLOR_BRIDGE-main File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/color_bridge.vhd Line: 18
+    Info (12023): Found entity 1: COLOR_BRIDGE File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/color_bridge.vhd Line: 6
 Info (12128): Elaborating entity "COLOR_BRIDGE" for hierarchy "VGA_MOD:inst|COLOR_BRIDGE:inst1"
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "VGA_MOD:inst|BUSMUX:inst13"
 Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst13"
@@ -1379,15 +1368,15 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst13" with the fo
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "VGA_MOD:inst|BUSMUX:inst13|lpm_mux:$00000" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12131): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst13|lpm_mux:$00000", which is child of megafunction instantiation "VGA_MOD:inst|BUSMUX:inst13" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_sjc.tdf
-    Info (12023): Found entity 1: mux_sjc File: C:/Users/15491959/cpu/cpu/db/mux_sjc.tdf Line: 23
+    Info (12023): Found entity 1: mux_sjc File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_sjc.tdf Line: 23
 Info (12128): Elaborating entity "mux_sjc" for hierarchy "VGA_MOD:inst|BUSMUX:inst13|lpm_mux:$00000|mux_sjc:auto_generated" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Warning (12125): Using design file lpm_ram_dq0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_ram_dq0-SYN File: C:/Users/15491959/cpu/cpu/lpm_ram_dq0.vhd Line: 54
-    Info (12023): Found entity 1: lpm_ram_dq0 File: C:/Users/15491959/cpu/cpu/lpm_ram_dq0.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_ram_dq0-SYN File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq0.vhd Line: 54
+    Info (12023): Found entity 1: lpm_ram_dq0 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq0.vhd Line: 42
 Info (12128): Elaborating entity "lpm_ram_dq0" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" File: C:/Users/15491959/cpu/cpu/lpm_ram_dq0.vhd Line: 89
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" File: C:/Users/15491959/cpu/cpu/lpm_ram_dq0.vhd Line: 89
-Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/15491959/cpu/cpu/lpm_ram_dq0.vhd Line: 89
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq0.vhd Line: 89
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq0.vhd Line: 89
+Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq0.vhd Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "video_mem1.mif"
@@ -1403,27 +1392,27 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncr
     Info (12134): Parameter "width_a" = "4"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o1j1.tdf
-    Info (12023): Found entity 1: altsyncram_o1j1 File: C:/Users/15491959/cpu/cpu/db/altsyncram_o1j1.tdf Line: 34
+    Info (12023): Found entity 1: altsyncram_o1j1 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_o1j1.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_o1j1" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
-    Info (12023): Found entity 1: decode_dla File: C:/Users/15491959/cpu/cpu/db/decode_dla.tdf Line: 23
-Info (12128): Elaborating entity "decode_dla" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|decode_dla:decode3" File: C:/Users/15491959/cpu/cpu/db/altsyncram_o1j1.tdf Line: 45
+    Info (12023): Found entity 1: decode_dla File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_dla.tdf Line: 23
+Info (12128): Elaborating entity "decode_dla" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|decode_dla:decode3" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_o1j1.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
-    Info (12023): Found entity 1: decode_61a File: C:/Users/15491959/cpu/cpu/db/decode_61a.tdf Line: 23
-Info (12128): Elaborating entity "decode_61a" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|decode_61a:rden_decode" File: C:/Users/15491959/cpu/cpu/db/altsyncram_o1j1.tdf Line: 46
+    Info (12023): Found entity 1: decode_61a File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_61a.tdf Line: 23
+Info (12128): Elaborating entity "decode_61a" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|decode_61a:rden_decode" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_o1j1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_pfb.tdf
-    Info (12023): Found entity 1: mux_pfb File: C:/Users/15491959/cpu/cpu/db/mux_pfb.tdf Line: 23
-Info (12128): Elaborating entity "mux_pfb" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|mux_pfb:mux2" File: C:/Users/15491959/cpu/cpu/db/altsyncram_o1j1.tdf Line: 47
+    Info (12023): Found entity 1: mux_pfb File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_pfb.tdf Line: 23
+Info (12128): Elaborating entity "mux_pfb" for hierarchy "VGA_MOD:inst|lpm_ram_dq0:inst3|altsyncram:altsyncram_component|altsyncram_o1j1:auto_generated|mux_pfb:mux2" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_o1j1.tdf Line: 47
 Warning (12125): Using design file demux.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: DEMUX
 Info (12128): Elaborating entity "DEMUX" for hierarchy "VGA_MOD:inst|DEMUX:inst18"
 Warning (12125): Using design file fifo0.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: fifo0-SYN File: C:/Users/15491959/cpu/cpu/fifo0.vhd Line: 56
-    Info (12023): Found entity 1: fifo0 File: C:/Users/15491959/cpu/cpu/fifo0.vhd Line: 42
+    Info (12022): Found design unit 1: fifo0-SYN File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/fifo0.vhd Line: 56
+    Info (12023): Found entity 1: fifo0 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/fifo0.vhd Line: 42
 Info (12128): Elaborating entity "fifo0" for hierarchy "VGA_MOD:inst|fifo0:inst7"
-Info (12128): Elaborating entity "scfifo" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" File: C:/Users/15491959/cpu/cpu/fifo0.vhd Line: 91
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" File: C:/Users/15491959/cpu/cpu/fifo0.vhd Line: 91
-Info (12133): Instantiated megafunction "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" with the following parameter: File: C:/Users/15491959/cpu/cpu/fifo0.vhd Line: 91
+Info (12128): Elaborating entity "scfifo" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/fifo0.vhd Line: 91
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/fifo0.vhd Line: 91
+Info (12133): Instantiated megafunction "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/fifo0.vhd Line: 91
     Info (12134): Parameter "add_ram_output_register" = "ON"
     Info (12134): Parameter "intended_device_family" = "Cyclone II"
     Info (12134): Parameter "lpm_numwords" = "4096"
@@ -1435,27 +1424,27 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_
     Info (12134): Parameter "underflow_checking" = "ON"
     Info (12134): Parameter "use_eab" = "ON"
 Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_2491.tdf
-    Info (12023): Found entity 1: scfifo_2491 File: C:/Users/15491959/cpu/cpu/db/scfifo_2491.tdf Line: 25
+    Info (12023): Found entity 1: scfifo_2491 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/scfifo_2491.tdf Line: 25
 Info (12128): Elaborating entity "scfifo_2491" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/scfifo.tdf Line: 300
 Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_9a91.tdf
-    Info (12023): Found entity 1: a_dpfifo_9a91 File: C:/Users/15491959/cpu/cpu/db/a_dpfifo_9a91.tdf Line: 33
-Info (12128): Elaborating entity "a_dpfifo_9a91" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo" File: C:/Users/15491959/cpu/cpu/db/scfifo_2491.tdf Line: 36
+    Info (12023): Found entity 1: a_dpfifo_9a91 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/a_dpfifo_9a91.tdf Line: 33
+Info (12128): Elaborating entity "a_dpfifo_9a91" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/scfifo_2491.tdf Line: 36
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_fqn1.tdf
-    Info (12023): Found entity 1: altsyncram_fqn1 File: C:/Users/15491959/cpu/cpu/db/altsyncram_fqn1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_fqn1" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|altsyncram_fqn1:FIFOram" File: C:/Users/15491959/cpu/cpu/db/a_dpfifo_9a91.tdf Line: 45
+    Info (12023): Found entity 1: altsyncram_fqn1 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_fqn1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_fqn1" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|altsyncram_fqn1:FIFOram" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/a_dpfifo_9a91.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_im8.tdf
-    Info (12023): Found entity 1: cmpr_im8 File: C:/Users/15491959/cpu/cpu/db/cmpr_im8.tdf Line: 23
-Info (12128): Elaborating entity "cmpr_im8" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cmpr_im8:almost_full_comparer" File: C:/Users/15491959/cpu/cpu/db/a_dpfifo_9a91.tdf Line: 54
-Info (12128): Elaborating entity "cmpr_im8" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cmpr_im8:three_comparison" File: C:/Users/15491959/cpu/cpu/db/a_dpfifo_9a91.tdf Line: 55
+    Info (12023): Found entity 1: cmpr_im8 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/cmpr_im8.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_im8" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cmpr_im8:almost_full_comparer" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/a_dpfifo_9a91.tdf Line: 54
+Info (12128): Elaborating entity "cmpr_im8" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cmpr_im8:three_comparison" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/a_dpfifo_9a91.tdf Line: 55
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_vhb.tdf
-    Info (12023): Found entity 1: cntr_vhb File: C:/Users/15491959/cpu/cpu/db/cntr_vhb.tdf Line: 26
-Info (12128): Elaborating entity "cntr_vhb" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_vhb:rd_ptr_msb" File: C:/Users/15491959/cpu/cpu/db/a_dpfifo_9a91.tdf Line: 56
+    Info (12023): Found entity 1: cntr_vhb File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/cntr_vhb.tdf Line: 26
+Info (12128): Elaborating entity "cntr_vhb" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_vhb:rd_ptr_msb" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/a_dpfifo_9a91.tdf Line: 56
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_ci7.tdf
-    Info (12023): Found entity 1: cntr_ci7 File: C:/Users/15491959/cpu/cpu/db/cntr_ci7.tdf Line: 26
-Info (12128): Elaborating entity "cntr_ci7" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_ci7:usedw_counter" File: C:/Users/15491959/cpu/cpu/db/a_dpfifo_9a91.tdf Line: 57
+    Info (12023): Found entity 1: cntr_ci7 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/cntr_ci7.tdf Line: 26
+Info (12128): Elaborating entity "cntr_ci7" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_ci7:usedw_counter" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/a_dpfifo_9a91.tdf Line: 57
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_0ib.tdf
-    Info (12023): Found entity 1: cntr_0ib File: C:/Users/15491959/cpu/cpu/db/cntr_0ib.tdf Line: 26
-Info (12128): Elaborating entity "cntr_0ib" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_0ib:wr_ptr" File: C:/Users/15491959/cpu/cpu/db/a_dpfifo_9a91.tdf Line: 58
+    Info (12023): Found entity 1: cntr_0ib File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/cntr_0ib.tdf Line: 26
+Info (12128): Elaborating entity "cntr_0ib" for hierarchy "VGA_MOD:inst|fifo0:inst7|scfifo:scfifo_component|scfifo_2491:auto_generated|a_dpfifo_9a91:dpfifo|cntr_0ib:wr_ptr" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/a_dpfifo_9a91.tdf Line: 58
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "VGA_MOD:inst|BUSMUX:inst15"
 Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst15"
 Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst15" with the following parameter:
@@ -1463,15 +1452,15 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst15" with the fo
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "VGA_MOD:inst|BUSMUX:inst15|lpm_mux:$00000" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12131): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst15|lpm_mux:$00000", which is child of megafunction instantiation "VGA_MOD:inst|BUSMUX:inst15" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_flc.tdf
-    Info (12023): Found entity 1: mux_flc File: C:/Users/15491959/cpu/cpu/db/mux_flc.tdf Line: 23
+    Info (12023): Found entity 1: mux_flc File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_flc.tdf Line: 23
 Info (12128): Elaborating entity "mux_flc" for hierarchy "VGA_MOD:inst|BUSMUX:inst15|lpm_mux:$00000|mux_flc:auto_generated" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Warning (12125): Using design file lpm_ram_dq1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_ram_dq1-SYN File: C:/Users/15491959/cpu/cpu/lpm_ram_dq1.vhd Line: 54
-    Info (12023): Found entity 1: lpm_ram_dq1 File: C:/Users/15491959/cpu/cpu/lpm_ram_dq1.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_ram_dq1-SYN File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq1.vhd Line: 54
+    Info (12023): Found entity 1: lpm_ram_dq1 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq1.vhd Line: 42
 Info (12128): Elaborating entity "lpm_ram_dq1" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" File: C:/Users/15491959/cpu/cpu/lpm_ram_dq1.vhd Line: 89
-Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" File: C:/Users/15491959/cpu/cpu/lpm_ram_dq1.vhd Line: 89
-Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/15491959/cpu/cpu/lpm_ram_dq1.vhd Line: 89
+Info (12128): Elaborating entity "altsyncram" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq1.vhd Line: 89
+Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq1.vhd Line: 89
+Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_ram_dq1.vhd Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "video_mem2.mif"
@@ -1487,17 +1476,17 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncr
     Info (12134): Parameter "width_a" = "4"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_k1j1.tdf
-    Info (12023): Found entity 1: altsyncram_k1j1 File: C:/Users/15491959/cpu/cpu/db/altsyncram_k1j1.tdf Line: 34
+    Info (12023): Found entity 1: altsyncram_k1j1 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_k1j1.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_k1j1" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_5la.tdf
-    Info (12023): Found entity 1: decode_5la File: C:/Users/15491959/cpu/cpu/db/decode_5la.tdf Line: 23
-Info (12128): Elaborating entity "decode_5la" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_5la:decode3" File: C:/Users/15491959/cpu/cpu/db/altsyncram_k1j1.tdf Line: 45
+    Info (12023): Found entity 1: decode_5la File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_5la.tdf Line: 23
+Info (12128): Elaborating entity "decode_5la" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_5la:decode3" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_k1j1.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_u0a.tdf
-    Info (12023): Found entity 1: decode_u0a File: C:/Users/15491959/cpu/cpu/db/decode_u0a.tdf Line: 23
-Info (12128): Elaborating entity "decode_u0a" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_u0a:rden_decode" File: C:/Users/15491959/cpu/cpu/db/altsyncram_k1j1.tdf Line: 46
+    Info (12023): Found entity 1: decode_u0a File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_u0a.tdf Line: 23
+Info (12128): Elaborating entity "decode_u0a" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_u0a:rden_decode" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_k1j1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_hfb.tdf
-    Info (12023): Found entity 1: mux_hfb File: C:/Users/15491959/cpu/cpu/db/mux_hfb.tdf Line: 23
-Info (12128): Elaborating entity "mux_hfb" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|mux_hfb:mux2" File: C:/Users/15491959/cpu/cpu/db/altsyncram_k1j1.tdf Line: 47
+    Info (12023): Found entity 1: mux_hfb File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_hfb.tdf Line: 23
+Info (12128): Elaborating entity "mux_hfb" for hierarchy "VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|mux_hfb:mux2" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_k1j1.tdf Line: 47
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "VGA_MOD:inst|BUSMUX:inst14"
 Info (12130): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst14"
 Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst14" with the following parameter:
@@ -1505,64 +1494,64 @@ Info (12133): Instantiated megafunction "VGA_MOD:inst|BUSMUX:inst14" with the fo
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "VGA_MOD:inst|BUSMUX:inst14|lpm_mux:$00000" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12131): Elaborated megafunction instantiation "VGA_MOD:inst|BUSMUX:inst14|lpm_mux:$00000", which is child of megafunction instantiation "VGA_MOD:inst|BUSMUX:inst14" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_dlc.tdf
-    Info (12023): Found entity 1: mux_dlc File: C:/Users/15491959/cpu/cpu/db/mux_dlc.tdf Line: 23
+    Info (12023): Found entity 1: mux_dlc File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_dlc.tdf Line: 23
 Info (12128): Elaborating entity "mux_dlc" for hierarchy "VGA_MOD:inst|BUSMUX:inst14|lpm_mux:$00000|mux_dlc:auto_generated" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Warning (12125): Using design file lpm_dff1.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: lpm_dff1-SYN File: C:/Users/15491959/cpu/cpu/lpm_dff1.vhd Line: 51
-    Info (12023): Found entity 1: lpm_dff1 File: C:/Users/15491959/cpu/cpu/lpm_dff1.vhd Line: 42
+    Info (12022): Found design unit 1: lpm_dff1-SYN File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff1.vhd Line: 51
+    Info (12023): Found entity 1: lpm_dff1 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff1.vhd Line: 42
 Info (12128): Elaborating entity "lpm_dff1" for hierarchy "lpm_dff1:inst1"
-Info (12128): Elaborating entity "lpm_ff" for hierarchy "lpm_dff1:inst1|lpm_ff:lpm_ff_component" File: C:/Users/15491959/cpu/cpu/lpm_dff1.vhd Line: 74
-Info (12130): Elaborated megafunction instantiation "lpm_dff1:inst1|lpm_ff:lpm_ff_component" File: C:/Users/15491959/cpu/cpu/lpm_dff1.vhd Line: 74
-Info (12133): Instantiated megafunction "lpm_dff1:inst1|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/15491959/cpu/cpu/lpm_dff1.vhd Line: 74
+Info (12128): Elaborating entity "lpm_ff" for hierarchy "lpm_dff1:inst1|lpm_ff:lpm_ff_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff1.vhd Line: 74
+Info (12130): Elaborated megafunction instantiation "lpm_dff1:inst1|lpm_ff:lpm_ff_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff1.vhd Line: 74
+Info (12133): Instantiated megafunction "lpm_dff1:inst1|lpm_ff:lpm_ff_component" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_dff1.vhd Line: 74
     Info (12134): Parameter "lpm_fftype" = "TFF"
     Info (12134): Parameter "lpm_type" = "LPM_FF"
     Info (12134): Parameter "lpm_width" = "1"
 Info (12128): Elaborating entity "TEXT_DRAWER" for hierarchy "TEXT_DRAWER:inst2"
 Info (12128): Elaborating entity "cpu" for hierarchy "cpu:inst12"
-Warning (10492): VHDL Process Statement warning at cpu.vhd(810): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 810
-Warning (10492): VHDL Process Statement warning at cpu.vhd(819): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 819
-Warning (10492): VHDL Process Statement warning at cpu.vhd(820): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 820
-Warning (10492): VHDL Process Statement warning at cpu.vhd(897): signal "result" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 897
-Warning (10631): VHDL Process Statement warning at cpu.vhd(799): inferring latch(es) for signal or variable "result", which holds its previous value in one or more paths through the process File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[0]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[1]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[2]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[3]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[4]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[5]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[6]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[7]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[8]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[9]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[10]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[11]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[12]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[13]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[14]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-Info (10041): Inferred latch for "result[15]" at cpu.vhd(799) File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
+Warning (10492): VHDL Process Statement warning at cpu.vhd(831): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 831
+Warning (10492): VHDL Process Statement warning at cpu.vhd(840): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 840
+Warning (10492): VHDL Process Statement warning at cpu.vhd(841): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 841
+Warning (10492): VHDL Process Statement warning at cpu.vhd(918): signal "result" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 918
+Warning (10631): VHDL Process Statement warning at cpu.vhd(820): inferring latch(es) for signal or variable "result", which holds its previous value in one or more paths through the process File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[0]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[1]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[2]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[3]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[4]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[5]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[6]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[7]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[8]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[9]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[10]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[11]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[12]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[13]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[14]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+Info (10041): Inferred latch for "result[15]" at cpu.vhd(820) File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
 Warning (12125): Using design file seletorclock.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: SeletorClock File: C:/Users/15491959/cpu/cpu/seletorclock.v Line: 1
+    Info (12023): Found entity 1: SeletorClock File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/seletorclock.v Line: 1
 Info (12128): Elaborating entity "SeletorClock" for hierarchy "SeletorClock:inst20"
 Warning (12125): Using design file clk_div.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: clk_div-a File: C:/Users/15491959/cpu/cpu/clk_div.vhd Line: 25
-    Info (12023): Found entity 1: clk_div File: C:/Users/15491959/cpu/cpu/clk_div.vhd Line: 6
+    Info (12022): Found design unit 1: clk_div-a File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/clk_div.vhd Line: 25
+    Info (12023): Found entity 1: clk_div File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/clk_div.vhd Line: 6
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:inst25"
 Warning (12125): Using design file debounce.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: debounce-a File: C:/Users/15491959/cpu/cpu/debounce.vhd Line: 10
-    Info (12023): Found entity 1: debounce File: C:/Users/15491959/cpu/cpu/debounce.vhd Line: 5
+    Info (12022): Found design unit 1: debounce-a File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/debounce.vhd Line: 10
+    Info (12023): Found entity 1: debounce File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/debounce.vhd Line: 5
 Info (12128): Elaborating entity "debounce" for hierarchy "debounce:inst23"
 Warning (12125): Using design file dec_keyboard.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: dec_keyboard-a File: C:/Users/15491959/cpu/cpu/dec_keyboard.vhd Line: 18
-    Info (12023): Found entity 1: dec_keyboard File: C:/Users/15491959/cpu/cpu/dec_keyboard.vhd Line: 6
+    Info (12022): Found design unit 1: dec_keyboard-a File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/dec_keyboard.vhd Line: 18
+    Info (12023): Found entity 1: dec_keyboard File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/dec_keyboard.vhd Line: 6
 Info (12128): Elaborating entity "dec_keyboard" for hierarchy "dec_keyboard:inst11"
 Warning (12125): Using design file keyboard.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
-    Info (12022): Found design unit 1: keyboard-a File: C:/Users/15491959/cpu/cpu/keyboard.vhd Line: 13
-    Info (12023): Found entity 1: keyboard File: C:/Users/15491959/cpu/cpu/keyboard.vhd Line: 6
+    Info (12022): Found design unit 1: keyboard-a File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/keyboard.vhd Line: 13
+    Info (12023): Found entity 1: keyboard File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/keyboard.vhd Line: 6
 Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:inst14"
 Info (12128): Elaborating entity "RAM" for hierarchy "RAM:inst10"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:inst10|altsyncram:altsyncram_component" File: C:/Users/15491959/cpu/cpu/RAM.vhd Line: 89
-Info (12130): Elaborated megafunction instantiation "RAM:inst10|altsyncram:altsyncram_component" File: C:/Users/15491959/cpu/cpu/RAM.vhd Line: 89
-Info (12133): Instantiated megafunction "RAM:inst10|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/15491959/cpu/cpu/RAM.vhd Line: 89
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAM:inst10|altsyncram:altsyncram_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/RAM.vhd Line: 89
+Info (12130): Elaborated megafunction instantiation "RAM:inst10|altsyncram:altsyncram_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/RAM.vhd Line: 89
+Info (12133): Instantiated megafunction "RAM:inst10|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/RAM.vhd Line: 89
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "cpuram.mif"
@@ -1578,22 +1567,22 @@ Info (12133): Instantiated megafunction "RAM:inst10|altsyncram:altsyncram_compon
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_doi1.tdf
-    Info (12023): Found entity 1: altsyncram_doi1 File: C:/Users/15491959/cpu/cpu/db/altsyncram_doi1.tdf Line: 34
+    Info (12023): Found entity 1: altsyncram_doi1 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_doi1.tdf Line: 34
 Info (12128): Elaborating entity "altsyncram_doi1" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_8la.tdf
-    Info (12023): Found entity 1: decode_8la File: C:/Users/15491959/cpu/cpu/db/decode_8la.tdf Line: 23
-Info (12128): Elaborating entity "decode_8la" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_8la:decode3" File: C:/Users/15491959/cpu/cpu/db/altsyncram_doi1.tdf Line: 45
+    Info (12023): Found entity 1: decode_8la File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_8la.tdf Line: 23
+Info (12128): Elaborating entity "decode_8la" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_8la:decode3" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_doi1.tdf Line: 45
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_11a.tdf
-    Info (12023): Found entity 1: decode_11a File: C:/Users/15491959/cpu/cpu/db/decode_11a.tdf Line: 23
-Info (12128): Elaborating entity "decode_11a" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_11a:rden_decode" File: C:/Users/15491959/cpu/cpu/db/altsyncram_doi1.tdf Line: 46
+    Info (12023): Found entity 1: decode_11a File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/decode_11a.tdf Line: 23
+Info (12128): Elaborating entity "decode_11a" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_11a:rden_decode" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_doi1.tdf Line: 46
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_7hb.tdf
-    Info (12023): Found entity 1: mux_7hb File: C:/Users/15491959/cpu/cpu/db/mux_7hb.tdf Line: 23
-Info (12128): Elaborating entity "mux_7hb" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|mux_7hb:mux2" File: C:/Users/15491959/cpu/cpu/db/altsyncram_doi1.tdf Line: 47
+    Info (12023): Found entity 1: mux_7hb File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/mux_7hb.tdf Line: 23
+Info (12128): Elaborating entity "mux_7hb" for hierarchy "RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|mux_7hb:mux2" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_doi1.tdf Line: 47
 Info (12128): Elaborating entity "ASCII_CONV" for hierarchy "ASCII_CONV:inst4"
 Info (12128): Elaborating entity "lpm_rom0" for hierarchy "lpm_rom0:inst3"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "lpm_rom0:inst3|altsyncram:altsyncram_component" File: C:/Users/15491959/cpu/cpu/lpm_rom0.vhd Line: 84
-Info (12130): Elaborated megafunction instantiation "lpm_rom0:inst3|altsyncram:altsyncram_component" File: C:/Users/15491959/cpu/cpu/lpm_rom0.vhd Line: 84
-Info (12133): Instantiated megafunction "lpm_rom0:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/15491959/cpu/cpu/lpm_rom0.vhd Line: 84
+Info (12128): Elaborating entity "altsyncram" for hierarchy "lpm_rom0:inst3|altsyncram:altsyncram_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_rom0.vhd Line: 84
+Info (12130): Elaborated megafunction instantiation "lpm_rom0:inst3|altsyncram:altsyncram_component" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_rom0.vhd Line: 84
+Info (12133): Instantiated megafunction "lpm_rom0:inst3|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/lpm_rom0.vhd Line: 84
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
     Info (12134): Parameter "init_file" = "charmap.mif"
@@ -1608,108 +1597,108 @@ Info (12133): Instantiated megafunction "lpm_rom0:inst3|altsyncram:altsyncram_co
     Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7kd1.tdf
-    Info (12023): Found entity 1: altsyncram_7kd1 File: C:/Users/15491959/cpu/cpu/db/altsyncram_7kd1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_7kd1 File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/altsyncram_7kd1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_7kd1" for hierarchy "lpm_rom0:inst3|altsyncram:altsyncram_component|altsyncram_7kd1:auto_generated" File: c:/intelfpga_lite/24.1std/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "POS_CONV" for hierarchy "POS_CONV:inst13"
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer inst5~0
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Mod0" File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 856
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Div0" File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 848
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Mod0" File: C:/Users/15491959/cpu/cpu/POS_CONV.vhd Line: 27
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Div0" File: C:/Users/15491959/cpu/cpu/POS_CONV.vhd Line: 28
-Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Mod0" File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 856
-Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Mod0" with the following parameter: File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 856
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Mod0" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 877
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Div0" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 869
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Mod0" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/POS_CONV.vhd Line: 27
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Div0" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/POS_CONV.vhd Line: 28
+Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Mod0" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 877
+Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Mod0" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 877
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_a5m.tdf
-    Info (12023): Found entity 1: lpm_divide_a5m File: C:/Users/15491959/cpu/cpu/db/lpm_divide_a5m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_a5m File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/lpm_divide_a5m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_dnh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/Users/15491959/cpu/cpu/db/sign_div_unsign_dnh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/sign_div_unsign_dnh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_03f.tdf
-    Info (12023): Found entity 1: alt_u_div_03f File: C:/Users/15491959/cpu/cpu/db/alt_u_div_03f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Div0" File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 848
-Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Div0" with the following parameter: File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 848
+    Info (12023): Found entity 1: alt_u_div_03f File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/alt_u_div_03f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Div0" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 869
+Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Div0" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 869
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_7dm.tdf
-    Info (12023): Found entity 1: lpm_divide_7dm File: C:/Users/15491959/cpu/cpu/db/lpm_divide_7dm.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "POS_CONV:inst13|lpm_divide:Mod0" File: C:/Users/15491959/cpu/cpu/POS_CONV.vhd Line: 27
-Info (12133): Instantiated megafunction "POS_CONV:inst13|lpm_divide:Mod0" with the following parameter: File: C:/Users/15491959/cpu/cpu/POS_CONV.vhd Line: 27
+    Info (12023): Found entity 1: lpm_divide_7dm File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/lpm_divide_7dm.tdf Line: 25
+Info (12130): Elaborated megafunction instantiation "POS_CONV:inst13|lpm_divide:Mod0" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/POS_CONV.vhd Line: 27
+Info (12133): Instantiated megafunction "POS_CONV:inst13|lpm_divide:Mod0" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/POS_CONV.vhd Line: 27
     Info (12134): Parameter "LPM_WIDTHN" = "11"
     Info (12134): Parameter "LPM_WIDTHD" = "11"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_05m.tdf
-    Info (12023): Found entity 1: lpm_divide_05m File: C:/Users/15491959/cpu/cpu/db/lpm_divide_05m.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_05m File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/lpm_divide_05m.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_3nh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_3nh File: C:/Users/15491959/cpu/cpu/db/sign_div_unsign_3nh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_3nh File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/sign_div_unsign_3nh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_c2f.tdf
-    Info (12023): Found entity 1: alt_u_div_c2f File: C:/Users/15491959/cpu/cpu/db/alt_u_div_c2f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "POS_CONV:inst13|lpm_divide:Div0" File: C:/Users/15491959/cpu/cpu/POS_CONV.vhd Line: 28
-Info (12133): Instantiated megafunction "POS_CONV:inst13|lpm_divide:Div0" with the following parameter: File: C:/Users/15491959/cpu/cpu/POS_CONV.vhd Line: 28
+    Info (12023): Found entity 1: alt_u_div_c2f File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/alt_u_div_c2f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "POS_CONV:inst13|lpm_divide:Div0" File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/POS_CONV.vhd Line: 28
+Info (12133): Instantiated megafunction "POS_CONV:inst13|lpm_divide:Div0" with the following parameter: File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/POS_CONV.vhd Line: 28
     Info (12134): Parameter "LPM_WIDTHN" = "11"
     Info (12134): Parameter "LPM_WIDTHD" = "6"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_hbm.tdf
-    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/15491959/cpu/cpu/db/lpm_divide_hbm.tdf Line: 25
+    Info (12023): Found entity 1: lpm_divide_hbm File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/lpm_divide_hbm.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_nlh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/15491959/cpu/cpu/db/sign_div_unsign_nlh.tdf Line: 25
+    Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
-    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/15491959/cpu/cpu/db/alt_u_div_kve.tdf Line: 23
-Warning (13012): Latch cpu:inst12|result[14] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[13] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[12] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[11] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[10] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[9] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[8] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[7] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[6] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[5] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[4] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[3] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[2] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[1] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[0] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[15] has unsafe behavior File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 799
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/cpu/cpu/cpu.vhd Line: 160
-Info (17049): 8 registers lost all their fanouts during netlist optimizations.
+    Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/db/alt_u_div_kve.tdf Line: 23
+Warning (13012): Latch cpu:inst12|result[14] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[13] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[12] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[11] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[10] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[9] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[8] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[7] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[6] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[5] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[4] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[3] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[2] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[1] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[0] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Warning (13012): Latch cpu:inst12|result[15] has unsafe behavior File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 820
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/Desktop/trab_simas_cpu/cpu/cpu.vhd Line: 160
+Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
-Info (21057): Implemented 3000 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3053 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 2836 logic cells
+    Info (21061): Implemented 2889 logic cells
     Info (21064): Implemented 133 RAM segments
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
     Info: Peak virtual memory: 5000 megabytes
-    Info: Processing ended: Fri Apr 25 18:01:26 2025
+    Info: Processing ended: Fri May  9 18:03:59 2025
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Total CPU time (on all processors): 00:00:22
 
 
