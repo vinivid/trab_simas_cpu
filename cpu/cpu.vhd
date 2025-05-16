@@ -624,7 +624,7 @@ begin
 --========================================================================				
 			IF(IR(15 DOWNTO 10) = RTS) THEN
 					IncSp := '1';
-				state := exec;
+					state := exec;
 			END IF;
 
 --========================================================================
@@ -633,16 +633,14 @@ begin
 			IF(IR(15 DOWNTO 10) = PUSH) THEN
 					M1 <= SP;
 					RW <= '1';
-					
-					IF (IR(6) = '0') THEN
-						M3 := Reg(Rx);
-					ELSE 
+					IF(IR(6)='0') THEN
+						M3 := REG(RX);
+					ELSE
 						M3 := FR;
 					END IF;
-					
 					M5 <= M3;
 					DecSP := '1';
-					
+				
 				state := fetch;
 			END IF;
 		
@@ -650,7 +648,7 @@ begin
 -- POP RX
 --========================================================================
 			IF(IR(15 DOWNTO 10) = POP) THEN
-					IncSP := '1';
+					IncSP :='1';
 				state := exec;
 			END IF;						
 				
@@ -749,7 +747,7 @@ begin
 -- EXEC RTS 			PC <- Mem[SP]
 --========================================================================
 			IF(IR(15 DOWNTO 10) = RTS) THEN
-					M1 <= PC;				-- M1 <- PC
+					M1 <= SP;				-- M1 <- PC
 					Rw <= '0';				-- Rw <= '0'
 					LoadPC := '1';			-- LoadPC <- 1
 					
@@ -760,17 +758,15 @@ begin
 -- EXEC POP RX/FR
 --========================================================================
 			IF(IR(15 DOWNTO 10) = POP) THEN
-					M1 <= SP;
-					RW <= '0';
-					
-					IF (IR(6) = '0') THEN
-						selM2 := sMEM;
-						LoadReg(RX) := '1';
-					ELSE 
-						selM6 := sMEM;
-						LoadFR := '1';
-					END IF;
-					
+				M1 <= SP;
+				RW <= '1';
+				IF(IR(6)='0') THEN
+					SelM2 := sMEM;
+					LoadReg(RX) := '1';
+				ELSE
+					SelM6 := sMEM;
+					LoadFR := '1';
+				END IF;	
 				state := fetch;
 			END IF;		
 		
