@@ -1,22 +1,42 @@
+body {
+    background-color: #282e38;
+}
+
 #map-grid {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    display: inline-grid;
+    grid-template-rows: repeat(30, 25px);
+    grid-template-columns: repeat(40, 25px);
+    gap: 2px;
 }
 
 .map-block {
-    color:black;
-    background-color: aqua;
+    width: 25px;
+    height: 25px;
+    background-color: white;
 }
 
 #tile-select {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    left: 30px;
+    display: inline-grid;
+    grid-template-rows: repeat(3, 1fr);
     gap: 10px;
 }
 
-.tile-cell {
-    color:black;
-    background-color: gray;
+.tile-block {
+    width: 25px;
+    height: 25px;
+    background-color: red;
+}
+
+#t0 {
+    background-color: red;
+}
+
+#t1 {
+    background-color: blue;
+}
+
+#t2 {
+    background-color: white;
 }
