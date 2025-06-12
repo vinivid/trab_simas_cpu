@@ -18,11 +18,11 @@
 ; o 1 representa um tile de parede, o 2 representa um tile 
 ; de de bloco quebravel, o 3 representa uma explosao da 
 ; bomba direita e etc.
-;
-;  O mapa iria disponibilazr funcoes que checam se 
-; se o valor em uma posicao eh uma parede, uma bomba 
-; e outros assim como funcoes de desenhar tiles do mapa 
-; e o mapa inteiro no buffer da gpu.
-;
-;  Em essencia o o objetivo do mapa e abstrair desenhar 
-; as tiles e a checagem de tile para os usuarios.
+
+;   O map buffer eh um vetor que ira repsentar os tiles do mapa.
+map_buffer : var #208
+
+;  Variaveis que representam as dimensoes do mapa
+; para conveniencia
+map_width  : var #16
+map_heigth : var #13
