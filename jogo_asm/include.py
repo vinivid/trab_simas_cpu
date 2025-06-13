@@ -1,16 +1,14 @@
 import sys
 
-"""Funcionamento:
+"""
+Funcionamento:
 Inclui todos os conteudos do arquivo no primeiro argumento para 
-o arquivo do segundo argumento.
+o arquivo do segundo argumento, recursivamente resolvendo os includes
+de cada arquivo sem a repetição de arquivos.
 
 No arquivo para incluir o conteudo é necessario escrever
 
 @include "nome do arquivo"
-
-sem as aspas e sem nenhum conteudo a mais ou comentarios
-Ele recusivamente inclui o conteudo para incluir nos outros
-arquivos
 
 ex:
 

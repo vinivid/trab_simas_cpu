@@ -13,8 +13,8 @@
 ; nessa posicao.
 ;
 two_by_two_draw:
-  ; Salvando as registradoras
-  ; usadas nessa funcao que nao sao argumento
+    ; Salvando as registradoras
+    ; usadas nessa funcao que nao sao argumento
 	push r3
 	push r4
 	
@@ -28,13 +28,13 @@ two_by_two_draw:
 	add r1, r1, r3
 	outchar r0, r1
   
-  ; desenhando na posicao abaixo da primeira
+    ; desenhando na posicao abaixo da primeira
 	add r0, r0, r3
 	add r1, r1, r4 ; pulando a linha da tela
 	outchar r0, r1
   
-  ; desenha na diagonal para baixo e direita 
-  ; da primeira
+    ; desenha na diagonal para baixo e direita 
+    ; da primeira
 	add r0, r0, r3
 	add r1, r1, r3
 	outchar r0, r1
