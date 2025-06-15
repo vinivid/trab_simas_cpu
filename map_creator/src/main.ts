@@ -93,25 +93,23 @@ function downloadFile(filename : string, contents : string[]) {
 
 function gridTilesToFile() {
     const htmlMapGrid = Array.from(document.getElementsByClassName('map-block')) as HTMLElement[]
-    const tileMapAsm : string[] = new Array(';   A tile grid representa as tiles do mapa\n',
-        ';em uma grid de 16 x 13, para ser utilizada com sprites\n',
+    const tileMapAsm : string[] = new Array(';   A tile map representa as tiles do mapa\n',
+        ';em uma grid de 20 x 13, para ser utilizada com sprites\n',
         ';2 X 2.\n',
-        'tile_grid:\n'
+        'tile_map : var #260\n'
     )
 
     htmlMapGrid.forEach((ele, id) => {
-        if(ele.style.backgroundColor) {
-            tileMapAsm.push(`\tstatic tile_grid + #${id}, #0\n`)
+        if(ele.style.backgroundColor == 'red') {
+            tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)
         } else if (ele.style.backgroundColor === 'blue') {
-            tileMapAsm.push(`\tstatic tile_grid + #${id}, #1\n`)
+            tileMapAsm.push(`\tstatic tile_map + #${id}, #1\n`)
         } else if (ele.style.backgroundColor === 'white') {
-            tileMapAsm.push(`\tstatic tile_grid + #${id}, #2\n`)
+            tileMapAsm.push(`\tstatic tile_map + #${id}, #2\n`)
         } else {
             console.log('invalid color')
         }
     })
-
-    tileMapAsm.forEach((ele) => console.log(ele))
 
     downloadFile('mapa.asm', tileMapAsm)
 }

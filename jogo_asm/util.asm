@@ -21,16 +21,14 @@
 two_by_two_draw:
     ; Salvando as registradoras
     ; usadas nessa funcao que nao sao argumento
-	push r3 
 	push r4
 	
-	loadn r3, #1  ; Seta o step de uma coluna
 	loadn r4, #39 ; Sera o step de uma linha da tela
 	
 	outchar r0, r1 ; primeira posicao 
 	
 	; desenhando na direita da primeira pos
-	add r1, r1, r3
+	inc r1
 	outchar r0, r1
   
     ; desenhando na posicao abaixo da primeira pos
@@ -39,11 +37,11 @@ two_by_two_draw:
   
     ; desenha na diagonal para baixo e direita 
     ; da primeira
-	add r1, r1, r3
+	inc r1
 	outchar r0, r1
 
 	pop r4
-	pop r3
+	rts
 
 ;   Desenha na posicao da tela a sequencia
 ; de quatro chars que representam um sprite
@@ -96,3 +94,4 @@ two_by_two_sequence_draw:
 
 	pop r4
 	pop r3
+	rts

@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title> Ble</title>
-</head>
-<body>
-	<div id="map-wrapper">
-		<div id="map-grid">
 			<div class="map-block"></div>
 			<div class="map-block"></div>
 			<div class="map-block"></div>
@@ -269,14 +258,3 @@
 			<div class="map-block"></div>
 			<div class="map-block"></div>
 			<div class="map-block"></div>
-		</div>
-		<div id="tile-select">
-			<div id="t0" class="tile-block"></div>
-			<div id="t1" class="tile-block"></div>
-			<div id="t2" class="tile-block"></div>
-			<button id="download-map">Exportar</button>
-		</div>
-	</div>
-</body>
-<script src="bundle.mjs"></script>
-</html>

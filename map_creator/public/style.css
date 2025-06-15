@@ -9,7 +9,7 @@ body {
 #map-grid {
     display: inline-grid;
     grid-template-rows: repeat(13, 25px);
-    grid-template-columns: repeat(16, 25px);
+    grid-template-columns: repeat(20, 25px);
     gap: 2px;
 }
 

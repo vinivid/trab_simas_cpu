@@ -18,7 +18,7 @@ function i(e) {
     });
   });
 }
-function r(e) {
+function s(e) {
   Array.from(document.getElementsByClassName("map-block")).forEach((o) => {
     o.addEventListener("mouseover", () => {
       e.isLeftDown && (o.style.backgroundColor = e.selectedTile);
@@ -27,38 +27,38 @@ function r(e) {
     }), o.style.backgroundColor = "white";
   });
 }
-function s() {
+function a() {
   let e = new l("red");
   return document.addEventListener("mousedown", () => {
     e.isLeftDown = !0;
   }), document.addEventListener("mouseup", () => {
     e.isLeftDown = !1;
-  }), i(e), r(e), e;
+  }), i(e), s(e), e;
 }
-function d(e, t) {
+function r(e, t) {
   const o = new Blob(t, { type: "text/plain" }), n = document.createElement("a");
   n.href = URL.createObjectURL(o), n.download = e, n.style.display = "none", document.body.appendChild(n), n.click(), document.body.removeChild(n), URL.revokeObjectURL(n.href);
 }
 function c() {
   const e = Array.from(document.getElementsByClassName("map-block")), t = new Array(
-    `;   A tile grid representa as tiles do mapa
+    `;   A tile map representa as tiles do mapa
 `,
-    `;em uma grid de 16 x 13, para ser utilizada com sprites
+    `;em uma grid de 20 x 13, para ser utilizada com sprites
 `,
-    `;2 X 2
+    `;2 X 2.
 `,
-    `tile_grid:
+    `tile_map : var #260
 `
   );
   e.forEach((o, n) => {
-    o.style.backgroundColor ? t.push(`	static tile_grid + #${n}, #0
-`) : o.style.backgroundColor === "blue" ? t.push(`	static tile_grid + #${n}, #1
-`) : o.style.backgroundColor === "white" ? t.push(`	static tile_grid + #${n}, #2
+    o.style.backgroundColor == "red" ? t.push(`	static tile_map + #${n}, #'A'
+`) : o.style.backgroundColor === "blue" ? t.push(`	static tile_map + #${n}, #1
+`) : o.style.backgroundColor === "white" ? t.push(`	static tile_map + #${n}, #2
 `) : console.log("invalid color");
-  }), t.forEach((o) => console.log(o)), d("mapa.asm", t);
+  }), t.forEach((o) => console.log(o)), r("mapa.asm", t);
 }
-function a() {
+function d() {
   document.getElementById("download-map").addEventListener("click", () => c());
 }
-s();
 a();
+d();
