@@ -3,7 +3,9 @@
 ;
 ; Parametros:
 ;
-; @param {char} r0 - Eh o char que deseja  
+; @param {const char} r0 - Eh o char que deseja 
+; desenhar na posicao da tela. Esse valor nao eh
+; alterado.  
 ;
 ; @param {int} r1 - Eh a posicao na tela em que 
 ; deseja desenhar o sprite. Tendo em mente que 
