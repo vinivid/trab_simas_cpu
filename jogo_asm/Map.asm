@@ -1,8 +1,6 @@
 ;  Esse arquivo inclui o mapa, as tiles pertencetes
 ; ao mapa e funcoes para interagir com o mapa.
 
-call draw_map_full
-
 @include util.asm
 @include mapa.asm
 
@@ -20,12 +18,12 @@ draw_map_full:
     push r7
 
     ; primeiro char da quinta linha da tela
-    loadn r2, #200
+    loadn r2, #160
     loadn r3, #2    ; step horizontal
     loadn r4, #20   ; fim do loop da coluna
     loadn r5, #tile_map   ; endereco da primeira posicao da grid
     loadn r6, #0    ; variavel do lop
-    loadn r7, #13   ; limite do loop de linhas
+    loadn r7, #12   ; limite do loop de linhas
 
     push r6
     loadn r6, #0
@@ -43,10 +41,19 @@ draw_map_full:
         jmp colum_draw_map_loop
 
     row_draw_loop:
+        ; checando se acabou de escrever todas as linhas
         pop r6
         cmp r6, r7 
         jeq draw_map_full_end
-
+        ; nao acabou todas linhas entao vao para a proxima
+        inc r6
+        push r6 
+        loadn r6, #0
+        push r0
+        loadn r0, #40 ; step de duas linhas 
+        add r2, r2, r0 ; pulando duas linahs
+        pop r0
+        jmp colum_draw_map_loop
 
     draw_map_full_end:
         pop r7
