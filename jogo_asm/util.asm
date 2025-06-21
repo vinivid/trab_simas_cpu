@@ -97,3 +97,23 @@ two_by_two_sequence_draw:
 	pop r4
 	pop r3
 	rts
+
+;  Retorna o valor absoluto do valor passado, e o 
+; sinal do numero passado (1 para positivo 0 para negativo).
+;
+; @param {int} r0 - Valor para se pegar o absluto.
+; @return {int} r0 - Valor absoluto de r0
+; @return {int} r1 - Sinal do valor passado.
+; 
+valor_absoluto_e_sinal:
+	loadn r1, #0
+	cmp r0, r1
+	jle eh_um_numero_negativo
+		loadn #1
+		rts
+
+	eh_um_numero_negativo:
+		loadn r1, #-1
+		mul r0, r0, r1
+		loadn r1, #0
+		rts

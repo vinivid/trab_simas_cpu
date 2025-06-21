@@ -2,12 +2,12 @@ jmp main
 
 @include Map.asm
 @include Player.asm 
-@include Bomb.asm
 
 main:
     call draw_map_full
-    call init_player_one
+    call ini_player_um
+    call ini_player_dois
     
     game_loop :
-        call input_player_um
+        call update_player_um
         jmp game_loop

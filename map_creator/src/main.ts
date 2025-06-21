@@ -102,18 +102,28 @@ function gridTilesToFile() {
         'player_one_ini_pos : var #2\n'
     )
 
+    let qtt_player = 0
+
     htmlMapGrid.forEach((ele, id) => {
         if(ele.style.backgroundColor == 'red') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)
         } else if (ele.style.backgroundColor === 'blue') {
-            tileMapAsm.push(`\tstatic tile_map + #${id}, #1\n`)
+            tileMapAsm.push(`\tstatic tile_map + #${id}, #'B'\n`)
         } else if (ele.style.backgroundColor === 'white') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #0\n`)
         }
         else if (ele.style.backgroundColor == 'yellow') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)
-            players_pos.push(`\tstatic player_one_ini_pos + #1, #${id % 20}\n`)
-            players_pos.push(`\tstatic player_one_ini_pos + #0, #${Math.floor(id / 20)}\n`)
+            if (qtt_player == 0) {
+                players_pos.push(`\tstatic player_one_ini_pos + #0, #${id % 20}\n`)
+                players_pos.push(`\tstatic player_one_ini_pos + #1, #${Math.floor(id / 20)}\n`)
+                qtt_player += 1
+            } else if (qtt_player == 1) {
+                players_pos.push('player_two_ini_pos : var #2\n')
+                players_pos.push(`\tstatic player_two_ini_pos + #0, #${id % 20}\n`)
+                players_pos.push(`\tstatic player_two_ini_pos + #1, #${Math.floor(id / 20)}\n`)
+                qtt_player += 1
+            }
         } else {
             console.log('invalid color')
         }

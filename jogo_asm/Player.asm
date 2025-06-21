@@ -1,27 +1,27 @@
 
 @include util.asm
 @include Map.asm
+@include Bomb.asm
 
-;  As coordenadas da localizacao do player 1
-pu_posx : var #1
-pu_posy : var #1
-
-;   Inicializa o player no mapa na posicao do player1 
-; dada pela variavel player_one_ini_pos
-init_player_one:
-    push r0
+;   Inicializa o player na posicao determinada pelo 
+; endereco de inicializacao.
+;
+; @param {endereco} r0 - Endereco de inicializacao do 
+; player
+; @param {endereco} r6 - Endereco da pos x do player 
+; @param {endereco} r7 - Enderece da pos y do player
+ini_player:
     push r1
     push r2
 
-    ; pegar posicao x e y
-    loadn r0, #player_one_ini_pos
+    ; pegando posicao x e y
     loadi r1, r0 
     inc r0 
     loadi r2, r0 
 
     ; Guardando as variaveis nos enderecos staticos
-    store pu_posx, r1
-    store pu_posy, r2
+    storei r6, r1
+    storei r7, r2
 
     ; Setando no mapa e desenhando na tela
     loadn r0, #'G'
@@ -30,8 +30,7 @@ init_player_one:
 
     pop r2 
     pop r1 
-    pop r0
-
+    rts
 
 ;   A funcao atuar no player altera o estado do player 
 ; com base no char passado (tecla).
@@ -194,9 +193,25 @@ atuar_no_player:
         pop r3
         rts
 
+; Coisas do player 1
+
+;  As coordenadas da localizacao do player 1
+pu_posx : var #1
+pu_posy : var #1
+
+; Inicializa o player 1
+ini_player_um:
+    push r0
+    loadn r0, #player_one_ini_pos
+    loadn r6, #pu_posx
+    loadn r7, #pu_posy
+    call ini_player
+    pop r0 
+    rts
+
 ;   Essa funcao le o teclado e ajusta o estado do player se
 ; for uma das teclas de mover o player 1.
-input_player_um:
+update_player_um:
     push r0 
 
     inchar r0 
@@ -206,3 +221,62 @@ input_player_um:
 
     pop r0
     rts
+
+; A partir daqui sao funcoes do player 2, que eh controlado 
+; por uma IA estupida
+
+;  As coordenadas da localizacao do player 2
+pd_posx : var #1
+pd_posy : var #1
+
+; O estado doo player 2. Se nao colocou uma bomba 
+; ele esta no estado de corajoso em que ele vai ativamente
+; ir na direcao do player esse eh o estado 0. O outro 
+; estado eh o estado covarde, em que ele foje ativamente 
+; da posicao da bomba que ele colocou.
+; A ia comeca no estado corajoso
+ia_stado : var #1
+    static ia_stado + #0, #0
+
+;   Inicializa o player dois no mapa na posicao do player2 
+; dada pela variavel player_two_ini_pos
+ini_player_dois:
+    push r0
+    loadn r0, #player_two_ini_pos
+    loadn r6, #pd_posx
+    loadn r7, #pd_posy
+    call ini_player
+    pop r0
+    rts
+
+; Gera uma decisao corajosa com base na posicao do player 1.
+;
+;  As decisoes corajosas serao as decisoes que levam o player 
+; 2 mais proximas ao player 1. Isso sera feito fazendo o a diferenca
+; das distancias dos dois players. A direcao que tiver a menor distancia 
+; e nao tiver nenhum obstaculo no caminho sera a decisa tomada. Caso 
+; o obstaculo no caminho da menor dista seja uma parede, coloca uma bomba 
+; no local e vai para o estado de covarde.
+;
+; @return {char} r0 - Acao a ser efetuada.
+decisao_corajosa:
+
+; Gera uma decisao covarde com base na posicao da bomba do player 2.
+;
+;  As decisoes covardes serao decisoes que levam o player 2 mais longe
+; da bomba que ele colocara. A direcao que for oposta a bomba e nao 
+; ter obstucalos sera a direcao tomada. O player 2 continua neste 
+; estado ate que a bomba que ele colocou suma.
+;
+; @return {char} r0 - Acao a ser efetuada.
+decisao_covarde:
+
+
+; Calcula a acao que deve ser feita pelo player 2
+;
+; @return {char} r0 - Acao a ser efetuada.
+decisao_de_acao:
+
+
+;  Atualiza a Ia e o estado do player dois
+update_player_dois:
