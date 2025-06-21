@@ -5,4 +5,8 @@ jmp main
 @include Bomb.asm
 
 main:
-    ; instruções da main e o loop de jogo
+    call init_player_one
+
+    game_loop : 
+        call input_player_um
+        jmp game_loop

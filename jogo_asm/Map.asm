@@ -49,8 +49,6 @@
 ; abaixo para referencia:
 ;
 
-jmp end
-
 @include util.asm
 @include mapa.asm
 

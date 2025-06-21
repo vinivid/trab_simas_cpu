@@ -1,138 +1,180 @@
-;////////////////////////////////////////////////////
+
+@include util.asm
+@include Map.asm
+
+;  As coordenadas da localizacao do player 1
+pu_posx : var #1
+pu_posy : var #1
+
+;   Inicializa o player no mapa na posicao do player1 
+; dada pela variavel player_one_ini_pos
+init_player_one:
+    push r0
+    push r1
+    push r2
+
+    ; pegar posicao x e y
+    loadn r0, #player_one_ini_pos
+    loadi r1, r0 
+    inc r0 
+    loadi r2, r0 
+
+    ; Guardando as variaveis nos enderecos staticos
+    store pu_posx, r1
+    store pu_posy, r2
+
+    ; Setando no mapa e desenhando na tela
+    loadn r0, #'G'
+    call set_tile
+    call two_by_two_sequence_draw
+
+    pop r2 
+    pop r1 
+    pop r0
+
+
+;   A funcao atuar no player altera o estado do player 
+; com base no char passado (tecla).
 ;
-;          ////////////////////
-;         // BOMBER SIMAS ! //
-;        ////////////////////
-;
-;       uma contribuição de:
-;       - João Daffele Dias ()
-;       - Renan Banci Catarin ()
-;       - Glauco Fleury Corrêa de Moraes (15456302)
-;       - Murilo Leandro Garcia ()
-;       - Rodrigo Silva de Almeida ()
-;       - Vitor Daniel Resende ()
-;       - Vinicius Souza Freitas ()
-;
-;//////////////////////////////////////////////////
-;
-;         // DECLARAÇÃO DOS DADOS & FRAMES //
-;
-;//////////////////////////////////////////////////
+; @param {char} r0 - Acao a ser feita no player, 'w' para 
+; ir para cima, 'a' para ir para esquerda, 's' para ir para 
+; baixo, 'd' para ir para direita e 'z' para colocar uma bomba.
+; Se o caractere passado nao representar uma acao valida a funcao 
+; nao faz nada.
+; @param {endereco} r6 - Endereco da posicao x do player 
+; @param {endereco} r7 - Endereco da posicao y do player
+; 
+atuar_no_player:
+    push r1 
+    push r2
 
-jmp main
-;------------------------------------------------
+    loadn r1, #'w'
+    cmp r0, r1
+    jeq para_cima
 
-; => Posição dos personagens: 4 variáveis para cada, sendo
-;    2 para a atual, 2 para a anterior
+    loadn r1, #'s'
+    cmp r0, r1
+    jeq para_baixo
 
-; => Direção: 2 variáveis para cada, 1 para a anterior,
-;    1 para a atual
-;    (UP = 0, RIGHT = 4, DOWN = 8, LEFT = 12)
+    loadn r1, #'a'
+    cmp r0, r1
+    jeq para_esquerda
 
-; => Cor: player 1 é amarelo, e o 2, verde
+    loadn r1, #'d'
+    cmp r0, r1
+    jeq para_direita
 
-; => Vida: cada player nasce com 1 vida apenas
+    ; nao foi nenhum dos inputs de controlar o player 
+    jmp atuar_return
 
-; => Especial: cada player nasce com 0 por default
+    para_cima:
+        loadi r2, r7 
+        ; Se tiver na ultima tile do topo nao vai pra cima 
+        loadn r3, #0
+        cmp r2, r3 
+        jeq atuar_return 
+        loadi r1, r6
 
-; => Bomba/Mega-Bomba: caractere que marca a localização
-;    da posição da bomba que o player soltou no mapa
+        ; apagando a tile do player que anterioremente estava la 
+        loadn r0, #2
+        call set_tile
+        call two_by_two_draw
 
-;  -----------------PLAYER 1--------------------
-;posição
-pos1P1 : var #1
-posPre1P1 : var #1
-pos2P1 : var #1
-posPre2P1 : var #1
-;direção
-dirP1: var #1
-dirPreP1: var #1
-;bomba
-bombP1: var #1
-;vida
-lifeP1: var #1
-;especial
-especialP1: var #1
-;cor
-corP1: var #1
-	static corTanque1 + #0, #2816
+        ; colocando o player na proxima posicao
+        loadi r1, r6
+        loadi r2, r7 
+        dec r2
+        storei r7, r2
 
-;  -----------------PLAYER 2--------------------
-;posição
-pos1P2 : var #1
-posPre1P12 : var #1
-pos2P2 : var #1
-posPre2P2 : var #1
-;direção
-dirP2: var #1
-dirPreP2: var #1
-;bomba
-bombP2: var #1
-;vida
-lifeP2: var #1
-;especial
-especialP2: var #1
-;cor
-corP2: var #1
-	static corTanque1 + #0, #2816 ;como mudar para azul?
+        loadn r0, #'G'
+        call set_tile
+        call two_by_two_sequence_draw
+        jmp atuar_return
 
-;
-;INSERIR MAPA, EXPLOSÕES, CANHÃO -> fazer com que o player escolha!
-;fazer 1 "mapa" pra cada cor disponível (é assim pra fpga)
+    para_baixo:
+        loadi r2, r7 
+        ; Se tiver na ultima tile de baixo nao vai pra baixo 
+        loadn r3, #12
+        cmp r2, r3 
+        jeq atuar_return 
+        loadi r1, r6
 
+        ; apagando a tile do player que anterioremente estava la 
+        loadn r0, #2
+        call set_tile
+        call two_by_two_draw
 
-;//////////////////////////////////////////////////
-;
-;         // LÓGICA PRINCIPAL: CÓDIGO //
-;
-;//////////////////////////////////////////////////
+        ; colocando o player na proxima posicao
+        loadi r1, r6
+        loadi r2, r7 
+        inc r2
+        storei r7, r2
 
-main:
-    ;dando clean na tela
-    call CleanScreen
-    ;printando o menu
-    call PrintMenu1
-    call PrintMenu2
-    call PrintMenu3
+        loadn r0, #'G'
+        call set_tile
+        call two_by_two_sequence_draw
+        jmp atuar_return
 
-Main_Loop:
-    ;tela inicial: ir pra 'Comandos' ou iniciar o game
-    loadn r1, #' ' ;tecla SPACE -> começar
-    loadn r2, #13 ;tecla ENTER -> commands
-    inchar r3
-    cmp r2, r3
-    jeq PrintCommands
-    cmp r1, r3
-    jneq Main_Loop
+    para_esquerda:
+        loadi r1, r6 
+        ; Se tiver na ultima tile da esqueda nao vai pra esquerda 
+        loadn r3, #0
+        cmp r1, r3 
+        jeq atuar_return 
+        loadi r2, r7
 
-    ;iniciando o game
+        ; apagando a tile do player que anterioremente estava la 
+        loadn r0, #2
+        call set_tile
+        call two_by_two_draw
 
-    call CleanScreen
+        ; colocando o player na proxima posicao
+        loadi r1, r6
+        loadi r2, r7 
+        dec r1
+        storei r6, r1
 
-    call PrintMargin
-    call PrintHearts
-    call PrintBombs
-    call PrintText
-    call PrintBlocks
+        loadn r0, #'G'
+        call set_tile
+        call two_by_two_sequence_draw
+        jmp atuar_return
 
-    call SpawnPlayer1
-    call SpawnPlayer2
+    para_direita:
+        loadi r1, r6 
+        ; Se tiver na ultima tile da direita nao vai pra direita
+        loadn r3, #19
+        cmp r1, r3 
+        jeq atuar_return 
+        loadi r2, r7
 
-    loadn r0, #0 ;counter pra atualizar as coisas
+        ; apagando a tile do player que anterioremente estava la 
+        loadn r0, #2
+        call set_tile
+        call two_by_two_draw
 
-    Sub_Loop:
-        ;o jogo em si
-        call UpdatePlayers ;atualizar de 4 em 4
-        call UpdateBombs ;atualizar de 8 em 8
-        call UpdateCanon ;atualizar de 1 em 1
+        ; colocando o player na proxima posicao
+        loadi r1, r6
+        loadi r2, r7 
+        inc r1
+        storei r6, r1
 
-        call Delay
-        
-        inc r0 ;loop incrementado
-        jmp Sub_Loop
+        loadn r0, #'G'
+        call set_tile
+        call two_by_two_sequence_draw
+        jmp atuar_return
 
-    halt
+    atuar_return:
+        pop r4 
+        pop r3
+        rts
 
+;   Essa funcao le o teclado e ajusta o estado do player se
+; for uma das teclas de mover o player 1.
+input_player_um:
+    push r0 
 
-
-
+    inchar r0 
+    loadn r6, #pu_posx
+    loadn r7, #pu_posy
+    call atuar_no_player
+    rts

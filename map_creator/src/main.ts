@@ -24,7 +24,8 @@ function initSelectorGrid(mouse : MouseSelector) {
     const selectGridTiles = {
         't0' : 'red',
         't1' : 'blue',
-        't2' : 'white'
+        't2' : 'white',
+        't3' : 'yellow'
     }
 
     const htmlSelectGrid = Array.from(document.getElementsByClassName('tile-block')) as HTMLElement[]
@@ -49,8 +50,6 @@ function initMapGrid(mouse : MouseSelector) {
             ele.style.backgroundColor = mouse.selectedTile
         })
 
-        // Por enquanto é necessario fazer essa gambiarra para quando
-        // for gerar o mapa ser possível saber qual é a cor do elemento
         ele.style.backgroundColor = 'white'
     })
 }
@@ -99,6 +98,10 @@ function gridTilesToFile() {
         'tile_map : var #260\n'
     )
 
+    const players_pos : string[] = new Array('\n; Posicao do player e 1 player 2, em que o offset 0 eh o x e o offset 1 eh o y\n',
+        'player_one_ini_pos : var #2\n'
+    )
+
     htmlMapGrid.forEach((ele, id) => {
         if(ele.style.backgroundColor == 'red') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)
@@ -106,12 +109,17 @@ function gridTilesToFile() {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #1\n`)
         } else if (ele.style.backgroundColor === 'white') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #2\n`)
+        }
+        else if (ele.style.backgroundColor == 'yellow') {
+            tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)
+            players_pos.push(`\tstatic player_one_ini_pos + #1, #${id % 20}\n`)
+            players_pos.push(`\tstatic player_one_ini_pos + #0, #${Math.floor(id / 20)}\n`)
         } else {
             console.log('invalid color')
         }
     })
 
-    downloadFile('mapa.asm', tileMapAsm)
+    downloadFile('mapa.asm', tileMapAsm.concat(players_pos))
 }
 
 function initExportButton() {
