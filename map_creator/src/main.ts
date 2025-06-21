@@ -108,7 +108,7 @@ function gridTilesToFile() {
         } else if (ele.style.backgroundColor === 'blue') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #1\n`)
         } else if (ele.style.backgroundColor === 'white') {
-            tileMapAsm.push(`\tstatic tile_map + #${id}, #2\n`)
+            tileMapAsm.push(`\tstatic tile_map + #${id}, #0\n`)
         }
         else if (ele.style.backgroundColor == 'yellow') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)

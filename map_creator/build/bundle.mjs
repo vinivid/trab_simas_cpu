@@ -60,7 +60,7 @@ function d() {
   e.forEach((t, l) => {
     t.style.backgroundColor == "red" ? o.push(`	static tile_map + #${l}, #'A'
 `) : t.style.backgroundColor === "blue" ? o.push(`	static tile_map + #${l}, #1
-`) : t.style.backgroundColor === "white" ? o.push(`	static tile_map + #${l}, #2
+`) : t.style.backgroundColor === "white" ? o.push(`	static tile_map + #${l}, #0
 `) : t.style.backgroundColor == "yellow" ? (o.push(`	static tile_map + #${l}, #'A'
 `), n.push(`	static player_one_ini_pos + #1, #${l % 20}
 `), n.push(`	static player_one_ini_pos + #0, #${Math.floor(l / 20)}

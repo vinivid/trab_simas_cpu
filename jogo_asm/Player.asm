@@ -75,8 +75,14 @@ atuar_no_player:
         jeq atuar_return 
         loadi r1, r6
 
+        ; verifica se eh uma tile vazia para que o player possa ir
+        dec r2 
+        call get_tile
+        cmp r0, r3
+        jne atuar_return
+        inc r2
+
         ; apagando a tile do player que anterioremente estava la 
-        loadn r0, #2
         call set_tile
         call two_by_two_draw
 
@@ -99,8 +105,15 @@ atuar_no_player:
         jeq atuar_return 
         loadi r1, r6
 
+        ; verifica se eh uma tile vazia para que o player possa ir
+        loadn r3, #0
+        inc r2 
+        call get_tile
+        cmp r0, r3
+        jne atuar_return
+        dec r2
+
         ; apagando a tile do player que anterioremente estava la 
-        loadn r0, #2
         call set_tile
         call two_by_two_draw
 
@@ -123,8 +136,14 @@ atuar_no_player:
         jeq atuar_return 
         loadi r2, r7
 
+        ; verifica se eh uma tile vazia para que o player possa ir
+        dec r1 
+        call get_tile
+        cmp r0, r3
+        jne atuar_return
+        inc r1
+
         ; apagando a tile do player que anterioremente estava la 
-        loadn r0, #2
         call set_tile
         call two_by_two_draw
 
@@ -147,8 +166,15 @@ atuar_no_player:
         jeq atuar_return 
         loadi r2, r7
 
+        ; verifica se eh uma tile vazia para que o player possa ir
+        loadn r3, #0
+        inc r1 
+        call get_tile
+        cmp r0, r3
+        jne atuar_return
+        dec r1
+
         ; apagando a tile do player que anterioremente estava la 
-        loadn r0, #2
         call set_tile
         call two_by_two_draw
 
@@ -177,4 +203,6 @@ input_player_um:
     loadn r6, #pu_posx
     loadn r7, #pu_posy
     call atuar_no_player
+
+    pop r0
     rts

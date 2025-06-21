@@ -175,3 +175,25 @@ set_tile:
     pop r4
     pop r3 
     rts
+
+;   Pega a tile na coordenada passada.
+;
+; @param {const int} r1 - Coordenada x da tile que deseja pegar 
+; @param {const int} r2 - Coordenada y da tile que deseja pegar 
+; @return {char} r0 - Tile na posicao dada por (r1, r2)
+;
+get_tile:
+    push r3 
+    
+    ; transformando para um endereco valido
+    loadn r3, #20
+    mul r0, r2, r3
+    add r0, r0, r1 
+
+    ; pegando o valor no tile map 
+    loadn r3, #tile_map
+    add r3, r3, r0 
+    loadi r0, r3
+
+    pop r3
+    rts

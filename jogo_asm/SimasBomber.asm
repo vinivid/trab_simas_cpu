@@ -5,8 +5,9 @@ jmp main
 @include Bomb.asm
 
 main:
+    call draw_map_full
     call init_player_one
-
-    game_loop : 
+    
+    game_loop :
         call input_player_um
         jmp game_loop
