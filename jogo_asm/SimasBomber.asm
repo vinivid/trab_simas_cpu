@@ -9,5 +9,5 @@ main:
     call ini_player_dois
     
     game_loop :
-        call update_player_um
+        call update_players
         jmp game_loop

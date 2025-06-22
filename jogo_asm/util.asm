@@ -109,11 +109,30 @@ valor_absoluto_e_sinal:
 	loadn r1, #0
 	cmp r0, r1
 	jle eh_um_numero_negativo
-		loadn #1
+		loadn r1, #1
 		rts
 
 	eh_um_numero_negativo:
-		loadn r1, #-1
+		; criando um numero negativo
+		loadn r1, #0
+		dec r1
 		mul r0, r0, r1
 		loadn r1, #0
+		rts
+
+;   Faz um delay da quantidade de tempo dado por r0.
+;
+; @param {int} r0 - Tempo para delay
+delay_um_tempo:
+	push r1 
+	loadn r1, #0
+	delay_loop:
+		cmp r0, r1
+		jne delay_end
+
+		inc r1 
+		jmp delay_loop
+
+	delay_end:
+		pop r1
 		rts
