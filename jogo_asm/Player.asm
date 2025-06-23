@@ -59,9 +59,17 @@ player_para_cima:
     jne player_para_cima_end
     inc r2
 
-    ; apagando a tile do player que anterioremente estava la 
-    call set_tile
-    call two_by_two_draw
+    ; apagando a tile do player que anterioremente estava la
+    ; se nao for uma tile de bomba.
+    call get_tile
+    loadn r3, #'#'
+    cmp r0, r3
+    jeq pular_desnhar_sobre_bomba_cima
+        loadn r0, #0
+        call set_tile
+        call two_by_two_draw
+
+    pular_desnhar_sobre_bomba_cima:
 
     ; colocando o player na proxima posicao
     loadi r1, r6
@@ -107,9 +115,17 @@ player_para_baixo:
     jne player_para_baixo_end
     dec r2
 
-    ; apagando a tile do player que anterioremente estava la 
-    call set_tile
-    call two_by_two_draw
+    ; apagando a tile do player que anterioremente estava la
+    ; se nao for uma tile de bomba.
+    call get_tile
+    loadn r3, #'#'
+    cmp r0, r3
+    jeq pular_desnhar_sobre_bomba_baixo
+        loadn r0, #0
+        call set_tile
+        call two_by_two_draw
+
+    pular_desnhar_sobre_bomba_baixo:
 
     ; colocando o player na proxima posicao
     loadi r1, r6
@@ -154,9 +170,15 @@ player_para_esquerda:
     jne player_para_esquerda_end
     inc r1
 
-    ; apagando a tile do player que anterioremente estava la 
-    call set_tile
-    call two_by_two_draw
+    call get_tile
+    loadn r3, #'#'
+    cmp r0, r3
+    jeq pular_desnhar_sobre_bomba_esquerda
+        loadn r0, #0
+        call set_tile
+        call two_by_two_draw
+
+    pular_desnhar_sobre_bomba_esquerda:
 
     ; colocando o player na proxima posicao
     loadi r1, r6
@@ -202,9 +224,17 @@ player_para_direita:
     jne player_para_direita_end
     dec r1
 
-    ; apagando a tile do player que anterioremente estava la 
-    call set_tile
-    call two_by_two_draw
+    ; apagando a tile do player que anterioremente estava la
+    ; se nao for uma tile de bomba.
+    call get_tile
+    loadn r3, #'#'
+    cmp r0, r3
+    jeq pular_desnhar_sobre_bomba_direita
+        loadn r0, #0
+        call set_tile
+        call two_by_two_draw
+
+    pular_desnhar_sobre_bomba_direita:
 
     ; colocando o player na proxima posicao
     loadi r1, r6
@@ -275,11 +305,19 @@ atuar_no_player_um:
     cmp r0, r1
     ceq player_para_direita
 
-    pop r7 
-    pop r6
-    pop r2 
-    pop r1 
-    rts
+    loadn r1, #'z'
+    cmp r0, r1 
+    jne atuar_no_player_um_fim
+        loadn r0, #player_um_bomba
+        load r1, pu_posx
+        load r2, pu_posy
+        call colocar_bomba
+    atuar_no_player_um_fim:
+        pop r7 
+        pop r6
+        pop r2 
+        pop r1 
+        rts
 
 ; coisas do player 2
 
