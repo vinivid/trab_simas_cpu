@@ -371,11 +371,20 @@ atuar_no_player_dois:
     cmp r0, r1
     ceq player_para_direita
 
-    pop r7 
-    pop r6
-    pop r2 
-    pop r1 
-    rts
+    loadn r1, #'n'
+    cmp r0, r1 
+    jne atuar_no_player_dois_fim
+        loadn r0, #player_dois_bomba
+        load r1, pd_posx
+        load r2, pd_posy
+        call colocar_bomba
+        
+    atuar_no_player_dois_fim:
+        pop r7 
+        pop r6
+        pop r2 
+        pop r1 
+        rts
 
 ; coisas de ler input
 

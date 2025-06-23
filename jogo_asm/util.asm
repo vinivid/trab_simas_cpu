@@ -98,19 +98,28 @@ two_by_two_sequence_draw:
 	pop r3
 	rts
 
-;   Faz um delay da quantidade de tempo dado por r0.
+;   Faz um delay da quantidade de tempo dado por r0 * r1.
 ;
 ; @param {int} r0 - Tempo para delay
+; @param {int} r1 - Multiplicado de vezes para o delay
 delay_um_tempo:
-	push r1 
-	loadn r1, #0
-	delay_loop:
-		cmp r0, r1
-		jne delay_end
+	push r2 
+	push r3
 
-		inc r1 
-		jmp delay_loop
+	loadn r2, #0
+	delay_quatidade:
+		cmp r2, r1 
+		jeq delay_end
+		inc r2
+		loadn r3, #0
+		delay_loop:
+			cmp r0, r3
+			jne delay_quatidade
+
+			inc r3
+			jmp delay_loop
 
 	delay_end:
-		pop r1
+		pop r3 
+		pop r2
 		rts

@@ -441,6 +441,8 @@ update_bombas:
 
     loadn r0, #player_um_bomba
     call update_bomba
+    loadn r0, #player_dois_bomba
+    call update_bomba
 
     pop r0
     rts
