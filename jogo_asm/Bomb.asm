@@ -11,13 +11,14 @@
 ; quantidade_de_tiles_de_explosao {int} : #6
 ; tiles_de_explosao {tile_explosao[21]} : #7
 ;
-;  Assim tendo um tamanho de 49 bytes
+;  Assim tendo um tamanho de 70 bytes
 ;
 ;   Em que tile de explosao tem a seguinte estrutura:
+; tile_previa {char} : #0
 ; pos_x {int} : #1
 ; pos_y {int} : #2
 ;  
-;   Tendo uma tamanho de 2 bytes
+;   Tendo uma tamanho de 3 bytes
 ;
 
 player_um_bomba : var #49
@@ -126,6 +127,9 @@ gerar_explosao:
     mov r7, r2
 
     ; setando a tile da bomba para labereda
+    loadn r0, #0
+    storei r3, r0 
+    inc r3
     storei r3, r1 
     inc r3 
     storei r3, r2
@@ -172,6 +176,9 @@ gerar_explosao:
         jeq labareda_para_cima_fim
 
         ; salvando na bomba
+        ; r0 eh a tile q tinha sido getada
+        storei r3, r0
+        inc r3
         storei r3, r1
         inc r3 
         storei r3, r2
@@ -228,6 +235,9 @@ gerar_explosao:
         jeq labareda_para_baixo_fim
 
         ; salvando na bomba
+        ; r0 eh a tile q tinha sido getada
+        storei r3, r0
+        inc r3
         storei r3, r1
         inc r3 
         storei r3, r2
@@ -284,6 +294,9 @@ gerar_explosao:
         jeq labareda_para_esquerda_fim
 
         ; salvando na bomba
+        ; r0 eh a tile q tinha sido getada
+        storei r3, r0
+        inc r3
         storei r3, r1
         inc r3 
         storei r3, r2
@@ -340,6 +353,9 @@ gerar_explosao:
         jeq labareda_para_direita_fim
 
         ; salvando na bomba
+        ; r0 eh a tile q tinha sido getada
+        storei r3, r0
+        inc r3
         storei r3, r1
         inc r3 
         storei r3, r2
@@ -370,7 +386,7 @@ gerar_explosao:
     ; que eh o r5
 
     pop r5
-    loadn r4, #2
+    loadn r4, #3
     ; pulando para o offset da quantidade de tiles 
     mul r1, r5, r4
     sub r3, r3, r1
