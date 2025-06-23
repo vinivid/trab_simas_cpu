@@ -23,103 +23,103 @@ tile_map : var #260
 	static tile_map + #18, #'A'
 	static tile_map + #19, #'A'
 	static tile_map + #20, #'A'
-	static tile_map + #21, #'A'
+	static tile_map + #21, #0
 	static tile_map + #22, #0
 	static tile_map + #23, #0
-	static tile_map + #24, #0
-	static tile_map + #25, #0
-	static tile_map + #26, #0
+	static tile_map + #24, #'B'
+	static tile_map + #25, #'B'
+	static tile_map + #26, #'B'
 	static tile_map + #27, #0
 	static tile_map + #28, #0
 	static tile_map + #29, #0
 	static tile_map + #30, #0
-	static tile_map + #31, #0
+	static tile_map + #31, #'B'
 	static tile_map + #32, #0
 	static tile_map + #33, #0
 	static tile_map + #34, #0
-	static tile_map + #35, #0
+	static tile_map + #35, #'B'
 	static tile_map + #36, #0
 	static tile_map + #37, #0
 	static tile_map + #38, #0
 	static tile_map + #39, #'A'
 	static tile_map + #40, #'A'
 	static tile_map + #41, #0
-	static tile_map + #42, #0
+	static tile_map + #42, #'A'
 	static tile_map + #43, #0
-	static tile_map + #44, #0
-	static tile_map + #45, #0
+	static tile_map + #44, #'B'
+	static tile_map + #45, #'B'
 	static tile_map + #46, #0
-	static tile_map + #47, #0
+	static tile_map + #47, #'B'
 	static tile_map + #48, #0
 	static tile_map + #49, #0
 	static tile_map + #50, #0
-	static tile_map + #51, #0
-	static tile_map + #52, #'A'
+	static tile_map + #51, #'B'
+	static tile_map + #52, #0
 	static tile_map + #53, #0
-	static tile_map + #54, #0
+	static tile_map + #54, #'B'
 	static tile_map + #55, #0
-	static tile_map + #56, #0
+	static tile_map + #56, #'B'
 	static tile_map + #57, #0
 	static tile_map + #58, #0
 	static tile_map + #59, #'A'
 	static tile_map + #60, #'A'
 	static tile_map + #61, #0
 	static tile_map + #62, #0
-	static tile_map + #63, #'A'
+	static tile_map + #63, #0
 	static tile_map + #64, #0
-	static tile_map + #65, #0
+	static tile_map + #65, #'A'
 	static tile_map + #66, #0
 	static tile_map + #67, #0
-	static tile_map + #68, #0
+	static tile_map + #68, #'B'
 	static tile_map + #69, #0
-	static tile_map + #70, #'A'
-	static tile_map + #71, #'A'
-	static tile_map + #72, #'A'
-	static tile_map + #73, #0
+	static tile_map + #70, #0
+	static tile_map + #71, #'B'
+	static tile_map + #72, #0
+	static tile_map + #73, #'B'
 	static tile_map + #74, #'A'
-	static tile_map + #75, #'A'
-	static tile_map + #76, #'A'
-	static tile_map + #77, #0
+	static tile_map + #75, #0
+	static tile_map + #76, #0
+	static tile_map + #77, #'B'
 	static tile_map + #78, #0
 	static tile_map + #79, #'A'
 	static tile_map + #80, #'A'
-	static tile_map + #81, #0
-	static tile_map + #82, #'A'
-	static tile_map + #83, #'A'
-	static tile_map + #84, #'A'
-	static tile_map + #85, #0
+	static tile_map + #81, #'B'
+	static tile_map + #82, #'B'
+	static tile_map + #83, #'B'
+	static tile_map + #84, #'B'
+	static tile_map + #85, #'A'
 	static tile_map + #86, #0
 	static tile_map + #87, #0
-	static tile_map + #88, #'A'
-	static tile_map + #89, #'A'
-	static tile_map + #90, #'A'
-	static tile_map + #91, #0
-	static tile_map + #92, #0
+	static tile_map + #88, #0
+	static tile_map + #89, #'B'
+	static tile_map + #90, #0
+	static tile_map + #91, #'B'
+	static tile_map + #92, #'B'
 	static tile_map + #93, #0
 	static tile_map + #94, #'A'
-	static tile_map + #95, #'A'
-	static tile_map + #96, #'A'
+	static tile_map + #95, #0
+	static tile_map + #96, #0
 	static tile_map + #97, #0
-	static tile_map + #98, #0
+	static tile_map + #98, #'B'
 	static tile_map + #99, #'A'
 	static tile_map + #100, #'A'
-	static tile_map + #101, #0
-	static tile_map + #102, #0
-	static tile_map + #103, #0
-	static tile_map + #104, #0
-	static tile_map + #105, #0
+	static tile_map + #101, #'B'
+	static tile_map + #102, #'B'
+	static tile_map + #103, #'B'
+	static tile_map + #104, #'B'
+	static tile_map + #105, #'A'
 	static tile_map + #106, #0
-	static tile_map + #107, #0
-	static tile_map + #108, #'A'
+	static tile_map + #107, #'A'
+	static tile_map + #108, #0
 	static tile_map + #109, #0
-	static tile_map + #110, #0
-	static tile_map + #111, #0
-	static tile_map + #112, #0
+	static tile_map + #110, #'B'
+	static tile_map + #111, #'B'
+	static tile_map + #112, #'A'
 	static tile_map + #113, #0
 	static tile_map + #114, #'A'
-	static tile_map + #115, #'A'
-	static tile_map + #116, #'A'
-	static tile_map + #117, #0
+	static tile_map + #115, #0
+	static tile_map + #116, #0
+	static tile_map + #117, #'B'
 	static tile_map + #118, #0
 	static tile_map + #119, #'A'
 	static tile_map + #120, #'A'
@@ -127,76 +127,76 @@ tile_map : var #260
 	static tile_map + #122, #0
 	static tile_map + #123, #0
 	static tile_map + #124, #0
-	static tile_map + #125, #0
+	static tile_map + #125, #'A'
 	static tile_map + #126, #0
-	static tile_map + #127, #0
-	static tile_map + #128, #'A'
-	static tile_map + #129, #'A'
+	static tile_map + #127, #'A'
+	static tile_map + #128, #0
+	static tile_map + #129, #0
 	static tile_map + #130, #0
-	static tile_map + #131, #0
-	static tile_map + #132, #0
+	static tile_map + #131, #'B'
+	static tile_map + #132, #'A'
 	static tile_map + #133, #0
-	static tile_map + #134, #0
-	static tile_map + #135, #'A'
-	static tile_map + #136, #0
+	static tile_map + #134, #'A'
+	static tile_map + #135, #0
+	static tile_map + #136, #'B'
 	static tile_map + #137, #0
 	static tile_map + #138, #0
 	static tile_map + #139, #'A'
 	static tile_map + #140, #'A'
-	static tile_map + #141, #0
-	static tile_map + #142, #'A'
-	static tile_map + #143, #'A'
-	static tile_map + #144, #'A'
-	static tile_map + #145, #0
+	static tile_map + #141, #'B'
+	static tile_map + #142, #0
+	static tile_map + #143, #0
+	static tile_map + #144, #0
+	static tile_map + #145, #'A'
 	static tile_map + #146, #0
-	static tile_map + #147, #0
+	static tile_map + #147, #'A'
 	static tile_map + #148, #0
-	static tile_map + #149, #'A'
-	static tile_map + #150, #'A'
-	static tile_map + #151, #0
-	static tile_map + #152, #0
+	static tile_map + #149, #0
+	static tile_map + #150, #'B'
+	static tile_map + #151, #'B'
+	static tile_map + #152, #'A'
 	static tile_map + #153, #0
-	static tile_map + #154, #0
-	static tile_map + #155, #'A'
-	static tile_map + #156, #0
-	static tile_map + #157, #0
-	static tile_map + #158, #0
+	static tile_map + #154, #'A'
+	static tile_map + #155, #'B'
+	static tile_map + #156, #'B'
+	static tile_map + #157, #'B'
+	static tile_map + #158, #'B'
 	static tile_map + #159, #'A'
 	static tile_map + #160, #'A'
 	static tile_map + #161, #0
-	static tile_map + #162, #0
-	static tile_map + #163, #'A'
+	static tile_map + #162, #'B'
+	static tile_map + #163, #0
 	static tile_map + #164, #0
-	static tile_map + #165, #0
+	static tile_map + #165, #'A'
 	static tile_map + #166, #0
 	static tile_map + #167, #0
 	static tile_map + #168, #0
-	static tile_map + #169, #0
-	static tile_map + #170, #'A'
-	static tile_map + #171, #0
+	static tile_map + #169, #'B'
+	static tile_map + #170, #0
+	static tile_map + #171, #'B'
 	static tile_map + #172, #0
 	static tile_map + #173, #0
-	static tile_map + #174, #0
-	static tile_map + #175, #'A'
-	static tile_map + #176, #0
-	static tile_map + #177, #0
-	static tile_map + #178, #0
+	static tile_map + #174, #'A'
+	static tile_map + #175, #'B'
+	static tile_map + #176, #'B'
+	static tile_map + #177, #'B'
+	static tile_map + #178, #'B'
 	static tile_map + #179, #'A'
 	static tile_map + #180, #'A'
 	static tile_map + #181, #0
 	static tile_map + #182, #0
-	static tile_map + #183, #0
+	static tile_map + #183, #'B'
 	static tile_map + #184, #0
-	static tile_map + #185, #0
+	static tile_map + #185, #'A'
 	static tile_map + #186, #0
 	static tile_map + #187, #0
-	static tile_map + #188, #0
+	static tile_map + #188, #'B'
 	static tile_map + #189, #0
 	static tile_map + #190, #0
-	static tile_map + #191, #0
+	static tile_map + #191, #'B'
 	static tile_map + #192, #0
 	static tile_map + #193, #0
-	static tile_map + #194, #0
+	static tile_map + #194, #'A'
 	static tile_map + #195, #0
 	static tile_map + #196, #0
 	static tile_map + #197, #0
@@ -205,21 +205,21 @@ tile_map : var #260
 	static tile_map + #200, #'A'
 	static tile_map + #201, #0
 	static tile_map + #202, #0
-	static tile_map + #203, #'A'
-	static tile_map + #204, #'A'
+	static tile_map + #203, #0
+	static tile_map + #204, #'B'
 	static tile_map + #205, #0
-	static tile_map + #206, #'A'
-	static tile_map + #207, #'A'
+	static tile_map + #206, #0
+	static tile_map + #207, #'B'
 	static tile_map + #208, #0
-	static tile_map + #209, #'A'
+	static tile_map + #209, #0
 	static tile_map + #210, #0
-	static tile_map + #211, #'A'
-	static tile_map + #212, #0
-	static tile_map + #213, #'A'
+	static tile_map + #211, #'B'
+	static tile_map + #212, #'B'
+	static tile_map + #213, #'B'
 	static tile_map + #214, #0
-	static tile_map + #215, #'A'
+	static tile_map + #215, #0
 	static tile_map + #216, #0
-	static tile_map + #217, #0
+	static tile_map + #217, #'A'
 	static tile_map + #218, #0
 	static tile_map + #219, #'A'
 	static tile_map + #220, #'A'
@@ -227,20 +227,20 @@ tile_map : var #260
 	static tile_map + #222, #0
 	static tile_map + #223, #0
 	static tile_map + #224, #0
-	static tile_map + #225, #0
-	static tile_map + #226, #0
+	static tile_map + #225, #'B'
+	static tile_map + #226, #'B'
 	static tile_map + #227, #0
 	static tile_map + #228, #0
 	static tile_map + #229, #0
 	static tile_map + #230, #0
-	static tile_map + #231, #0
-	static tile_map + #232, #0
-	static tile_map + #233, #0
+	static tile_map + #231, #'B'
+	static tile_map + #232, #'B'
+	static tile_map + #233, #'B'
 	static tile_map + #234, #0
 	static tile_map + #235, #0
 	static tile_map + #236, #0
 	static tile_map + #237, #0
-	static tile_map + #238, #'A'
+	static tile_map + #238, #0
 	static tile_map + #239, #'A'
 	static tile_map + #240, #'A'
 	static tile_map + #241, #'A'
@@ -265,8 +265,8 @@ tile_map : var #260
 
 ; Posicao do player e 1 player 2, em que o offset 0 eh o x e o offset 1 eh o y
 player_one_ini_pos : var #2
-	static player_one_ini_pos + #0, #1
-	static player_one_ini_pos + #1, #1
+	static player_one_ini_pos + #0, #2
+	static player_one_ini_pos + #1, #2
 player_two_ini_pos : var #2
-	static player_two_ini_pos + #0, #18
-	static player_two_ini_pos + #1, #11
+	static player_two_ini_pos + #0, #17
+	static player_two_ini_pos + #1, #10

@@ -21,11 +21,11 @@
 ;   Tendo uma tamanho de 3 bytes
 ;
 
-player_um_bomba : var #49
+player_um_bomba : var #70
     static player_um_bomba + #0, #0
     static player_um_bomba + #4, #0
 
-player_dois_bomba : var #49
+player_dois_bomba : var #70
     static player_dois_bomba + #0, #0
     static player_dois_bomba + #4, #0
 
@@ -80,6 +80,69 @@ colocar_bomba:
         pop r3 
         rts
 
+;   Apaga as labaredas geradas por uma explosao da bomba.
+;
+; @param {endereco} r0 - Bomba que originou as labaredas que 
+; devem ser apagadas.
+;
+apagar_labaredas:
+    push r1
+    push r2
+    push r3
+    push r4
+    push r7
+
+    ; salvando o endereco numa registradora melhor
+    mov r7, r0
+
+    ; pulando para se esta em labaredas
+    loadn r1, #4
+    add r7, r7, r1
+    ; setando para nao estar mais explodindo
+    loadn r2, #0
+    storei r7, r2
+
+    ; pegando quantidade de tiles
+    inc r7
+    inc r7
+    loadi r3, r7
+    inc r7
+
+    ; variavel que conta se ja removeu as tiles do 
+    loadn r4, #0
+
+    remover_tiles:
+        cmp r3, r4
+        jeq remover_tiles_fim
+
+        ; valor da tile na posicao x y 
+        loadi r0, r7
+        inc r7
+        loadi r1, r7
+        inc r7
+        loadi r2, r7
+        inc r7
+
+        ; Se for para adicionar power ups, 
+        ; em vez de quebrar os locais e transformar
+        ; em livre, teria de checar se eh uma caixa 
+        ; com o r0 e spawnar o powerup caso a caixa 
+        ; tenha
+
+        loadn r0, #0
+        call set_tile
+        call two_by_two_draw
+
+        inc r4
+        jmp remover_tiles
+    remover_tiles_fim:
+
+    pop r7 
+    pop r4
+    pop r3
+    pop r2
+    pop r1 
+    rts
 
 ;   Gera a explosao da bomba.
 ;  Obs: A funcao nao checa pelos limites do mapa 
@@ -96,6 +159,10 @@ gerar_explosao:
     push r5
     push r6
     push r7
+
+    ; setando colocado para zero
+    loadn r1, #0
+    storei r0, r1
 
     ; pulando para a pos_x 
     loadn r3, #2
@@ -416,6 +483,8 @@ gerar_explosao:
 update_bomba:
     push r1
     push r2
+    push r7
+    mov r7, r0
 
     ; verificando se tem um bomba colocada.
     loadi r1, r0
@@ -433,19 +502,36 @@ update_bomba:
     loadn r2, #10
     cmp r1, r2
     jne fim_do_update_bomba
-        ; tirando a flag de bomba colocada
+        ; retornando r0 ao endereco original
         dec r0 
-        loadn r1, #0
-        storei r0, r1
-
         call gerar_explosao
         jmp fim_do_update_bomba
 
     update_fogo:
         ; dar update no fogo se estiver no 
         ; estado de fogo
+        loadn r2, #4
+        add r0, r0, r2
+        loadi r2, r0
+        loadn r1, #0
+        cmp r2, r1
+        jeq fim_do_update_bomba
+
+        ; esta com explosao
+        inc r0 
+        loadi r1, r0
+        inc r1
+        storei r0, r1
+
+        loadn r2, #4
+        cmp r1, r2
+        jne fim_do_update_bomba
+            mov r0, r7
+            call apagar_labaredas
+            jmp fim_do_update_bomba
 
     fim_do_update_bomba:
+        pop r7
         pop r2
         pop r1 
         rts
