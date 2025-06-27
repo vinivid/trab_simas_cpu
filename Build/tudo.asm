@@ -470,6 +470,7 @@ draw_map_full:
     loadn r2, #160
     loadn r3, #2    ; step horizontal
     loadn r4, #20   ; fim do loop da coluna
+    loadn r5, #tile_map
     loadn r6, #0    ; variavel do lop
     loadn r7, #12   ; limite do loop de linhas
 
@@ -506,7 +507,7 @@ draw_map_full:
     draw_map_full_end:
         pop r7
         pop r6
-        pop r5 
+        pop r5
         pop r4 
         pop r3 
         pop r2 
@@ -1545,12 +1546,11 @@ update_players:
     pop r0
     rts
 main:
-    loadn r5, #tile_map
     call draw_map_full
-    ;call ini_player_um
-    ;call ini_player_dois
+    call ini_player_um
+    call ini_player_dois
     
-    game_loop :
-        ;call update_players
-        ;call update_bombas
+    game_loop:
+        call update_players
+        call update_bombas
         jmp game_loop

@@ -5,12 +5,11 @@ jmp main
 @include Bomb.asm
 
 main:
-    loadn r5, #tile_map
     call draw_map_full
-    ;call ini_player_um
-    ;call ini_player_dois
+    call ini_player_um
+    call ini_player_dois
     
-    game_loop :
-        ;call update_players
-        ;call update_bombas
+    game_loop:
+        call update_players
+        call update_bombas
         jmp game_loop
