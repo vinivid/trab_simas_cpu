@@ -457,14 +457,17 @@ player_two_ini_pos : var #2
 ; @param {endereco} r5 - Endereco do mapa que voce deseja desenhar.
 ;
 draw_map_full:
-    ;push r0
-    ;push r1 
-    ;push r2
-    ;push r3
-    ;push r4
-    ;push r5
-    ;push r6
-    ;push r7
+    push r0
+    push r1 
+    push r2
+    push r3
+    push r4
+    push r5
+    push r6
+    push r7
+
+    variavel_do_r : var #1
+        static variavel_do_r + #0, #0
 
     ; primeiro char da quinta linha da tela
     loadn r2, #160
@@ -474,8 +477,6 @@ draw_map_full:
     loadn r6, #0    ; variavel do lop
     loadn r7, #12   ; limite do loop de linhas
 
-    push r6
-    loadn r6, #0
     colum_draw_map_loop:
         cmp r6, r4
         jeq row_draw_loop
@@ -491,26 +492,26 @@ draw_map_full:
 
     row_draw_loop:
         ; checando se acabou de escrever todas as linhas
-        pop r6
+        load r6, variavel_do_r
         cmp r6, r7 
         jeq draw_map_full_end
         ; nao acabou todas linhas entao vao para a proxima
         inc r6
-        push r6 
+        store r6, variavel_do_r
         loadn r6, #0
         loadn r0, #40  ; step de duas linhas 
         add r2, r2, r0 ; pulando duas linahs
         jmp colum_draw_map_loop
 
     draw_map_full_end:
-        ;pop r7
+        pop r7
         ;pop r6
-        ;pop r5
-        ;pop r4 
-        ;pop r3 
-        ;pop r2 
-        ;pop r1 
-        ;pop r0
+        pop r5
+        pop r4 
+        pop r3 
+        pop r2 
+        pop r1 
+        pop r0
         rts
 
 ;    A funcao set tile muda uma tile 

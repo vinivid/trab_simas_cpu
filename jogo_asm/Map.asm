@@ -57,24 +57,21 @@
 ; Ele desenha somente as tile 2 x 2 de um unico caracter 
 ; que sao os basicos do mapa.
 ;
-;
-; @param {endereco} r5 - Endereco do mapa que voce deseja desenhar.
-;
 draw_map_full:
-    ;push r0
-    ;push r1 
-    ;push r2
-    ;push r3
-    ;push r4
-    ;push r5
-    ;push r6
-    ;push r7
+    push r0
+    push r1 
+    push r2
+    push r3
+    push r4
+    push r5
+    push r6
+    push r7
 
     ; primeiro char da quinta linha da tela
     loadn r2, #160
     loadn r3, #2    ; step horizontal
     loadn r4, #20   ; fim do loop da coluna
-    loadn r5, #tile_map
+    loadn r5, #tile_map   ; endereco da primeira posicao do mapa
     loadn r6, #0    ; variavel do lop
     loadn r7, #12   ; limite do loop de linhas
 
@@ -107,14 +104,14 @@ draw_map_full:
         jmp colum_draw_map_loop
 
     draw_map_full_end:
-        ;pop r7
-        ;pop r6
-        ;pop r5
-        ;pop r4 
-        ;pop r3 
-        ;pop r2 
-        ;pop r1 
-        ;pop r0
+        pop r7
+        pop r6
+        pop r5 
+        pop r4 
+        pop r3 
+        pop r2 
+        pop r1 
+        pop r0
         rts
 
 ;    A funcao set tile muda uma tile 
