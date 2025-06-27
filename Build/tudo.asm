@@ -453,9 +453,6 @@ player_two_ini_pos : var #2
 ; Ele desenha somente as tile 2 x 2 de um unico caracter 
 ; que sao os basicos do mapa.
 ;
-;
-; @param {endereco} r5 - Endereco do mapa que voce deseja desenhar.
-;
 draw_map_full:
     push r0
     push r1 
@@ -466,17 +463,16 @@ draw_map_full:
     push r6
     push r7
 
-    variavel_do_r : var #1
-        static variavel_do_r + #0, #0
-
     ; primeiro char da quinta linha da tela
     loadn r2, #160
     loadn r3, #2    ; step horizontal
     loadn r4, #20   ; fim do loop da coluna
-    loadn r5, #tile_map
+    loadn r5, #tile_map   ; endereco da primeira posicao do mapa
     loadn r6, #0    ; variavel do lop
     loadn r7, #12   ; limite do loop de linhas
 
+    push r6
+    loadn r6, #0
     colum_draw_map_loop:
         cmp r6, r4
         jeq row_draw_loop
@@ -492,12 +488,12 @@ draw_map_full:
 
     row_draw_loop:
         ; checando se acabou de escrever todas as linhas
-        load r6, variavel_do_r
+        pop r6
         cmp r6, r7 
         jeq draw_map_full_end
         ; nao acabou todas linhas entao vao para a proxima
         inc r6
-        store r6, variavel_do_r
+        push r6 
         loadn r6, #0
         loadn r0, #40  ; step de duas linhas 
         add r2, r2, r0 ; pulando duas linahs
@@ -505,8 +501,8 @@ draw_map_full:
 
     draw_map_full_end:
         pop r7
-        ;pop r6
-        pop r5
+        pop r6
+        pop r5 
         pop r4 
         pop r3 
         pop r2 
@@ -1546,10 +1542,10 @@ update_players:
     rts
 main:
     call draw_map_full
-    ;call ini_player_um
-    ;call ini_player_dois
+    call ini_player_um
+    call ini_player_dois
     
     game_loop:
-        ;call update_players
-        ;call update_bombas
+        call update_players
+        call update_bombas
         jmp game_loop
