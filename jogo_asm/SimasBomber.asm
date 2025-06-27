@@ -5,7 +5,7 @@ jmp main
 @include Bomb.asm
 
 main:
-    ;call draw_map_full
+    call draw_map_full
     call ini_player_um
     call ini_player_dois
     
