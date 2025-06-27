@@ -453,6 +453,9 @@ player_two_ini_pos : var #2
 ; Ele desenha somente as tile 2 x 2 de um unico caracter 
 ; que sao os basicos do mapa.
 ;
+;
+; @param {endereco} r5 - Endereco do mapa que voce deseja desenhar.
+;
 draw_map_full:
     push r0
     push r1 
@@ -467,7 +470,6 @@ draw_map_full:
     loadn r2, #160
     loadn r3, #2    ; step horizontal
     loadn r4, #20   ; fim do loop da coluna
-    loadn r5, #tile_map   ; endereco da primeira posicao do mapa
     loadn r6, #0    ; variavel do lop
     loadn r7, #12   ; limite do loop de linhas
 
@@ -1543,11 +1545,12 @@ update_players:
     pop r0
     rts
 main:
+    loadn r5, #tile_map
     call draw_map_full
-    call ini_player_um
-    call ini_player_dois
+    ;call ini_player_um
+    ;call ini_player_dois
     
     game_loop :
-        call update_players
-        call update_bombas
+        ;call update_players
+        ;call update_bombas
         jmp game_loop
