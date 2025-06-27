@@ -78,11 +78,11 @@ draw_map_full:
     loadn r6, #0    ; variavel do lop
     loadn r7, #12   ; limite do loop de linhas
 
-    push r6
+    ;push r6
     loadn r6, #0
     colum_draw_map_loop:
         cmp r6, r4
-        jeq row_draw_loop
+        jeq draw_map_full_end
 
         loadi r0, r5
         mov r1, r2
@@ -93,20 +93,18 @@ draw_map_full:
         inc r6 ; avancando o loop das colunas
         jmp colum_draw_map_loop
 
-    row_draw_loop:
-        ; checando se acabou de escrever todas as linhas
-        pop r6
-        cmp r6, r7 
-        jeq draw_map_full_end
-        ; nao acabou todas linhas entao vao para a proxima
-        inc r6
-        push r6 
-        loadn r6, #0
-        push r0
-        loadn r0, #40  ; step de duas linhas 
-        add r2, r2, r0 ; pulando duas linahs
-        pop r0
-        jmp colum_draw_map_loop
+    ;row_draw_loop:
+    ;    ; checando se acabou de escrever todas as linhas
+    ;    pop r6
+    ;    cmp r6, r7 
+    ;    jeq draw_map_full_end
+    ;    ; nao acabou todas linhas entao vao para a proxima
+    ;    inc r6
+    ;    push r6 
+    ;    loadn r6, #0
+    ;    loadn r0, #40  ; step de duas linhas 
+    ;    add r2, r2, r0 ; pulando duas linahs
+    ;    jmp colum_draw_map_loop
 
     draw_map_full_end:
         pop r7
