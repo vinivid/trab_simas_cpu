@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AP9
-Fri May 16 17:16:52 2025
+Fri Jun 27 20:31:56 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -76,13 +76,13 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May 16 17:16:52 2025           ;
+; Analysis & Synthesis Status     ; Successful - Fri Jun 27 20:31:56 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; AP9                                             ;
 ; Top-level Entity Name           ; AP9                                             ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 663                                             ;
+; Total registers                 ; 662                                             ;
 ; Total pins                      ; 30                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 946,176                                         ;
@@ -298,16 +298,16 @@ on the Quartus Prime software download page.
 +---------------------------------------------+--------------+
 ; Resource                                    ; Usage        ;
 +---------------------------------------------+--------------+
-; Estimate of Logic utilization (ALMs needed) ; 1529         ;
+; Estimate of Logic utilization (ALMs needed) ; 1548         ;
 ;                                             ;              ;
-; Combinational ALUT usage for logic          ; 2515         ;
-;     -- 7 input functions                    ; 35           ;
+; Combinational ALUT usage for logic          ; 2552         ;
+;     -- 7 input functions                    ; 36           ;
 ;     -- 6 input functions                    ; 477          ;
-;     -- 5 input functions                    ; 679          ;
-;     -- 4 input functions                    ; 458          ;
-;     -- <=3 input functions                  ; 866          ;
+;     -- 5 input functions                    ; 693          ;
+;     -- 4 input functions                    ; 460          ;
+;     -- <=3 input functions                  ; 886          ;
 ;                                             ;              ;
-; Dedicated logic registers                   ; 663          ;
+; Dedicated logic registers                   ; 662          ;
 ;                                             ;              ;
 ; I/O pins                                    ; 30           ;
 ; Total MLAB memory bits                      ; 0            ;
@@ -317,8 +317,8 @@ on the Quartus Prime software download page.
 ;                                             ;              ;
 ; Maximum fan-out node                        ; KEY[0]~input ;
 ; Maximum fan-out                             ; 451          ;
-; Total fan-out                               ; 15750        ;
-; Average fan-out                             ; 4.67         ;
+; Total fan-out                               ; 15835        ;
+; Average fan-out                             ; 4.65         ;
 +---------------------------------------------+--------------+
 
 
@@ -327,7 +327,7 @@ on the Quartus Prime software download page.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                           ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |AP9                                         ; 2515 (1)            ; 663 (0)                   ; 946176            ; 1          ; 30   ; 0            ; |AP9                                                                                                                          ; AP9                 ; work         ;
+; |AP9                                         ; 2552 (1)            ; 662 (0)                   ; 946176            ; 1          ; 30   ; 0            ; |AP9                                                                                                                          ; AP9                 ; work         ;
 ;    |POS_CONV:inst13|                         ; 228 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|POS_CONV:inst13                                                                                                          ; POS_CONV            ; work         ;
 ;       |lpm_divide:Div0|                      ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|POS_CONV:inst13|lpm_divide:Div0                                                                                          ; lpm_divide          ; work         ;
 ;          |lpm_divide_hbm:auto_generated|     ; 100 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|POS_CONV:inst13|lpm_divide:Div0|lpm_divide_hbm:auto_generated                                                            ; lpm_divide_hbm      ; work         ;
@@ -340,8 +340,7 @@ on the Quartus Prime software download page.
 ;    |RAM:inst10|                              ; 24 (0)              ; 4 (0)                     ; 524288            ; 0          ; 0    ; 0            ; |AP9|RAM:inst10                                                                                                               ; RAM                 ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 24 (0)              ; 4 (0)                     ; 524288            ; 0          ; 0    ; 0            ; |AP9|RAM:inst10|altsyncram:altsyncram_component                                                                               ; altsyncram          ; work         ;
 ;          |altsyncram_doi1:auto_generated|    ; 24 (0)              ; 4 (4)                     ; 524288            ; 0          ; 0    ; 0            ; |AP9|RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated                                                ; altsyncram_doi1     ; work         ;
-;             |decode_11a:rden_decode|         ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_11a:rden_decode                         ; decode_11a          ; work         ;
-;             |decode_8la:decode3|             ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_8la:decode3                             ; decode_8la          ; work         ;
+;             |decode_8la:decode3|             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|decode_8la:decode3                             ; decode_8la          ; work         ;
 ;             |mux_7hb:mux2|                   ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|mux_7hb:mux2                                   ; mux_7hb             ; work         ;
 ;    |SeletorClock:inst20|                     ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|SeletorClock:inst20                                                                                                      ; SeletorClock        ; work         ;
 ;    |TEXT_DRAWER:inst2|                       ; 100 (100)           ; 99 (99)                   ; 0                 ; 0          ; 0    ; 0            ; |AP9|TEXT_DRAWER:inst2                                                                                                        ; TEXT_DRAWER         ; work         ;
@@ -383,7 +382,7 @@ on the Quartus Prime software download page.
 ;             |altsyncram_k1j1:auto_generated| ; 2 (0)               ; 0 (0)                     ; 65536             ; 0          ; 0    ; 0            ; |AP9|VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated                            ; altsyncram_k1j1     ; work         ;
 ;                |decode_5la:decode3|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|VGA_MOD:inst|lpm_ram_dq1:inst2|altsyncram:altsyncram_component|altsyncram_k1j1:auto_generated|decode_5la:decode3         ; decode_5la          ; work         ;
 ;    |clk_div:inst25|                          ; 30 (30)             ; 37 (37)                   ; 0                 ; 0          ; 0    ; 0            ; |AP9|clk_div:inst25                                                                                                           ; clk_div             ; work         ;
-;    |cpu:inst12|                              ; 1895 (1323)         ; 372 (372)                 ; 0                 ; 1          ; 0    ; 0            ; |AP9|cpu:inst12                                                                                                               ; cpu                 ; work         ;
+;    |cpu:inst12|                              ; 1932 (1360)         ; 371 (371)                 ; 0                 ; 1          ; 0    ; 0            ; |AP9|cpu:inst12                                                                                                               ; cpu                 ; work         ;
 ;       |lpm_divide:Div0|                      ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Div0                                                                                               ; lpm_divide          ; work         ;
 ;          |lpm_divide_7dm:auto_generated|     ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Div0|lpm_divide_7dm:auto_generated                                                                 ; lpm_divide_7dm      ; work         ;
 ;             |sign_div_unsign_dnh:divider|    ; 286 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AP9|cpu:inst12|lpm_divide:Div0|lpm_divide_7dm:auto_generated|sign_div_unsign_dnh:divider                                     ; sign_div_unsign_dnh ; work         ;
@@ -484,6 +483,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                                      ; Reason for Removal                                                                                                             ;
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
+; cpu:inst12|LoadSP                                                                                                  ; Stuck at GND due to stuck port data_in                                                                                         ;
 ; cpu:inst12|selM6[1,2]                                                                                              ; Stuck at GND due to stuck port data_in                                                                                         ;
 ; cpu:inst12|TECLADO[8..15]                                                                                          ; Stuck at GND due to stuck port data_in                                                                                         ;
 ; VGA_MOD:inst|COLOR_BRIDGE:inst1|B[1]                                                                               ; Merged with VGA_MOD:inst|COLOR_BRIDGE:inst1|B[0]                                                                               ;
@@ -499,7 +499,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; TEXT_DRAWER:inst2|LNAUX[2]                                                                                         ; Merged with TEXT_DRAWER:inst2|CHARADDR[2]                                                                                      ;
 ; TEXT_DRAWER:inst2|LNAUX[1]                                                                                         ; Merged with TEXT_DRAWER:inst2|CHARADDR[1]                                                                                      ;
 ; TEXT_DRAWER:inst2|LNAUX[0]                                                                                         ; Merged with TEXT_DRAWER:inst2|CHARADDR[0]                                                                                      ;
-; Total Number of Removed Registers = 41                                                                             ;                                                                                                                                ;
+; Total Number of Removed Registers = 42                                                                             ;                                                                                                                                ;
 +--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -508,12 +508,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 663   ;
+; Total registers                              ; 662   ;
 ; Number of registers using Synchronous Clear  ; 43    ;
-; Number of registers using Synchronous Load   ; 219   ;
-; Number of registers using Asynchronous Clear ; 372   ;
+; Number of registers using Synchronous Load   ; 206   ;
+; Number of registers using Asynchronous Clear ; 371   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 297   ;
+; Number of registers using Clock Enable       ; 296   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -526,17 +526,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; cpu:inst12|selM2[0]                     ; 27      ;
 ; cpu:inst12|SP[14]                       ; 1       ;
 ; cpu:inst12|SP[13]                       ; 1       ;
-; cpu:inst12|SP[12]                       ; 1       ;
-; cpu:inst12|SP[8]                        ; 1       ;
+; cpu:inst12|SP[11]                       ; 1       ;
 ; cpu:inst12|SP[7]                        ; 1       ;
 ; cpu:inst12|SP[6]                        ; 1       ;
 ; cpu:inst12|SP[5]                        ; 1       ;
-; cpu:inst12|SP[11]                       ; 1       ;
+; cpu:inst12|SP[4]                        ; 1       ;
 ; cpu:inst12|SP[10]                       ; 1       ;
 ; cpu:inst12|SP[9]                        ; 1       ;
-; cpu:inst12|SP[4]                        ; 1       ;
-; cpu:inst12|SP[2]                        ; 1       ;
+; cpu:inst12|SP[8]                        ; 1       ;
 ; cpu:inst12|SP[3]                        ; 1       ;
+; cpu:inst12|SP[2]                        ; 1       ;
+; cpu:inst12|SP[12]                       ; 1       ;
 ; TEXT_DRAWER:inst2|PREVXPOS[4]           ; 1       ;
 ; TEXT_DRAWER:inst2|PREVXPOS[5]           ; 1       ;
 ; TEXT_DRAWER:inst2|PREVXPOS[0]           ; 1       ;
@@ -552,43 +552,43 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |AP9|VGA_MOD:inst|VGA_SYNC:inst|Vcnt[0]                                                                          ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |AP9|TEXT_DRAWER:inst2|XP[3]                                                                                     ;
-; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|XP[8]                                                                                     ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |AP9|cpu:inst12|vga_char[8]                                                                                      ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|FR[10]                                                                                           ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |AP9|dec_keyboard:inst11|bin_digit[5]                                                                            ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |AP9|keyboard:inst14|INCNT[3]                                                                                    ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |AP9|dec_keyboard:inst11|cc[1]                                                                                   ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |AP9|cpu:inst12|OP[2]                                                                                            ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|y[15]                                                                                            ;
-; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|x[0]                                                                                             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |AP9|VGA_MOD:inst|VGA_SYNC:inst|Vcnt[8]                                                                          ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |AP9|TEXT_DRAWER:inst2|YP[3]                                                                                     ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|YP[6]                                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |AP9|cpu:inst12|vga_char[11]                                                                                     ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|FR[15]                                                                                           ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |AP9|dec_keyboard:inst11|bin_digit[7]                                                                            ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |AP9|cpu:inst12|OP[1]                                                                                            ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |AP9|keyboard:inst14|INCNT[0]                                                                                    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |AP9|dec_keyboard:inst11|cc[0]                                                                                   ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|y[10]                                                                                            ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |AP9|cpu:inst12|x[15]                                                                                            ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |AP9|TEXT_DRAWER:inst2|STATE[2]                                                                                  ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|PIXCNT[2]                                                                                 ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|LNCNT[1]                                                                                  ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |AP9|cpu:inst12|FR[0]                                                                                            ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |AP9|cpu:inst12|M5[7]                                                                                            ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |AP9|cpu:inst12|M4[8]                                                                                            ;
-; 12:1               ; 15 bits   ; 120 LEs       ; 30 LEs               ; 90 LEs                 ; Yes        ; |AP9|cpu:inst12|M1[6]                                                                                            ;
-; 14:1               ; 2 bits    ; 18 LEs        ; 14 LEs               ; 4 LEs                  ; Yes        ; |AP9|cpu:inst12|selM2[2]                                                                                         ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |AP9|RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|mux_7hb:mux2|l2_w9_n0_mux_dataout ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft0                                                                                       ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|PIXCNT[0]                                                                                 ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; Yes        ; |AP9|TEXT_DRAWER:inst2|LNCNT[2]                                                                                  ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; Yes        ; |AP9|cpu:inst12|FR[2]                                                                                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 32 LEs               ; 48 LEs                 ; Yes        ; |AP9|cpu:inst12|M5[11]                                                                                           ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |AP9|cpu:inst12|M4[3]                                                                                            ;
+; 12:1               ; 15 bits   ; 120 LEs       ; 60 LEs               ; 60 LEs                 ; Yes        ; |AP9|cpu:inst12|M1[0]                                                                                            ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |AP9|cpu:inst12|selM2[2]                                                                                         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |AP9|RAM:inst10|altsyncram:altsyncram_component|altsyncram_doi1:auto_generated|mux_7hb:mux2|l2_w0_n0_mux_dataout ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft1                                                                                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftRight1                                                                                      ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftRight0                                                                                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|RotateLeft0                                                                                      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftRight0                                                                                      ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftRight0                                                                                      ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft1                                                                                       ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft1                                                                                       ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|TEXT_DRAWER:inst2|Mux70                                                                                     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |AP9|VGA_MOD:inst|busmux:inst15|lpm_mux:$00000|mux_flc:auto_generated|l1_w4_n0_mux_dataout                       ;
-; 8:1                ; 33 bits   ; 165 LEs       ; 165 LEs              ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux52                                                                                            ;
-; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux22                                                                                            ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft0                                                                                       ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|ShiftLeft0                                                                                       ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |AP9|TEXT_DRAWER:inst2|Mux67                                                                                     ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |AP9|VGA_MOD:inst|busmux:inst15|lpm_mux:$00000|mux_flc:auto_generated|l1_w2_n0_mux_dataout                       ;
+; 8:1                ; 33 bits   ; 165 LEs       ; 165 LEs              ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux51                                                                                            ;
+; 8:1                ; 32 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux33                                                                                            ;
 ; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |AP9|cpu:inst12|M2                                                                                               ;
 ; 8:1                ; 8 bits    ; 40 LEs        ; 32 LEs               ; 8 LEs                  ; No         ; |AP9|cpu:inst12|M2                                                                                               ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux17                                                                                            ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |AP9|cpu:inst12|Mux6                                                                                             ;
 ; 6:1                ; 8 bits    ; 32 LEs        ; 8 LEs                ; 24 LEs                 ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
-; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|result[12]                                                                                       ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |AP9|VGA_MOD:inst|busmux:inst13|lpm_mux:$00000|mux_sjc:auto_generated|l1_w0_n0_mux_dataout                       ;
-; 11:1               ; 16 bits   ; 112 LEs       ; 80 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|Mux81                                                                                            ;
+; 9:1                ; 16 bits   ; 96 LEs        ; 64 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|result[7]                                                                                        ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |AP9|VGA_MOD:inst|busmux:inst13|lpm_mux:$00000|mux_sjc:auto_generated|l1_w2_n0_mux_dataout                       ;
+; 11:1               ; 16 bits   ; 112 LEs       ; 80 LEs               ; 32 LEs                 ; No         ; |AP9|cpu:inst12|Mux84                                                                                            ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
 ; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
 ; 18:1               ; 2 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |AP9|cpu:inst12|reg                                                                                              ;
@@ -1225,34 +1225,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 663                         ;
-;     CLR               ; 120                         ;
+; arriav_ff             ; 662                         ;
+;     CLR               ; 117                         ;
 ;     CLR SCLR          ; 21                          ;
-;     CLR SLD           ; 145                         ;
-;     ENA               ; 153                         ;
-;     ENA CLR           ; 49                          ;
+;     CLR SLD           ; 147                         ;
+;     ENA               ; 152                         ;
+;     ENA CLR           ; 64                          ;
 ;     ENA CLR SCLR      ; 13                          ;
-;     ENA CLR SLD       ; 24                          ;
+;     ENA CLR SLD       ; 9                           ;
 ;     ENA SCLR          ; 8                           ;
 ;     ENA SLD           ; 50                          ;
 ;     SCLR              ; 1                           ;
-;     plain             ; 79                          ;
-; arriav_lcell_comb     ; 2515                        ;
+;     plain             ; 80                          ;
+; arriav_lcell_comb     ; 2552                        ;
 ;     arith             ; 613                         ;
 ;         0 data inputs ; 78                          ;
-;         1 data inputs ; 108                         ;
-;         2 data inputs ; 65                          ;
-;         3 data inputs ; 44                          ;
-;         4 data inputs ; 73                          ;
+;         1 data inputs ; 123                         ;
+;         2 data inputs ; 66                          ;
+;         3 data inputs ; 29                          ;
+;         4 data inputs ; 72                          ;
 ;         5 data inputs ; 245                         ;
-;     extend            ; 35                          ;
-;         7 data inputs ; 35                          ;
-;     normal            ; 1826                        ;
+;     extend            ; 36                          ;
+;         7 data inputs ; 36                          ;
+;     normal            ; 1862                        ;
 ;         1 data inputs ; 24                          ;
-;         2 data inputs ; 142                         ;
-;         3 data inputs ; 370                         ;
-;         4 data inputs ; 379                         ;
-;         5 data inputs ; 434                         ;
+;         2 data inputs ; 141                         ;
+;         3 data inputs ; 390                         ;
+;         4 data inputs ; 382                         ;
+;         5 data inputs ; 448                         ;
 ;         6 data inputs ; 477                         ;
 ;     shared            ; 41                          ;
 ;         0 data inputs ; 8                           ;
@@ -1265,7 +1265,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 133                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 36.00                       ;
-; Average LUT depth     ; 15.50                       ;
+; Average LUT depth     ; 15.48                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1274,7 +1274,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -1284,7 +1284,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
-    Info: Processing started: Fri May 16 17:16:39 2025
+    Info: Processing started: Fri Jun 27 20:31:42 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AP9 -c AP9
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -1508,27 +1508,27 @@ Info (12133): Instantiated megafunction "lpm_dff1:inst1|lpm_ff:lpm_ff_component"
     Info (12134): Parameter "lpm_width" = "1"
 Info (12128): Elaborating entity "TEXT_DRAWER" for hierarchy "TEXT_DRAWER:inst2"
 Info (12128): Elaborating entity "cpu" for hierarchy "cpu:inst12"
-Warning (10492): VHDL Process Statement warning at cpu.vhd(827): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 827
-Warning (10492): VHDL Process Statement warning at cpu.vhd(836): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 836
-Warning (10492): VHDL Process Statement warning at cpu.vhd(837): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 837
-Warning (10492): VHDL Process Statement warning at cpu.vhd(914): signal "result" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 914
-Warning (10631): VHDL Process Statement warning at cpu.vhd(816): inferring latch(es) for signal or variable "result", which holds its previous value in one or more paths through the process File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[0]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[1]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[2]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[3]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[4]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[5]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[6]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[7]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[8]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[9]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[10]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[11]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[12]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[13]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[14]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
-Info (10041): Inferred latch for "result[15]" at cpu.vhd(816) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (10492): VHDL Process Statement warning at cpu.vhd(823): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 823
+Warning (10492): VHDL Process Statement warning at cpu.vhd(832): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 832
+Warning (10492): VHDL Process Statement warning at cpu.vhd(833): signal "FR" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 833
+Warning (10492): VHDL Process Statement warning at cpu.vhd(910): signal "result" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 910
+Warning (10631): VHDL Process Statement warning at cpu.vhd(812): inferring latch(es) for signal or variable "result", which holds its previous value in one or more paths through the process File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[0]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[1]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[2]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[3]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[4]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[5]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[6]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[7]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[8]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[9]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[10]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[11]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[12]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[13]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[14]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
+Info (10041): Inferred latch for "result[15]" at cpu.vhd(812) File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
 Warning (12125): Using design file seletorclock.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: SeletorClock File: C:/Users/15491959/trab_simas_cpu/cpu/seletorclock.v Line: 1
 Info (12128): Elaborating entity "SeletorClock" for hierarchy "SeletorClock:inst20"
@@ -1603,12 +1603,12 @@ Info (12128): Elaborating entity "POS_CONV" for hierarchy "POS_CONV:inst13"
 Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer inst5~0
 Info (278001): Inferred 4 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Mod0" File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 873
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Div0" File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 865
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Mod0" File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 869
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "cpu:inst12|Div0" File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 861
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Mod0" File: C:/Users/15491959/trab_simas_cpu/cpu/POS_CONV.vhd Line: 27
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "POS_CONV:inst13|Div0" File: C:/Users/15491959/trab_simas_cpu/cpu/POS_CONV.vhd Line: 28
-Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Mod0" File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 873
-Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Mod0" with the following parameter: File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 873
+Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Mod0" File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 869
+Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Mod0" with the following parameter: File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 869
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1619,8 +1619,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_dnh File: C:/Users/15491959/trab_simas_cpu/cpu/db/sign_div_unsign_dnh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_03f.tdf
     Info (12023): Found entity 1: alt_u_div_03f File: C:/Users/15491959/trab_simas_cpu/cpu/db/alt_u_div_03f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Div0" File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 865
-Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Div0" with the following parameter: File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 865
+Info (12130): Elaborated megafunction instantiation "cpu:inst12|lpm_divide:Div0" File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 861
+Info (12133): Instantiated megafunction "cpu:inst12|lpm_divide:Div0" with the following parameter: File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 861
     Info (12134): Parameter "LPM_WIDTHN" = "16"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1651,37 +1651,37 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_nlh File: C:/Users/15491959/trab_simas_cpu/cpu/db/sign_div_unsign_nlh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_kve.tdf
     Info (12023): Found entity 1: alt_u_div_kve File: C:/Users/15491959/trab_simas_cpu/cpu/db/alt_u_div_kve.tdf Line: 23
-Warning (13012): Latch cpu:inst12|result[14] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[14] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[13] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[13] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[12] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[12] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[11] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[11] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[10] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[10] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[9] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[9] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[8] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[8] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[7] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[7] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[6] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[6] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[5] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[5] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[4] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[4] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[3] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[3] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[2] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[2] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[1] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[1] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[0] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[0] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
-Warning (13012): Latch cpu:inst12|result[15] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 816
+Warning (13012): Latch cpu:inst12|result[15] has unsafe behavior File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 812
     Warning (13013): Ports D and ENA on the latch are fed by the same signal cpu:inst12|OP[5] File: C:/Users/15491959/trab_simas_cpu/cpu/cpu.vhd Line: 160
 Info (17049): 16 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -1689,16 +1689,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
-Info (21057): Implemented 3054 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 3079 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 19 output pins
-    Info (21061): Implemented 2890 logic cells
+    Info (21061): Implemented 2915 logic cells
     Info (21064): Implemented 133 RAM segments
     Info (21062): Implemented 1 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
-    Info: Peak virtual memory: 5000 megabytes
-    Info: Processing ended: Fri May 16 17:16:52 2025
-    Info: Elapsed time: 00:00:13
+    Info: Peak virtual memory: 5001 megabytes
+    Info: Processing ended: Fri Jun 27 20:31:56 2025
+    Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:21
 
 

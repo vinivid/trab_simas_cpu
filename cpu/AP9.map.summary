@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri May 16 17:16:52 2025
+Analysis & Synthesis Status : Successful - Fri Jun 27 20:31:56 2025
 Quartus Prime Version : 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 Revision Name : AP9
 Top-level Entity Name : AP9
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 663
+Total registers : 662
 Total pins : 30
 Total virtual pins : 0
 Total block memory bits : 946,176
