@@ -463,7 +463,7 @@ draw_map_full:
     push r3
     push r4
     push r5
-    push r6
+    ;push r6
     push r7
 
     ; primeiro char da quinta linha da tela
@@ -504,7 +504,7 @@ draw_map_full:
 
     draw_map_full_end:
         pop r7
-        pop r6
+        ;pop r6
         pop r5
         pop r4 
         pop r3 
