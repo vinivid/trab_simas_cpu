@@ -35,7 +35,7 @@
 					"file": "/V/projetos/trab_simas_cpu/Simulador/Hello4.asm",
 					"settings":
 					{
-						"buffer_size": 35580,
+						"buffer_size": 35581,
 						"line_ending": "Windows"
 					}
 				}
@@ -141,15 +141,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 35580,
+								"buffer_size": 35581,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										10418,
-										10418
+										10590,
+										10590
 									]
 								],
 								"settings":
