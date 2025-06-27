@@ -457,14 +457,14 @@ player_two_ini_pos : var #2
 ; @param {endereco} r5 - Endereco do mapa que voce deseja desenhar.
 ;
 draw_map_full:
-    push r0
-    push r1 
-    push r2
-    push r3
-    push r4
-    push r5
+    ;push r0
+    ;push r1 
+    ;push r2
+    ;push r3
+    ;push r4
+    ;push r5
     ;push r6
-    push r7
+    ;push r7
 
     ; primeiro char da quinta linha da tela
     loadn r2, #160
@@ -503,14 +503,14 @@ draw_map_full:
         jmp colum_draw_map_loop
 
     draw_map_full_end:
-        pop r7
+        ;pop r7
         ;pop r6
-        pop r5
-        pop r4 
-        pop r3 
-        pop r2 
-        pop r1 
-        pop r0
+        ;pop r5
+        ;pop r4 
+        ;pop r3 
+        ;pop r2 
+        ;pop r1 
+        ;pop r0
         rts
 
 ;    A funcao set tile muda uma tile 
@@ -1545,10 +1545,10 @@ update_players:
     rts
 main:
     call draw_map_full
-    call ini_player_um
-    call ini_player_dois
+    ;call ini_player_um
+    ;call ini_player_dois
     
     game_loop:
-        call update_players
-        call update_bombas
+        ;call update_players
+        ;call update_bombas
         jmp game_loop

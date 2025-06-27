@@ -61,14 +61,14 @@
 ; @param {endereco} r5 - Endereco do mapa que voce deseja desenhar.
 ;
 draw_map_full:
-    push r0
-    push r1 
-    push r2
-    push r3
-    push r4
-    push r5
+    ;push r0
+    ;push r1 
+    ;push r2
+    ;push r3
+    ;push r4
+    ;push r5
     ;push r6
-    push r7
+    ;push r7
 
     ; primeiro char da quinta linha da tela
     loadn r2, #160
@@ -107,14 +107,14 @@ draw_map_full:
         jmp colum_draw_map_loop
 
     draw_map_full_end:
-        pop r7
+        ;pop r7
         ;pop r6
-        pop r5
-        pop r4 
-        pop r3 
-        pop r2 
-        pop r1 
-        pop r0
+        ;pop r5
+        ;pop r4 
+        ;pop r3 
+        ;pop r2 
+        ;pop r1 
+        ;pop r0
         rts
 
 ;    A funcao set tile muda uma tile 
