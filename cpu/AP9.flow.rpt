@@ -1,5 +1,5 @@
 Flow report for AP9
-Fri Jun 27 20:38:00 2025
+Sat Jun 28 01:02:58 2025
 Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ on the Quartus Prime software download page.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Flow Status                     ; Successful - Fri Jun 27 20:37:51 2025           ;
+; Flow Status                     ; Successful - Sat Jun 28 01:02:58 2025           ;
 ; Quartus Prime Version           ; 24.1std.0 Build 1077 03/04/2025 SC Lite Edition ;
 ; Revision Name                   ; AP9                                             ;
 ; Top-level Entity Name           ; AP9                                             ;
@@ -106,7 +106,15 @@ on the Quartus Prime software download page.
 ; Fitter               ; 00:05:49     ; 1.1                     ; 6828 MB             ; 00:19:34                           ;
 ; Assembler            ; 00:00:03     ; 1.0                     ; 5019 MB             ; 00:00:03                           ;
 ; Timing Analyzer      ; 00:00:08     ; 2.7                     ; 5391 MB             ; 00:00:19                           ;
-; Total                ; 00:06:14     ; --                      ; --                  ; 00:20:16                           ;
+; MIF/HEX Update       ; 00:00:04     ; 1.0                     ; 4899 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 5019 MB             ; 00:00:03                           ;
+; MIF/HEX Update       ; 00:00:04     ; 1.0                     ; 4898 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 5019 MB             ; 00:00:03                           ;
+; MIF/HEX Update       ; 00:00:04     ; 1.0                     ; 4898 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 5019 MB             ; 00:00:03                           ;
+; MIF/HEX Update       ; 00:00:06     ; 1.0                     ; 4899 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 5019 MB             ; 00:00:03                           ;
+; Total                ; 00:06:46     ; --                      ; --                  ; 00:20:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -119,6 +127,14 @@ on the Quartus Prime software download page.
 ; Fitter               ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
 ; Assembler            ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
 ; Timing Analyzer      ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
+; MIF/HEX Update       ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; 6-306-11         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -129,6 +145,14 @@ quartus_map --read_settings_files=on --write_settings_files=off AP9 -c AP9
 quartus_fit --read_settings_files=off --write_settings_files=off AP9 -c AP9
 quartus_asm --read_settings_files=off --write_settings_files=off AP9 -c AP9
 quartus_sta AP9 -c AP9
+quartus_cdb AP9 -c AP9 --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off AP9 -c AP9
+quartus_cdb AP9 -c AP9 --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off AP9 -c AP9
+quartus_cdb AP9 -c AP9 --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off AP9 -c AP9
+quartus_cdb AP9 -c AP9 --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off AP9 -c AP9
 
 
 
