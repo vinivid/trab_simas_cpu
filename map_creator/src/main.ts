@@ -102,18 +102,26 @@ function gridTilesToFile() {
         'player_one_ini_pos : var #2\n'
     )
 
+    const tileMapAsmOg : string[] = new Array(
+        '\n\ntile_map_og : var #260\n'
+    )
+
     let qtt_player = 0
 
     htmlMapGrid.forEach((ele, id) => {
         if(ele.style.backgroundColor == 'red') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)
+            tileMapAsmOg.push(`\tstatic tile_map_og + #${id}, #'A'\n`)
         } else if (ele.style.backgroundColor === 'blue') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #'B'\n`)
+            tileMapAsmOg.push(`\tstatic tile_map_og + #${id}, #'B'\n`)
         } else if (ele.style.backgroundColor === 'white') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #0\n`)
+            tileMapAsmOg.push(`\tstatic tile_map_og + #${id}, #0\n`)
         }
         else if (ele.style.backgroundColor == 'yellow') {
-            tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)
+            tileMapAsm.push(`\tstatic tile_map + #${id}, #0\n`)
+            tileMapAsmOg.push(`\tstatic tile_map_og + #${id}, #0\n`)
             if (qtt_player == 0) {
                 players_pos.push(`\tstatic player_one_ini_pos + #0, #${id % 20}\n`)
                 players_pos.push(`\tstatic player_one_ini_pos + #1, #${Math.floor(id / 20)}\n`)
@@ -129,7 +137,7 @@ function gridTilesToFile() {
         }
     })
 
-    downloadFile('mapa.asm', tileMapAsm.concat(players_pos))
+    downloadFile('mapa.asm', tileMapAsm.concat(players_pos).concat(tileMapAsmOg))
 }
 
 function initExportButton() {

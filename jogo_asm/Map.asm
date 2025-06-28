@@ -57,13 +57,14 @@
 ; Ele desenha somente as tile 2 x 2 de um unico caracter 
 ; que sao os basicos do mapa.
 ;
+; @param {endereco} r5 - Endereco do mapa que deseja desenhar na
+; tela
 draw_map_full:
     push r0
     push r1 
     push r2
     push r3
     push r4
-    push r5
     push r6
     push r7
 
@@ -71,7 +72,6 @@ draw_map_full:
     loadn r2, #160
     loadn r3, #2    ; step horizontal
     loadn r4, #20   ; fim do loop da coluna
-    loadn r5, #tile_map   ; endereco da primeira posicao do mapa
     loadn r6, #0    ; variavel do lop
     loadn r7, #12   ; limite do loop de linhas
 
@@ -106,7 +106,6 @@ draw_map_full:
     draw_map_full_end:
         pop r7
         pop r6
-        pop r5 
         pop r4 
         pop r3 
         pop r2 
@@ -196,3 +195,36 @@ get_tile:
     pop r3
     rts
 
+;   Restaura o tile map para o seu estado inicial.
+restore_tile_map:
+    push r0 
+    push r1
+    push r2
+    push r3
+    push r4
+
+    loadn r0, #tile_map_og
+    loadn r1, #tile_map 
+
+    loadn r2, #0 ; variavel para iterar pelo char map
+    loadn r3, #260 ; quantidade de tiles em um mapa
+
+    restore_tile_map_loop:
+        cmp r2, r3
+        jeq restore_tile_map_loop_end
+
+        loadi r4, r0 ;carregando o valor do mapa original
+        storei r1, r4 ; colocar no tile map o valor original
+
+        inc r0 ; proximo endereco do tile map original
+        inc r1 ; proximo endereco do tile map  
+        inc r2 ; indo para a proxima posicao
+        jmp restore_tile_map_loop
+    restore_tile_map_loop_end:
+
+    pop r4
+    pop r3
+    pop r2
+    pop r1
+    pop r0
+    rts
