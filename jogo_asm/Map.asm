@@ -57,9 +57,6 @@
 ; Ele desenha somente as tile 2 x 2 de um unico caracter 
 ; que sao os basicos do mapa.
 ;
-;
-; @param {endereco} r5 - Endereco do mapa que voce deseja desenhar.
-;
 draw_map_full:
     push r0
     push r1 
@@ -74,15 +71,15 @@ draw_map_full:
     loadn r2, #160
     loadn r3, #2    ; step horizontal
     loadn r4, #20   ; fim do loop da coluna
-    loadn r5, #tile_map
+    loadn r5, #tile_map   ; endereco da primeira posicao do mapa
     loadn r6, #0    ; variavel do lop
     loadn r7, #12   ; limite do loop de linhas
 
-    ;push r6
+    push r6
     loadn r6, #0
     colum_draw_map_loop:
         cmp r6, r4
-        jeq draw_map_full_end
+        jeq row_draw_loop
 
         loadi r0, r5
         mov r1, r2
@@ -93,23 +90,23 @@ draw_map_full:
         inc r6 ; avancando o loop das colunas
         jmp colum_draw_map_loop
 
-    ;row_draw_loop:
-    ;    ; checando se acabou de escrever todas as linhas
-    ;    pop r6
-    ;    cmp r6, r7 
-    ;    jeq draw_map_full_end
-    ;    ; nao acabou todas linhas entao vao para a proxima
-    ;    inc r6
-    ;    push r6 
-    ;    loadn r6, #0
-    ;    loadn r0, #40  ; step de duas linhas 
-    ;    add r2, r2, r0 ; pulando duas linahs
-    ;    jmp colum_draw_map_loop
+    row_draw_loop:
+        ; checando se acabou de escrever todas as linhas
+        pop r6
+        cmp r6, r7 
+        jeq draw_map_full_end
+        ; nao acabou todas linhas entao vao para a proxima
+        inc r6
+        push r6 
+        loadn r6, #0
+        loadn r0, #40  ; step de duas linhas 
+        add r2, r2, r0 ; pulando duas linahs
+        jmp colum_draw_map_loop
 
     draw_map_full_end:
         pop r7
         pop r6
-        pop r5
+        pop r5 
         pop r4 
         pop r3 
         pop r2 
