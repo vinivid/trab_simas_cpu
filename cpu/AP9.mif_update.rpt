@@ -1,6 +1,6 @@
 MIF/HEX Update report for AP9
-Sun Oct  9 17:46:00 2016
-Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
+Sat Jun 28 01:02:54 2025
+Quartus Prime Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
 
 
 ---------------------
@@ -16,27 +16,27 @@ Quartus II 64-Bit Version 14.1.0 Build 186 12/03/2014 SJ Full Version
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
+Copyright (C) 2025  Altera Corporation. All rights reserved.
 Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus II License Agreement,
-the Altera MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
 
 
 
 +---------------------------------------------------------------+
 ; MIF/HEX Update Summary                                        ;
 +-----------------------+---------------------------------------+
-; MIF/HEX Update Status ; Successful - Sun Oct  9 17:45:59 2016 ;
+; MIF/HEX Update Status ; Successful - Sat Jun 28 01:02:54 2025 ;
 ; Revision Name         ; AP9                                   ;
 ; Top-level Entity Name ; AP9                                   ;
 ; Family                ; Cyclone V                             ;
@@ -44,37 +44,40 @@ agreement for further details.
 +-----------------------+---------------------------------------+
 
 
-+--------------------------------------------------+
-; MIF/HEX Update Processed Files                   ;
-+--------------------------------------------------+
-; File Name                                        ;
-+--------------------------------------------------+
-; /home/perina/Desktop/AP9 - DE0-CV/charmap.mif    ;
-; /home/perina/Desktop/AP9 - DE0-CV/cpuram.mif     ;
-; /home/perina/Desktop/AP9 - DE0-CV/video_mem1.mif ;
-; /home/perina/Desktop/AP9 - DE0-CV/video_mem2.mif ;
-+--------------------------------------------------+
++-----------------------------------------------------+
+; MIF/HEX Update Processed Files                      ;
++-----------------------------------------------------+
+; File Name                                           ;
++-----------------------------------------------------+
+; C:/Users/15491959/trab_simas_cpu/cpu/charmap.mif    ;
+; C:/Users/15491959/trab_simas_cpu/cpu/cpuram.mif     ;
+; C:/Users/15491959/trab_simas_cpu/cpu/video_mem1.mif ;
+; C:/Users/15491959/trab_simas_cpu/cpu/video_mem2.mif ;
++-----------------------------------------------------+
 
 
 +-------------------------+
 ; MIF/HEX Update Messages ;
 +-------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit MIF/HEX Update
-    Info: Version 14.1.0 Build 186 12/03/2014 SJ Full Version
-    Info: Processing started: Sun Oct  9 17:45:48 2016
+Info: Running Quartus Prime MIF/HEX Update
+    Info: Version 24.1std.0 Build 1077 03/04/2025 SC Lite Edition
+    Info: Processing started: Sat Jun 28 01:02:48 2025
 Info: Command: quartus_cdb AP9 -c AP9 --update_mif
-Warning (125092): Tcl Script File ../../ProcUktimaVersao/ProcessadorRegsVariables_SemInstrucoesUltima1/lpm_mux1.qip not found
-    Info (125063): set_global_assignment -name QIP_FILE ../../ProcUktimaVersao/ProcessadorRegsVariables_SemInstrucoesUltima1/lpm_mux1.qip
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (113028): 1 out of 1024 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/15491959/trab_simas_cpu/cpu/charmap.mif Line: 1
+    Warning (113026): Memory Initialization File Address 652 is not initialized File: C:/Users/15491959/trab_simas_cpu/cpu/charmap.mif Line: 1
+Warning (113031): 1 out of 1024 addresses are reinitialized. The latest initialized data will replace the existing data. There are 1 warnings found, and 1 warnings are reported. File: C:/Users/15491959/trab_simas_cpu/cpu/charmap.mif Line: 1
+    Warning (113030): Memory Initialization File address 642 is reinitialized File: C:/Users/15491959/trab_simas_cpu/cpu/ Line: 438
 Info (39024): Processed the following Memory Initialization File(s)
-    Info (39025): Processed Memory Initialization File /home/perina/Desktop/AP9 - DE0-CV/charmap.mif
-    Info (39025): Processed Memory Initialization File /home/perina/Desktop/AP9 - DE0-CV/cpuram.mif
-    Info (39025): Processed Memory Initialization File /home/perina/Desktop/AP9 - DE0-CV/video_mem1.mif
-    Info (39025): Processed Memory Initialization File /home/perina/Desktop/AP9 - DE0-CV/video_mem2.mif
-Info: Quartus II 64-Bit MIF/HEX Update was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1196 megabytes
-    Info: Processing ended: Sun Oct  9 17:46:00 2016
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:05
+    Info (39025): Processed Memory Initialization File C:/Users/15491959/trab_simas_cpu/cpu/charmap.mif File: C:/Users/15491959/trab_simas_cpu/cpu/charmap.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/15491959/trab_simas_cpu/cpu/cpuram.mif File: C:/Users/15491959/trab_simas_cpu/cpu/cpuram.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/15491959/trab_simas_cpu/cpu/video_mem1.mif File: C:/Users/15491959/trab_simas_cpu/cpu/video_mem1.mif Line: 0
+    Info (39025): Processed Memory Initialization File C:/Users/15491959/trab_simas_cpu/cpu/video_mem2.mif File: C:/Users/15491959/trab_simas_cpu/cpu/video_mem2.mif Line: 0
+Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Sat Jun 28 01:02:54 2025
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
 
 
