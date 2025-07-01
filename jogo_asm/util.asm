@@ -123,3 +123,58 @@ delay_um_tempo:
 		pop r3 
 		pop r2
 		rts
+
+;  Imprime a string na posicao passada como argumento.
+;
+; @param {endereco} r0 - Endereco da str que deseja imprimir.
+; @param {int} r1 - Posicao da tela na qual deseja imprimir.
+;
+print_str:
+	push r2
+	push r3
+
+	print_str_loop:
+		loadi r2, r0
+		loadn r3, #'\0' 
+		cmp r3, r2
+		jeq print_str_loop_end
+
+		outchar r2, r1
+		inc r1 ; proxima posicao na tela
+		inc r0 ; proximo char 
+		jmp print_str_loop
+
+	print_str_loop_end:
+
+	pop r3
+	pop r2
+	rts
+
+;  Imprime a string na posicao passada como argumento em que 
+; cada caracter vai ter a cor passada como argumento.
+;
+; @param {endereco} r0 - Endereco da str que deseja imprimir.
+; @param {int} r1 - Posicao da tela na qual deseja imprimir.
+; @param {cor} r2 - Cor para imprimir cada caracter.
+;
+print_str_colored:
+	push r3
+	push r4
+
+	print_str_colored_loop:
+		loadi r3, r0
+		loadn r4, #'\0' 
+		cmp r4, r3
+		jeq print_str_loop_end
+
+		add r3, r3, r2 ; adicionando a cor no caracter
+		outchar r3, r1
+		inc r1 ; proxima posicao na tela
+		inc r0 ; proximo char 
+		jmp print_str_colored_loop
+
+	print_str_colored_loop_end:
+
+	pop r4
+	pop r3
+	rts
