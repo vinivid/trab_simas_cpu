@@ -45,6 +45,57 @@ two_by_two_draw:
 	pop r4
 	rts
 
+; Tem o mesmo funcionamento do two by two draw, so que 
+; ele desenha as tiles com a cor passada como argumento.
+;
+; Parametros:
+;
+; @param {const char} r0 - Eh o char que deseja 
+; desenhar na posicao da tela. Esse valor nao eh
+; alterado.  
+; @param {int} r1 - Eh a posicao na tela em que 
+; deseja desenhar o sprite. Tendo em mente que 
+; o sprite tera o seu canto superior esquerdo
+; nessa posicao.
+; @param {int} r2 - Eh a cor na qual cada tile deve ser 
+; desenhada.
+;
+two_by_two_draw_colored:
+    ; Salvando as registradoras
+    ; usadas nessa funcao que nao sao argumento
+	push r3
+	push r4
+	
+	mov r3, r0 ; salvando o valor original
+	loadn r4, #39 ; Sera o step de uma linha da tela
+
+	add r0, r0, r2
+	outchar r0, r1 ; primeira posicao 
+	
+	; desenhando na direita da primeira pos
+	inc r1
+	; pegando o char original e adicionando a cor
+	mov r0, r3 
+	add r0, r0, r2
+	outchar r0, r1 ; printando o char 
+  
+    ; desenhando na posicao abaixo da primeira pos
+	add r1, r1, r4 ; pulando a linha da tela
+	mov r0, r3 
+	add r0, r0, r2
+	outchar r0, r1 ; printando o char
+  
+    ; desenha na diagonal para baixo e direita 
+    ; da primeira
+	inc r1
+	mov r0, r3 
+	add r0, r0, r2
+	outchar r0, r1 ; printando o char
+
+	pop r4
+	pop r3
+	rts
+
 ;   Desenha na posicao da tela a sequencia
 ; de quatro chars que representam um sprite
 ; 2x2.
@@ -70,29 +121,84 @@ two_by_two_draw:
 two_by_two_sequence_draw:
     ; Salvando as registradoras
     ; usadas nessa funcao que nao sao argumento
+	push r4
+	
+	loadn r4, #39 ; Sera o step de uma linha da tela
+	
+	outchar r0, r1 ; primeira posicao 
+	
+	; desenhando na direita da primeira
+	inc r0 
+	inc r1
+	outchar r0, r1
+  
+    ; desenhando na posicao abaixo da primeira
+	inc r0
+	add r1, r1, r4 ; pulando a linha da tela
+	outchar r0, r1
+  
+    ; desenha na diagonal para baixo e direita 
+    ; da primeira
+	inc r0
+	inc r1
+	outchar r0, r1
+
+	pop r4
+	rts
+
+;   Igual o two by two sequence draw, com o aditivo de 
+; colocar a cor para cada char.
+;
+; Parametros:
+;
+; @param {char} r0 - Eh o primeiro char da 
+; sequencia de caracteres que deseja desenhar
+; na tela.
+; @param {int} r1 - Eh a posicao na tela em que 
+; deseja desenhar o sprite. Tendo em mente que 
+; o sprite tera o seu canto superior esquerdo
+; nessa posicao.
+; @param {int} r2 - Eh a cor na qual cada tile deve ser 
+; desenhada.
+;
+two_by_two_sequence_draw_colored:
+    ; Salvando as registradoras
+    ; usadas nessa funcao que nao sao argumento
 	push r3
 	push r4
 	
 	loadn r3, #1  ; Sera o step para direita
 	loadn r4, #39 ; Sera o step de uma linha da tela
 	
+	mov r3, r0; salvando char
+	add r0, r0, r2 ; adicionando a cor
 	outchar r0, r1 ; primeira posicao 
-	
+	mov r0, r3 ; pegando o valor dnv
+
 	; desenhando na direita da primeira
-	add r0, r0, r3 
-	add r1, r1, r3
-	outchar r0, r1
+	inc r0 
+	inc r1
+	mov r3, r0; salvando char
+	add r0, r0, r2 ; adicionando a cor
+	outchar r0, r1 ; primeira posicao 
+	mov r0, r3 ; pegando o valor dnv
   
     ; desenhando na posicao abaixo da primeira
-	add r0, r0, r3
+	inc r0
 	add r1, r1, r4 ; pulando a linha da tela
-	outchar r0, r1
+	mov r3, r0; salvando char
+	add r0, r0, r2 ; adicionando a cor
+	outchar r0, r1 ; primeira posicao 
+	mov r0, r3 ; pegando o valor dnv
   
     ; desenha na diagonal para baixo e direita 
     ; da primeira
-	add r0, r0, r3
-	add r1, r1, r3
-	outchar r0, r1
+	inc r0
+	inc r1
+	mov r3, r0; salvando char
+	add r0, r0, r2 ; adicionando a cor
+	outchar r0, r1 ; primeira posicao 
+	mov r0, r3 ; pegando o valor dnv
 
 	pop r4
 	pop r3

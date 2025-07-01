@@ -8,7 +8,12 @@ jmp main
 main:
     call draw_start_menu
     loadn r1, #'z'
-    ; esperando o botao de start   
+    ; esperando o botao de start
+    loadn r0, #79
+    loadn r1, #0
+    loadn r2, #2304
+    call two_by_two_sequence_draw_colored
+    loadn r1, #'z'
     menu_loop:
         inchar r0
         cmp r0, r1

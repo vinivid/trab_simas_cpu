@@ -83,7 +83,39 @@ draw_map_full:
 
         loadi r0, r5
         mov r1, r2
+
+        ; decidir qual tile desewnhar e de qual forma
+        push r7
+        loadn r7, #'A'
+        cmp r0, r7
+        jeq draw_brick_tile
+
+        loadn r7, #'B'
+        cmp r0, r7
+        jeq draw_box_tile
+
+        ; desenhar o chao de preto
         call two_by_two_draw
+        jmp end_draw_if
+
+        draw_brick_tile:
+            push r2
+            loadn r2, #1792
+            call two_by_two_sequence_draw_colored
+            pop r2
+            jmp end_draw_if
+
+        draw_box_tile:
+            push r2
+            loadn r2, #256
+            call two_by_two_sequence_draw_colored
+            pop r2
+            jmp end_draw_if
+
+        end_draw_if:
+
+        ; popando o r7
+        pop r7
 
         add r2, r2, r3 ; proxima posicao na tela 
         inc r5 ; indo para a proxima tile

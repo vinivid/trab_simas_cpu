@@ -98,6 +98,57 @@ two_by_two_draw:
 	pop r4
 	rts
 
+; Tem o mesmo funcionamento do two by two draw, so que 
+; ele desenha as tiles com a cor passada como argumento.
+;
+; Parametros:
+;
+; @param {const char} r0 - Eh o char que deseja 
+; desenhar na posicao da tela. Esse valor nao eh
+; alterado.  
+; @param {int} r1 - Eh a posicao na tela em que 
+; deseja desenhar o sprite. Tendo em mente que 
+; o sprite tera o seu canto superior esquerdo
+; nessa posicao.
+; @param {int} r2 - Eh a cor na qual cada tile deve ser 
+; desenhada.
+;
+two_by_two_draw_colored:
+    ; Salvando as registradoras
+    ; usadas nessa funcao que nao sao argumento
+	push r3
+	push r4
+	
+	mov r3, r0 ; salvando o valor original
+	loadn r4, #39 ; Sera o step de uma linha da tela
+
+	add r0, r0, r2
+	outchar r0, r1 ; primeira posicao 
+	
+	; desenhando na direita da primeira pos
+	inc r1
+	; pegando o char original e adicionando a cor
+	mov r0, r3 
+	add r0, r0, r2
+	outchar r0, r1 ; printando o char 
+  
+    ; desenhando na posicao abaixo da primeira pos
+	add r1, r1, r4 ; pulando a linha da tela
+	mov r0, r3 
+	add r0, r0, r2
+	outchar r0, r1 ; printando o char
+  
+    ; desenha na diagonal para baixo e direita 
+    ; da primeira
+	inc r1
+	mov r0, r3 
+	add r0, r0, r2
+	outchar r0, r1 ; printando o char
+
+	pop r4
+	pop r3
+	rts
+
 ;   Desenha na posicao da tela a sequencia
 ; de quatro chars que representam um sprite
 ; 2x2.
@@ -123,29 +174,84 @@ two_by_two_draw:
 two_by_two_sequence_draw:
     ; Salvando as registradoras
     ; usadas nessa funcao que nao sao argumento
+	push r4
+	
+	loadn r4, #39 ; Sera o step de uma linha da tela
+	
+	outchar r0, r1 ; primeira posicao 
+	
+	; desenhando na direita da primeira
+	inc r0 
+	inc r1
+	outchar r0, r1
+  
+    ; desenhando na posicao abaixo da primeira
+	inc r0
+	add r1, r1, r4 ; pulando a linha da tela
+	outchar r0, r1
+  
+    ; desenha na diagonal para baixo e direita 
+    ; da primeira
+	inc r0
+	inc r1
+	outchar r0, r1
+
+	pop r4
+	rts
+
+;   Igual o two by two sequence draw, com o aditivo de 
+; colocar a cor para cada char.
+;
+; Parametros:
+;
+; @param {char} r0 - Eh o primeiro char da 
+; sequencia de caracteres que deseja desenhar
+; na tela.
+; @param {int} r1 - Eh a posicao na tela em que 
+; deseja desenhar o sprite. Tendo em mente que 
+; o sprite tera o seu canto superior esquerdo
+; nessa posicao.
+; @param {int} r2 - Eh a cor na qual cada tile deve ser 
+; desenhada.
+;
+two_by_two_sequence_draw_colored:
+    ; Salvando as registradoras
+    ; usadas nessa funcao que nao sao argumento
 	push r3
 	push r4
 	
 	loadn r3, #1  ; Sera o step para direita
 	loadn r4, #39 ; Sera o step de uma linha da tela
 	
+	mov r3, r0; salvando char
+	add r0, r0, r2 ; adicionando a cor
 	outchar r0, r1 ; primeira posicao 
-	
+	mov r0, r3 ; pegando o valor dnv
+
 	; desenhando na direita da primeira
-	add r0, r0, r3 
-	add r1, r1, r3
-	outchar r0, r1
+	inc r0 
+	inc r1
+	mov r3, r0; salvando char
+	add r0, r0, r2 ; adicionando a cor
+	outchar r0, r1 ; primeira posicao 
+	mov r0, r3 ; pegando o valor dnv
   
     ; desenhando na posicao abaixo da primeira
-	add r0, r0, r3
+	inc r0
 	add r1, r1, r4 ; pulando a linha da tela
-	outchar r0, r1
+	mov r3, r0; salvando char
+	add r0, r0, r2 ; adicionando a cor
+	outchar r0, r1 ; primeira posicao 
+	mov r0, r3 ; pegando o valor dnv
   
     ; desenha na diagonal para baixo e direita 
     ; da primeira
-	add r0, r0, r3
-	add r1, r1, r3
-	outchar r0, r1
+	inc r0
+	inc r1
+	mov r3, r0; salvando char
+	add r0, r0, r2 ; adicionando a cor
+	outchar r0, r1 ; primeira posicao 
+	mov r0, r3 ; pegando o valor dnv
 
 	pop r4
 	pop r3
@@ -802,7 +908,39 @@ draw_map_full:
 
         loadi r0, r5
         mov r1, r2
+
+        ; decidir qual tile desewnhar e de qual forma
+        push r7
+        loadn r7, #'A'
+        cmp r0, r7
+        jeq draw_brick_tile
+
+        loadn r7, #'B'
+        cmp r0, r7
+        jeq draw_box_tile
+
+        ; desenhar o chao de preto
         call two_by_two_draw
+        jmp end_draw_if
+
+        draw_brick_tile:
+            push r2
+            loadn r2, #1792
+            call two_by_two_sequence_draw_colored
+            pop r2
+            jmp end_draw_if
+
+        draw_box_tile:
+            push r2
+            loadn r2, #256
+            call two_by_two_sequence_draw_colored
+            pop r2
+            jmp end_draw_if
+
+        end_draw_if:
+
+        ; popando o r7
+        pop r7
 
         add r2, r2, r3 ; proxima posicao na tela 
         inc r5 ; indo para a proxima tile
@@ -1152,8 +1290,10 @@ gerar_explosao:
     inc r3
     loadn r0, #'*'
     call set_tile
-    loadn r0, #75
-    call two_by_two_sequence_draw
+    push r2
+    loadn r2, #2816
+    call two_by_two_sequence_draw_colored
+    pop r2
 
     ; Loops de criar as tiles do fogo
     ; eles vao pegando as posicaoes que estao livres 
@@ -1209,9 +1349,13 @@ gerar_explosao:
         ; setando para uma tile de labareda
         loadn r0, #'*'
         call set_tile
+        ; desenhando a tile
         loadn r0, #79
-        call two_by_two_sequence_draw
-
+        push r2
+        loadn r2, #2816
+        call two_by_two_sequence_draw_colored
+        pop r2
+    
         mov r1, r6
         mov r2, r7
 
@@ -1270,7 +1414,10 @@ gerar_explosao:
         loadn r0, #'*'
         call set_tile
         loadn r0, #79
-        call two_by_two_sequence_draw
+        push r2
+        loadn r2, #2816
+        call two_by_two_sequence_draw_colored
+        pop r2
 
         mov r1, r6
         mov r2, r7
@@ -1330,7 +1477,10 @@ gerar_explosao:
         loadn r0, #'*'
         call set_tile
         loadn r0, #83
-        call two_by_two_sequence_draw
+        push r2
+        loadn r2, #2816
+        call two_by_two_sequence_draw_colored
+        pop r2
 
         mov r1, r6
         mov r2, r7
@@ -1390,7 +1540,10 @@ gerar_explosao:
         loadn r0, #'*'
         call set_tile
         loadn r0, #83
-        call two_by_two_sequence_draw
+        push r2
+        loadn r2, #2816
+        call two_by_two_sequence_draw_colored
+        pop r2
 
         mov r1, r6
         mov r2, r7
@@ -1508,6 +1661,7 @@ update_bombas:
 ;
 ; @param {endereco} r0 - Endereco de inicializacao do 
 ; player.
+; @param {cor} r4 - Cor do player para iniciar ele
 ; @param {endereco} r5 - Endereco da bomba do player
 ; @param {endereco} r6 - Endereco da pos x do player 
 ; @param {endereco} r7 - Enderece da pos y do player
@@ -1527,7 +1681,8 @@ ini_player:
     ; Setando no mapa e desenhando na tela
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     ; setando a bomba colocada como falsa
     loadn r1, #0
@@ -1546,6 +1701,7 @@ ini_player:
 ;   A funcao player para cima move o player para cima atualizando 
 ; suas informacoes
 ;
+; @param {const cor} r4 - Cor para pintar o personagem.
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -1590,7 +1746,8 @@ player_para_cima:
 
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     player_para_cima_end:
         pop r3 
@@ -1602,6 +1759,7 @@ player_para_cima:
 ;   A funcao player para baixo move o player para baixo atualizando 
 ; suas informacoes
 ;
+; @param {const cor} r4 - Cor para pintar o personagem.
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -1646,7 +1804,8 @@ player_para_baixo:
 
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     player_para_baixo_end:
         pop r3 
@@ -1658,6 +1817,7 @@ player_para_baixo:
 ;   A funcao player para esquerda move o player para esquerda atualizando 
 ; suas informacoes.
 ;
+; @param {const cor} r4 - Cor para pintar o personagem.
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -1699,7 +1859,8 @@ player_para_esquerda:
 
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     player_para_esquerda_end:
         pop r3 
@@ -1711,6 +1872,7 @@ player_para_esquerda:
 ;   A funcao player para direita move o player para direita atualizando 
 ; suas informacoes.
 ;
+; @param {const cor} r4 - Cor para pintar o personagem.
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -1755,7 +1917,8 @@ player_para_direita:
 
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     player_para_direita_end:
         pop r3 
@@ -1802,6 +1965,7 @@ pu_posy : var #1
 ini_player_um:
     push r0
     loadn r0, #player_one_ini_pos
+    loadn r4, #0
     loadn r5, #player_um_bomba
     loadn r6, #pu_posx
     loadn r7, #pu_posy
@@ -1825,6 +1989,7 @@ atuar_no_player_um:
     push r1 
     push r2
     push r3
+    push r4
     push r6
     push r7
     loadn r6, #pu_posx
@@ -1836,6 +2001,9 @@ atuar_no_player_um:
     loadn r1, #1
     cmp r1, r3
     jeq player_um_morte
+
+    ; cor branca do player 1
+    loadn r4, #0
 
     loadn r1, #'w'
     cmp r0, r1
@@ -1866,6 +2034,7 @@ atuar_no_player_um:
         loadn r5, #0
         pop r7 
         pop r6
+        pop r4
         pop r3
         pop r2 
         pop r1 
@@ -1875,6 +2044,7 @@ atuar_no_player_um:
         loadn r5, #1
         pop r7 
         pop r6
+        pop r4
         pop r3
         pop r2 
         pop r1 
@@ -1891,6 +2061,7 @@ pd_posy : var #1
 ini_player_dois:
     push r0
     loadn r0, #player_two_ini_pos
+    loadn r4, #3072
     loadn r5, #player_dois_bomba
     loadn r6, #pd_posx
     loadn r7, #pd_posy
@@ -1913,6 +2084,7 @@ atuar_no_player_dois:
     push r1 
     push r2
     push r3
+    push r4
     push r6
     push r7
     loadn r6, #pd_posx
@@ -1924,6 +2096,9 @@ atuar_no_player_dois:
     loadn r1, #1
     cmp r1, r3
     jeq player_dois_morte
+
+    ; valor azul do player 2
+    loadn r4, #3072
 
     loadn r1, #'i'
     cmp r0, r1
@@ -1953,6 +2128,7 @@ atuar_no_player_dois:
         loadn r5, #0
         pop r7 
         pop r6
+        pop r4
         pop r3
         pop r2 
         pop r1 
@@ -2394,7 +2570,12 @@ print_map_name:
 main:
     call draw_start_menu
     loadn r1, #'z'
-    ; esperando o botao de start   
+    ; esperando o botao de start
+    loadn r0, #79
+    loadn r1, #0
+    loadn r2, #2304
+    call two_by_two_sequence_draw_colored
+    loadn r1, #'z'
     menu_loop:
         inchar r0
         cmp r0, r1

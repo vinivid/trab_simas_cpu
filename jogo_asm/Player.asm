@@ -8,6 +8,7 @@
 ;
 ; @param {endereco} r0 - Endereco de inicializacao do 
 ; player.
+; @param {cor} r4 - Cor do player para iniciar ele
 ; @param {endereco} r5 - Endereco da bomba do player
 ; @param {endereco} r6 - Endereco da pos x do player 
 ; @param {endereco} r7 - Enderece da pos y do player
@@ -27,7 +28,8 @@ ini_player:
     ; Setando no mapa e desenhando na tela
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     ; setando a bomba colocada como falsa
     loadn r1, #0
@@ -46,6 +48,7 @@ ini_player:
 ;   A funcao player para cima move o player para cima atualizando 
 ; suas informacoes
 ;
+; @param {const cor} r4 - Cor para pintar o personagem.
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -90,7 +93,8 @@ player_para_cima:
 
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     player_para_cima_end:
         pop r3 
@@ -102,6 +106,7 @@ player_para_cima:
 ;   A funcao player para baixo move o player para baixo atualizando 
 ; suas informacoes
 ;
+; @param {const cor} r4 - Cor para pintar o personagem.
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -146,7 +151,8 @@ player_para_baixo:
 
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     player_para_baixo_end:
         pop r3 
@@ -158,6 +164,7 @@ player_para_baixo:
 ;   A funcao player para esquerda move o player para esquerda atualizando 
 ; suas informacoes.
 ;
+; @param {const cor} r4 - Cor para pintar o personagem.
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -199,7 +206,8 @@ player_para_esquerda:
 
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     player_para_esquerda_end:
         pop r3 
@@ -211,6 +219,7 @@ player_para_esquerda:
 ;   A funcao player para direita move o player para direita atualizando 
 ; suas informacoes.
 ;
+; @param {const cor} r4 - Cor para pintar o personagem.
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -255,7 +264,8 @@ player_para_direita:
 
     loadn r0, #'G'
     call set_tile
-    call two_by_two_sequence_draw
+    mov r2, r4
+    call two_by_two_sequence_draw_colored
 
     player_para_direita_end:
         pop r3 
@@ -302,6 +312,7 @@ pu_posy : var #1
 ini_player_um:
     push r0
     loadn r0, #player_one_ini_pos
+    loadn r4, #0
     loadn r5, #player_um_bomba
     loadn r6, #pu_posx
     loadn r7, #pu_posy
@@ -325,6 +336,7 @@ atuar_no_player_um:
     push r1 
     push r2
     push r3
+    push r4
     push r6
     push r7
     loadn r6, #pu_posx
@@ -336,6 +348,9 @@ atuar_no_player_um:
     loadn r1, #1
     cmp r1, r3
     jeq player_um_morte
+
+    ; cor branca do player 1
+    loadn r4, #0
 
     loadn r1, #'w'
     cmp r0, r1
@@ -366,6 +381,7 @@ atuar_no_player_um:
         loadn r5, #0
         pop r7 
         pop r6
+        pop r4
         pop r3
         pop r2 
         pop r1 
@@ -375,6 +391,7 @@ atuar_no_player_um:
         loadn r5, #1
         pop r7 
         pop r6
+        pop r4
         pop r3
         pop r2 
         pop r1 
@@ -391,6 +408,7 @@ pd_posy : var #1
 ini_player_dois:
     push r0
     loadn r0, #player_two_ini_pos
+    loadn r4, #3072
     loadn r5, #player_dois_bomba
     loadn r6, #pd_posx
     loadn r7, #pd_posy
@@ -413,6 +431,7 @@ atuar_no_player_dois:
     push r1 
     push r2
     push r3
+    push r4
     push r6
     push r7
     loadn r6, #pd_posx
@@ -424,6 +443,9 @@ atuar_no_player_dois:
     loadn r1, #1
     cmp r1, r3
     jeq player_dois_morte
+
+    ; valor azul do player 2
+    loadn r4, #3072
 
     loadn r1, #'i'
     cmp r0, r1
@@ -453,6 +475,7 @@ atuar_no_player_dois:
         loadn r5, #0
         pop r7 
         pop r6
+        pop r4
         pop r3
         pop r2 
         pop r1 

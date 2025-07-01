@@ -203,8 +203,10 @@ gerar_explosao:
     inc r3
     loadn r0, #'*'
     call set_tile
-    loadn r0, #75
-    call two_by_two_sequence_draw
+    push r2
+    loadn r2, #2816
+    call two_by_two_sequence_draw_colored
+    pop r2
 
     ; Loops de criar as tiles do fogo
     ; eles vao pegando as posicaoes que estao livres 
@@ -260,9 +262,13 @@ gerar_explosao:
         ; setando para uma tile de labareda
         loadn r0, #'*'
         call set_tile
+        ; desenhando a tile
         loadn r0, #79
-        call two_by_two_sequence_draw
-
+        push r2
+        loadn r2, #2816
+        call two_by_two_sequence_draw_colored
+        pop r2
+    
         mov r1, r6
         mov r2, r7
 
@@ -321,7 +327,10 @@ gerar_explosao:
         loadn r0, #'*'
         call set_tile
         loadn r0, #79
-        call two_by_two_sequence_draw
+        push r2
+        loadn r2, #2816
+        call two_by_two_sequence_draw_colored
+        pop r2
 
         mov r1, r6
         mov r2, r7
@@ -381,7 +390,10 @@ gerar_explosao:
         loadn r0, #'*'
         call set_tile
         loadn r0, #83
-        call two_by_two_sequence_draw
+        push r2
+        loadn r2, #2816
+        call two_by_two_sequence_draw_colored
+        pop r2
 
         mov r1, r6
         mov r2, r7
@@ -441,7 +453,10 @@ gerar_explosao:
         loadn r0, #'*'
         call set_tile
         loadn r0, #83
-        call two_by_two_sequence_draw
+        push r2
+        loadn r2, #2816
+        call two_by_two_sequence_draw_colored
+        pop r2
 
         mov r1, r6
         mov r2, r7
