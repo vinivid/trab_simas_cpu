@@ -120,11 +120,18 @@ function gridTilesToFile() {
 
     let qtt_player = 0
 
+    const pus = new Array() 
+    const tileMapPU: string[] = new Array('\n; Posicao que tem um power up dentro da caixa\n', 
+        '\n\ntile_map_pu : var #260\n'
+    )
+
     htmlMapGrid.forEach((ele, id) => {
+        tileMapPU.push(`\tstatic tile_map + #${id}, #0\n`)
         if(ele.style.backgroundColor == 'red') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)
             tileMapAsmOg.push(`\tstatic tile_map_og + #${id}, #'A'\n`)
         } else if (ele.style.backgroundColor === 'blue') {
+            pus.push(id)
             tileMapAsm.push(`\tstatic tile_map + #${id}, #'B'\n`)
             tileMapAsmOg.push(`\tstatic tile_map_og + #${id}, #'B'\n`)
         } else if (ele.style.backgroundColor === 'white') {
@@ -148,6 +155,11 @@ function gridTilesToFile() {
             console.log('invalid color')
         }
     })
+
+    for (let i = 1; i <= 4; i++) {
+        var has_pu = pus[Math.floor(Math.random() * pus.length)];
+        tileMapPU[has_pu] = `\tstatic tile_map + #${has_pu}, #1\n`
+    }
 
     downloadFile('mapa.asm', tileMapAsm.concat(players_pos).concat(tileMapAsmOg).concat(tileMapName).concat(tileMapLocation))
 }
