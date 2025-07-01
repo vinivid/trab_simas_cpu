@@ -126,7 +126,7 @@ function gridTilesToFile() {
     )
 
     htmlMapGrid.forEach((ele, id) => {
-        tileMapPU.push(`\tstatic tile_map + #${id}, #0\n`)
+        tileMapPU.push(`\tstatic tile_map_pu + #${id}, #0\n`)
         if(ele.style.backgroundColor == 'red') {
             tileMapAsm.push(`\tstatic tile_map + #${id}, #'A'\n`)
             tileMapAsmOg.push(`\tstatic tile_map_og + #${id}, #'A'\n`)
@@ -158,10 +158,10 @@ function gridTilesToFile() {
 
     for (let i = 1; i <= 4; i++) {
         var has_pu = pus[Math.floor(Math.random() * pus.length)];
-        tileMapPU[has_pu] = `\tstatic tile_map + #${has_pu}, #1\n`
+        tileMapPU[has_pu+2] = `\tstatic tile_map_pu + #${has_pu}, #1\n`
     }
 
-    downloadFile('mapa.asm', tileMapAsm.concat(players_pos).concat(tileMapAsmOg).concat(tileMapName).concat(tileMapLocation))
+    downloadFile('mapa.asm', tileMapAsm.concat(players_pos).concat(tileMapAsmOg).concat(tileMapName).concat(tileMapLocation).concat(tileMapPU))
 }
 
 function initExportButton() {

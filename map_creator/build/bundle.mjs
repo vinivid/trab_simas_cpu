@@ -1,4 +1,4 @@
-class d {
+class h {
   constructor(a) {
     this.selectedTile = a;
   }
@@ -6,50 +6,50 @@ class d {
     this.selectedTile = a;
   }
 }
-function u(e) {
+function y(e) {
   const a = {
     t0: "red",
     t1: "blue",
     t2: "white",
     t3: "yellow"
   };
-  Array.from(document.getElementsByClassName("tile-block")).forEach((t) => {
-    t.addEventListener("click", () => {
-      e.changeSelectedTile(a[t.id]);
+  Array.from(document.getElementsByClassName("tile-block")).forEach((o) => {
+    o.addEventListener("click", () => {
+      e.changeSelectedTile(a[o.id]);
     });
   });
 }
-function _(e) {
-  Array.from(document.getElementsByClassName("map-block")).forEach((l) => {
-    l.addEventListener("mouseover", () => {
-      e.isLeftDown && (l.style.backgroundColor = e.selectedTile);
-    }), l.addEventListener("mousedown", () => {
-      l.style.backgroundColor = e.selectedTile;
-    }), l.style.backgroundColor = "white";
+function f(e) {
+  Array.from(document.getElementsByClassName("map-block")).forEach((n) => {
+    n.addEventListener("mouseover", () => {
+      e.isLeftDown && (n.style.backgroundColor = e.selectedTile);
+    }), n.addEventListener("mousedown", () => {
+      n.style.backgroundColor = e.selectedTile;
+    }), n.style.backgroundColor = "white";
   });
 }
-function h() {
-  let e = new d("red");
+function g() {
+  let e = new h("red");
   return document.addEventListener("mousedown", () => {
     e.isLeftDown = !0;
   }), document.addEventListener("mouseup", () => {
     e.isLeftDown = !1;
-  }), u(e), _(e), e;
+  }), y(e), f(e), e;
 }
-function y(e, a) {
-  const l = new Blob(a, { type: "text/plain" }), t = document.createElement("a");
-  t.href = URL.createObjectURL(l), t.download = e, t.style.display = "none", document.body.appendChild(t), t.click(), document.body.removeChild(t), URL.revokeObjectURL(t.href);
+function w(e, a) {
+  const n = new Blob(a, { type: "text/plain" }), o = document.createElement("a");
+  o.href = URL.createObjectURL(n), o.download = e, o.style.display = "none", document.body.appendChild(o), o.click(), document.body.removeChild(o), URL.revokeObjectURL(o.href);
 }
-function f() {
+function b() {
   let e = document.getElementById("nam_map").value;
-  e.length > 40 && (e = "bomberman");
-  let a = 40 - e.length, l = Math.ceil(a / 2);
-  const t = `
+  e.length > 40 && (e = "bomberman"), e = e.toLowerCase();
+  let a = 40 - e.length, n = Math.ceil(a / 2);
+  const o = `
 tile_map_name : string "${e}"
-`, p = `
+`, u = `
 tile_map_location : var #1
-static tile_map_location + #0, #${l}
-`, m = Array.from(document.getElementsByClassName("map-block")), i = new Array(
+static tile_map_location + #0, #${n}
+`, _ = Array.from(document.getElementsByClassName("map-block")), s = new Array(
     `;   A tile map representa as tiles do mapa
 `,
     `;em uma grid de 20 x 13, para ser utilizada com sprites
@@ -58,38 +58,54 @@ static tile_map_location + #0, #${l}
 `,
     `tile_map : var #260
 `
-  ), n = new Array(
+  ), i = new Array(
     `
 ; Posicao do player e 1 player 2, em que o offset 0 eh o x e o offset 1 eh o y
 `,
     `player_one_ini_pos : var #2
 `
-  ), s = new Array(
+  ), r = new Array(
     `
 
 tile_map_og : var #260
 `
   );
   let c = 0;
-  m.forEach((r, o) => {
-    r.style.backgroundColor == "red" ? (i.push(`	static tile_map + #${o}, #'A'
-`), s.push(`	static tile_map_og + #${o}, #'A'
-`)) : r.style.backgroundColor === "blue" ? (i.push(`	static tile_map + #${o}, #'B'
-`), s.push(`	static tile_map_og + #${o}, #'B'
-`)) : r.style.backgroundColor === "white" ? (i.push(`	static tile_map + #${o}, #0
-`), s.push(`	static tile_map_og + #${o}, #0
-`)) : r.style.backgroundColor == "yellow" ? (i.push(`	static tile_map + #${o}, #0
-`), s.push(`	static tile_map_og + #${o}, #0
-`), c == 0 ? (n.push(`	static player_one_ini_pos + #0, #${o % 20}
-`), n.push(`	static player_one_ini_pos + #1, #${Math.floor(o / 20)}
-`), c += 1) : c == 1 && (n.push(`player_two_ini_pos : var #2
-`), n.push(`	static player_two_ini_pos + #0, #${o % 20}
-`), n.push(`	static player_two_ini_pos + #1, #${Math.floor(o / 20)}
+  const p = new Array(), m = new Array(
+    `
+; Posicao que tem um power up dentro da caixa
+`,
+    `
+
+tile_map_pu : var #260
+`
+  );
+  _.forEach((l, t) => {
+    m.push(`	static tile_map + #${t}, #0
+`), l.style.backgroundColor == "red" ? (s.push(`	static tile_map + #${t}, #'A'
+`), r.push(`	static tile_map_og + #${t}, #'A'
+`)) : l.style.backgroundColor === "blue" ? (p.push(t), s.push(`	static tile_map + #${t}, #'B'
+`), r.push(`	static tile_map_og + #${t}, #'B'
+`)) : l.style.backgroundColor === "white" ? (s.push(`	static tile_map + #${t}, #0
+`), r.push(`	static tile_map_og + #${t}, #0
+`)) : l.style.backgroundColor == "yellow" ? (s.push(`	static tile_map + #${t}, #0
+`), r.push(`	static tile_map_og + #${t}, #0
+`), c == 0 ? (i.push(`	static player_one_ini_pos + #0, #${t % 20}
+`), i.push(`	static player_one_ini_pos + #1, #${Math.floor(t / 20)}
+`), c += 1) : c == 1 && (i.push(`player_two_ini_pos : var #2
+`), i.push(`	static player_two_ini_pos + #0, #${t % 20}
+`), i.push(`	static player_two_ini_pos + #1, #${Math.floor(t / 20)}
 `), c += 1)) : console.log("invalid color");
-  }), y("mapa.asm", i.concat(n).concat(s).concat(t).concat(p));
+  });
+  for (let l = 1; l <= 4; l++) {
+    var d = p[Math.floor(Math.random() * p.length)];
+    m[d + 2] = `	static tile_map + #${d}, #1
+`;
+  }
+  w("mapa.asm", s.concat(i).concat(r).concat(o).concat(u).concat(m));
 }
-function g() {
-  document.getElementById("download-map").addEventListener("click", () => f());
+function E() {
+  document.getElementById("download-map").addEventListener("click", () => b());
 }
-h();
 g();
+E();
