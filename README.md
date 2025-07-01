@@ -26,7 +26,7 @@ O game possui 4 estados: tela inicial, de comandos, de game-over, e de gameplay.
 - Murilo Leandro Garcia
 - Vitor Daniel Resende 
 - João Daleffe Dias
-- Rodrigo Silva Almeida
-- Vinicius de Souza Freitas
+- Renan Banci Catarin, 14658181
+- Vinicius de Souza Freitas, 15491959
 - Glauco Fleury Corrêa de Moraes
-- Rodrigo Silva de Almeida
+- Rodrigo Silva de Almeida, 15645380
