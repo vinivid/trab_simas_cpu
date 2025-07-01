@@ -1497,7 +1497,8 @@ update_bombas:
 ; endereco de inicializacao.
 ;
 ; @param {endereco} r0 - Endereco de inicializacao do 
-; player
+; player.
+; @param {endereco} r5 - Endereco da bomba do player
 ; @param {endereco} r6 - Endereco da pos x do player 
 ; @param {endereco} r7 - Enderece da pos y do player
 ini_player:
@@ -1517,6 +1518,16 @@ ini_player:
     loadn r0, #'G'
     call set_tile
     call two_by_two_sequence_draw
+
+    ; setando a bomba colocada como falsa
+    loadn r1, #0
+    storei r5, r1
+
+    ; indo para o estado de fogo e setando para zero
+    loadn r1, #4
+    add r5, r5, r1
+    loadn r1, #0
+    storei r5, r1
 
     pop r2 
     pop r1 
@@ -1743,8 +1754,35 @@ player_para_direita:
         pop r0 
         rts
 
-; Coisas do player 1
+;   Verifica se o player morreu (tenha sido
+; atingindo por uma labareda), caso tenha morrido
+; retorna 1, caso contrario retorna zero. 
+;
+; @param {int} r1 - Posicao x do player.
+; @param {int} r2 - Posicao y do player.
+; @return {bool} r3 - 1 caso o player tenha morrido,
+; 0 caso contrario
+checar_se_player_morreu:
+    push r0
+    
+    ; pegando a tile que o player esta 
+    call get_tile
 
+    loadn r3, #'*'
+    cmp r3, r0
+    jeq o_player_morreu
+        ; se nao for uma tile de bomba
+        loadn r3, #0
+        pop r0
+        rts
+
+    ; se for uma tile de bomba
+    o_player_morreu:
+        loadn r3, #1        
+        pop r0
+        rts
+
+; Coisas do player 1
 
 ;  As coordenadas da localizacao do player 1
 pu_posx : var #1
@@ -1754,6 +1792,7 @@ pu_posy : var #1
 ini_player_um:
     push r0
     loadn r0, #player_one_ini_pos
+    loadn r5, #player_um_bomba
     loadn r6, #pu_posx
     loadn r7, #pu_posy
     call ini_player
@@ -1761,7 +1800,8 @@ ini_player_um:
     rts
 
 ;   A funcao  altera o estado do player um
-; com base no char passado (tecla).
+; com base no char passado (tecla), tambem checando 
+; pela morte do player.
 ;
 ; @param {char} r0 - Acao a ser feita no player, 'w' para 
 ; ir para cima, 'a' para ir para esquerda, 's' para ir para 
@@ -1770,14 +1810,22 @@ ini_player_um:
 ; nao faz nada.
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
-; 
+; @return {bool} r5 - Retorna 1 caso o player tenha morrido.
 atuar_no_player_um:
     push r1 
     push r2
+    push r3
     push r6
     push r7
     loadn r6, #pu_posx
     loadn r7, #pu_posy
+
+    load r1, pu_posx
+    load r2, pu_posy
+    call checar_se_player_morreu
+    loadn r1, #1
+    cmp r1, r3
+    jeq player_um_morte
 
     loadn r1, #'w'
     cmp r0, r1
@@ -1798,13 +1846,26 @@ atuar_no_player_um:
     loadn r1, #'z'
     cmp r0, r1 
     jne atuar_no_player_um_fim
+        ; o z esta pressionado, entao colocar a bomba
         loadn r0, #player_um_bomba
         load r1, pu_posx
         load r2, pu_posy
         call colocar_bomba
+
     atuar_no_player_um_fim:
+        loadn r5, #0
         pop r7 
         pop r6
+        pop r3
+        pop r2 
+        pop r1 
+        rts
+
+    player_um_morte:
+        loadn r5, #1
+        pop r7 
+        pop r6
+        pop r3
         pop r2 
         pop r1 
         rts
@@ -1820,6 +1881,7 @@ pd_posy : var #1
 ini_player_dois:
     push r0
     loadn r0, #player_two_ini_pos
+    loadn r5, #player_dois_bomba
     loadn r6, #pd_posx
     loadn r7, #pd_posy
     call ini_player
@@ -1840,10 +1902,18 @@ ini_player_dois:
 atuar_no_player_dois:
     push r1 
     push r2
+    push r3
     push r6
     push r7
     loadn r6, #pd_posx
     loadn r7, #pd_posy
+
+    load r1, pd_posx
+    load r2, pd_posy
+    call checar_se_player_morreu
+    loadn r1, #1
+    cmp r1, r3
+    jeq player_dois_morte
 
     loadn r1, #'i'
     cmp r0, r1
@@ -1870,8 +1940,19 @@ atuar_no_player_dois:
         call colocar_bomba
         
     atuar_no_player_dois_fim:
+        loadn r5, #0
         pop r7 
         pop r6
+        pop r3
+        pop r2 
+        pop r1 
+        rts
+
+    player_dois_morte:
+        loadn r5, #1
+        pop r7 
+        pop r6
+        pop r3
         pop r2 
         pop r1 
         rts
@@ -1879,16 +1960,45 @@ atuar_no_player_dois:
 ; coisas de ler input
 
 ;   Essa funcao le o teclado e ajusta o estado dos players 
-; caso alguma tecla de controle tenha sido pressionada.
+; caso alguma tecla de controle tenha sido pressionada, caso 
+; algum player tenha morrido, retorna o numero dele, zero caso
+; nao ninguem tenha morrido.
+;
+; @return {int} r0 - Numero do player que morreu, ou zero caso 
+; nao tenha ocorrido mortes.
 update_players:
-    push r0 
+    push r1
+    push r5
 
     inchar r0 
     call atuar_no_player_um
-    call atuar_no_player_dois
+    loadn r1, #1
+    cmp r5, r1
+    jeq player_um_mortis 
 
-    pop r0
-    rts
+    call atuar_no_player_dois
+    loadn r1, #1
+    cmp r5, r1
+    jeq player_dois_mortis 
+
+        ; nenhum dos playeres morreu entao retorna zero
+        loadn r0, #0
+        pop r5
+        pop r1
+        rts
+
+    player_um_mortis:
+        loadn r0, #1
+        pop r5
+        pop r1
+        rts
+
+    player_dois_mortis:
+        loadn r0, #2
+        pop r5
+        pop r1
+        rts
+
 
 menu_map : var #260
 	static menu_map + #0, #0
@@ -2186,6 +2296,8 @@ draw_start_menu:
 pu_loss : string "player 1 perdeu"
 pd_loss : string "player 2 perdeu"
 start_again_string : string "pressione z para reiniciar"
+wipe_loss : string "               "
+wipe_loss_restart : string "                                "
 
 ;  Imprime a string de que um dos players perdeu,
 ; se for o player 1 que perdeu eh necessasario passar
@@ -2202,26 +2314,44 @@ draw_player_lose:
 
         ; essa eh a branch se o player 2 perdeu
         loadn r0, #pd_loss
-        loadn r1, #45
+        loadn r1, #52
         loadn r2, #2304
         call print_str_colored
         jmp draw_player_lose_end
 
     player_one_lost:
         loadn r0, #pu_loss
-        loadn r1, #45
+        loadn r1, #52
         loadn r2, #2304
         call print_str_colored
 
     draw_player_lose_end:
         loadn r0, #start_again_string
-        loadn r1, #80
+        loadn r1, #87
         call print_str
 
         pop r2
         pop r1
         rts
 
+;   Remove o texto do player que perdeu.
+remover_player_perdeu:
+    push r0
+    push r1
+
+    ; remove o player perdeu 
+    loadn r0, #wipe_loss
+    loadn r1, #52
+    call print_str
+
+    ; remove o texto de restart
+    loadn r0, #wipe_loss_restart
+    loadn r1, #87
+    call print_str
+
+    pop r0
+    pop r1
+    rts
 main:
     call draw_start_menu
     loadn r1, #'z'
@@ -2233,12 +2363,39 @@ main:
         jmp menu_loop
     menu_loop_end:
 
+    ; inicializando o jogo
     loadn r5, #tile_map
     call draw_map_full
     call ini_player_um
     call ini_player_dois
     
     game_loop:
-        ;call update_players
-        ;call update_bombas
+        call update_players
+        ; checando se algum player morreu
+        loadn r1, #0
+        cmp r0, r1
+        jne death_state
+
+        call update_bombas
         jmp game_loop
+
+    death_state:
+        call draw_player_lose
+        loadn r1, #'z'
+        death_loop:
+            ; esperando pressionar z
+            inchar r0
+            cmp r0, r1
+            jeq death_loop_end
+            jmp death_loop
+
+        death_loop_end:
+            ; reinicalizando os dados e voltando 
+            ; para o jogo
+            call remover_player_perdeu
+            call restore_tile_map
+            loadn r5, #tile_map
+            call draw_map_full
+            call ini_player_um
+            call ini_player_dois
+            jmp game_loop

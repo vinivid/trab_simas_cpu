@@ -35,6 +35,8 @@ draw_start_menu:
 pu_loss : string "player 1 perdeu"
 pd_loss : string "player 2 perdeu"
 start_again_string : string "pressione z para reiniciar"
+wipe_loss : string "               "
+wipe_loss_restart : string "                                "
 
 ;  Imprime a string de que um dos players perdeu,
 ; se for o player 1 que perdeu eh necessasario passar
@@ -51,22 +53,41 @@ draw_player_lose:
 
         ; essa eh a branch se o player 2 perdeu
         loadn r0, #pd_loss
-        loadn r1, #45
+        loadn r1, #52
         loadn r2, #2304
         call print_str_colored
         jmp draw_player_lose_end
 
     player_one_lost:
         loadn r0, #pu_loss
-        loadn r1, #45
+        loadn r1, #52
         loadn r2, #2304
         call print_str_colored
 
     draw_player_lose_end:
         loadn r0, #start_again_string
-        loadn r1, #80
+        loadn r1, #87
         call print_str
 
         pop r2
         pop r1
         rts
+
+;   Remove o texto do player que perdeu.
+remover_player_perdeu:
+    push r0
+    push r1
+
+    ; remove o player perdeu 
+    loadn r0, #wipe_loss
+    loadn r1, #52
+    call print_str
+
+    ; remove o texto de restart
+    loadn r0, #wipe_loss_restart
+    loadn r1, #87
+    call print_str
+
+    pop r0
+    pop r1
+    rts

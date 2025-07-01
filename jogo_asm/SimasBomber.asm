@@ -16,6 +16,7 @@ main:
         jmp menu_loop
     menu_loop_end:
 
+    ; inicializando o jogo
     loadn r5, #tile_map
     call draw_map_full
     call ini_player_um
@@ -23,5 +24,31 @@ main:
     
     game_loop:
         call update_players
+        ; checando se algum player morreu
+        loadn r1, #0
+        cmp r0, r1
+        jne death_state
+
         call update_bombas
         jmp game_loop
+
+    death_state:
+        call draw_player_lose
+        loadn r1, #'z'
+        death_loop:
+            ; esperando pressionar z
+            inchar r0
+            cmp r0, r1
+            jeq death_loop_end
+            jmp death_loop
+
+        death_loop_end:
+            ; reinicalizando os dados e voltando 
+            ; para o jogo
+            call remover_player_perdeu
+            call restore_tile_map
+            loadn r5, #tile_map
+            call draw_map_full
+            call ini_player_um
+            call ini_player_dois
+            jmp game_loop

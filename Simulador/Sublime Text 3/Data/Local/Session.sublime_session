@@ -35,7 +35,7 @@
 					"file": "/V/projetos/trab_simas_cpu/Simulador/Hello4.asm",
 					"settings":
 					{
-						"buffer_size": 54765,
+						"buffer_size": 57870,
 						"line_ending": "Windows"
 					}
 				}
@@ -142,15 +142,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 54765,
+								"buffer_size": 57870,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										54526,
-										54526
+										56985,
+										56985
 									]
 								],
 								"settings":
@@ -159,7 +159,7 @@
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 48553.0,
+								"translation.y": 50914.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
