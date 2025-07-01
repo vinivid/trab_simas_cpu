@@ -59,6 +59,9 @@ ARCHITECTURE main of cpu is
 	CONSTANT INCHAR		: STD_LOGIC_VECTOR(5 downto 0) := "110101";		-- INCHAR RX     -- RX[5..0] <- KeyPressed	RX[15..6] <- 0's  	Format: < inst(6) | RX(3) | xxxxxxx >
 																								-- Se nao pressionar nenhuma tecla, RX recebe 00FF
 	
+	CONSTANT ADDI       : STD_LOGIC_VECTOR(5 downto 0) := "111111";  -- New instruction added by the group
+
+
 	CONSTANT ARITH			: STD_LOGIC_VECTOR(1 downto 0) := "10";
 	-- Aritmethic Instructions(All should begin wiht "10"):	
 	CONSTANT ADD 			: STD_LOGIC_VECTOR(3 downto 0) := "0000";			-- ADD RX RY RZ / ADDC RX RY RZ  	-- RX <- RY + RZ / RX <- RY + RZ + C  	-- b0=CarRY	  			Format: < inst(6) | RX(3) | RY(3) | RZ(3)| C >
@@ -434,6 +437,22 @@ begin
 			END IF;
 
 --========================================================================
+-- ADDI 			RX <- Imm RZ
+--========================================================================
+			IF(IR(15 DOWNTO 10) =  ADDI)) THEN
+				Op(5 downto 0) <= Ir(15 downto 10);
+				op(6) <= Ir(0);
+				
+				selM2 := sULA;
+				LoadReg(RX) := '1';
+				
+				selM6 := sULA;
+				LoadFR := '1';
+				
+				state := exec;
+			END IF;
+
+--========================================================================
 -- ARITH OPERATION ('INC' NOT INCLUDED) 			RX <- RY (?) RZ
 --========================================================================
 			IF(IR(15 DOWNTO 14) = ARITH AND IR(13 DOWNTO 10) /= INC) THEN
@@ -722,7 +741,20 @@ begin
 				
 				state := fetch;
 			END IF;
-						
+			
+--========================================================================
+-- ADDI 			RX <- Imm RZ
+--========================================================================
+			IF(IR(15 DOWNTO 10) = ADDI) THEN
+				M4 := REG(RZ);
+				IncPC := '1'
+				M3 := IR(15 DOWNTO 0);
+				
+				X <= M3;
+				y <= M4;
+
+				state := fetch
+			END IF;
 
 --========================================================================
 -- EXEC CALL    Pilha <- PC e PC <- 16bit END :
