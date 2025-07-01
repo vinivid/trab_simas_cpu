@@ -35,7 +35,7 @@
 					"file": "/V/projetos/trab_simas_cpu/Simulador/Hello4.asm",
 					"settings":
 					{
-						"buffer_size": 35670,
+						"buffer_size": 58787,
 						"line_ending": "Windows"
 					}
 				}
@@ -97,7 +97,7 @@
 			],
 			"find":
 			{
-				"height": 30.0
+				"height": 43.0
 			},
 			"find_in_files":
 			{
@@ -111,6 +111,7 @@
 				"case_sensitive": false,
 				"find_history":
 				[
+					"player_two_ini_pos",
 					"inchar",
 					"r*",
 					"r3",
@@ -142,15 +143,15 @@
 							"semi_transient": false,
 							"settings":
 							{
-								"buffer_size": 35670,
+								"buffer_size": 58787,
 								"regions":
 								{
 								},
 								"selection":
 								[
 									[
-										35670,
-										35670
+										44214,
+										44214
 									]
 								],
 								"settings":
@@ -159,7 +160,7 @@
 									"translate_tabs_to_spaces": false
 								},
 								"translation.x": 0.0,
-								"translation.y": 34210.0,
+								"translation.y": 39864.0,
 								"zoom_level": 1.0
 							},
 							"stack_index": 0,
@@ -201,13 +202,13 @@
 			"menu_visible": true,
 			"output.exec":
 			{
-				"height": 32.0
+				"height": 338.0
 			},
 			"output.find_results":
 			{
 				"height": 0.0
 			},
-			"position": "0,2,3,-1,-1,-1,-1,674,442,135,1098",
+			"position": "0,2,3,-32000,-32000,-1,-1,674,442,135,1098",
 			"project": "",
 			"replace":
 			{

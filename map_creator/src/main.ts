@@ -91,6 +91,18 @@ function downloadFile(filename : string, contents : string[]) {
 }
 
 function gridTilesToFile() {
+    let tileMapNameStr : string = (document.getElementById('nam_map')! as HTMLInputElement).value
+    if (tileMapNameStr.length > 40)
+        tileMapNameStr = "bomberman"
+    
+    tileMapNameStr = tileMapNameStr.toLowerCase()
+
+    let leftRigth = 40 - tileMapNameStr.length
+    let left = Math.ceil(leftRigth/2)
+
+    const tileMapName = `\ntile_map_name : string "${tileMapNameStr}"\n`
+    const tileMapLocation = `\ntile_map_location : var #1\nstatic tile_map_location + #0, #${left}\n`
+
     const htmlMapGrid = Array.from(document.getElementsByClassName('map-block')) as HTMLElement[]
     const tileMapAsm : string[] = new Array(';   A tile map representa as tiles do mapa\n',
         ';em uma grid de 20 x 13, para ser utilizada com sprites\n',
@@ -137,7 +149,7 @@ function gridTilesToFile() {
         }
     })
 
-    downloadFile('mapa.asm', tileMapAsm.concat(players_pos).concat(tileMapAsmOg))
+    downloadFile('mapa.asm', tileMapAsm.concat(players_pos).concat(tileMapAsmOg).concat(tileMapName).concat(tileMapLocation))
 }
 
 function initExportButton() {

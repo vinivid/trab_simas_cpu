@@ -3,6 +3,8 @@
 
 bomberman_msg : string "bomberman"
 init_msg : string "pressione z para iniciar"
+wipe_init_msg : string "                        "
+wipe_bomberman_str : string "         "
 
 ;  Desenha a tela de menu na tela.
 ;
@@ -90,4 +92,31 @@ remover_player_perdeu:
 
     pop r0
     pop r1
+    rts
+
+; Imprime o nome do mapa com a cor azul
+print_map_name:
+    push r0 
+    push r1
+    push r2
+
+    ; tirando o nome do bomberman
+    loadn r0, #wipe_bomberman_str
+    loadn r1, #16
+    call print_str
+
+    ; tirando o nome do bomberman
+    loadn r0, #wipe_init_msg
+    loadn r1, #87
+    call print_str
+
+    ; escrevendo o nome do mapa
+    loadn r0, #tile_map_name
+    load r1, tile_map_location
+    loadn r2, #3072 ; cor azul
+    call print_str_colored
+
+    pop r2
+    pop r1
+    pop r0
     rts
