@@ -3283,8 +3283,8 @@ main:
         jne death_state
         call update_bombas
 
-        loadn r0, #1000
-        loadn r1, #1
+        loadn r0, #10000
+        loadn r1, #5
         call delay_um_tempo
         jmp game_loop
 
