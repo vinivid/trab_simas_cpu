@@ -29,8 +29,11 @@ main:
         loadn r1, #0
         cmp r0, r1
         jne death_state
-
         call update_bombas
+
+        loadn r0, #1000
+        loadn r1, #1
+        call delay_um_tempo
         jmp game_loop
 
     death_state:

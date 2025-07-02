@@ -548,7 +548,7 @@ update_bomba:
 
     ; Se a bomba chegou no tempo limite explode 
     ; ela.
-    loadn r2, #10
+    loadn r2, #23
     cmp r1, r2
     jne fim_do_update_bomba
         ; retornando r0 ao endereco original
@@ -572,7 +572,7 @@ update_bomba:
         inc r1
         storei r0, r1 ; salvando quantidade de tempo da explosao
 
-        loadn r2, #4 ; valor do fim da bomba
+        loadn r2, #7 ; valor do fim da bomba
         cmp r1, r2
         jne fim_do_update_bomba
             mov r0, r7
