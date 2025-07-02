@@ -9,10 +9,6 @@ main:
     call draw_start_menu
     loadn r1, #'z'
     ; esperando o botao de start
-    loadn r0, #79
-    loadn r1, #0
-    loadn r2, #2304
-    call two_by_two_sequence_draw_colored
     loadn r1, #'z'
     menu_loop:
         inchar r0
@@ -24,7 +20,7 @@ main:
     ; inicializando o jogo
     loadn r5, #tile_map
     call draw_map_full
-    call print_map_name
+    ;call print_map_name
     call ini_player_um
     call ini_player_dois
     

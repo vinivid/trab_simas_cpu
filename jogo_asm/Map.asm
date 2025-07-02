@@ -101,14 +101,14 @@ draw_map_full:
         draw_brick_tile:
             push r2
             loadn r2, #1792
-            call two_by_two_sequence_draw_colored
+            call two_by_two_draw_colored
             pop r2
             jmp end_draw_if
 
         draw_box_tile:
             push r2
             loadn r2, #256
-            call two_by_two_sequence_draw_colored
+            call two_by_two_draw_colored
             pop r2
             jmp end_draw_if
 

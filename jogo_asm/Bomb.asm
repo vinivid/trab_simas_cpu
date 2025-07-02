@@ -90,6 +90,7 @@ apagar_labaredas:
     push r2
     push r3
     push r4
+    push r5
     push r7
 
     ; salvando o endereco numa registradora melhor
@@ -115,29 +116,38 @@ apagar_labaredas:
         cmp r3, r4
         jeq remover_tiles_fim
 
-        ; valor da tile na posicao x y 
-        loadi r0, r7
+        ; posicao x y da tile da labareda 
         inc r7
         loadi r1, r7
         inc r7
         loadi r2, r7
         inc r7
 
-        ; Se for para adicionar power ups, 
-        ; em vez de quebrar os locais e transformar
-        ; em livre, teria de checar se eh uma caixa 
-        ; com o r0 e spawnar o powerup caso a caixa 
-        ; tenha
+        ; se tiver um power up seta a tile quebrada 
+        ; para uma do power up e desenha o power up
+        call checar_se_tem_power_up
+        loadn r5, #1
+        cmp r0, r5
+        jeq tem_powerup_nessa_posicao
+            loadn r0, #0
+            call set_tile
+            call two_by_two_draw
+            jmp final_do_if_do_powerup
 
-        loadn r0, #0
-        call set_tile
-        call two_by_two_draw
+        tem_powerup_nessa_posicao:
+            loadn r0, #'P'
+            call set_tile
+            loadn r0, #'W'
+            call two_by_two_sequence_draw
+
+        final_do_if_do_powerup:
 
         inc r4
         jmp remover_tiles
     remover_tiles_fim:
 
-    pop r7 
+    pop r7
+    pop r5
     pop r4
     pop r3
     pop r2

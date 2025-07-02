@@ -29,18 +29,18 @@ tile_map : var #260
 	static tile_map + #24, #0
 	static tile_map + #25, #0
 	static tile_map + #26, #0
-	static tile_map + #27, #0
+	static tile_map + #27, #'A'
 	static tile_map + #28, #0
 	static tile_map + #29, #0
 	static tile_map + #30, #0
 	static tile_map + #31, #0
 	static tile_map + #32, #0
-	static tile_map + #33, #0
-	static tile_map + #34, #0
-	static tile_map + #35, #0
-	static tile_map + #36, #0
-	static tile_map + #37, #0
-	static tile_map + #38, #0
+	static tile_map + #33, #'A'
+	static tile_map + #34, #'A'
+	static tile_map + #35, #'A'
+	static tile_map + #36, #'A'
+	static tile_map + #37, #'A'
+	static tile_map + #38, #'A'
 	static tile_map + #39, #'A'
 	static tile_map + #40, #'A'
 	static tile_map + #41, #0
@@ -49,13 +49,13 @@ tile_map : var #260
 	static tile_map + #44, #0
 	static tile_map + #45, #0
 	static tile_map + #46, #0
-	static tile_map + #47, #'B'
+	static tile_map + #47, #0
 	static tile_map + #48, #0
 	static tile_map + #49, #0
 	static tile_map + #50, #0
 	static tile_map + #51, #0
 	static tile_map + #52, #0
-	static tile_map + #53, #'B'
+	static tile_map + #53, #0
 	static tile_map + #54, #0
 	static tile_map + #55, #0
 	static tile_map + #56, #0
@@ -69,13 +69,13 @@ tile_map : var #260
 	static tile_map + #64, #0
 	static tile_map + #65, #0
 	static tile_map + #66, #0
-	static tile_map + #67, #'B'
+	static tile_map + #67, #0
 	static tile_map + #68, #0
 	static tile_map + #69, #0
 	static tile_map + #70, #0
 	static tile_map + #71, #0
 	static tile_map + #72, #0
-	static tile_map + #73, #'B'
+	static tile_map + #73, #0
 	static tile_map + #74, #0
 	static tile_map + #75, #0
 	static tile_map + #76, #0
@@ -83,127 +83,127 @@ tile_map : var #260
 	static tile_map + #78, #0
 	static tile_map + #79, #'A'
 	static tile_map + #80, #'A'
-	static tile_map + #81, #0
-	static tile_map + #82, #'B'
+	static tile_map + #81, #'A'
+	static tile_map + #82, #0
 	static tile_map + #83, #0
 	static tile_map + #84, #0
 	static tile_map + #85, #0
 	static tile_map + #86, #0
-	static tile_map + #87, #'B'
+	static tile_map + #87, #0
 	static tile_map + #88, #0
 	static tile_map + #89, #0
 	static tile_map + #90, #0
 	static tile_map + #91, #0
 	static tile_map + #92, #0
-	static tile_map + #93, #'B'
+	static tile_map + #93, #0
 	static tile_map + #94, #0
-	static tile_map + #95, #'B'
-	static tile_map + #96, #'B'
-	static tile_map + #97, #'B'
+	static tile_map + #95, #0
+	static tile_map + #96, #0
+	static tile_map + #97, #0
 	static tile_map + #98, #0
 	static tile_map + #99, #'A'
-	static tile_map + #100, #'A'
-	static tile_map + #101, #0
-	static tile_map + #102, #'B'
-	static tile_map + #103, #'B'
+	static tile_map + #100, #0
+	static tile_map + #101, #'A'
+	static tile_map + #102, #0
+	static tile_map + #103, #0
 	static tile_map + #104, #0
 	static tile_map + #105, #0
 	static tile_map + #106, #0
-	static tile_map + #107, #'B'
-	static tile_map + #108, #'A'
-	static tile_map + #109, #'A'
-	static tile_map + #110, #'A'
-	static tile_map + #111, #'A'
-	static tile_map + #112, #'A'
-	static tile_map + #113, #'B'
+	static tile_map + #107, #0
+	static tile_map + #108, #0
+	static tile_map + #109, #0
+	static tile_map + #110, #0
+	static tile_map + #111, #0
+	static tile_map + #112, #0
+	static tile_map + #113, #0
 	static tile_map + #114, #0
 	static tile_map + #115, #0
 	static tile_map + #116, #0
-	static tile_map + #117, #'B'
+	static tile_map + #117, #0
 	static tile_map + #118, #0
 	static tile_map + #119, #'A'
-	static tile_map + #120, #'A'
-	static tile_map + #121, #0
+	static tile_map + #120, #0
+	static tile_map + #121, #'A'
 	static tile_map + #122, #0
 	static tile_map + #123, #0
 	static tile_map + #124, #0
 	static tile_map + #125, #0
 	static tile_map + #126, #0
 	static tile_map + #127, #'B'
-	static tile_map + #128, #0
-	static tile_map + #129, #0
+	static tile_map + #128, #'B'
+	static tile_map + #129, #'B'
 	static tile_map + #130, #0
 	static tile_map + #131, #0
 	static tile_map + #132, #0
-	static tile_map + #133, #'B'
+	static tile_map + #133, #0
 	static tile_map + #134, #0
 	static tile_map + #135, #0
 	static tile_map + #136, #0
 	static tile_map + #137, #0
 	static tile_map + #138, #0
 	static tile_map + #139, #'A'
-	static tile_map + #140, #'A'
-	static tile_map + #141, #0
+	static tile_map + #140, #0
+	static tile_map + #141, #'A'
 	static tile_map + #142, #0
 	static tile_map + #143, #0
 	static tile_map + #144, #0
 	static tile_map + #145, #0
 	static tile_map + #146, #0
 	static tile_map + #147, #'B'
-	static tile_map + #148, #0
-	static tile_map + #149, #0
+	static tile_map + #148, #'B'
+	static tile_map + #149, #'B'
 	static tile_map + #150, #0
 	static tile_map + #151, #0
 	static tile_map + #152, #0
-	static tile_map + #153, #'B'
+	static tile_map + #153, #0
 	static tile_map + #154, #0
 	static tile_map + #155, #0
 	static tile_map + #156, #0
 	static tile_map + #157, #0
 	static tile_map + #158, #0
 	static tile_map + #159, #'A'
-	static tile_map + #160, #'A'
-	static tile_map + #161, #0
+	static tile_map + #160, #0
+	static tile_map + #161, #'A'
 	static tile_map + #162, #0
 	static tile_map + #163, #0
 	static tile_map + #164, #0
 	static tile_map + #165, #0
 	static tile_map + #166, #0
 	static tile_map + #167, #'B'
-	static tile_map + #168, #0
-	static tile_map + #169, #0
+	static tile_map + #168, #'B'
+	static tile_map + #169, #'B'
 	static tile_map + #170, #0
 	static tile_map + #171, #0
 	static tile_map + #172, #0
-	static tile_map + #173, #'B'
+	static tile_map + #173, #0
 	static tile_map + #174, #0
 	static tile_map + #175, #0
 	static tile_map + #176, #0
 	static tile_map + #177, #0
 	static tile_map + #178, #0
 	static tile_map + #179, #'A'
-	static tile_map + #180, #'A'
-	static tile_map + #181, #0
+	static tile_map + #180, #0
+	static tile_map + #181, #'A'
 	static tile_map + #182, #0
 	static tile_map + #183, #0
 	static tile_map + #184, #0
 	static tile_map + #185, #0
 	static tile_map + #186, #0
-	static tile_map + #187, #'B'
+	static tile_map + #187, #0
 	static tile_map + #188, #0
 	static tile_map + #189, #0
 	static tile_map + #190, #0
 	static tile_map + #191, #0
 	static tile_map + #192, #0
-	static tile_map + #193, #'B'
+	static tile_map + #193, #0
 	static tile_map + #194, #0
 	static tile_map + #195, #0
 	static tile_map + #196, #0
 	static tile_map + #197, #0
 	static tile_map + #198, #0
 	static tile_map + #199, #'A'
-	static tile_map + #200, #'A'
-	static tile_map + #201, #0
+	static tile_map + #200, #0
+	static tile_map + #201, #'A'
 	static tile_map + #202, #0
 	static tile_map + #203, #0
 	static tile_map + #204, #0
@@ -268,7 +268,7 @@ player_one_ini_pos : var #2
 	static player_one_ini_pos + #0, #2
 	static player_one_ini_pos + #1, #2
 player_two_ini_pos : var #2
-	static player_two_ini_pos + #0, #17
+	static player_two_ini_pos + #0, #16
 	static player_two_ini_pos + #1, #10
 
 
@@ -300,18 +300,18 @@ tile_map_og : var #260
 	static tile_map_og + #24, #0
 	static tile_map_og + #25, #0
 	static tile_map_og + #26, #0
-	static tile_map_og + #27, #0
+	static tile_map_og + #27, #'A'
 	static tile_map_og + #28, #0
 	static tile_map_og + #29, #0
 	static tile_map_og + #30, #0
 	static tile_map_og + #31, #0
 	static tile_map_og + #32, #0
-	static tile_map_og + #33, #0
-	static tile_map_og + #34, #0
-	static tile_map_og + #35, #0
-	static tile_map_og + #36, #0
-	static tile_map_og + #37, #0
-	static tile_map_og + #38, #0
+	static tile_map_og + #33, #'A'
+	static tile_map_og + #34, #'A'
+	static tile_map_og + #35, #'A'
+	static tile_map_og + #36, #'A'
+	static tile_map_og + #37, #'A'
+	static tile_map_og + #38, #'A'
 	static tile_map_og + #39, #'A'
 	static tile_map_og + #40, #'A'
 	static tile_map_og + #41, #0
@@ -320,13 +320,13 @@ tile_map_og : var #260
 	static tile_map_og + #44, #0
 	static tile_map_og + #45, #0
 	static tile_map_og + #46, #0
-	static tile_map_og + #47, #'B'
+	static tile_map_og + #47, #0
 	static tile_map_og + #48, #0
 	static tile_map_og + #49, #0
 	static tile_map_og + #50, #0
 	static tile_map_og + #51, #0
 	static tile_map_og + #52, #0
-	static tile_map_og + #53, #'B'
+	static tile_map_og + #53, #0
 	static tile_map_og + #54, #0
 	static tile_map_og + #55, #0
 	static tile_map_og + #56, #0
@@ -340,13 +340,13 @@ tile_map_og : var #260
 	static tile_map_og + #64, #0
 	static tile_map_og + #65, #0
 	static tile_map_og + #66, #0
-	static tile_map_og + #67, #'B'
+	static tile_map_og + #67, #0
 	static tile_map_og + #68, #0
 	static tile_map_og + #69, #0
 	static tile_map_og + #70, #0
 	static tile_map_og + #71, #0
 	static tile_map_og + #72, #0
-	static tile_map_og + #73, #'B'
+	static tile_map_og + #73, #0
 	static tile_map_og + #74, #0
 	static tile_map_og + #75, #0
 	static tile_map_og + #76, #0
@@ -354,127 +354,127 @@ tile_map_og : var #260
 	static tile_map_og + #78, #0
 	static tile_map_og + #79, #'A'
 	static tile_map_og + #80, #'A'
-	static tile_map_og + #81, #0
-	static tile_map_og + #82, #'B'
+	static tile_map_og + #81, #'A'
+	static tile_map_og + #82, #0
 	static tile_map_og + #83, #0
 	static tile_map_og + #84, #0
 	static tile_map_og + #85, #0
 	static tile_map_og + #86, #0
-	static tile_map_og + #87, #'B'
+	static tile_map_og + #87, #0
 	static tile_map_og + #88, #0
 	static tile_map_og + #89, #0
 	static tile_map_og + #90, #0
 	static tile_map_og + #91, #0
 	static tile_map_og + #92, #0
-	static tile_map_og + #93, #'B'
+	static tile_map_og + #93, #0
 	static tile_map_og + #94, #0
-	static tile_map_og + #95, #'B'
-	static tile_map_og + #96, #'B'
-	static tile_map_og + #97, #'B'
+	static tile_map_og + #95, #0
+	static tile_map_og + #96, #0
+	static tile_map_og + #97, #0
 	static tile_map_og + #98, #0
 	static tile_map_og + #99, #'A'
-	static tile_map_og + #100, #'A'
-	static tile_map_og + #101, #0
-	static tile_map_og + #102, #'B'
-	static tile_map_og + #103, #'B'
+	static tile_map_og + #100, #0
+	static tile_map_og + #101, #'A'
+	static tile_map_og + #102, #0
+	static tile_map_og + #103, #0
 	static tile_map_og + #104, #0
 	static tile_map_og + #105, #0
 	static tile_map_og + #106, #0
-	static tile_map_og + #107, #'B'
-	static tile_map_og + #108, #'A'
-	static tile_map_og + #109, #'A'
-	static tile_map_og + #110, #'A'
-	static tile_map_og + #111, #'A'
-	static tile_map_og + #112, #'A'
-	static tile_map_og + #113, #'B'
+	static tile_map_og + #107, #0
+	static tile_map_og + #108, #0
+	static tile_map_og + #109, #0
+	static tile_map_og + #110, #0
+	static tile_map_og + #111, #0
+	static tile_map_og + #112, #0
+	static tile_map_og + #113, #0
 	static tile_map_og + #114, #0
 	static tile_map_og + #115, #0
 	static tile_map_og + #116, #0
-	static tile_map_og + #117, #'B'
+	static tile_map_og + #117, #0
 	static tile_map_og + #118, #0
 	static tile_map_og + #119, #'A'
-	static tile_map_og + #120, #'A'
-	static tile_map_og + #121, #0
+	static tile_map_og + #120, #0
+	static tile_map_og + #121, #'A'
 	static tile_map_og + #122, #0
 	static tile_map_og + #123, #0
 	static tile_map_og + #124, #0
 	static tile_map_og + #125, #0
 	static tile_map_og + #126, #0
 	static tile_map_og + #127, #'B'
-	static tile_map_og + #128, #0
-	static tile_map_og + #129, #0
+	static tile_map_og + #128, #'B'
+	static tile_map_og + #129, #'B'
 	static tile_map_og + #130, #0
 	static tile_map_og + #131, #0
 	static tile_map_og + #132, #0
-	static tile_map_og + #133, #'B'
+	static tile_map_og + #133, #0
 	static tile_map_og + #134, #0
 	static tile_map_og + #135, #0
 	static tile_map_og + #136, #0
 	static tile_map_og + #137, #0
 	static tile_map_og + #138, #0
 	static tile_map_og + #139, #'A'
-	static tile_map_og + #140, #'A'
-	static tile_map_og + #141, #0
+	static tile_map_og + #140, #0
+	static tile_map_og + #141, #'A'
 	static tile_map_og + #142, #0
 	static tile_map_og + #143, #0
 	static tile_map_og + #144, #0
 	static tile_map_og + #145, #0
 	static tile_map_og + #146, #0
 	static tile_map_og + #147, #'B'
-	static tile_map_og + #148, #0
-	static tile_map_og + #149, #0
+	static tile_map_og + #148, #'B'
+	static tile_map_og + #149, #'B'
 	static tile_map_og + #150, #0
 	static tile_map_og + #151, #0
 	static tile_map_og + #152, #0
-	static tile_map_og + #153, #'B'
+	static tile_map_og + #153, #0
 	static tile_map_og + #154, #0
 	static tile_map_og + #155, #0
 	static tile_map_og + #156, #0
 	static tile_map_og + #157, #0
 	static tile_map_og + #158, #0
 	static tile_map_og + #159, #'A'
-	static tile_map_og + #160, #'A'
-	static tile_map_og + #161, #0
+	static tile_map_og + #160, #0
+	static tile_map_og + #161, #'A'
 	static tile_map_og + #162, #0
 	static tile_map_og + #163, #0
 	static tile_map_og + #164, #0
 	static tile_map_og + #165, #0
 	static tile_map_og + #166, #0
 	static tile_map_og + #167, #'B'
-	static tile_map_og + #168, #0
-	static tile_map_og + #169, #0
+	static tile_map_og + #168, #'B'
+	static tile_map_og + #169, #'B'
 	static tile_map_og + #170, #0
 	static tile_map_og + #171, #0
 	static tile_map_og + #172, #0
-	static tile_map_og + #173, #'B'
+	static tile_map_og + #173, #0
 	static tile_map_og + #174, #0
 	static tile_map_og + #175, #0
 	static tile_map_og + #176, #0
 	static tile_map_og + #177, #0
 	static tile_map_og + #178, #0
 	static tile_map_og + #179, #'A'
-	static tile_map_og + #180, #'A'
-	static tile_map_og + #181, #0
+	static tile_map_og + #180, #0
+	static tile_map_og + #181, #'A'
 	static tile_map_og + #182, #0
 	static tile_map_og + #183, #0
 	static tile_map_og + #184, #0
 	static tile_map_og + #185, #0
 	static tile_map_og + #186, #0
-	static tile_map_og + #187, #'B'
+	static tile_map_og + #187, #0
 	static tile_map_og + #188, #0
 	static tile_map_og + #189, #0
 	static tile_map_og + #190, #0
 	static tile_map_og + #191, #0
 	static tile_map_og + #192, #0
-	static tile_map_og + #193, #'B'
+	static tile_map_og + #193, #0
 	static tile_map_og + #194, #0
 	static tile_map_og + #195, #0
 	static tile_map_og + #196, #0
 	static tile_map_og + #197, #0
 	static tile_map_og + #198, #0
 	static tile_map_og + #199, #'A'
-	static tile_map_og + #200, #'A'
-	static tile_map_og + #201, #0
+	static tile_map_og + #200, #0
+	static tile_map_og + #201, #'A'
 	static tile_map_og + #202, #0
 	static tile_map_og + #203, #0
 	static tile_map_og + #204, #0
@@ -534,7 +534,272 @@ tile_map_og : var #260
 	static tile_map_og + #258, #'A'
 	static tile_map_og + #259, #'A'
 
-tile_map_name : string "degera"
+tile_map_name : string "degora"
 
 tile_map_location : var #1
 static tile_map_location + #0, #17
+
+; Posicao que tem um power up dentro da caixa
+
+
+tile_map_pu : var #260
+	static tile_map + #0, #0
+	static tile_map + #1, #0
+	static tile_map + #2, #0
+	static tile_map + #3, #0
+	static tile_map + #4, #0
+	static tile_map + #5, #0
+	static tile_map + #6, #0
+	static tile_map + #7, #0
+	static tile_map + #8, #0
+	static tile_map + #9, #0
+	static tile_map + #10, #0
+	static tile_map + #11, #0
+	static tile_map + #12, #0
+	static tile_map + #13, #0
+	static tile_map + #14, #0
+	static tile_map + #15, #0
+	static tile_map + #16, #0
+	static tile_map + #17, #0
+	static tile_map + #18, #0
+	static tile_map + #19, #0
+	static tile_map + #20, #0
+	static tile_map + #21, #0
+	static tile_map + #22, #0
+	static tile_map + #23, #0
+	static tile_map + #24, #0
+	static tile_map + #25, #0
+	static tile_map + #26, #0
+	static tile_map + #27, #0
+	static tile_map + #28, #0
+	static tile_map + #29, #0
+	static tile_map + #30, #0
+	static tile_map + #31, #0
+	static tile_map + #32, #0
+	static tile_map + #33, #0
+	static tile_map + #34, #0
+	static tile_map + #35, #0
+	static tile_map + #36, #0
+	static tile_map + #37, #0
+	static tile_map + #38, #0
+	static tile_map + #39, #0
+	static tile_map + #40, #0
+	static tile_map + #41, #0
+	static tile_map + #42, #0
+	static tile_map + #43, #0
+	static tile_map + #44, #0
+	static tile_map + #45, #0
+	static tile_map + #46, #0
+	static tile_map + #47, #0
+	static tile_map + #48, #0
+	static tile_map + #49, #0
+	static tile_map + #50, #0
+	static tile_map + #51, #0
+	static tile_map + #52, #0
+	static tile_map + #53, #0
+	static tile_map + #54, #0
+	static tile_map + #55, #0
+	static tile_map + #56, #0
+	static tile_map + #57, #0
+	static tile_map + #58, #0
+	static tile_map + #59, #0
+	static tile_map + #60, #0
+	static tile_map + #61, #0
+	static tile_map + #62, #0
+	static tile_map + #63, #0
+	static tile_map + #64, #0
+	static tile_map + #65, #0
+	static tile_map + #66, #0
+	static tile_map + #67, #0
+	static tile_map + #68, #0
+	static tile_map + #69, #0
+	static tile_map + #70, #0
+	static tile_map + #71, #0
+	static tile_map + #72, #0
+	static tile_map + #73, #0
+	static tile_map + #74, #0
+	static tile_map + #75, #0
+	static tile_map + #76, #0
+	static tile_map + #77, #0
+	static tile_map + #78, #0
+	static tile_map + #79, #0
+	static tile_map + #80, #0
+	static tile_map + #81, #0
+	static tile_map + #82, #0
+	static tile_map + #83, #0
+	static tile_map + #84, #0
+	static tile_map + #85, #0
+	static tile_map + #86, #0
+	static tile_map + #87, #0
+	static tile_map + #88, #0
+	static tile_map + #89, #0
+	static tile_map + #90, #0
+	static tile_map + #91, #0
+	static tile_map + #92, #0
+	static tile_map + #93, #0
+	static tile_map + #94, #0
+	static tile_map + #95, #0
+	static tile_map + #96, #0
+	static tile_map + #97, #0
+	static tile_map + #98, #0
+	static tile_map + #99, #0
+	static tile_map + #100, #0
+	static tile_map + #101, #0
+	static tile_map + #102, #0
+	static tile_map + #103, #0
+	static tile_map + #104, #0
+	static tile_map + #105, #0
+	static tile_map + #106, #0
+	static tile_map + #107, #0
+	static tile_map + #108, #0
+	static tile_map + #109, #0
+	static tile_map + #110, #0
+	static tile_map + #111, #0
+	static tile_map + #112, #0
+	static tile_map + #113, #0
+	static tile_map + #114, #0
+	static tile_map + #115, #0
+	static tile_map + #116, #0
+	static tile_map + #117, #0
+	static tile_map + #118, #0
+	static tile_map + #119, #0
+	static tile_map + #120, #0
+	static tile_map + #121, #0
+	static tile_map + #122, #0
+	static tile_map + #123, #0
+	static tile_map + #124, #0
+	static tile_map + #125, #0
+	static tile_map + #126, #0
+	static tile_map + #127, #0
+	static tile_map + #128, #0
+	static tile_map + #129, #0
+	static tile_map + #130, #0
+	static tile_map + #131, #0
+	static tile_map + #132, #0
+	static tile_map + #133, #0
+	static tile_map + #134, #0
+	static tile_map + #135, #0
+	static tile_map + #136, #0
+	static tile_map + #137, #0
+	static tile_map + #138, #0
+	static tile_map + #139, #0
+	static tile_map + #140, #0
+	static tile_map + #141, #0
+	static tile_map + #142, #0
+	static tile_map + #143, #0
+	static tile_map + #144, #0
+	static tile_map + #145, #0
+	static tile_map + #146, #0
+	static tile_map + #147, #0
+	static tile_map + #148, #0
+	static tile_map + #149, #0
+	static tile_map + #150, #0
+	static tile_map + #151, #0
+	static tile_map + #152, #0
+	static tile_map + #153, #0
+	static tile_map + #154, #0
+	static tile_map + #155, #0
+	static tile_map + #156, #0
+	static tile_map + #157, #0
+	static tile_map + #158, #0
+	static tile_map + #159, #0
+	static tile_map + #160, #0
+	static tile_map + #161, #0
+	static tile_map + #162, #0
+	static tile_map + #163, #0
+	static tile_map + #164, #0
+	static tile_map + #165, #0
+	static tile_map + #166, #0
+	static tile_map + #167, #1
+	static tile_map + #168, #1
+	static tile_map + #169, #1
+	static tile_map + #170, #0
+	static tile_map + #171, #0
+	static tile_map + #172, #0
+	static tile_map + #173, #0
+	static tile_map + #174, #0
+	static tile_map + #175, #0
+	static tile_map + #176, #0
+	static tile_map + #177, #0
+	static tile_map + #178, #0
+	static tile_map + #179, #0
+	static tile_map + #180, #0
+	static tile_map + #181, #0
+	static tile_map + #182, #0
+	static tile_map + #183, #0
+	static tile_map + #184, #0
+	static tile_map + #185, #0
+	static tile_map + #186, #0
+	static tile_map + #187, #0
+	static tile_map + #188, #0
+	static tile_map + #189, #0
+	static tile_map + #190, #0
+	static tile_map + #191, #0
+	static tile_map + #192, #0
+	static tile_map + #193, #0
+	static tile_map + #194, #0
+	static tile_map + #195, #0
+	static tile_map + #196, #0
+	static tile_map + #197, #0
+	static tile_map + #198, #0
+	static tile_map + #199, #0
+	static tile_map + #200, #0
+	static tile_map + #201, #0
+	static tile_map + #202, #0
+	static tile_map + #203, #0
+	static tile_map + #204, #0
+	static tile_map + #205, #0
+	static tile_map + #206, #0
+	static tile_map + #207, #0
+	static tile_map + #208, #0
+	static tile_map + #209, #0
+	static tile_map + #210, #0
+	static tile_map + #211, #0
+	static tile_map + #212, #0
+	static tile_map + #213, #0
+	static tile_map + #214, #0
+	static tile_map + #215, #0
+	static tile_map + #216, #0
+	static tile_map + #217, #0
+	static tile_map + #218, #0
+	static tile_map + #219, #0
+	static tile_map + #220, #0
+	static tile_map + #221, #0
+	static tile_map + #222, #0
+	static tile_map + #223, #0
+	static tile_map + #224, #0
+	static tile_map + #225, #0
+	static tile_map + #226, #0
+	static tile_map + #227, #0
+	static tile_map + #228, #0
+	static tile_map + #229, #0
+	static tile_map + #230, #0
+	static tile_map + #231, #0
+	static tile_map + #232, #0
+	static tile_map + #233, #0
+	static tile_map + #234, #0
+	static tile_map + #235, #0
+	static tile_map + #236, #0
+	static tile_map + #237, #0
+	static tile_map + #238, #0
+	static tile_map + #239, #0
+	static tile_map + #240, #0
+	static tile_map + #241, #0
+	static tile_map + #242, #0
+	static tile_map + #243, #0
+	static tile_map + #244, #0
+	static tile_map + #245, #0
+	static tile_map + #246, #0
+	static tile_map + #247, #0
+	static tile_map + #248, #0
+	static tile_map + #249, #0
+	static tile_map + #250, #0
+	static tile_map + #251, #0
+	static tile_map + #252, #0
+	static tile_map + #253, #0
+	static tile_map + #254, #0
+	static tile_map + #255, #0
+	static tile_map + #256, #0
+	static tile_map + #257, #0
+	static tile_map + #258, #0
+	static tile_map + #259, #0
