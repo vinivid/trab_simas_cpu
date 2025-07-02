@@ -6,7 +6,7 @@ class h {
     this.selectedTile = a;
   }
 }
-function y(e) {
+function f(e) {
   const a = {
     t0: "red",
     t1: "blue",
@@ -19,7 +19,7 @@ function y(e) {
     });
   });
 }
-function f(e) {
+function y(e) {
   Array.from(document.getElementsByClassName("map-block")).forEach((n) => {
     n.addEventListener("mouseover", () => {
       e.isLeftDown && (n.style.backgroundColor = e.selectedTile);
@@ -34,7 +34,7 @@ function g() {
     e.isLeftDown = !0;
   }), document.addEventListener("mouseup", () => {
     e.isLeftDown = !1;
-  }), y(e), f(e), e;
+  }), f(e), y(e), e;
 }
 function w(e, a) {
   const n = new Blob(a, { type: "text/plain" }), o = document.createElement("a");
@@ -71,7 +71,7 @@ tile_map_og : var #260
 `
   );
   let c = 0;
-  const p = new Array(), m = new Array(
+  const m = new Array(), p = new Array(
     `
 ; Posicao que tem um power up dentro da caixa
 `,
@@ -81,10 +81,10 @@ tile_map_pu : var #260
 `
   );
   _.forEach((l, t) => {
-    m.push(`	static tile_map + #${t}, #0
+    p.push(`	static tile_map_pu + #${t}, #0
 `), l.style.backgroundColor == "red" ? (s.push(`	static tile_map + #${t}, #'A'
 `), r.push(`	static tile_map_og + #${t}, #'A'
-`)) : l.style.backgroundColor === "blue" ? (p.push(t), s.push(`	static tile_map + #${t}, #'B'
+`)) : l.style.backgroundColor === "blue" ? (m.push(t), s.push(`	static tile_map + #${t}, #'B'
 `), r.push(`	static tile_map_og + #${t}, #'B'
 `)) : l.style.backgroundColor === "white" ? (s.push(`	static tile_map + #${t}, #0
 `), r.push(`	static tile_map_og + #${t}, #0
@@ -98,11 +98,11 @@ tile_map_pu : var #260
 `), c += 1)) : console.log("invalid color");
   });
   for (let l = 1; l <= 4; l++) {
-    var d = p[Math.floor(Math.random() * p.length)];
-    m[d + 2] = `	static tile_map + #${d}, #1
+    var d = m[Math.floor(Math.random() * m.length)];
+    p[d + 2] = `	static tile_map_pu + #${d}, #1
 `;
   }
-  w("mapa.asm", s.concat(i).concat(r).concat(o).concat(u).concat(m));
+  p.forEach((l) => console.log(l)), w("mapa.asm", s.concat(i).concat(r).concat(o).concat(u).concat(p));
 }
 function E() {
   document.getElementById("download-map").addEventListener("click", () => b());
