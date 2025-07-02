@@ -19,7 +19,7 @@ main:
     ; inicializando o jogo
     loadn r5, #tile_map
     call draw_map_full
-    ;call print_map_name
+    call print_map_name
     call ini_player_um
     call ini_player_dois
     
