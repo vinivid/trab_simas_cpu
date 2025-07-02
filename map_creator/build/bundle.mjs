@@ -109,7 +109,7 @@ tile_map_pu_og : var #260
   for (let l = 1; l <= 4; l++) {
     var p = m[Math.floor(Math.random() * m.length)];
     u[p + 2] = `	static tile_map_pu + #${p}, #1
-`, d[p + 2] = `	static tile_map_pu_og + #${p}, #0
+`, d[p + 2] = `	static tile_map_pu_og + #${p}, #1
 `;
   }
   b("mapa.asm", s.concat(i).concat(r).concat(o).concat(_).concat(u).concat(d));

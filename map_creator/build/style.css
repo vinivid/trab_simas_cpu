@@ -1,5 +1,19 @@
 body {
     background-color: #282e38;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    color: white;
+    font-family: sans-serif;
+    font-size: 64px;
+    margin: 0 0 20px 0;
 }
 
 #map-wrapper {
@@ -8,14 +22,14 @@ body {
 
 #map-grid {
     display: inline-grid;
-    grid-template-rows: repeat(13, 25px);
-    grid-template-columns: repeat(20, 25px);
+    grid-template-rows: repeat(13, 40px);
+    grid-template-columns: repeat(20, 40px);
     gap: 2px;
 }
 
 .map-block {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     background-color: white;
 }
 
@@ -28,8 +42,8 @@ body {
 }
 
 .tile-block {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     background-color: red;
 }
 
