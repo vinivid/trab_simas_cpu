@@ -32,7 +32,7 @@ main:
         call update_bombas
 
         loadn r0, #1000
-        loadn r1, #1
+        loadn r1, #3
         call delay_um_tempo
         jmp game_loop
 
