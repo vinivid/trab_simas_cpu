@@ -2320,11 +2320,22 @@ player_para_cima:
     jeq player_para_cima_end
     loadi r1, r6
 
+    ; verifica se eh uma tile de de powerup
+    dec r2
+    loadn r3, #'P'
+    call get_tile
+    cmp r0, r3
+    jne sem_powerup_acima
+        ; chama func do powerup
+        jmp andar_para_cima
+    sem_powerup_acima:
+
     ; verifica se eh uma tile vazia para que o player possa ir
-    dec r2 
+    loadn r3, #0
     call get_tile
     cmp r0, r3
     jne player_para_cima_end
+    andar_para_cima:
     inc r2
 
     ; apagando a tile do player que anterioremente estava la
@@ -2377,12 +2388,22 @@ player_para_baixo:
     jeq player_para_baixo_end
     loadi r1, r6
 
+    ; verifica se eh uma tile de de powerup
+    inc r2
+    loadn r3, #'P'
+    call get_tile
+    cmp r0, r3
+    jne sem_powerup_abaixo
+        ; chama func do powerup
+        jmp andar_para_baixo
+    sem_powerup_abaixo:
+
     ; verifica se eh uma tile vazia para que o player possa ir
     loadn r3, #0
-    inc r2 
     call get_tile
     cmp r0, r3
     jne player_para_baixo_end
+    andar_para_baixo:
     dec r2
 
     ; apagando a tile do player que anterioremente estava la
@@ -2435,11 +2456,22 @@ player_para_esquerda:
     jeq player_para_esquerda_end
     loadi r2, r7
 
+    ; verifica se eh uma tile de de powerup
+    dec r1
+    loadn r3, #'P'
+    call get_tile
+    cmp r0, r3
+    jne sem_powerup_a_esquerda
+        ; chama func do powerup
+        jmp andar_para_esquerda
+    sem_powerup_a_esquerda:
+
     ; verifica se eh uma tile vazia para que o player possa ir
-    dec r1 
+    loadn r3, #0
     call get_tile
     cmp r0, r3
     jne player_para_esquerda_end
+    andar_para_esquerda:
     inc r1
 
     call get_tile
@@ -2490,12 +2522,22 @@ player_para_direita:
     jeq player_para_direita_end 
     loadi r2, r7
 
+    ; verifica se eh uma tile de de powerup
+    inc r1
+    loadn r3, #'P'
+    call get_tile
+    cmp r0, r3
+    jne sem_powerup_a_direita
+        ; chama func do powerup
+        jmp andar_para_direita
+    sem_powerup_a_direita:
+
     ; verifica se eh uma tile vazia para que o player possa ir
     loadn r3, #0
-    inc r1 
     call get_tile
     cmp r0, r3
     jne player_para_direita_end
+    andar_para_direita:
     dec r1
 
     ; apagando a tile do player que anterioremente estava la
