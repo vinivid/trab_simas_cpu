@@ -35,7 +35,7 @@ main:
 
     death_state:
         call draw_player_lose
-        loadn r1, #'z'
+        loadn r1, #'z'  
         death_loop:
             ; esperando pressionar z
             inchar r0

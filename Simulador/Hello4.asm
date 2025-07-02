@@ -2238,6 +2238,46 @@ update_bomba:
         pop r1 
         rts
 
+;   Essa funcao adiciona um power up na 
+; bomba, acrescentando em um o limite que 
+; ela pode chegar.
+;
+; @param {const int} r1 - Coordenada x na qual o power up foi 
+; encontrado.
+; @param {const int} r2 - Coordenada y na qual o power up foi 
+; encontrado.
+; @param {const endereco} r5 - Endereco da bomba do 
+; player a ser modificada.
+adcionar_powerup_na_bomba:
+    push r0
+    push r3
+
+    ; colocando o endereco da bomba para r1 
+    ; para que ela n seja modificada
+    mov r3, r5
+
+    ; pulando para o tamanho da bomba
+    loadn r0, #4
+    add r3, r3, r0
+    loadi r0, r3 ; pegando o tamanho da bomba atualizando
+    inc r0
+    storei r3, r0 ; salvando na posicao da memoria
+
+    ; transformando para um endereco valido
+    loadn r3, #20
+    mul r0, r2, r3
+    add r0, r0, r1 
+
+    ; indo para o endereco no power up map 
+    loadn r3, #tile_map_pu
+    add r3, r3, r0
+    loadn r0, #0
+    storei r3, r0 ; setando a posicao para 0
+
+    pop r3
+    pop r0
+    rts
+
 ;  Faz o update das bombas dos players.
 ;
 update_bombas:
@@ -2287,7 +2327,7 @@ ini_player:
     ; o valor default
     loadn r1, #4
     add r5, r5, r1
-    loadn r1, #4
+    loadn r1, #2
     storei r5, r1
 
     ; indo para o estado de fogo e setando para zero
@@ -2303,6 +2343,7 @@ ini_player:
 ; suas informacoes
 ;
 ; @param {const cor} r4 - Cor para pintar o personagem.
+; @param {const endereco} r5 - Endereco da bomba do player
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -2320,11 +2361,22 @@ player_para_cima:
     jeq player_para_cima_end
     loadi r1, r6
 
+    ; verifica se eh uma tile de de powerup
+    dec r2
+    loadn r3, #'P'
+    call get_tile
+    cmp r0, r3
+    jne sem_powerup_acima
+        call adcionar_powerup_na_bomba
+        jmp andar_para_cima
+    sem_powerup_acima:
+
     ; verifica se eh uma tile vazia para que o player possa ir
-    dec r2 
+    loadn r3, #0
     call get_tile
     cmp r0, r3
     jne player_para_cima_end
+    andar_para_cima:
     inc r2
 
     ; apagando a tile do player que anterioremente estava la
@@ -2361,6 +2413,7 @@ player_para_cima:
 ; suas informacoes
 ;
 ; @param {const cor} r4 - Cor para pintar o personagem.
+; @param {const endereco} r5 - Endereco da bomba do player
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -2377,12 +2430,22 @@ player_para_baixo:
     jeq player_para_baixo_end
     loadi r1, r6
 
+    ; verifica se eh uma tile de de powerup
+    inc r2
+    loadn r3, #'P'
+    call get_tile
+    cmp r0, r3
+    jne sem_powerup_abaixo
+        call adcionar_powerup_na_bomba
+        jmp andar_para_baixo
+    sem_powerup_abaixo:
+
     ; verifica se eh uma tile vazia para que o player possa ir
     loadn r3, #0
-    inc r2 
     call get_tile
     cmp r0, r3
     jne player_para_baixo_end
+    andar_para_baixo:
     dec r2
 
     ; apagando a tile do player que anterioremente estava la
@@ -2419,6 +2482,7 @@ player_para_baixo:
 ; suas informacoes.
 ;
 ; @param {const cor} r4 - Cor para pintar o personagem.
+; @param {const endereco} r5 - Endereco da bomba do player
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -2435,11 +2499,22 @@ player_para_esquerda:
     jeq player_para_esquerda_end
     loadi r2, r7
 
+    ; verifica se eh uma tile de de powerup
+    dec r1
+    loadn r3, #'P'
+    call get_tile
+    cmp r0, r3
+    jne sem_powerup_a_esquerda
+        call adcionar_powerup_na_bomba
+        jmp andar_para_esquerda
+    sem_powerup_a_esquerda:
+
     ; verifica se eh uma tile vazia para que o player possa ir
-    dec r1 
+    loadn r3, #0
     call get_tile
     cmp r0, r3
     jne player_para_esquerda_end
+    andar_para_esquerda:
     inc r1
 
     call get_tile
@@ -2474,6 +2549,7 @@ player_para_esquerda:
 ; suas informacoes.
 ;
 ; @param {const cor} r4 - Cor para pintar o personagem.
+; @param {const endereco} r5 - Endereco da bomba do player
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -2490,12 +2566,22 @@ player_para_direita:
     jeq player_para_direita_end 
     loadi r2, r7
 
+    ; verifica se eh uma tile de de powerup
+    inc r1
+    loadn r3, #'P'
+    call get_tile
+    cmp r0, r3
+    jne sem_powerup_a_direita
+        call adcionar_powerup_na_bomba
+        jmp andar_para_direita
+    sem_powerup_a_direita:
+
     ; verifica se eh uma tile vazia para que o player possa ir
     loadn r3, #0
-    inc r1 
     call get_tile
     cmp r0, r3
     jne player_para_direita_end
+    andar_para_direita:
     dec r1
 
     ; apagando a tile do player que anterioremente estava la
@@ -2538,7 +2624,7 @@ player_para_direita:
 ; 0 caso contrario
 checar_se_player_morreu:
     push r0
-    
+      
     ; pegando a tile que o player esta 
     call get_tile
 
@@ -2552,7 +2638,7 @@ checar_se_player_morreu:
 
     ; se for uma tile de bomba
     o_player_morreu:
-        loadn r3, #1        
+        loadn r3, #1  
         pop r0
         rts
 
@@ -2603,6 +2689,7 @@ atuar_no_player_um:
     cmp r1, r3
     jeq player_um_morte
 
+    loadn r5, #player_um_bomba
     ; cor branca do player 1
     loadn r4, #0
 
@@ -2698,6 +2785,7 @@ atuar_no_player_dois:
     cmp r1, r3
     jeq player_dois_morte
 
+    loadn r5, #player_dois_bomba
     ; valor azul do player 2
     loadn r4, #3072
 
@@ -2739,9 +2827,10 @@ atuar_no_player_dois:
         loadn r5, #1
         pop r7 
         pop r6
+        pop r4
         pop r3
         pop r2 
-        pop r1 
+        pop r1
         rts
 
 ; coisas de ler input
@@ -3198,7 +3287,7 @@ main:
 
     death_state:
         call draw_player_lose
-        loadn r1, #'z'
+        loadn r1, #'z'  
         death_loop:
             ; esperando pressionar z
             inchar r0

@@ -585,6 +585,46 @@ update_bomba:
         pop r1 
         rts
 
+;   Essa funcao adiciona um power up na 
+; bomba, acrescentando em um o limite que 
+; ela pode chegar.
+;
+; @param {const int} r1 - Coordenada x na qual o power up foi 
+; encontrado.
+; @param {const int} r2 - Coordenada y na qual o power up foi 
+; encontrado.
+; @param {const endereco} r5 - Endereco da bomba do 
+; player a ser modificada.
+adcionar_powerup_na_bomba:
+    push r0
+    push r3
+
+    ; colocando o endereco da bomba para r1 
+    ; para que ela n seja modificada
+    mov r3, r5
+
+    ; pulando para o tamanho da bomba
+    loadn r0, #4
+    add r3, r3, r0
+    loadi r0, r3 ; pegando o tamanho da bomba atualizando
+    inc r0
+    storei r3, r0 ; salvando na posicao da memoria
+
+    ; transformando para um endereco valido
+    loadn r3, #20
+    mul r0, r2, r3
+    add r0, r0, r1 
+
+    ; indo para o endereco no power up map 
+    loadn r3, #tile_map_pu
+    add r3, r3, r0
+    loadn r0, #0
+    storei r3, r0 ; setando a posicao para 0
+
+    pop r3
+    pop r0
+    rts
+
 ;  Faz o update das bombas dos players.
 ;
 update_bombas:

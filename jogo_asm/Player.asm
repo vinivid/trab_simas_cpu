@@ -55,6 +55,7 @@ ini_player:
 ; suas informacoes
 ;
 ; @param {const cor} r4 - Cor para pintar o personagem.
+; @param {const endereco} r5 - Endereco da bomba do player
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -78,7 +79,7 @@ player_para_cima:
     call get_tile
     cmp r0, r3
     jne sem_powerup_acima
-        ; chama func do powerup
+        call adcionar_powerup_na_bomba
         jmp andar_para_cima
     sem_powerup_acima:
 
@@ -124,6 +125,7 @@ player_para_cima:
 ; suas informacoes
 ;
 ; @param {const cor} r4 - Cor para pintar o personagem.
+; @param {const endereco} r5 - Endereco da bomba do player
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -146,7 +148,7 @@ player_para_baixo:
     call get_tile
     cmp r0, r3
     jne sem_powerup_abaixo
-        ; chama func do powerup
+        call adcionar_powerup_na_bomba
         jmp andar_para_baixo
     sem_powerup_abaixo:
 
@@ -192,6 +194,7 @@ player_para_baixo:
 ; suas informacoes.
 ;
 ; @param {const cor} r4 - Cor para pintar o personagem.
+; @param {const endereco} r5 - Endereco da bomba do player
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -214,7 +217,7 @@ player_para_esquerda:
     call get_tile
     cmp r0, r3
     jne sem_powerup_a_esquerda
-        ; chama func do powerup
+        call adcionar_powerup_na_bomba
         jmp andar_para_esquerda
     sem_powerup_a_esquerda:
 
@@ -258,6 +261,7 @@ player_para_esquerda:
 ; suas informacoes.
 ;
 ; @param {const cor} r4 - Cor para pintar o personagem.
+; @param {const endereco} r5 - Endereco da bomba do player
 ; @param {const endereco} r6 - Endereco da posicao x do player 
 ; @param {const endereco} r7 - Endereco da posicao y do player
 ; 
@@ -280,7 +284,7 @@ player_para_direita:
     call get_tile
     cmp r0, r3
     jne sem_powerup_a_direita
-        ; chama func do powerup
+        call adcionar_powerup_na_bomba
         jmp andar_para_direita
     sem_powerup_a_direita:
 
@@ -332,7 +336,7 @@ player_para_direita:
 ; 0 caso contrario
 checar_se_player_morreu:
     push r0
-    
+      
     ; pegando a tile que o player esta 
     call get_tile
 
@@ -346,7 +350,7 @@ checar_se_player_morreu:
 
     ; se for uma tile de bomba
     o_player_morreu:
-        loadn r3, #1        
+        loadn r3, #1  
         pop r0
         rts
 
@@ -397,6 +401,7 @@ atuar_no_player_um:
     cmp r1, r3
     jeq player_um_morte
 
+    loadn r5, #player_um_bomba
     ; cor branca do player 1
     loadn r4, #0
 
@@ -492,6 +497,7 @@ atuar_no_player_dois:
     cmp r1, r3
     jeq player_dois_morte
 
+    loadn r5, #player_dois_bomba
     ; valor azul do player 2
     loadn r4, #3072
 
@@ -533,9 +539,10 @@ atuar_no_player_dois:
         loadn r5, #1
         pop r7 
         pop r6
+        pop r4
         pop r3
         pop r2 
-        pop r1 
+        pop r1
         rts
 
 ; coisas de ler input
