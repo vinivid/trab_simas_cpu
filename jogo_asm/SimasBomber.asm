@@ -9,7 +9,6 @@ main:
     call draw_start_menu
     loadn r1, #'z'
     ; esperando o botao de start
-    loadn r1, #'z'
     menu_loop:
         inchar r0
         cmp r0, r1
