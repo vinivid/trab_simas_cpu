@@ -36,7 +36,7 @@ tem umas outras coisas ai ...
 - Murilo Leandro Garcia
 - Vitor Daniel Resende 
 - João Daleffe Dias
-- Renan Banci Catarin, 14658181
-- Vinicius de Souza Freitas, 15491959
+- Renan Banci Catarin
+- Vinicius de Souza Freitas
 - Glauco Fleury Corrêa de Moraes
-- Rodrigo Silva de Almeida, 15645380
+- Rodrigo Silva de Almeida
