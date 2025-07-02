@@ -6,12 +6,13 @@
 ; tempo_des_de_ter_sido_colocada {int} : #1
 ; pos_x {int} : #2
 ; pos_y {int} : #3
-; esta_no_estado_de_fogo {bool} : #4
-; quantidade_de_tempo_da_explosao {int} : #5
-; quantidade_de_tiles_de_explosao {int} : #6
-; tiles_de_explosao {tile_explosao[21]} : #7
+; tamanho_do_fogo : #4
+; esta_no_estado_de_fogo {bool} : #5
+; quantidade_de_tempo_da_explosao {int} : #6
+; quantidade_de_tiles_de_explosao {int} : #7
+; tiles_de_explosao {tile_explosao[21]} : #8
 ;
-;  Assim tendo um tamanho de 70 bytes
+;  Assim tendo um tamanho de 71 bytes
 ;
 ;   Em que tile de explosao tem a seguinte estrutura:
 ; tile_previa {char} : #0
@@ -21,13 +22,15 @@
 ;   Tendo uma tamanho de 3 bytes
 ;
 
-player_um_bomba : var #70
+player_um_bomba : var #71
     static player_um_bomba + #0, #0
-    static player_um_bomba + #4, #0
+    static player_um_bomba + #4, #3
+    static player_um_bomba + #5, #0
 
-player_dois_bomba : var #70
+player_dois_bomba : var #71
     static player_dois_bomba + #0, #0
-    static player_dois_bomba + #4, #0
+    static player_dois_bomba + #4, #3
+    static player_dois_bomba + #5, #0
 
 ;   A funcao colocar bomba coloca uma bomba no pe 
 ; do player, atualizando o charmap e desenhando a 
@@ -97,7 +100,7 @@ apagar_labaredas:
     mov r7, r0
 
     ; pulando para se esta em labaredas
-    loadn r1, #4
+    loadn r1, #5
     add r7, r7, r1
     ; setando para nao estar mais explodindo
     loadn r2, #0
@@ -154,6 +157,10 @@ apagar_labaredas:
     pop r1 
     rts
 
+
+; essa variavel sera o tamnho do fogo
+tamanho_do_fogo : var #1
+
 ;   Gera a explosao da bomba.
 ;  Obs: A funcao nao checa pelos limites do mapa 
 ; quando gerando as labredas, se na tiver a parede 
@@ -176,14 +183,24 @@ gerar_explosao:
 
     ; pulando para a pos_x 
     loadn r3, #2
-    add r3, r0, r3
+    add r3, r0, r3 
     ; carregando os valores de posx e posy
     loadi r1, r3
     inc r3
     loadi r2, r3
 
+    ; colocando o offset da bomba no tamanho do fogo
+    ; e guardando o valor
+    loadn r4, #4
+    add r0, r0, r4
+    loadi r4, r0
+
+    ; guardando o tamanho do fogo
+    store tamanho_do_fogo, r4
+
     ; agora r3 esta gurdando o endereco da bomba
     ; colocando o estado de fogo como true
+    inc r3
     inc r3
     loadn r0, #1
     storei r3, r0 
@@ -213,6 +230,8 @@ gerar_explosao:
     inc r3
     loadn r0, #'*'
     call set_tile
+    ; colocando o centro da bomba
+    loadn r0, #'K'
     push r2
     loadn r2, #2816
     call two_by_two_sequence_draw_colored
@@ -251,7 +270,7 @@ gerar_explosao:
         jeq labareda_para_cima_fim
 
         ; ou chegou no limite das labaredas dai para tmb
-        loadn r5, #2
+        load r5, tamanho_do_fogo
         cmp r4, r5
         jeq labareda_para_cima_fim
 
@@ -315,7 +334,7 @@ gerar_explosao:
         jeq labareda_para_baixo_fim
 
         ; ou chegou no limite das labaredas dai para tmb
-        loadn r5, #2
+        load r5, tamanho_do_fogo
         cmp r4, r5
         jeq labareda_para_baixo_fim
 
@@ -378,7 +397,7 @@ gerar_explosao:
         jeq labareda_para_esquerda_fim
 
         ; ou chegou no limite das labaredas dai para tmb
-        loadn r5, #2
+        load r5, tamanho_do_fogo
         cmp r4, r5
         jeq labareda_para_esquerda_fim
 
@@ -441,7 +460,7 @@ gerar_explosao:
         jeq labareda_para_direita_fim
 
         ; ou chegou no limite das labaredas dai para tmb
-        loadn r5, #2
+        load r5, tamanho_do_fogo
         cmp r4, r5
         jeq labareda_para_direita_fim
 
@@ -524,7 +543,7 @@ update_bomba:
 
     inc r0 
     loadi r1, r0 
-    inc r1 
+    inc r1 ; aumentando o tempo em que a bomba foi colocada
     storei r0, r1
 
     ; Se a bomba chegou no tempo limite explode 
@@ -540,20 +559,20 @@ update_bomba:
     update_fogo:
         ; dar update no fogo se estiver no 
         ; estado de fogo
-        loadn r2, #4
+        loadn r2, #5
         add r0, r0, r2
-        loadi r2, r0
+        loadi r2, r0 ; estado da bomba esta em r2
         loadn r1, #0
         cmp r2, r1
         jeq fim_do_update_bomba
 
         ; esta com explosao
         inc r0 
-        loadi r1, r0
+        loadi r1, r0 ; quantidade de tempo da explosao
         inc r1
-        storei r0, r1
+        storei r0, r1 ; salvando quantidade de tempo da explosao
 
-        loadn r2, #4
+        loadn r2, #4 ; valor do fim da bomba
         cmp r1, r2
         jne fim_do_update_bomba
             mov r0, r7

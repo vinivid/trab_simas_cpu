@@ -234,9 +234,13 @@ restore_tile_map:
     push r2
     push r3
     push r4
+    push r5
+    push r6
 
     loadn r0, #tile_map_og
-    loadn r1, #tile_map 
+    loadn r1, #tile_map
+    loadn r5, #tile_map_pu_og
+    loadn r6, #tile_map_pu
 
     loadn r2, #0 ; variavel para iterar pelo char map
     loadn r3, #260 ; quantidade de tiles em um mapa
@@ -248,12 +252,19 @@ restore_tile_map:
         loadi r4, r0 ;carregando o valor do mapa original
         storei r1, r4 ; colocar no tile map o valor original
 
+        loadi r4, r5 ; carregando o valor orignal do mapa de powerup
+        storei r6, r4 ; colocando no 
+
         inc r0 ; proximo endereco do tile map original
-        inc r1 ; proximo endereco do tile map  
-        inc r2 ; indo para a proxima posicao
+        inc r1 ; proximo endereco do tile map
+        inc r5 ; poxima posicao no mapa da bomba original
+        inc r6 ; proxima posicao do tile map de power up  
+        inc r2 ; indo para a proxima posicao        
         jmp restore_tile_map_loop
     restore_tile_map_loop_end:
 
+    pop r6
+    pop r5
     pop r4
     pop r3
     pop r2

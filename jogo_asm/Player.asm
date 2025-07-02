@@ -35,9 +35,15 @@ ini_player:
     loadn r1, #0
     storei r5, r1
 
-    ; indo para o estado de fogo e setando para zero
+    ; indo para o tamanho da de fogo explosao e setando como 
+    ; o valor default
     loadn r1, #4
     add r5, r5, r1
+    loadn r1, #2
+    storei r5, r1
+
+    ; indo para o estado de fogo e setando para zero
+    inc r5
     loadn r1, #0
     storei r5, r1
 
